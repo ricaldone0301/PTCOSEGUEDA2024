@@ -29,9 +29,7 @@ namespace PTC.Controller.Login
         }
         private void DataAccess(object sender, EventArgs e)
         {
-      
             DAOLogin DAOData = new DAOLogin();
-           
             DAOData.Usuario = ObjLogin.TxtUsuario.Text;
             DAOData.Contraseña = ObjLogin.TxtContra.Text;
 
@@ -85,5 +83,5 @@ namespace PTC.Controller.Login
         }
     }
 }
-
+  
 

@@ -11,14 +11,56 @@ using PTC.Modelo.DTOLogin;
 using System.Security.Cryptography.X509Certificates;
 using System.Data.SqlTypes;
 using System.Runtime.Remoting.Messaging;
+using PTC.Vista.Dashboard;
+using PTC.Vista.Login;
+using System.Drawing.Drawing2D;
 
 namespace PTC.Modelo.DAOLogin
 {
     public class DAOLogin : DtoLogin
     {
-        //internal string usuarioPersonal;
-        //internal string contraseñaPersonal;
-        SqlCommand Command = new SqlCommand();
+
+            //internal string usuarioPersonal;
+            //internal string contraseñaPersonal;
+            SqlCommand Command = new SqlCommand();
+
+            public int Login()
+            {
+                try
+                {
+                    Command.Connection = getConnection();
+                    Command.CommandText = "sp_Login";
+                    Command.CommandType = CommandType.StoredProcedure;
+                    Command.Parameters.AddWithValue("@username", Usuario);
+                    Command.Parameters.AddWithValue("@password", Contraseña);
+                    return Command.ExecuteScalar().ToString() == Usuario ? 1 : 0;
+
+                }
+
+                catch (Exception ex)
+
+                {
+
+                    MessageBox.Show(ex.Message);
+
+                    return -1;
+
+                }
+
+                finally { getConnection().Close(); }
+
+            }
+
+        }
+
+    }
+
+
+ /*
+
+    //internal string usuarioPersonal;
+    //internal string contraseñaPersonal;
+    SqlCommand Command = new SqlCommand();
         public int Login()
         {
             try
@@ -37,6 +79,7 @@ namespace PTC.Modelo.DAOLogin
             }
             finally { getConnection().Close(); }
         }
+ 
     }
  }
-
+ */

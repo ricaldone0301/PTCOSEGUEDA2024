@@ -70,3 +70,17 @@ C:\Users\Estudiante\Documents\PTC\obj\Debug\PTC.csproj.CoreCompileInputs.cache
 C:\Users\Estudiante\Documents\PTC\obj\Debug\PTC.csproj.CopyComplete
 C:\Users\Estudiante\Documents\PTC\obj\Debug\PTC.exe
 C:\Users\Estudiante\Documents\PTC\obj\Debug\PTC.pdb
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Properties.Resources.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.AgendarCita.ViewAgendarcita.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.AgregarDoctores.ViewAgregarUsuario.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Cita.ViewCitas.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Dashboard.ViewDashboard.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Login.ViewLogin.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Pacientes.ViewPacientes.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Trataminetos.ViewTratamientos.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Doctores.ViewUsuarios.resources
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.GenerateResource.cache
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.exe
+C:\Users\Estudiante\Documents\PTCOSEGUEDA\PTCOSEGUEDA2024\obj\Debug\PTC.pdb

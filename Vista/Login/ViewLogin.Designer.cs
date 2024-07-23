@@ -38,6 +38,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,10 +51,9 @@
             this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnIngresar.Location = new System.Drawing.Point(269, 416);
-            this.BtnIngresar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnIngresar.Location = new System.Drawing.Point(202, 338);
             this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(144, 50);
+            this.BtnIngresar.Size = new System.Drawing.Size(108, 41);
             this.BtnIngresar.TabIndex = 15;
             this.BtnIngresar.Text = "INGRESAR";
             this.BtnIngresar.UseVisualStyleBackColor = false;
@@ -64,10 +64,9 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(112, 43);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(84, 35);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(448, 155);
+            this.pictureBox2.Size = new System.Drawing.Size(336, 126);
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
@@ -75,10 +74,9 @@
             // 
             this.ContraHide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContraHide.BackgroundImage")));
             this.ContraHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ContraHide.Location = new System.Drawing.Point(944, 453);
-            this.ContraHide.Margin = new System.Windows.Forms.Padding(4);
+            this.ContraHide.Location = new System.Drawing.Point(708, 368);
             this.ContraHide.Name = "ContraHide";
-            this.ContraHide.Size = new System.Drawing.Size(40, 36);
+            this.ContraHide.Size = new System.Drawing.Size(30, 29);
             this.ContraHide.TabIndex = 21;
             this.ContraHide.UseVisualStyleBackColor = true;
             // 
@@ -86,10 +84,9 @@
             // 
             this.ContraVisible.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContraVisible.BackgroundImage")));
             this.ContraVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ContraVisible.Location = new System.Drawing.Point(944, 453);
-            this.ContraVisible.Margin = new System.Windows.Forms.Padding(4);
+            this.ContraVisible.Location = new System.Drawing.Point(708, 368);
             this.ContraVisible.Name = "ContraVisible";
-            this.ContraVisible.Size = new System.Drawing.Size(40, 36);
+            this.ContraVisible.Size = new System.Drawing.Size(30, 29);
             this.ContraVisible.TabIndex = 20;
             this.ContraVisible.UseVisualStyleBackColor = true;
             // 
@@ -97,10 +94,9 @@
             // 
             this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
             this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.Location = new System.Drawing.Point(637, 4);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnExit.Location = new System.Drawing.Point(478, 3);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(40, 36);
+            this.BtnExit.Size = new System.Drawing.Size(30, 29);
             this.BtnExit.TabIndex = 19;
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -109,10 +105,9 @@
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.TxtUsuario.Location = new System.Drawing.Point(603, 373);
-            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUsuario.Location = new System.Drawing.Point(452, 303);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
+            this.TxtUsuario.Size = new System.Drawing.Size(286, 33);
             this.TxtUsuario.TabIndex = 13;
             this.TxtUsuario.Text = "Usuario";
             // 
@@ -122,10 +117,9 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.White;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.linkLabel1.Location = new System.Drawing.Point(599, 511);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(449, 415);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(147, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(119, 13);
             this.linkLabel1.TabIndex = 16;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Olvido su contraseña?";
@@ -134,10 +128,9 @@
             // 
             this.TxtContra.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContra.ForeColor = System.Drawing.Color.Gray;
-            this.TxtContra.Location = new System.Drawing.Point(603, 453);
-            this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtContra.Location = new System.Drawing.Point(452, 368);
             this.TxtContra.Name = "TxtContra";
-            this.TxtContra.Size = new System.Drawing.Size(380, 39);
+            this.TxtContra.Size = new System.Drawing.Size(286, 33);
             this.TxtContra.TabIndex = 14;
             this.TxtContra.Text = "Contraseña";
             // 
@@ -146,6 +139,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.White;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.linkLabel2);
             this.bunifuGradientPanel1.Controls.Add(this.BtnExit);
             this.bunifuGradientPanel1.Controls.Add(this.BtnIngresar);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
@@ -153,19 +147,32 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(470, 150);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(352, 122);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(677, 485);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(508, 394);
             this.bunifuGradientPanel1.TabIndex = 22;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.White;
+            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.linkLabel2.Location = new System.Drawing.Point(326, 293);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(60, 13);
+            this.linkLabel2.TabIndex = 23;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Registrarse";
             // 
             // ViewLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1683, 828);
+            this.ClientSize = new System.Drawing.Size(1264, 679);
             this.ControlBox = false;
             this.Controls.Add(this.ContraHide);
             this.Controls.Add(this.ContraVisible);
@@ -173,14 +180,14 @@
             this.Controls.Add(this.TxtContra);
             this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1701, 875);
-            this.MinimumSize = new System.Drawing.Size(1701, 875);
+            this.MaximumSize = new System.Drawing.Size(1280, 718);
+            this.MinimumSize = new System.Drawing.Size(1280, 718);
             this.Name = "ViewLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +203,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.TextBox TxtContra;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
