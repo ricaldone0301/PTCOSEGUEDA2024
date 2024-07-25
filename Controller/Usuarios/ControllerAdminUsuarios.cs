@@ -2,6 +2,7 @@
 using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.Doctores;
+using PTC.Vista.Registro;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,11 +18,13 @@ namespace PTC.Controller.Usuarios
     class ControllerAdminUsuarios
     {
         ViewUsuarios ObjAdminUsuario;
+        ViewRegistro ObjRegistro;
         public ControllerAdminUsuarios(ViewUsuarios Vista)
         {
             ObjAdminUsuario = Vista;
             ObjAdminUsuario.Load += new EventHandler(LoadData);
             ObjAdminUsuario.btnNuevo.Click += new EventHandler(NewUser);
+            //ObjRegistro.btnEnviar.Click += new EventHandler(NewUser);
             ObjAdminUsuario.cmsActualizar.Click += new EventHandler(UpdateUser);
             ObjAdminUsuario.cmsEliminar.Click += new EventHandler(DeleteUser);
            // ObjAdminUsuario.dgvPersonas.CellContentClick += new DataGridViewCellEventHandler(dgvPersonas_CellContentClick);
@@ -34,7 +37,7 @@ namespace PTC.Controller.Usuarios
             if (MessageBox.Show($"¿Esta seguro que desea eliminar a:\n{ObjAdminUsuario.dgvPersonas[2, pos].Value.ToString()}\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOUsuarios daoDel = new DAOUsuarios();
-                daoDel.PersonalId = (ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString());
+                daoDel.PersonalId = int.Parse(ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString());
                 int valorRetornado = daoDel.EliminarUsuario();
                 if (valorRetornado == 1)
                 {
@@ -59,7 +62,7 @@ namespace PTC.Controller.Usuarios
             int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
             int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;
             int rol, EspecialidadID, consultorioID;
-            string PersonalID, Nombre, Telefono, UsuarioPersonal, contraseñaPersonal;
+            string PersonalID, Nombre, Telefono, UsuarioPersonal, contraseñaPersonal, email;
 
             Nombre = ObjAdminUsuario.dgvPersonas[0, pos].Value.ToString();
             PersonalID = ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString();
@@ -69,9 +72,10 @@ namespace PTC.Controller.Usuarios
             UsuarioPersonal = ObjAdminUsuario.dgvPersonas[5, pos].Value.ToString();
             contraseñaPersonal = ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString();
             rol = int.Parse(ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString());
+            email = ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString();
 
 
-            ViewAgregarUsuario openForm = new ViewAgregarUsuario(2, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal);
+            ViewAgregarUsuario openForm = new ViewAgregarUsuario(2, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
             openForm.ShowDialog();
             RefrescarData();
 

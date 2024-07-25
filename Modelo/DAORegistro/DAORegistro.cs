@@ -1,17 +1,17 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using PTC.Modelo.DTOUsuarios;
+﻿using PTC.Modelo.DTOUsuarios;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using PTC.Modelo.DTORegistro;
 
-namespace PTC.Modelo.DAOUsuarios
+namespace PTC.Modelo.DAORegistro
 {
-    class DAOUsuarios : DtoUsuarios
+    class DAORegistro : DtoRegistro
     {
         readonly SqlCommand Command = new SqlCommand();
         public DataSet ComboBoxRoles()
@@ -40,7 +40,7 @@ namespace PTC.Modelo.DAOUsuarios
                 getConnection().Close();
             }
             return ds;
-            }
+        }
 
         public DataSet ComboBoxEspecialidad()
         {
@@ -68,7 +68,7 @@ namespace PTC.Modelo.DAOUsuarios
                 getConnection().Close();
             }
             return ds;
-            }
+        }
 
         public DataSet ComboBoxConsultorio()
         {
@@ -101,7 +101,7 @@ namespace PTC.Modelo.DAOUsuarios
 
 
         public int RegistrarUsuario()
-            {
+        {
             try
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -125,7 +125,7 @@ namespace PTC.Modelo.DAOUsuarios
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     return rowsAffected;
-                    }
+                }
             }
             catch (Exception ex)
             {
@@ -134,99 +134,8 @@ namespace PTC.Modelo.DAOUsuarios
             }
             finally
             {
-    
+
             }
         }
-
-        public DataSet ObtenerPersonas()
-        {
-            try
-            {
-                Command.Connection = getConnection();
-                string query = "SELECT * FROM Personal";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                DataSet ds = new DataSet();
-
-                ds.Load(reader, LoadOption.OverwriteChanges, "Personal");
-                reader.Close();
-
-                return ds;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
-
-        public int ActualizarUsuario()
-        {
-            try
-            {
-                Command.Connection = getConnection();
-                string query = "UPDATE Personal SET " +
-                                "nombrePersonal = @param1, " +
-                                "especialidadID = @param2, " +
-                                "telefono = @param3," +
-                                "consultorioID = @param4," +
-                                "usuarioPersonal = @param5, " +
-                                "contraseñaPersonal = @param6," +
-                                "roleID = @param7," +
-                                "email = @param8 " +
-                                "WHERE personalID = @param9";
-              
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                cmd.Parameters.AddWithValue("param1", Nombre);
-                cmd.Parameters.AddWithValue("param2", EspecialidadId);
-                cmd.Parameters.AddWithValue("param3", Telefono);
-                cmd.Parameters.AddWithValue("param4", ConsultorioId);
-                cmd.Parameters.AddWithValue("param5", Usuario);
-                cmd.Parameters.AddWithValue("param6", Contrasena);
-                cmd.Parameters.AddWithValue("param7", Rol);
-                cmd.Parameters.AddWithValue("param8", Email);
-                cmd.Parameters.AddWithValue("param9", PersonalId);
-
-                int respuesta = cmd.ExecuteNonQuery();               
-                return respuesta;
-            }
-            catch (Exception)
-            {
-                return -1;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
-
-        public int EliminarUsuario()
-        {
-            try
-            {
-               
-                Command.Connection = getConnection();
-                string query = "DELETE Personal WHERE personalID = @param2";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                cmd.Parameters.AddWithValue("param2", PersonalId);
-                int respuesta = cmd.ExecuteNonQuery();
-                return respuesta;
-            }
-            catch (Exception)
-            {
-                return -1;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
-
     }
 }
-

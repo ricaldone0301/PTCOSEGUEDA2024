@@ -73,14 +73,17 @@
     <Compile Include="Controller\Cita\ControllerAgendarCita.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />
+    <Compile Include="Controller\Registro\ControllerRegistro.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
     <Compile Include="Modelo\DAOCitas\DAOCitas.cs" />
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
+    <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
     <Compile Include="Modelo\DAOUsuarios\DAOUsuarios.cs" />
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTOCitas\DTOCitas.cs" />
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
+    <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +116,12 @@
     </Compile>
     <Compile Include="Vista\Dashboard\ViewDashboard.Designer.cs">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Registro\ViewRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Registro\ViewRegistro.Designer.cs">
+      <DependentUpon>ViewRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Trataminetos\ViewTratamientos.cs">
       <SubType>Form</SubType>
@@ -168,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pacientes\ViewPacientes.resx">
       <DependentUpon>ViewPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Registro\ViewRegistro.resx">
+      <DependentUpon>ViewRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Trataminetos\ViewTratamientos.resx">
       <DependentUpon>ViewTratamientos.cs</DependentUpon>

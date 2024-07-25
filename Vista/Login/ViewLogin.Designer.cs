@@ -38,6 +38,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -146,6 +147,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.White;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.linkLabel2);
             this.bunifuGradientPanel1.Controls.Add(this.BtnExit);
             this.bunifuGradientPanel1.Controls.Add(this.BtnIngresar);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
@@ -159,6 +161,20 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(677, 485);
             this.bunifuGradientPanel1.TabIndex = 22;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.White;
+            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.linkLabel2.Location = new System.Drawing.Point(456, 361);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(58, 16);
+            this.linkLabel2.TabIndex = 23;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Registro";
             // 
             // ViewLogin
             // 
@@ -181,6 +197,7 @@
             this.Text = "ViewLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +213,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.TextBox TxtContra;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
