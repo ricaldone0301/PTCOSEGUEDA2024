@@ -26,5 +26,10 @@ namespace PTC.Vista.Registro
         {
 
         }
+
+        private void timevcode_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

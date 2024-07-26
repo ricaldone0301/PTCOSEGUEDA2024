@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegistro));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbEsp = new System.Windows.Forms.ComboBox();
             this.cbConsul = new System.Windows.Forms.ComboBox();
@@ -49,10 +49,12 @@
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEnviar1 = new System.Windows.Forms.Button();
+            this.timevcode = new System.Windows.Forms.Timer(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,18 +77,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(947, 569);
             this.bunifuGradientPanel1.TabIndex = 28;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.Location = new System.Drawing.Point(329, 4);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(40, 36);
-            this.BtnExit.TabIndex = 19;
-            this.BtnExit.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -291,13 +281,25 @@
             this.bunifuCustomLabel4.TabIndex = 10;
             this.bunifuCustomLabel4.Text = "NOMBRE";
             // 
-            // textBox1
+            // BtnExit
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 272);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 22);
-            this.textBox1.TabIndex = 38;
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnExit.Location = new System.Drawing.Point(329, 4);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(40, 36);
+            this.BtnExit.TabIndex = 19;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            // 
+            // txtConfirm
+            // 
+            this.txtConfirm.Location = new System.Drawing.Point(90, 272);
+            this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(209, 22);
+            this.txtConfirm.TabIndex = 38;
             // 
             // bunifuCustomLabel2
             // 
@@ -314,8 +316,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Tomato;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btnEnviar1);
+            this.panel2.Controls.Add(this.txtConfirm);
             this.panel2.Controls.Add(this.BtnExit);
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
             this.panel2.Location = new System.Drawing.Point(807, 172);
@@ -323,21 +325,26 @@
             this.panel2.Size = new System.Drawing.Size(373, 571);
             this.panel2.TabIndex = 39;
             // 
-            // button1
+            // btnEnviar1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.button1.Location = new System.Drawing.Point(134, 316);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 46);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "ENVIAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEnviar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
+            this.btnEnviar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviar1.FlatAppearance.BorderSize = 0;
+            this.btnEnviar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
+            this.btnEnviar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnEnviar1.Location = new System.Drawing.Point(134, 316);
+            this.btnEnviar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEnviar1.Name = "btnEnviar1";
+            this.btnEnviar1.Size = new System.Drawing.Size(131, 46);
+            this.btnEnviar1.TabIndex = 37;
+            this.btnEnviar1.Text = "ENVIAR";
+            this.btnEnviar1.UseVisualStyleBackColor = false;
+            // 
+            // timevcode
+            // 
+            this.timevcode.Interval = 1000;
+            this.timevcode.Tick += new System.EventHandler(this.timevcode_Tick);
             // 
             // ViewRegistro
             // 
@@ -379,9 +386,10 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         public System.Windows.Forms.TextBox txtNombre;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtConfirm;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnEnviar1;
+        private System.Windows.Forms.Timer timevcode;
     }
 }

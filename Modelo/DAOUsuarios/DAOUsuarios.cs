@@ -99,7 +99,6 @@ namespace PTC.Modelo.DAOUsuarios
         }
 
 
-
         public int RegistrarUsuario()
             {
             try
