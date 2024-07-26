@@ -99,7 +99,6 @@ namespace PTC.Modelo.DAORegistro
         }
 
 
-
         public int RegistrarUsuario()
         {
             try

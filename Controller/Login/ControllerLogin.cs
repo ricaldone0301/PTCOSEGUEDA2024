@@ -1,6 +1,7 @@
 ﻿using PTC.Modelo.DAOLogin;
 using PTC.Vista.Dashboard;
 using PTC.Vista.Login;
+using PTC.Vista.Registro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace PTC.Controller.Login
 
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
         }
+
         private void DataAccess(object sender, EventArgs e)
         {
       
