@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PTC.Controller.Login;
+using PTC.Controller.Registro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace PTC.Vista.Registro
         public ViewRegistro()
         {
             InitializeComponent();
+            ControllerRegistro control = new ControllerRegistro(this);
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -29,7 +32,6 @@ namespace PTC.Vista.Registro
 
         private void timevcode_Tick(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using PTC.Modelo.DAOLogin;
 using PTC.Vista.Dashboard;
 using PTC.Vista.Login;
+using PTC.Vista.Pacientes;
 using PTC.Vista.Registro;
 using System;
 using System.Collections.Generic;
@@ -25,10 +26,17 @@ namespace PTC.Controller.Login
 
             ObjLogin.TxtContra.Enter += new EventHandler(EnterPassword);
             ObjLogin.TxtContra.Leave += new EventHandler(LeavePassword);
+            ObjLogin.BtnRegistro.Click += new EventHandler(Registro);
 
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
         }
 
+        private void Registro(object sender, EventArgs e)
+        {
+            ViewRegistro viewRegistroForm = new ViewRegistro();
+            viewRegistroForm.ShowDialog();
+
+        }
         private void DataAccess(object sender, EventArgs e)
         {
       
