@@ -343,6 +343,7 @@
             // 
             // timevcode
             // 
+            this.timevcode.Enabled = true;
             this.timevcode.Interval = 1000;
             this.timevcode.Tick += new System.EventHandler(this.timevcode_Tick);
             // 
@@ -390,6 +391,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnEnviar1;
-        private System.Windows.Forms.Timer timevcode;
+        public System.Windows.Forms.Timer timevcode;
     }
 }

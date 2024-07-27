@@ -18,23 +18,27 @@ namespace PTC.Controller.Registro
     {
         ViewRegistro ObjRegistro;
 
-        private int accion;
         private string rol;
 
-        public ControllerRegistro(ViewRegistro Vista, int accion)
+
+        private string verificationCode = string.Empty;
+        //private ViewRegistro viewRegistro;
+        public ControllerRegistro(ViewRegistro Vista)
         {
             ObjRegistro = Vista;
-            this.accion = accion;
             ObjRegistro.Load += new EventHandler(InitialCharge);
             ObjRegistro.btnEnviar.Click += new EventHandler(ConseguirCorreo);
             ObjRegistro.btnEnviar1.Click += new EventHandler(VerificarCodigoYRegistrar);
+            ObjRegistro.timevcode.Tick  += new EventHandler(Tick);
         }
+
+   
 
         public void InitialCharge(object sender, EventArgs e)
         {
             try
             {
-                DAOUsuarios objAdmin = new DAOUsuarios();
+                DAORegistro objAdmin = new DAORegistro();
 
                 DataSet dsRoles = objAdmin.ComboBoxRoles();
                 if (dsRoles != null && dsRoles.Tables.Contains("Roles"))
@@ -44,14 +48,13 @@ namespace PTC.Controller.Registro
                     ObjRegistro.cbRol.ValueMember = "roleID";
                     ObjRegistro.cbRol.DisplayMember = "nombreRol";
 
-                    if (accion == 1)
+                    
+                    DataRow[] rows = dtRoles.Select($"nombreRol = '{rol}'");
+                    if (rows.Length > 0)
                     {
-                        DataRow[] rows = dtRoles.Select($"nombreRol = '{rol}'");
-                        if (rows.Length > 0)
-                        {
-                            ObjRegistro.cbRol.Text = rows[0]["nombreRol"].ToString();
-                        }
+                        ObjRegistro.cbRol.Text = rows[0]["nombreRol"].ToString();
                     }
+                    
                 }
                 DataSet dsEspecialidad = objAdmin.ComboBoxEspecialidad();
                 if (dsEspecialidad != null && dsEspecialidad.Tables.Contains("Especialidad"))
@@ -78,24 +81,18 @@ namespace PTC.Controller.Registro
             }
         }
 
-        private string verificationCode = string.Empty;
+
+
         public void ConseguirCorreo(object sender, EventArgs e)
         {
-            string to, from, email, pass;
-            int vCode = 1000;
+            string to, from, pass;
 
-            vCode += 10;
-            if (vCode == 9999)
-            {
-                vCode = 1000;
-            }
-
-            verificationCode = vCode.ToString();
+            verificationCode = generateCode();
 
             to = ObjRegistro.txtEmail.Text;
             from = "clinicadentalosegueda01@gmail.com";
             pass = "aops ysuj qrda jfkm";
-            email = verificationCode;
+            //svgm hivi nkxl jceh
             MailMessage message = new MailMessage();
             message.To.Add(to);
             message.From = new MailAddress(from);
@@ -129,7 +126,6 @@ namespace PTC.Controller.Registro
                     DAORegistro daoRegistro = new DAORegistro();
 
                     daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
-                    daoRegistro.PersonalId = ObjRegistro.txtEmail.Text.Trim();
                     daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
                     daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
                     daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
@@ -158,6 +154,27 @@ namespace PTC.Controller.Registro
             {
                 MessageBox.Show("El código de verificación es incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Tick(object sender, EventArgs e)
+        {
+            int vCode = 1000;
+
+            vCode += 10;
+            if (vCode == 9999)
+            {
+                vCode = 1000;
+            }
+
+        }
+
+        public String generateCode()
+        {
+            Random r = new Random();
+            int randNum = r.Next(1000000);
+            string sixDigitNumber = randNum.ToString("D6");
+
+            return sixDigitNumber;
         }
 
     }
