@@ -106,8 +106,6 @@ namespace PTC.Modelo.DAORegistro
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = getConnection();
-                    //cmd.CommandText = "SELECT SCOPE_IDENTITY()";
-                    //int personalId = Convert.ToInt32(cmd.ExecuteScalar());
 
                     String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email)";
                     cmd.CommandText = query;
@@ -115,7 +113,6 @@ namespace PTC.Modelo.DAORegistro
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
                     cmd.Parameters.AddWithValue("@roleID", Rol);
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    //cmd.Parameters.AddWithValue("@personalId", personalId);
                     cmd.Parameters.AddWithValue("@especialidadId", EspecialidadId);
                     cmd.Parameters.AddWithValue("@telefono", Telefono);
                     cmd.Parameters.AddWithValue("@consultorioId", ConsultorioId);
@@ -128,7 +125,7 @@ namespace PTC.Modelo.DAORegistro
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error in RegistrarUsuario: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
                 return -1;
             }
             finally
