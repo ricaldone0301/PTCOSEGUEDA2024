@@ -75,10 +75,13 @@
     <Compile Include="Controller\Login\ControllerLogin.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
+    <Compile Include="Modelo\DAOAgregarPacientes\DAOAgregarPacientes.cs" />
     <Compile Include="Modelo\DAOCitas\DAOCitas.cs" />
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
     <Compile Include="Modelo\DAOUsuarios\DAOUsuarios.cs" />
     <Compile Include="Modelo\dbContext.cs" />
+    <Compile Include="Modelo\dbPacientes.cs" />
+    <Compile Include="Modelo\DTOAgregarPacientes\DTOAgregarPacientes.cs" />
     <Compile Include="Modelo\DTOCitas\DTOCitas.cs" />
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
@@ -89,6 +92,12 @@
     </Compile>
     <Compile Include="Vista\AgendarCita\ViewAgendarcita.Designer.cs">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\AgregarPaciente\VistaAgregarPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarPaciente\VistaAgregarPacientes.Designer.cs">
+      <DependentUpon>VistaAgregarPacientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\AgregarUsuario\ViewAgregarUsuario.cs">
       <SubType>Form</SubType>
@@ -150,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\AgendarCita\ViewAgendarcita.resx">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AgregarPaciente\VistaAgregarPacientes.resx">
+      <DependentUpon>VistaAgregarPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\AgregarUsuario\ViewAgregarUsuario.resx">
       <DependentUpon>ViewAgregarUsuario.cs</DependentUpon>
@@ -213,8 +225,6 @@
   <ItemGroup>
     <None Include="Resources\osegueda1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Vista\AgregarPaciente\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

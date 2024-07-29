@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTC.Modelo.DTOAgregarPacientes
 {
-    internal class DTOAgregarPacientes
+    class DTOAgregarPacientes : dbPacientes
     {
         private string nombrePaciente;
         private int edadPaciente;
@@ -51,6 +51,5 @@ namespace PTC.Modelo.DTOAgregarPacientes
         public bool Operacion { get => operacion; set => operacion = value; }
         public string TipoOperacion { get => tipoOperacion; set => tipoOperacion = value; }
         public string RecuperacionOperacion { get => recuperacionOperacion; set => recuperacionOperacion = value; }
-
     }
 }

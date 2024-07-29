@@ -1,46 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\",
+  "WorkspaceRootPath": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\vista\\cita\\viewcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\cita\\viewcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\villa\\onedrive\\escritorio\\dani\\ricaldone\\t\u00E9cnico\\ptc\\repositorio nuevo!!!\\ptcosegueda2024\\modelo\\dtoagregarpacientes\\dtoagregarpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtoagregarpacientes\\dtoagregarpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\vista\\usuarios\\viewusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\usuarios\\viewusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\villa\\onedrive\\escritorio\\dani\\ricaldone\\t\u00E9cnico\\ptc\\repositorio nuevo!!!\\ptcosegueda2024\\modelo\\daoagregarpacientes\\daoagregarpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daoagregarpacientes\\daoagregarpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\controller\\cita\\controlleradmincitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\cita\\controlleradmincitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\villa\\onedrive\\escritorio\\dani\\ricaldone\\t\u00E9cnico\\ptc\\repositorio nuevo!!!\\ptcosegueda2024\\modelo\\dbpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dbpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\villa\\onedrive\\escritorio\\dani\\ricaldone\\t\u00E9cnico\\ptc\\repositorio nuevo!!!\\ptcosegueda2024\\vista\\agregarpaciente\\vistaagregarpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarpaciente\\vistaagregarpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\vista\\pacientes\\viewpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\villa\\onedrive\\escritorio\\dani\\ricaldone\\t\u00E9cnico\\ptc\\repositorio nuevo!!!\\ptcosegueda2024\\vista\\cita\\viewcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\cita\\viewcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\vista\\usuarios\\viewusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\usuarios\\viewusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarusuario\\viewagregarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\vista\\pacientes\\viewpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\pacientes\\viewpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\controller\\cita\\controlleragendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\cita\\controlleragendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\vista\\agendarcita\\viewagendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agendarcita\\viewagendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\modelo\\daocitas\\daocitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daocitas\\daocitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\dental_osegueda_ptc2024\\modelo\\dtocitas\\dtocitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtocitas\\dtocitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,41 +46,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ControllerAdminCitas.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Controller\\Cita\\ControllerAdminCitas.cs",
-              "RelativeDocumentMoniker": "Controller\\Cita\\ControllerAdminCitas.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Controller\\Cita\\ControllerAdminCitas.cs",
-              "RelativeToolTip": "Controller\\Cita\\ControllerAdminCitas.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAiwFUAAAAbAAAA",
+              "Title": "dbPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Modelo\\dbPacientes.cs",
+              "RelativeDocumentMoniker": "Modelo\\dbPacientes.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Modelo\\dbPacientes.cs",
+              "RelativeToolTip": "Modelo\\dbPacientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T21:34:42.746Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-07-23T21:01:52.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ViewAgregarUsuario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
-              "RelativeDocumentMoniker": "Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs [Design]",
-              "RelativeToolTip": "Vista\\AgregarUsuario\\ViewAgregarUsuario.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "DAOAgregarPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Modelo\\DAOAgregarPacientes\\DAOAgregarPacientes.cs",
+              "RelativeDocumentMoniker": "Modelo\\DAOAgregarPacientes\\DAOAgregarPacientes.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Modelo\\DAOAgregarPacientes\\DAOAgregarPacientes.cs",
+              "RelativeToolTip": "Modelo\\DAOAgregarPacientes\\DAOAgregarPacientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T23:23:23.929Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-23T20:50:31.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DTOAgregarPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Modelo\\DTOAgregarPacientes\\DTOAgregarPacientes.cs",
+              "RelativeDocumentMoniker": "Modelo\\DTOAgregarPacientes\\DTOAgregarPacientes.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Modelo\\DTOAgregarPacientes\\DTOAgregarPacientes.cs",
+              "RelativeToolTip": "Modelo\\DTOAgregarPacientes\\DTOAgregarPacientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:50:17.089Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ViewAgregarUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
+              "Title": "VistaAgregarPacientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\AgregarPaciente\\VistaAgregarPacientes.cs",
+              "RelativeDocumentMoniker": "Vista\\AgregarPaciente\\VistaAgregarPacientes.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\AgregarPaciente\\VistaAgregarPacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\AgregarPaciente\\VistaAgregarPacientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:11:22.995Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewAgregarUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
               "RelativeDocumentMoniker": "Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\AgregarUsuario\\ViewAgregarUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T23:23:23.929Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewAgregarUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
+              "RelativeDocumentMoniker": "Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
               "RelativeToolTip": "Vista\\AgregarUsuario\\ViewAgregarUsuario.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAABMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -93,11 +126,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ViewCitas.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Cita\\ViewCitas.cs",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\Cita\\ViewCitas.cs",
               "RelativeDocumentMoniker": "Vista\\Cita\\ViewCitas.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Cita\\ViewCitas.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\Cita\\ViewCitas.cs",
               "RelativeToolTip": "Vista\\Cita\\ViewCitas.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAjwBMAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -106,79 +139,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ViewUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Usuarios\\ViewUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\Usuarios\\ViewUsuarios.cs",
               "RelativeDocumentMoniker": "Vista\\Usuarios\\ViewUsuarios.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Usuarios\\ViewUsuarios.cs",
+              "ToolTip": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\Usuarios\\ViewUsuarios.cs",
               "RelativeToolTip": "Vista\\Usuarios\\ViewUsuarios.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAjwBMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T22:53:36.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ViewPacientes.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Pacientes\\ViewPacientes.cs",
-              "RelativeDocumentMoniker": "Vista\\Pacientes\\ViewPacientes.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Pacientes\\ViewPacientes.cs [Design]",
-              "RelativeToolTip": "Vista\\Pacientes\\ViewPacientes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T22:53:28.353Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ControllerAgendarCita.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Controller\\Cita\\ControllerAgendarCita.cs",
-              "RelativeDocumentMoniker": "Controller\\Cita\\ControllerAgendarCita.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Controller\\Cita\\ControllerAgendarCita.cs",
-              "RelativeToolTip": "Controller\\Cita\\ControllerAgendarCita.cs",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAAABEAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T18:30:15.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T22:53:36.183Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "DAOCitas.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Modelo\\DAOCitas\\DAOCitas.cs",
-              "RelativeDocumentMoniker": "Modelo\\DAOCitas\\DAOCitas.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Modelo\\DAOCitas\\DAOCitas.cs",
-              "RelativeToolTip": "Modelo\\DAOCitas\\DAOCitas.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAAAGcAAABCAAAA",
+              "Title": "ViewPacientes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\villa\\OneDrive\\Escritorio\\Dani\\Ricaldone\\T\u00E9cnico\\PTC\\repositorio nuevo!!!\\PTCOSEGUEDA2024\\Vista\\Pacientes\\ViewPacientes.cs",
+              "RelativeDocumentMoniker": "Vista\\Pacientes\\ViewPacientes.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Pacientes\\ViewPacientes.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\Pacientes\\ViewPacientes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T18:15:29.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DTOCitas.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Modelo\\DTOCitas\\DTOCitas.cs",
-              "RelativeDocumentMoniker": "Modelo\\DTOCitas\\DTOCitas.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Modelo\\DTOCitas\\DTOCitas.cs",
-              "RelativeToolTip": "Modelo\\DTOCitas\\DTOCitas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T18:15:25.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ViewAgendarcita.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\AgendarCita\\ViewAgendarcita.cs",
-              "RelativeDocumentMoniker": "Vista\\AgendarCita\\ViewAgendarcita.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\Dental_Osegueda_PTC2024\\Vista\\AgendarCita\\ViewAgendarcita.cs [Design]",
-              "RelativeToolTip": "Vista\\AgendarCita\\ViewAgendarcita.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T20:52:53.96Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-22T22:53:28.353Z"
             }
           ]
         }
