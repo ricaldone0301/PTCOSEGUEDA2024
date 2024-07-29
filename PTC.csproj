@@ -71,17 +71,20 @@
   <ItemGroup>
     <Compile Include="Controller\Cita\ControllerAdminCitas.cs" />
     <Compile Include="Controller\Cita\ControllerAgendarCita.cs" />
+    <Compile Include="Controller\Contrasena\ControllerContrasena.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />
     <Compile Include="Controller\Registro\ControllerRegistro.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
     <Compile Include="Modelo\DAOCitas\DAOCitas.cs" />
+    <Compile Include="Modelo\DAOContrasena\DAOContrasena.cs" />
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
     <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
     <Compile Include="Modelo\DAOUsuarios\DAOUsuarios.cs" />
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTOCitas\DTOCitas.cs" />
+    <Compile Include="Modelo\DTOContrasena\DTOContrasena.cs" />
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
@@ -116,6 +119,12 @@
     </Compile>
     <Compile Include="Vista\Dashboard\ViewDashboard.Designer.cs">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.Designer.cs">
+      <DependentUpon>ViewOlvidoContrasena.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Registro\ViewRegistro.cs">
       <SubType>Form</SubType>
@@ -175,6 +184,9 @@
     <EmbeddedResource Include="Vista\Login\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.resx">
+      <DependentUpon>ViewOlvidoContrasena.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pacientes\ViewPacientes.resx">
       <DependentUpon>ViewPacientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,9 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\reload.ico" />
-    <Content Include="Resources\reload.png" />
     <Content Include="Resources\trashcan.ico" />
-    <Content Include="Resources\trashcan.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blanco.png" />
@@ -215,9 +225,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\output-onlinepngtools %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot 2024-06-24 092023.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\osegueda.png" />
