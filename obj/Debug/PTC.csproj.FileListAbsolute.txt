@@ -100,3 +100,4 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.Co
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.Up2Date
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.exe
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.pdb
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.OlvidoContrasena.ViewOlvidoContrasena.resources

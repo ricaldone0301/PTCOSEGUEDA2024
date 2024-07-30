@@ -35,7 +35,7 @@
             this.ContraVisible = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnOlvido = new System.Windows.Forms.LinkLabel();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.BtnRegistro = new System.Windows.Forms.LinkLabel();
@@ -117,19 +117,19 @@
             this.TxtUsuario.TabIndex = 13;
             this.TxtUsuario.Text = "Usuario";
             // 
-            // linkLabel1
+            // btnOlvido
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.Window;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.White;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.linkLabel1.Location = new System.Drawing.Point(599, 511);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(147, 16);
-            this.linkLabel1.TabIndex = 16;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Olvido su contraseña?";
+            this.btnOlvido.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.btnOlvido.AutoSize = true;
+            this.btnOlvido.BackColor = System.Drawing.Color.White;
+            this.btnOlvido.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnOlvido.Location = new System.Drawing.Point(599, 511);
+            this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnOlvido.Name = "btnOlvido";
+            this.btnOlvido.Size = new System.Drawing.Size(147, 16);
+            this.btnOlvido.TabIndex = 16;
+            this.btnOlvido.TabStop = true;
+            this.btnOlvido.Text = "¿Olvido su contraseña?";
             // 
             // TxtContra
             // 
@@ -185,7 +185,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.ContraHide);
             this.Controls.Add(this.ContraVisible);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.btnOlvido);
             this.Controls.Add(this.TxtContra);
             this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -210,9 +210,9 @@
         public System.Windows.Forms.Button ContraVisible;
         public System.Windows.Forms.Button ContraHide;
         public System.Windows.Forms.TextBox TxtUsuario;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.TextBox TxtContra;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         public System.Windows.Forms.LinkLabel BtnRegistro;
+        public System.Windows.Forms.LinkLabel btnOlvido;
     }
 }

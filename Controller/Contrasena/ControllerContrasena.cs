@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTC.Vista.OlvidoContrasena;
 using PTC.Modelo.DAOContrasena;
+using PTC.Modelo.DTORegistro;
 
 namespace PTC.Controller
 {
@@ -27,7 +28,7 @@ namespace PTC.Controller
         {
             ObjContrasena = Vista;
             ObjContrasena.btnEnviar.Click += new EventHandler(ConseguirCorreo);
-            ObjContrasena.btnEnviar1.Click += new EventHandler(VerificarCodigoYRegistrar);
+            ObjContrasena.btnEnviar1.Click += new EventHandler(ActualizarContrasena);
             ObjContrasena.timevcode.Tick += new EventHandler(Tick);
         }
 
@@ -62,35 +63,33 @@ namespace PTC.Controller
             }
         }
 
-        public void VerificarCodigoYRegistrar(object sender, EventArgs e)
+        public void ActualizarContrasena(object sender, EventArgs e)
         {
             string inputCode = ObjContrasena.txtConfirm.Text.Trim();
-            string email = ObjContrasena.txtEmail.Text.Trim();
 
             if (inputCode == verificationCode)
             {
                 try
                 {
-                    DAOContrasena daoContrasena = new DAOContrasena
-                    {
-                        Contrasena = ObjContrasena.txtContrasena.Text.Trim(),
-                        Email = email
-                    };
+                    DAOContrasena dAOContrasena = new DAOContrasena();
 
-                    int valorRetornado = daoContrasena.ActualizarContra();
+                    dAOContrasena.Contrasena = ObjContrasena.txtContrasena.Text.Trim();
+                    dAOContrasena.Email = ObjContrasena.txtEmail.Text.Trim();
+
+                    int valorRetornado = dAOContrasena.ActualizarContra();
 
                     if (valorRetornado == 1)
                     {
-                        MessageBox.Show("Su contraseña ha sido actualizada", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Su contraseña no pudo ser actualizada", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al actualizar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
