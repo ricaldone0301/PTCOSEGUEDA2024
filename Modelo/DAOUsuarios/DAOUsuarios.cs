@@ -99,7 +99,6 @@ namespace PTC.Modelo.DAOUsuarios
         }
 
 
-
         public int RegistrarUsuario()
             {
             try
@@ -110,7 +109,7 @@ namespace PTC.Modelo.DAOUsuarios
                     //cmd.CommandText = "SELECT SCOPE_IDENTITY()";
                     //int personalId = Convert.ToInt32(cmd.ExecuteScalar());
 
-                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId)";
+                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@usuario", Usuario);
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
@@ -120,6 +119,7 @@ namespace PTC.Modelo.DAOUsuarios
                     cmd.Parameters.AddWithValue("@especialidadId", EspecialidadId);
                     cmd.Parameters.AddWithValue("@telefono", Telefono);
                     cmd.Parameters.AddWithValue("@consultorioId", ConsultorioId);
+                    cmd.Parameters.AddWithValue("@email", Email);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -176,8 +176,9 @@ namespace PTC.Modelo.DAOUsuarios
                                 "consultorioID = @param4," +
                                 "usuarioPersonal = @param5, " +
                                 "contraseñaPersonal = @param6," +
-                                "roleID = @param7 " +
-                                "WHERE personalID = @param8";
+                                "roleID = @param7," +
+                                "email = @param8 " +
+                                "WHERE personalID = @param9";
               
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param1", Nombre);
@@ -187,7 +188,8 @@ namespace PTC.Modelo.DAOUsuarios
                 cmd.Parameters.AddWithValue("param5", Usuario);
                 cmd.Parameters.AddWithValue("param6", Contrasena);
                 cmd.Parameters.AddWithValue("param7", Rol);
-                cmd.Parameters.AddWithValue("param8", PersonalId);
+                cmd.Parameters.AddWithValue("param8", Email);
+                cmd.Parameters.AddWithValue("param9", PersonalId);
 
                 int respuesta = cmd.ExecuteNonQuery();               
                 return respuesta;
