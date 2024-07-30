@@ -1,5 +1,5 @@
 ﻿using PTC.Vista.Dashboard;
-using PTC.Vista.Pacientes;
+//using PTC.Vista.Pacientes;
 using PTC.Vista.Calendario;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.AgendarCita;
@@ -35,7 +35,7 @@ namespace PTC.Controller.Dasboard
 
         private void Pacientes(object sender, EventArgs e)
         {
-            AbrirFormulario<ViewPacientes>();
+            AbrirFormulario<ViewUsuarios>();
         }
 
         private void Citas(object sender, EventArgs e)
