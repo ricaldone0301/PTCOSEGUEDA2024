@@ -10,9 +10,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace PTC.Modelo.DAOContrasena
 {
-    internal class DAOContrasena : DtoContrasena
+    class DAOContrasena : DtoContrasena
     {
-
+        readonly SqlCommand Command = new SqlCommand();
         public int ActualizarContra()
         {
             try

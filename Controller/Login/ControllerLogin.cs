@@ -54,7 +54,7 @@ namespace PTC.Controller.Login
             CommonClass common = new CommonClass();
             DAOData.Usuario = ObjLogin.TxtUsuario.Text;
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.TxtContra.Text);
-            DAOData.Contraseña = ObjLogin.TxtContra.Text;
+            DAOData.Contraseña = cadenaencriptada;
 
             int answer = DAOData.Login();
 
