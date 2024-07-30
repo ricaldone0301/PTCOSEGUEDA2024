@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PTC.Vista.Trataminetos
+namespace PTC.Vista.Padecimientos
 {
-    public partial class ViewTratamientos : Form
+    public partial class ViewPadecimientos : Form
     {
-        public ViewTratamientos()
+        public ViewPadecimientos()
         {
             InitializeComponent();
-        }
-
-        private void ViewTratamientos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

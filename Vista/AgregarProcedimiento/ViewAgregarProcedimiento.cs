@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PTC.Vista.Trataminetos
+namespace PTC.Vista.AgregarProcedimiento
 {
-    public partial class ViewTratamientos : Form
+    public partial class ViewAgregarProcedimiento : Form
     {
-        public ViewTratamientos()
+        public ViewAgregarProcedimiento()
         {
             InitializeComponent();
-        }
-
-        private void ViewTratamientos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
