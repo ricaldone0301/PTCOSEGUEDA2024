@@ -87,6 +87,7 @@
     <Compile Include="Modelo\DTOCitas\DTOCitas.cs" />
     <Compile Include="Modelo\DTOContrasena\DTOContrasena.cs" />
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
+    <Compile Include="Modelo\DTOProcedimiento\DTOProcedimiento.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
     <Compile Include="Program.cs" />
@@ -96,6 +97,12 @@
     </Compile>
     <Compile Include="Vista\AgendarCita\ViewAgendarcita.Designer.cs">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\AgregarProcedimiento\ViewAgregarProcedimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarProcedimiento\ViewAgregarProcedimiento.Designer.cs">
+      <DependentUpon>ViewAgregarProcedimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\AgregarUsuario\ViewAgregarUsuario.cs">
       <SubType>Form</SubType>
@@ -127,6 +134,12 @@
     <Compile Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.Designer.cs">
       <DependentUpon>ViewOlvidoContrasena.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Procedimientos\ViewProcedimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Procedimientos\ViewProcedimiento.Designer.cs">
+      <DependentUpon>ViewProcedimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Registro\ViewRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,12 +164,6 @@
     <Compile Include="Vista\Login\ViewLogin.Designer.cs">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Pacientes\ViewPacientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Pacientes\ViewPacientes.Designer.cs">
-      <DependentUpon>ViewPacientes.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -169,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\AgendarCita\ViewAgendarcita.resx">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AgregarProcedimiento\ViewAgregarProcedimiento.resx">
+      <DependentUpon>ViewAgregarProcedimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\AgregarUsuario\ViewAgregarUsuario.resx">
       <DependentUpon>ViewAgregarUsuario.cs</DependentUpon>
@@ -188,8 +198,8 @@
     <EmbeddedResource Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.resx">
       <DependentUpon>ViewOlvidoContrasena.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Pacientes\ViewPacientes.resx">
-      <DependentUpon>ViewPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Procedimientos\ViewProcedimiento.resx">
+      <DependentUpon>ViewProcedimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Registro\ViewRegistro.resx">
       <DependentUpon>ViewRegistro.cs</DependentUpon>
@@ -234,6 +244,7 @@
     <None Include="Resources\osegueda1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Modelo\DAOProcedimiento\" />
     <Folder Include="Vista\AgregarPaciente\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

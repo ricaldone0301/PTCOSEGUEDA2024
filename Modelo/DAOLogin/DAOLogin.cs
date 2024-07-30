@@ -16,24 +16,34 @@ namespace PTC.Modelo.DAOLogin
 {
     public class DAOLogin : DtoLogin
     {
-        //internal string usuarioPersonal;
-        //internal string contraseñaPersonal;
+        
         SqlCommand Command = new SqlCommand();
-        public int Login()
+        public bool Login() 
         {
             try
             {
+
                 Command.Connection = getConnection();
-                Command.CommandText = "sp_Login";
-                Command.CommandType = CommandType.StoredProcedure;
-                Command.Parameters.AddWithValue("@username", Usuario);
-                Command.Parameters.AddWithValue("@password", Contraseña);
-                return Command.ExecuteScalar().ToString() == Usuario ? 1 : 0;
-            }
+                string query = "SELECT * FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("username", Usuario);
+                cmd.Parameters.AddWithValue("password", Contraseña);
+                SqlDataReader rd = cmd.ExecuteReader();
+                /*while (rd.Read())
+                {
+                    SessionVar.Username = rd.GetString(0);
+                    SessionVar.Password = rd.GetString(1);
+                    SessionVar.RoleId = rd.GetInt32(3);
+                    SessionVar.Access = rd.GetString(4);
+                    SessionVar.FullName = rd.GetString(5);
+               }*/
+                    return rd.HasRows;
+
+                }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return -1;
+                return false;
             }
             finally { getConnection().Close(); }
         }

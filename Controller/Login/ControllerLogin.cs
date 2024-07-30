@@ -3,7 +3,7 @@ using PTC.Modelo.DAOLogin;
 using PTC.Vista.Dashboard;
 using PTC.Vista.Login;
 using PTC.Vista.OlvidoContrasena;
-using PTC.Vista.Pacientes;
+//using PTC.Vista.Pacientes;
 using PTC.Vista.Registro;
 using System;
 using System.Collections.Generic;
@@ -56,9 +56,9 @@ namespace PTC.Controller.Login
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.TxtContra.Text);
             DAOData.Contraseña = cadenaencriptada;
 
-            int answer = DAOData.Login();
+            bool answer = DAOData.Login();
 
-            if (answer == 1)
+            if (answer == true)
             {
                 ViewDashboard viewDashboard = new ViewDashboard();
                 viewDashboard.Show();

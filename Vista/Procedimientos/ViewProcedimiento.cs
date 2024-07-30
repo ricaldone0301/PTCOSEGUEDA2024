@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PTC.Vista.Padecimientos
 {
-    public partial class ViewPadecimientos : Form
+    public partial class ViewProcedimiento : Form
     {
-        public ViewPadecimientos()
+        public ViewProcedimiento()
         {
             InitializeComponent();
         }
