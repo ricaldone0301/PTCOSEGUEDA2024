@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using PTC.Vista.OlvidoContrasena;
 using PTC.Modelo.DAOContrasena;
 using PTC.Modelo.DTORegistro;
+using PTC.Controller.Common;
 
 namespace PTC.Controller
 {
@@ -72,8 +73,9 @@ namespace PTC.Controller
                 try
                 {
                     DAOContrasena dAOContrasena = new DAOContrasena();
-
-                    dAOContrasena.Contrasena = ObjContrasena.txtContrasena.Text.Trim();
+                    CommonClass common = new CommonClass();
+                    string cadenaencriptada = common.ComputeSha256Hash(ObjContrasena.txtContrasena.Text);
+                    dAOContrasena.Contrasena = cadenaencriptada;
                     dAOContrasena.Email = ObjContrasena.txtEmail.Text.Trim();
 
                     int valorRetornado = dAOContrasena.ActualizarContra();

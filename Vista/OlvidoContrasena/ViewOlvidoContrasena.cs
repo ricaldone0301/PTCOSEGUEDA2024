@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PTC.Controller;
+using PTC.Controller.Registro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace PTC.Vista.OlvidoContrasena
         public ViewOlvidoContrasena()
         {
             InitializeComponent();
+            ControllerContrasena control = new ControllerContrasena(this);
         }
     }
 }

@@ -75,12 +75,15 @@
     <Compile Include="Controller\Contrasena\ControllerContrasena.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />
+    <Compile Include="Controller\Procedimiento\ControllerAdminProcedimientos.cs" />
+    <Compile Include="Controller\Procedimiento\ControllerAgregarProcedimientos.cs" />
     <Compile Include="Controller\Registro\ControllerRegistro.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
     <Compile Include="Modelo\DAOCitas\DAOCitas.cs" />
     <Compile Include="Modelo\DAOContrasena\DAOContrasena.cs" />
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
+    <Compile Include="Modelo\DAOProcedimiento\DAOProcedimiento.cs" />
     <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
     <Compile Include="Modelo\DAOUsuarios\DAOUsuarios.cs" />
     <Compile Include="Modelo\dbContext.cs" />
@@ -244,7 +247,6 @@
     <None Include="Resources\osegueda1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modelo\DAOProcedimiento\" />
     <Folder Include="Vista\AgregarPaciente\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

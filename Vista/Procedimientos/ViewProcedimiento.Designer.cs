@@ -32,9 +32,9 @@
             this.cmsEliminar = new System.Windows.Forms.Button();
             this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,21 +77,21 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // dgvCitas
+            // dgvProcedimientos
             // 
-            this.dgvCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dgvCitas.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCitas.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Location = new System.Drawing.Point(90, 119);
-            this.dgvCitas.Name = "dgvCitas";
-            this.dgvCitas.ReadOnly = true;
-            this.dgvCitas.RowHeadersWidth = 51;
-            this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(1070, 589);
-            this.dgvCitas.TabIndex = 7;
+            this.dgvProcedimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProcedimientos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvProcedimientos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvProcedimientos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProcedimientos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvProcedimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProcedimientos.Location = new System.Drawing.Point(90, 119);
+            this.dgvProcedimientos.Name = "dgvProcedimientos";
+            this.dgvProcedimientos.ReadOnly = true;
+            this.dgvProcedimientos.RowHeadersWidth = 51;
+            this.dgvProcedimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProcedimientos.Size = new System.Drawing.Size(1070, 589);
+            this.dgvProcedimientos.TabIndex = 7;
             // 
             // ViewProcedimiento
             // 
@@ -99,13 +99,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 828);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvCitas);
+            this.Controls.Add(this.dgvProcedimientos);
             this.MaximumSize = new System.Drawing.Size(1701, 875);
             this.MinimumSize = new System.Drawing.Size(1701, 875);
             this.Name = "ViewProcedimiento";
             this.Text = "ViewPadecimientos";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -116,6 +116,6 @@
         public System.Windows.Forms.Button cmsEliminar;
         public System.Windows.Forms.Button cmsActualizar;
         public System.Windows.Forms.Button btnNuevo;
-        public System.Windows.Forms.DataGridView dgvCitas;
+        public System.Windows.Forms.DataGridView dgvProcedimientos;
     }
 }
