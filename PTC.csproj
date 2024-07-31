@@ -72,6 +72,7 @@
     <Compile Include="Controller\Cita\ControllerAdminCitas.cs" />
     <Compile Include="Controller\Cita\ControllerAgendarCita.cs" />
     <Compile Include="Controller\Common\CommonClass.cs" />
+    <Compile Include="Controller\Common\SessionVar.cs" />
     <Compile Include="Controller\Contrasena\ControllerContrasena.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />

@@ -14,6 +14,9 @@ using PTC.Vista.Cita;
 using PTC.Vista.Login;
 using PTC.Vista.Doctores;
 using PTC.Vista.Padecimientos;
+using PTC.Modelo.DTOLogin;
+using PTC.Modelo.DTOContrasena;
+using PTC.Controller.Common;
 
 namespace PTC.Controller.Dasboard
 {
@@ -26,6 +29,7 @@ namespace PTC.Controller.Dasboard
         public ControllerDashboard(ViewDashboard View)
         {
             ObjDashboard = View;
+            View.Load += new EventHandler(EventosIniciales);
             ObjDashboard.btnCerrarSesion.Click += new EventHandler(CerrarSesion);
             ObjDashboard.btnPacientes.Click += new EventHandler(Pacientes);
             ObjDashboard.btnCalendario.Click += new EventHandler(Calendario);
@@ -70,6 +74,28 @@ namespace PTC.Controller.Dasboard
         {
             AbrirFormulario<ViewUsuarios>();
 
+        }
+
+        void EventosIniciales(object sender, EventArgs e)
+        {
+            Acceso();
+        }
+
+
+        public void Acceso()
+        {
+            switch (SessionVar.Access)
+            {
+                case "Asistente":
+                    break;
+                case "Secretario":
+                    break;
+                case "Doctor":
+                    ObjDashboard.btnUsuarios.Visible = false;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
