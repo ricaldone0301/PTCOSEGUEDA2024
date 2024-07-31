@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using PTC.Vista.Cita;
 using PTC.Vista.Login;
 using PTC.Vista.Doctores;
+using PTC.Vista.Padecimientos;
 
 namespace PTC.Controller.Dasboard
 {
@@ -31,11 +32,17 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.btnCitas.Click += new EventHandler(Citas);
             ObjDashboard.btnInicio.Click += new EventHandler(Inicio);
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
+            ObjDashboard.btnProcedimientos.Click += new EventHandler(Procedimientos);
         }
 
         private void Pacientes(object sender, EventArgs e)
         {
             AbrirFormulario<ViewUsuarios>();
+        }
+
+        private void Procedimientos(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewProcedimiento>();
         }
 
         private void Citas(object sender, EventArgs e)

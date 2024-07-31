@@ -32,6 +32,7 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -44,10 +45,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnPadecimientos = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +83,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ok.Controls.Add(this.btnPadecimientos);
+            this.ok.Controls.Add(this.btnProcedimientos);
             this.ok.Controls.Add(this.btnUsuarios);
             this.ok.Controls.Add(this.pictureBox2);
             this.ok.Controls.Add(this.btnCerrarSesion);
@@ -106,6 +106,32 @@
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ok.Size = new System.Drawing.Size(267, 884);
             this.ok.TabIndex = 20;
+            // 
+            // btnProcedimientos
+            // 
+            this.btnProcedimientos.ActiveBorderThickness = 1;
+            this.btnProcedimientos.ActiveCornerRadius = 20;
+            this.btnProcedimientos.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.BackColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProcedimientos.BackgroundImage")));
+            this.btnProcedimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProcedimientos.ButtonText = "PADECIMIENTOS";
+            this.btnProcedimientos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProcedimientos.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcedimientos.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnProcedimientos.IdleBorderThickness = 1;
+            this.btnProcedimientos.IdleCornerRadius = 20;
+            this.btnProcedimientos.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.IdleForecolor = System.Drawing.Color.MidnightBlue;
+            this.btnProcedimientos.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.Location = new System.Drawing.Point(49, 230);
+            this.btnProcedimientos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnProcedimientos.Name = "btnProcedimientos";
+            this.btnProcedimientos.Size = new System.Drawing.Size(181, 46);
+            this.btnProcedimientos.TabIndex = 11;
+            this.btnProcedimientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUsuarios
             // 
@@ -335,6 +361,13 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1433, 886);
             this.PanelContenedor.TabIndex = 32;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.monthCalendar1.Location = new System.Drawing.Point(388, 265);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 31;
+            // 
             // PanelPadre
             // 
             this.PanelPadre.Controls.Add(this.ok);
@@ -344,39 +377,6 @@
             this.PanelPadre.Name = "PanelPadre";
             this.PanelPadre.Size = new System.Drawing.Size(1705, 887);
             this.PanelPadre.TabIndex = 33;
-            // 
-            // btnPadecimientos
-            // 
-            this.btnPadecimientos.ActiveBorderThickness = 1;
-            this.btnPadecimientos.ActiveCornerRadius = 20;
-            this.btnPadecimientos.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.btnPadecimientos.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btnPadecimientos.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.btnPadecimientos.BackColor = System.Drawing.Color.Transparent;
-            this.btnPadecimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPadecimientos.BackgroundImage")));
-            this.btnPadecimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPadecimientos.ButtonText = "PADECIMIENTOS";
-            this.btnPadecimientos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPadecimientos.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPadecimientos.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnPadecimientos.IdleBorderThickness = 1;
-            this.btnPadecimientos.IdleCornerRadius = 20;
-            this.btnPadecimientos.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btnPadecimientos.IdleForecolor = System.Drawing.Color.MidnightBlue;
-            this.btnPadecimientos.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnPadecimientos.Location = new System.Drawing.Point(49, 230);
-            this.btnPadecimientos.Margin = new System.Windows.Forms.Padding(5);
-            this.btnPadecimientos.Name = "btnPadecimientos";
-            this.btnPadecimientos.Size = new System.Drawing.Size(181, 46);
-            this.btnPadecimientos.TabIndex = 11;
-            this.btnPadecimientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.monthCalendar1.Location = new System.Drawing.Point(388, 265);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 31;
             // 
             // ViewDashboard
             // 
@@ -423,7 +423,7 @@
         public System.Windows.Forms.Panel PanelPadre;
         public Bunifu.Framework.UI.BunifuThinButton2 btnUsuarios;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnPadecimientos;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

@@ -21,10 +21,11 @@ namespace PTC.Modelo.DAOProcedimiento
                 {
                     cmd.Connection = getConnection();
 
-                    String query = "INSERT INTO Procedimientos (nombreProcedimiento, precioProcedimiento) VALUES (@nombreProcedimiento, @precioProcedimiento";
+                    String query = "INSERT INTO Procedimientos (nombreProcedimiento, precioProcedimiento, descProcedimiento) VALUES (@nombreProcedimiento, @precioProcedimiento, @descProcedimiento";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@nombreProcedimiento", NombreProcedimiento);
                     cmd.Parameters.AddWithValue("@precioProcedimiento", PrecioProcedimiento);
+                    cmd.Parameters.AddWithValue("@descProcedimiento", DescProcedimiento);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -69,7 +70,7 @@ namespace PTC.Modelo.DAOProcedimiento
             }
         }
 
-        public int ActualizarUsuario()
+        public int ActualizarProcedimiento()
         {
             try
             {
@@ -77,12 +78,14 @@ namespace PTC.Modelo.DAOProcedimiento
                 string query = "UPDATE Procedimientos SET " +
                                 "nombreProcedimiento = @param2, " +
                                 "precioProcedimiento = @param3, " +
+                                "descProcedimiento = @param4, " +
                                 "WHERE procedimientoID = @param1";
 
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param1", ProcedimientoID);
                 cmd.Parameters.AddWithValue("param2", NombreProcedimiento);
                 cmd.Parameters.AddWithValue("param3", PrecioProcedimiento);
+                cmd.Parameters.AddWithValue("param4", DescProcedimiento);
 
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
@@ -97,7 +100,7 @@ namespace PTC.Modelo.DAOProcedimiento
             }
         }
 
-        public int EliminarUsuario()
+        public int EliminarProcedimiento()
         {
             try
             {

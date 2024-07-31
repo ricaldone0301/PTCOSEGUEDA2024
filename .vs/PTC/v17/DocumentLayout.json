@@ -3,88 +3,112 @@
   "WorkspaceRootPath": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\modelo\\daocontrasena\\daocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\controller\\procedimiento\\controlleragregarprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\procedimiento\\controlleragregarprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\procedimiento\\controlleradminprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\procedimiento\\controlleradminprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\cita\\controlleradmincitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\cita\\controlleradmincitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\cita\\viewcitas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\cita\\viewcitas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\agregarprocedimiento\\viewagregarprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarprocedimiento\\viewagregarprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\agregarprocedimiento\\viewagregarprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarprocedimiento\\viewagregarprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\common\\commonclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\common\\commonclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\contrasena\\controllercontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\contrasena\\controllercontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\dashboard\\viewdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\dashboard\\viewdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\daoprocedimiento\\daoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daoprocedimiento\\daoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\dtoprocedimiento\\dtoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtoprocedimiento\\dtoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\daocontrasena\\daocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daocontrasena\\daocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\registro\\controllerregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\registro\\controllerregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\procedimientos\\viewprocedimiento.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\procedimientos\\viewprocedimiento.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\procedimientos\\viewprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\procedimientos\\viewprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\daousuarios\\daousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daousuarios\\daousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\controller\\contrasena\\controllercontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\contrasena\\controllercontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\dasboard\\controllerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\dasboard\\controllerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\controller\\registro\\controllerregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\registro\\controllerregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\cita\\controlleragendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\cita\\controlleragendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\modelo\\daoprocedimiento\\daoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daoprocedimiento\\daoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\cita\\viewcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\cita\\viewcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\modelo\\dtoprocedimiento\\dtoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtoprocedimiento\\dtoprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\olvidocontrasena\\viewolvidocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\olvidocontrasena\\viewolvidocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\registro\\viewregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\registro\\viewregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\controller\\login\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\login\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\login\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\vista\\agregarprocedimiento\\viewagregarprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agregarprocedimiento\\viewagregarprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\daologin\\daologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\daologin\\daologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\usuarios\\controlleragregarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\usuarios\\controlleragregarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\usuarios\\controlleradminusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\usuarios\\controlleradminusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\vista\\olvidocontrasena\\viewolvidocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\olvidocontrasena\\viewolvidocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\modelo\\dtoregistro\\dtoregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtoregistro\\dtoregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\modelo\\dtologin\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtologin\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\controller\\common\\commonclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\common\\commonclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\agendarcita\\viewagendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\agendarcita\\viewagendarcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\vista\\procedimientos\\viewprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\procedimientos\\viewprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\dtousuarios\\dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtousuarios\\dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|c:\\users\\natal\\onedrive\\documents\\github\\ptcosegueda2024\\controller\\dasboard\\controllerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\dasboard\\controllerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\usuarios\\controlleradminusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\usuarios\\controlleradminusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\controller\\usuarios\\controlleragregarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:controller\\usuarios\\controlleragregarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\olvidocontrasena\\viewolvidocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\olvidocontrasena\\viewolvidocontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\dtoregistro\\dtoregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtoregistro\\dtoregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\modelo\\dtologin\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:modelo\\dtologin\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\vista\\procedimientos\\viewprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BAC691D-E8C4-46D4-92BF-CDCB3D4F12A4}|PTC.csproj|solutionrelative:vista\\procedimientos\\viewprocedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,32 +118,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ViewOlvidoContrasena.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs",
-              "RelativeDocumentMoniker": "Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs [Design]",
-              "RelativeToolTip": "Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "ViewAgregarProcedimiento.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\AgregarProcedimiento\\ViewAgregarProcedimiento.cs",
+              "RelativeDocumentMoniker": "Vista\\AgregarProcedimiento\\ViewAgregarProcedimiento.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\AgregarProcedimiento\\ViewAgregarProcedimiento.cs",
+              "RelativeToolTip": "Vista\\AgregarProcedimiento\\ViewAgregarProcedimiento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T01:35:21.955Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DAOUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOUsuarios\\DAOUsuarios.cs",
-              "RelativeDocumentMoniker": "Modelo\\DAOUsuarios\\DAOUsuarios.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOUsuarios\\DAOUsuarios.cs",
-              "RelativeToolTip": "Modelo\\DAOUsuarios\\DAOUsuarios.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T21:47:57.481Z",
+              "WhenOpened": "2024-07-31T03:24:58.578Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -138,19 +149,122 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ControllerAgregarProcedimientos.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Procedimiento\\ControllerAgregarProcedimientos.cs",
+              "RelativeDocumentMoniker": "Controller\\Procedimiento\\ControllerAgregarProcedimientos.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Procedimiento\\ControllerAgregarProcedimientos.cs*",
+              "RelativeToolTip": "Controller\\Procedimiento\\ControllerAgregarProcedimientos.cs*",
+              "ViewState": "AQIAACoAAAAAAAAAAAD4vzMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T03:30:17.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewCitas.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Cita\\ViewCitas.Designer.cs",
+              "RelativeDocumentMoniker": "Vista\\Cita\\ViewCitas.Designer.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Cita\\ViewCitas.Designer.cs",
+              "RelativeToolTip": "Vista\\Cita\\ViewCitas.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T03:21:45.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ControllerAdminCitas.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Cita\\ControllerAdminCitas.cs",
+              "RelativeDocumentMoniker": "Controller\\Cita\\ControllerAdminCitas.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Cita\\ControllerAdminCitas.cs",
+              "RelativeToolTip": "Controller\\Cita\\ControllerAdminCitas.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAACwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T03:21:40.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DAOUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOUsuarios\\DAOUsuarios.cs",
+              "RelativeDocumentMoniker": "Modelo\\DAOUsuarios\\DAOUsuarios.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOUsuarios\\DAOUsuarios.cs",
+              "RelativeToolTip": "Modelo\\DAOUsuarios\\DAOUsuarios.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAcwHwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T21:47:57.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ViewProcedimiento.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Procedimientos\\ViewProcedimiento.cs",
+              "RelativeDocumentMoniker": "Vista\\Procedimientos\\ViewProcedimiento.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Procedimientos\\ViewProcedimiento.cs",
+              "RelativeToolTip": "Vista\\Procedimientos\\ViewProcedimiento.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T02:51:06.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViewProcedimiento.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Procedimientos\\ViewProcedimiento.Designer.cs",
+              "RelativeDocumentMoniker": "Vista\\Procedimientos\\ViewProcedimiento.Designer.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Procedimientos\\ViewProcedimiento.Designer.cs",
+              "RelativeToolTip": "Vista\\Procedimientos\\ViewProcedimiento.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T02:51:02.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControllerAdminProcedimientos.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Procedimiento\\ControllerAdminProcedimientos.cs",
+              "RelativeDocumentMoniker": "Controller\\Procedimiento\\ControllerAdminProcedimientos.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Procedimiento\\ControllerAdminProcedimientos.cs*",
+              "RelativeToolTip": "Controller\\Procedimiento\\ControllerAdminProcedimientos.cs*",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAIwGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T02:50:29.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ViewDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Dashboard\\ViewDashboard.cs",
+              "RelativeDocumentMoniker": "Vista\\Dashboard\\ViewDashboard.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Dashboard\\ViewDashboard.cs [Design]",
+              "RelativeToolTip": "Vista\\Dashboard\\ViewDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T02:47:53.917Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "DAOContrasena.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOContrasena\\DAOContrasena.cs",
               "RelativeDocumentMoniker": "Modelo\\DAOContrasena\\DAOContrasena.cs",
               "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOContrasena\\DAOContrasena.cs",
               "RelativeToolTip": "Modelo\\DAOContrasena\\DAOContrasena.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwA8AAAAjAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAqwCEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T02:00:17.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "ControllerRegistro.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Registro\\ControllerRegistro.cs",
               "RelativeDocumentMoniker": "Controller\\Registro\\ControllerRegistro.cs",
@@ -163,33 +277,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "DTOProcedimiento.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DTOProcedimiento\\DTOProcedimiento.cs",
               "RelativeDocumentMoniker": "Modelo\\DTOProcedimiento\\DTOProcedimiento.cs",
               "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DTOProcedimiento\\DTOProcedimiento.cs",
               "RelativeToolTip": "Modelo\\DTOProcedimiento\\DTOProcedimiento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T23:00:34.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "DAOProcedimiento.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOProcedimiento\\DAOProcedimiento.cs",
               "RelativeDocumentMoniker": "Modelo\\DAOProcedimiento\\DAOProcedimiento.cs",
               "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOProcedimiento\\DAOProcedimiento.cs",
               "RelativeToolTip": "Modelo\\DAOProcedimiento\\DAOProcedimiento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAABFAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAGwAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T21:53:57.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "ViewProcedimiento.cs [Design]",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Procedimientos\\ViewProcedimiento.cs",
               "RelativeDocumentMoniker": "Vista\\Procedimientos\\ViewProcedimiento.cs",
@@ -201,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "ViewAgregarProcedimiento.cs [Design]",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\AgregarProcedimiento\\ViewAgregarProcedimiento.cs",
               "RelativeDocumentMoniker": "Vista\\AgregarProcedimiento\\ViewAgregarProcedimiento.cs",
@@ -213,20 +327,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ControllerContrasena.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Contrasena\\ControllerContrasena.cs",
               "RelativeDocumentMoniker": "Controller\\Contrasena\\ControllerContrasena.cs",
               "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Contrasena\\ControllerContrasena.cs",
               "RelativeToolTip": "Controller\\Contrasena\\ControllerContrasena.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAFAAAABHAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAqwEMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T21:03:43.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
               "Title": "CommonClass.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Common\\CommonClass.cs",
               "RelativeDocumentMoniker": "Controller\\Common\\CommonClass.cs",
@@ -239,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "DTOLogin.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DTOLogin\\DTOLogin.cs",
               "RelativeDocumentMoniker": "Modelo\\DTOLogin\\DTOLogin.cs",
@@ -247,12 +361,11 @@
               "RelativeToolTip": "Modelo\\DTOLogin\\DTOLogin.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAowA0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T14:53:10.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T14:53:10.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "DTORegistro.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DTORegistro\\DTORegistro.cs",
               "RelativeDocumentMoniker": "Modelo\\DTORegistro\\DTORegistro.cs",
@@ -260,25 +373,24 @@
               "RelativeToolTip": "Modelo\\DTORegistro\\DTORegistro.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T20:44:49.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T20:44:49.282Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 16,
               "Title": "ControllerDashboard.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Dasboard\\ControllerDashboard.cs",
               "RelativeDocumentMoniker": "Controller\\Dasboard\\ControllerDashboard.cs",
               "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Dasboard\\ControllerDashboard.cs",
               "RelativeToolTip": "Controller\\Dasboard\\ControllerDashboard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAACAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAmwCIAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T17:26:14.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "ControllerLogin.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Login\\ControllerLogin.cs",
               "RelativeDocumentMoniker": "Controller\\Login\\ControllerLogin.cs",
@@ -286,12 +398,11 @@
               "RelativeToolTip": "Controller\\Login\\ControllerLogin.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAAADgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T17:25:57.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T17:25:57.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 23,
               "Title": "ViewOlvidoContrasena.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs",
               "RelativeDocumentMoniker": "Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs",
@@ -299,25 +410,11 @@
               "RelativeToolTip": "Vista\\OlvidoContrasena\\ViewOlvidoContrasena.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAswBIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T02:12:31.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-28T02:12:31.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DAOLogin.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOLogin\\DAOLogin.cs",
-              "RelativeDocumentMoniker": "Modelo\\DAOLogin\\DAOLogin.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DAOLogin\\DAOLogin.cs",
-              "RelativeToolTip": "Modelo\\DAOLogin\\DAOLogin.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAewDAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T01:06:56.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "ControllerAdminUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Usuarios\\ControllerAdminUsuarios.cs",
               "RelativeDocumentMoniker": "Controller\\Usuarios\\ControllerAdminUsuarios.cs",
@@ -325,12 +422,11 @@
               "RelativeToolTip": "Controller\\Usuarios\\ControllerAdminUsuarios.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAIwBMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T21:18:06.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T21:18:06.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "ControllerAgregarUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Usuarios\\ControllerAgregarUsuarios.cs",
               "RelativeDocumentMoniker": "Controller\\Usuarios\\ControllerAgregarUsuarios.cs",
@@ -338,12 +434,11 @@
               "RelativeToolTip": "Controller\\Usuarios\\ControllerAgregarUsuarios.cs",
               "ViewState": "AQIAAG0AAAAAAAAAAAAcwIIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T21:18:46.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T21:18:46.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "DTOUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Modelo\\DTOUsuarios\\DTOUsuarios.cs",
               "RelativeDocumentMoniker": "Modelo\\DTOUsuarios\\DTOUsuarios.cs",
@@ -351,33 +446,31 @@
               "RelativeToolTip": "Modelo\\DTOUsuarios\\DTOUsuarios.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwBUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T21:41:52.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T21:41:52.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ViewCitas.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Cita\\ViewCitas.cs",
+              "RelativeDocumentMoniker": "Vista\\Cita\\ViewCitas.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Cita\\ViewCitas.cs",
+              "RelativeToolTip": "Vista\\Cita\\ViewCitas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T22:56:55.543Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "ViewAgendarcita.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\AgendarCita\\ViewAgendarcita.cs",
-              "RelativeDocumentMoniker": "Vista\\AgendarCita\\ViewAgendarcita.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\AgendarCita\\ViewAgendarcita.cs [Design]",
-              "RelativeToolTip": "Vista\\AgendarCita\\ViewAgendarcita.cs [Design]",
+              "Title": "ControllerAgendarCita.cs",
+              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Cita\\ControllerAgendarCita.cs",
+              "RelativeDocumentMoniker": "Controller\\Cita\\ControllerAgendarCita.cs",
+              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Controller\\Cita\\ControllerAgendarCita.cs",
+              "RelativeToolTip": "Controller\\Cita\\ControllerAgendarCita.cs",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAAAL4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T20:52:53.96Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ViewRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Registro\\ViewRegistro.cs",
-              "RelativeDocumentMoniker": "Vista\\Registro\\ViewRegistro.cs",
-              "ToolTip": "C:\\Users\\natal\\OneDrive\\Documents\\GitHub\\PTCOSEGUEDA2024\\Vista\\Registro\\ViewRegistro.cs",
-              "RelativeToolTip": "Vista\\Registro\\ViewRegistro.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAswBMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T23:55:06.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T18:30:15.439Z"
             }
           ]
         }

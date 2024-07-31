@@ -11,9 +11,10 @@ namespace PTC.Modelo.DTOProcedimiento
         private int procedimientoID;
         private string nombreProcedimiento;
         private decimal precioProcedimiento;
-
+        private string descProcedimiento;
         public int ProcedimientoID { get => procedimientoID; set => procedimientoID = value; }
         public string NombreProcedimiento { get => nombreProcedimiento; set => nombreProcedimiento = value; }
         public decimal PrecioProcedimiento { get => precioProcedimiento; set => precioProcedimiento = value; }
+        public string DescProcedimiento { get => descProcedimiento; set => descProcedimiento = value; }
     }
 }
