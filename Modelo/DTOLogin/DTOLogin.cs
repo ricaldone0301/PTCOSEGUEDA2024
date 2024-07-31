@@ -10,10 +10,12 @@ namespace PTC.Modelo.DTOLogin
         {
             private string usuarioPersonal;
             private string contraseñaPersonal;
+            private string access;
 
             public string Usuario { get => usuarioPersonal; set => usuarioPersonal = value; }
             public string Contraseña { get => contraseñaPersonal; set => contraseñaPersonal = value; }
-        }
+            public string Access { get => access; set => access = value; }
+    }
 
     }
 
