@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace PTC.Modelo.DTOProcedimiento
 {
-    internal class DTOProcedimiento
+    class DtoProcedimiento : dbContext
     {
+        private int procedimientoID;
+        private string nombreProcedimiento;
+        private decimal precioProcedimiento;
+
+        public int ProcedimientoID { get => procedimientoID; set => procedimientoID = value; }
+        public string NombreProcedimiento { get => nombreProcedimiento; set => nombreProcedimiento = value; }
+        public decimal PrecioProcedimiento { get => precioProcedimiento; set => precioProcedimiento = value; }
     }
 }

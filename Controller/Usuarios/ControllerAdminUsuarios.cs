@@ -18,7 +18,6 @@ namespace PTC.Controller.Usuarios
     class ControllerAdminUsuarios
     {
         ViewUsuarios ObjAdminUsuario;
-        ViewRegistro ObjRegistro;
         public ControllerAdminUsuarios(ViewUsuarios Vista)
         {
             ObjAdminUsuario = Vista;
