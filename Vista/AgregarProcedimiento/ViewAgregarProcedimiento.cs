@@ -22,7 +22,7 @@ namespace PTC.Vista.AgregarProcedimiento
 
         public ViewAgregarProcedimiento(int accion, int procedimientoID, string nombreProcedimiento, decimal precioProcedimiento, string descProcedimiento)
         {
-            ControllerAgregarProcedimientos objAgendarCita = new ControllerAgregarProcedimientos(this, accion, procedimientoID, nombreProcedimiento, precioProcedimiento, descProcedimiento);
+            ControllerAgregarProcedimientos ObjAgregarProcedimiento = new ControllerAgregarProcedimientos(this, accion, procedimientoID, nombreProcedimiento, precioProcedimiento, descProcedimiento);
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

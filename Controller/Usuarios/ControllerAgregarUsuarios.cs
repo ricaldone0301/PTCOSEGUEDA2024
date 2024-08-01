@@ -37,7 +37,7 @@ namespace PTC.Controller.Usuarios
             ObjAgregarUsuario.Load += new EventHandler(InitialCharge);
             verificarAccion();
             ChargeValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
-            this.personalId = int.Parse(PersonalID);
+            this.personalId = int.Parse(PersonalID.ToString());
             ObjAgregarUsuario.btnActualizar.Click += new EventHandler(UpdateRegister);
         }
 

@@ -5,6 +5,7 @@ using PTC.Vista.AgregarProcedimiento;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace PTC.Controller.Procedimiento
         ViewAgregarProcedimiento ObjAgregarProcedimiento;
 
         private int accion;
+        private int procedimientoID;
 
         public ControllerAgregarProcedimientos(ViewAgregarProcedimiento Vista, int accion)
         {
@@ -30,7 +32,9 @@ namespace PTC.Controller.Procedimiento
             ObjAgregarProcedimiento = Vista;
             this.accion = accion;
             verificarAccion();
+            this.procedimientoID = int.Parse(procedimientoID).ToString;
             ObjAgregarProcedimiento.btnActualizar.Click += new EventHandler(UpdateRegister);
+
         }
 
         public void verificarAccion()
@@ -42,8 +46,8 @@ namespace PTC.Controller.Procedimiento
             }
             else if (accion == 2)
             {
-                ObjAgregarProcedimiento.btnGuardar.Enabled = false;
                 ObjAgregarProcedimiento.btnActualizar.Enabled = true;
+                ObjAgregarProcedimiento.btnGuardar.Enabled = false;
             }
         }
 
@@ -53,9 +57,12 @@ namespace PTC.Controller.Procedimiento
             {
                 DAOProcedimiento daoAdmin = new DAOProcedimiento();
 
-                daoAdmin.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.ToString();
-                daoAdmin.PrecioProcedimiento = decimal.Parse(ObjAgregarProcedimiento.txtPrecio.ToString());
-                daoAdmin.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.ToString();
+                daoAdmin.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
+                String test = ObjAgregarProcedimiento.txtPrecio.Text.ToString().Trim();
+                decimal result;
+                decimal.TryParse(test, out result);
+                daoAdmin.PrecioProcedimiento = result;
+                daoAdmin.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.Text.ToString();
 
 
                 //daoAdmin.CitaID = ObjAgendarCita.txtUsuario.Text.Trim();
@@ -91,9 +98,9 @@ namespace PTC.Controller.Procedimiento
         public void UpdateRegister(object sender, EventArgs e)
         {
             DAOProcedimiento daoUpdate = new DAOProcedimiento();
-            daoUpdate.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.ToString();
-            daoUpdate.PrecioProcedimiento = decimal.Parse(ObjAgregarProcedimiento.txtPrecio.ToString());
-            daoUpdate.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.ToString();
+            daoUpdate.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
+            daoUpdate.PrecioProcedimiento = decimal.Parse(ObjAgregarProcedimiento.txtPrecio.Text.ToString());
+            daoUpdate.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.Text.ToString();
 
 
             int valorRetornado = daoUpdate.ActualizarProcedimiento();

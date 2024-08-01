@@ -30,6 +30,8 @@ namespace PTC.Controller.Dasboard
         {
             ObjDashboard = View;
             View.Load += new EventHandler(EventosIniciales);
+            ObjDashboard.lblUsuario.Text = SessionVar.Usuario;
+            ObjDashboard.lblNombre.Text = SessionVar.Nombre;
             ObjDashboard.btnCerrarSesion.Click += new EventHandler(CerrarSesion);
             ObjDashboard.btnPacientes.Click += new EventHandler(Pacientes);
             ObjDashboard.btnCalendario.Click += new EventHandler(Calendario);
