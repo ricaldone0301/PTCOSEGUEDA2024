@@ -94,6 +94,7 @@
     <Compile Include="Modelo\DTOProcedimiento\DTOProcedimiento.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
+    <Compile Include="Modelo\ModelInit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\AgendarCita\ViewAgendarcita.cs">

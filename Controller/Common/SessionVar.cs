@@ -8,11 +8,11 @@ namespace PTC.Controller.Common
 {
     internal class SessionVar
     {
-        private static string usuarioPersonal = string.Empty;
-        private static string contraseñaPersonal = string.Empty;
-        private static int rolID = 0 ;
-        private static string nombrePersonal = string.Empty;
-        public static string access = string.Empty;
+        private static string usuarioPersonal;
+        private static string contraseñaPersonal;
+        private static int rolID;
+        private static string nombrePersonal;
+        public static string access;
 
         public static string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
         public static string Usuario { get => usuarioPersonal; set => usuarioPersonal = value; }

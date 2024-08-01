@@ -12,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace PTC.Controller.Procedimiento
 {
@@ -25,7 +27,6 @@ namespace PTC.Controller.Procedimiento
             ObjAdminProcedimiento = Vista;
             ObjAdminProcedimiento.Load += new EventHandler(LoadData);
             ObjAdminProcedimiento.btnNuevo.Click += new EventHandler(Nuevo);
-                //ObjRegistro.btnEnviar.Click += new EventHandler(NewUser);
             ObjAdminProcedimiento.cmsActualizar.Click += new EventHandler(Actualizar);
              ObjAdminProcedimiento.cmsEliminar.Click += new EventHandler(Eliminar);
                 // ObjAdminUsuario.dgvPersonas.CellContentClick += new DataGridViewCellEventHandler(dgvPersonas_CellContentClick);
@@ -35,10 +36,10 @@ namespace PTC.Controller.Procedimiento
             {
                 int rowIndex = ObjAdminProcedimiento.dgvProcedimientos.CurrentCell.RowIndex;
                 int pos = ObjAdminProcedimiento.dgvProcedimientos.CurrentRow.Index;
-                if (MessageBox.Show($"¿Esta seguro que desea eliminar a:\n{ObjAdminProcedimiento.dgvProcedimientos[2, pos].Value.ToString()}\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show($"¿Esta seguro que desea eliminar este registro? Considere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DAOProcedimiento daoDel = new DAOProcedimiento();
-                    daoDel.ProcedimientoID = int.Parse(ObjAdminProcedimiento.dgvProcedimientos[1, pos].Value.ToString());
+                    daoDel.ProcedimientoID = int.Parse(ObjAdminProcedimiento.dgvProcedimientos[0, pos].Value.ToString());
                     int valorRetornado = daoDel.EliminarProcedimiento();
                     if (valorRetornado == 1)
                     {
@@ -65,16 +66,15 @@ namespace PTC.Controller.Procedimiento
                 int procedimientoID;
                 string nombreProcedimiento, descProcedimiento;
                 decimal precioProcedimiento;
-                
+
                 procedimientoID = int.Parse(ObjAdminProcedimiento.dgvProcedimientos[0,pos].Value.ToString());
                 nombreProcedimiento = ObjAdminProcedimiento.dgvProcedimientos[1, pos].Value.ToString();
                 precioProcedimiento = decimal.Parse(ObjAdminProcedimiento.dgvProcedimientos[2, pos].Value.ToString());
                 descProcedimiento = ObjAdminProcedimiento.dgvProcedimientos[3, pos].Value.ToString();
 
 
-
-            //ViewProcedimiento openForm = new ViewProcedimiento(2, nombreProcedimiento, precioProcedimiento);
-            //openForm.ShowDialog();
+            ViewAgregarProcedimiento openForm = new ViewAgregarProcedimiento(2, procedimientoID, nombreProcedimiento, precioProcedimiento, descProcedimiento);
+            openForm.ShowDialog();
             RefrescarData();
 
             }

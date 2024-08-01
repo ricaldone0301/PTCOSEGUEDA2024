@@ -40,8 +40,8 @@
             this.btnCalendario = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPacientes = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblNombre = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblUsuario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.PanelContenedor = new System.Windows.Forms.Panel();
@@ -91,8 +91,8 @@
             this.ok.Controls.Add(this.btnCalendario);
             this.ok.Controls.Add(this.btnPacientes);
             this.ok.Controls.Add(this.btnInicio);
-            this.ok.Controls.Add(this.bunifuCustomLabel2);
-            this.ok.Controls.Add(this.bunifuCustomLabel1);
+            this.ok.Controls.Add(this.lblNombre);
+            this.ok.Controls.Add(this.lblUsuario);
             this.ok.Controls.Add(this.pictureBox1);
             this.ok.Controls.Add(this.bunifuSeparator1);
             this.ok.GradientBottomLeft = System.Drawing.Color.White;
@@ -301,29 +301,29 @@
             this.btnInicio.TabIndex = 3;
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel2
+            // lblNombre
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(87, 49);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(69, 19);
-            this.bunifuCustomLabel2.TabIndex = 4;
-            this.bunifuCustomLabel2.Text = "Empleado";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNombre.Location = new System.Drawing.Point(87, 49);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 19);
+            this.lblNombre.TabIndex = 4;
+            this.lblNombre.Text = "Empleado";
             // 
-            // bunifuCustomLabel1
+            // lblUsuario
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(85, 26);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(99, 25);
-            this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "USUARIO";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblUsuario.Location = new System.Drawing.Point(85, 26);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(99, 25);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "USUARIO";
             // 
             // pictureBox1
             // 
@@ -410,8 +410,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuGradientPanel ok;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnCerrarSesion;
@@ -425,5 +423,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
+        public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
     }
 }

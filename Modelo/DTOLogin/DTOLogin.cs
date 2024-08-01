@@ -8,14 +8,19 @@ namespace PTC.Modelo.DTOLogin
 {
         public class DtoLogin : dbContext
         {
-            private string usuarioPersonal;
-            private string contraseñaPersonal;
-            private string access;
+        private  string usuarioPersonal;
+        private  string contraseñaPersonal;
+        private  int rolID;
+        private  string nombrePersonal;
+        public  string access;
 
-            public string Usuario { get => usuarioPersonal; set => usuarioPersonal = value; }
-            public string Contraseña { get => contraseñaPersonal; set => contraseñaPersonal = value; }
-            public string Access { get => access; set => access = value; }
-    }
+        public  string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
+        public string Usuario { get => usuarioPersonal; set => usuarioPersonal = value; }
+        public  string Contrasena { get => contraseñaPersonal; set => contraseñaPersonal = value; }
+
+        public  string Access { get => access; set => access = value; }
+        public  int Rol { get => rolID; set => rolID = value; }
+        }
 
     }
 

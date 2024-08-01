@@ -19,8 +19,6 @@ namespace PTC.Controller.Login
     public class ControllerLogin
     {
         private ViewLogin ObjLogin;
-        private int _loginAttempts = 0; 
-        private const int MaxAttempts = 3;
 
         public ControllerLogin(ViewLogin Vista)
         {
@@ -56,50 +54,22 @@ namespace PTC.Controller.Login
             CommonClass common = new CommonClass();
             DAOData.Usuario = ObjLogin.TxtUsuario.Text;
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.TxtContra.Text);
-            DAOData.Contraseña = cadenaencriptada;
-
-            _loginAttempts = 0;
+            DAOData.Contrasena = cadenaencriptada;
 
             bool answer = DAOData.Login();
 
-            if (answer)
+
+            if (answer == true)
             {
-                // Login successful
                 ViewDashboard viewDashboard = new ViewDashboard();
                 viewDashboard.Show();
                 ObjLogin.Hide();
-
-                // Reset the attempt counter on successful login
-                _loginAttempts = 0;
             }
             else
             {
-                // Increment the login attempt counter
-                _loginAttempts++;
-
-                if (_loginAttempts >= MaxAttempts)
-                {
-                    // Lockout or disable the login button
-                    MessageBox.Show("Número máximo de intentos alcanzado. Por favor, intente más tarde.",
-                                    "Bloqueo de cuenta",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
-
-                    // Optionally disable the login button or form
-                    ObjLogin.BtnIngresar.Enabled = false; // Assuming BtnLogin is the login button
-                                                       // You could also disable or hide other elements or perform additional actions here
-                }
-                else
-                {
-                    // Inform the user of remaining attempts
-                    MessageBox.Show($"Credenciales incorrectas. Intentos restantes: {MaxAttempts - _loginAttempts}",
-                                    "Error.",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Credenciales incorectas", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
- 
 
         private void EnterUsername(object sender, EventArgs e)
         {

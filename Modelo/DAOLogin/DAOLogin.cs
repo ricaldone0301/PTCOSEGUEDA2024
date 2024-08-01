@@ -27,7 +27,7 @@ namespace PTC.Modelo.DAOLogin
                 string query = "SELECT * FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("username", Usuario);
-                cmd.Parameters.AddWithValue("password", Contraseña);
+                cmd.Parameters.AddWithValue("password", Contrasena);
                 SqlDataReader rd = cmd.ExecuteReader();
                 /*while (rd.Read())
                 {

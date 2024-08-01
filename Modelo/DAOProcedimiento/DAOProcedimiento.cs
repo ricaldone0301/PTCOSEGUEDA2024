@@ -21,7 +21,7 @@ namespace PTC.Modelo.DAOProcedimiento
                 {
                     cmd.Connection = getConnection();
 
-                    String query = "INSERT INTO Procedimientos (nombreProcedimiento, precioProcedimiento, descProcedimiento) VALUES (@nombreProcedimiento, @precioProcedimiento, @descProcedimiento";
+                    String query = "INSERT INTO Procedimientos (nombreProcedimiento, precioProcedimiento, descProcedimiento) VALUES (@nombreProcedimiento, @precioProcedimiento, @descProcedimiento)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@nombreProcedimiento", NombreProcedimiento);
                     cmd.Parameters.AddWithValue("@precioProcedimiento", PrecioProcedimiento);
@@ -106,7 +106,7 @@ namespace PTC.Modelo.DAOProcedimiento
             {
 
                 Command.Connection = getConnection();
-                string query = "DELETE Personal WHERE procedimientoID = @param1";
+                string query = "DELETE Procedimientos WHERE procedimientoID = @param1";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param1", ProcedimientoID);
                 int respuesta = cmd.ExecuteNonQuery();
