@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PTC.Controller.Procedimiento
 {
@@ -32,7 +33,7 @@ namespace PTC.Controller.Procedimiento
             ObjAgregarProcedimiento = Vista;
             this.accion = accion;
             verificarAccion();
-            this.procedimientoID = int.Parse(procedimientoID).ToString;
+            this.procedimientoID = procedimientoID;
             ObjAgregarProcedimiento.btnActualizar.Click += new EventHandler(UpdateRegister);
 
         }
@@ -99,7 +100,10 @@ namespace PTC.Controller.Procedimiento
         {
             DAOProcedimiento daoUpdate = new DAOProcedimiento();
             daoUpdate.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
-            daoUpdate.PrecioProcedimiento = decimal.Parse(ObjAgregarProcedimiento.txtPrecio.Text.ToString());
+            String test = ObjAgregarProcedimiento.txtPrecio.Text.ToString().Trim();
+            decimal result;
+            decimal.TryParse(test, out result);
+            daoUpdate.PrecioProcedimiento = result;
             daoUpdate.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.Text.ToString();
 
 
