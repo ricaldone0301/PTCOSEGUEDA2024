@@ -56,6 +56,7 @@ namespace PTC.Controller.Login
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.TxtContra.Text);
             DAOData.Contrasena = cadenaencriptada;
 
+            
             bool answer = DAOData.Login();
 
 
