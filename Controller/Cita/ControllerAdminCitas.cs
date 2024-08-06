@@ -77,7 +77,7 @@ namespace PTC.Controller.Cita
         public void RefrescarData()
         {
             DAOCitas objAdmin = new DAOCitas();
-            DataSet ds = objAdmin.ObtenerPersonas();
+            DataSet ds = objAdmin.ComboBoxDoctor();
             ObjAdminCitas.dgvCitas.DataSource = ds.Tables["Citas"];
         }
 

@@ -47,12 +47,12 @@ namespace PTC.Modelo.DAOCitas
             {
                 using (SqlConnection connection = getConnection())
                 {
-                    string query = "SELECT * FROM Personal WHERE roleID=1";
+                    string query = "SELECT * FROM Personal";
                     SqlCommand cmd = new SqlCommand(query, connection);
 
                     using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
                     {
-                        adp.Fill(ds, "Especialidad");
+                        adp.Fill(ds, "Personal");
                     }
                 }
             }
@@ -156,32 +156,7 @@ namespace PTC.Modelo.DAOCitas
             }
         }
 
-        public DataSet ObtenerPersonas()
-        {
-            try
-            {
-                Command.Connection = getConnection();
-                string query = "SELECT * FROM Personal";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                DataSet ds = new DataSet();
-
-                ds.Load(reader, LoadOption.OverwriteChanges, "Personal");
-                reader.Close();
-
-                return ds;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
 
         public int ActualizarUsuario()
         {

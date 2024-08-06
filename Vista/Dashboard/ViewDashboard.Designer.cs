@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDashboard));
-            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuThinButton29 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuThinButton210 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -47,92 +40,20 @@
             this.btnCalendario = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPacientes = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblNombre = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblUsuario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bunifuCards2.SuspendLayout();
-            this.bunifuGradientPanel3.SuspendLayout();
-            this.bunifuCards3.SuspendLayout();
-            this.bunifuGradientPanel4.SuspendLayout();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelContenedor.SuspendLayout();
             this.PanelPadre.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuCards2
-            // 
-            this.bunifuCards2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCards2.BorderRadius = 10;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.color = System.Drawing.Color.Tomato;
-            this.bunifuCards2.Controls.Add(this.comboBox2);
-            this.bunifuCards2.Controls.Add(this.bunifuGradientPanel3);
-            this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(685, 260);
-            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(301, 418);
-            this.bunifuCards2.TabIndex = 29;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(99, 57);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // bunifuGradientPanel3
-            // 
-            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
-            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.Controls.Add(this.bunifuThinButton29);
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(0, 2);
-            this.bunifuGradientPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
-            this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(299, 30);
-            this.bunifuGradientPanel3.TabIndex = 3;
-            // 
-            // bunifuThinButton29
-            // 
-            this.bunifuThinButton29.ActiveBorderThickness = 1;
-            this.bunifuThinButton29.ActiveCornerRadius = 20;
-            this.bunifuThinButton29.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton29.BackgroundImage")));
-            this.bunifuThinButton29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuThinButton29.ButtonText = "CITAS ANTERIORES";
-            this.bunifuThinButton29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton29.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton29.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton29.IdleBorderThickness = 1;
-            this.bunifuThinButton29.IdleCornerRadius = 20;
-            this.bunifuThinButton29.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton29.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.Location = new System.Drawing.Point(0, -2);
-            this.bunifuThinButton29.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.bunifuThinButton29.Name = "bunifuThinButton29";
-            this.bunifuThinButton29.Size = new System.Drawing.Size(220, 32);
-            this.bunifuThinButton29.TabIndex = 11;
-            this.bunifuThinButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomLabel10
             // 
@@ -145,75 +66,6 @@
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(688, 31);
             this.bunifuCustomLabel10.TabIndex = 30;
             this.bunifuCustomLabel10.Text = "Bienvenido al Sistema de Citas de Clínica Dental Osegueda";
-            // 
-            // bunifuCards3
-            // 
-            this.bunifuCards3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCards3.BorderRadius = 10;
-            this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.Tomato;
-            this.bunifuCards3.Controls.Add(this.comboBox1);
-            this.bunifuCards3.Controls.Add(this.bunifuGradientPanel4);
-            this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(353, 260);
-            this.bunifuCards3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bunifuCards3.Name = "bunifuCards3";
-            this.bunifuCards3.RightSahddow = true;
-            this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(301, 418);
-            this.bunifuCards3.TabIndex = 28;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 57);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // bunifuGradientPanel4
-            // 
-            this.bunifuGradientPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
-            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel4.Controls.Add(this.bunifuThinButton210);
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 2);
-            this.bunifuGradientPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
-            this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(301, 30);
-            this.bunifuGradientPanel4.TabIndex = 2;
-            // 
-            // bunifuThinButton210
-            // 
-            this.bunifuThinButton210.ActiveBorderThickness = 1;
-            this.bunifuThinButton210.ActiveCornerRadius = 20;
-            this.bunifuThinButton210.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton210.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton210.BackgroundImage")));
-            this.bunifuThinButton210.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuThinButton210.ButtonText = "CITAS PRÓXIMAS";
-            this.bunifuThinButton210.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton210.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton210.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton210.IdleBorderThickness = 1;
-            this.bunifuThinButton210.IdleCornerRadius = 20;
-            this.bunifuThinButton210.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton210.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.Location = new System.Drawing.Point(0, -2);
-            this.bunifuThinButton210.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.bunifuThinButton210.Name = "bunifuThinButton210";
-            this.bunifuThinButton210.Size = new System.Drawing.Size(220, 32);
-            this.bunifuThinButton210.TabIndex = 10;
-            this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomLabel3
             // 
@@ -231,6 +83,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ok.Controls.Add(this.btnProcedimientos);
             this.ok.Controls.Add(this.btnUsuarios);
             this.ok.Controls.Add(this.pictureBox2);
             this.ok.Controls.Add(this.btnCerrarSesion);
@@ -238,8 +91,8 @@
             this.ok.Controls.Add(this.btnCalendario);
             this.ok.Controls.Add(this.btnPacientes);
             this.ok.Controls.Add(this.btnInicio);
-            this.ok.Controls.Add(this.bunifuCustomLabel2);
-            this.ok.Controls.Add(this.bunifuCustomLabel1);
+            this.ok.Controls.Add(this.lblNombre);
+            this.ok.Controls.Add(this.lblUsuario);
             this.ok.Controls.Add(this.pictureBox1);
             this.ok.Controls.Add(this.bunifuSeparator1);
             this.ok.GradientBottomLeft = System.Drawing.Color.White;
@@ -253,6 +106,32 @@
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ok.Size = new System.Drawing.Size(267, 884);
             this.ok.TabIndex = 20;
+            // 
+            // btnProcedimientos
+            // 
+            this.btnProcedimientos.ActiveBorderThickness = 1;
+            this.btnProcedimientos.ActiveCornerRadius = 20;
+            this.btnProcedimientos.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.BackColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProcedimientos.BackgroundImage")));
+            this.btnProcedimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProcedimientos.ButtonText = "PADECIMIENTOS";
+            this.btnProcedimientos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProcedimientos.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcedimientos.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnProcedimientos.IdleBorderThickness = 1;
+            this.btnProcedimientos.IdleCornerRadius = 20;
+            this.btnProcedimientos.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.IdleForecolor = System.Drawing.Color.MidnightBlue;
+            this.btnProcedimientos.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnProcedimientos.Location = new System.Drawing.Point(49, 230);
+            this.btnProcedimientos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnProcedimientos.Name = "btnProcedimientos";
+            this.btnProcedimientos.Size = new System.Drawing.Size(181, 46);
+            this.btnProcedimientos.TabIndex = 11;
+            this.btnProcedimientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUsuarios
             // 
@@ -273,8 +152,8 @@
             this.btnUsuarios.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnUsuarios.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.Location = new System.Drawing.Point(49, 394);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnUsuarios.Location = new System.Drawing.Point(49, 626);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(181, 46);
             this.btnUsuarios.TabIndex = 10;
@@ -311,7 +190,7 @@
             this.btnCerrarSesion.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCerrarSesion.IdleLineColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.Location = new System.Drawing.Point(49, 682);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(5);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(181, 46);
             this.btnCerrarSesion.TabIndex = 8;
@@ -336,8 +215,8 @@
             this.btnCitas.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnCitas.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnCitas.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnCitas.Location = new System.Drawing.Point(49, 338);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCitas.Location = new System.Drawing.Point(49, 398);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(5);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(181, 46);
             this.btnCitas.TabIndex = 7;
@@ -363,8 +242,8 @@
             this.btnCalendario.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnCalendario.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnCalendario.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnCalendario.Location = new System.Drawing.Point(49, 284);
-            this.btnCalendario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCalendario.Location = new System.Drawing.Point(49, 342);
+            this.btnCalendario.Margin = new System.Windows.Forms.Padding(5);
             this.btnCalendario.Name = "btnCalendario";
             this.btnCalendario.Size = new System.Drawing.Size(181, 46);
             this.btnCalendario.TabIndex = 6;
@@ -389,8 +268,8 @@
             this.btnPacientes.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnPacientes.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnPacientes.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnPacientes.Location = new System.Drawing.Point(49, 229);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnPacientes.Location = new System.Drawing.Point(49, 286);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(5);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(181, 46);
             this.btnPacientes.TabIndex = 5;
@@ -416,35 +295,35 @@
             this.btnInicio.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnInicio.IdleLineColor = System.Drawing.Color.Transparent;
             this.btnInicio.Location = new System.Drawing.Point(49, 174);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(5);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(181, 46);
             this.btnInicio.TabIndex = 3;
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel2
+            // lblNombre
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(87, 49);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(69, 19);
-            this.bunifuCustomLabel2.TabIndex = 4;
-            this.bunifuCustomLabel2.Text = "Empleado";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNombre.Location = new System.Drawing.Point(87, 49);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 19);
+            this.lblNombre.TabIndex = 4;
+            this.lblNombre.Text = "Empleado";
             // 
-            // bunifuCustomLabel1
+            // lblUsuario
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(85, 26);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(99, 25);
-            this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "USUARIO";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblUsuario.Location = new System.Drawing.Point(85, 26);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(99, 25);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "USUARIO";
             // 
             // pictureBox1
             // 
@@ -464,7 +343,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(95)))), ((int)(((byte)(49)))));
             this.bunifuSeparator1.LineThickness = 4;
             this.bunifuSeparator1.Location = new System.Drawing.Point(-7, 71);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(273, 43);
             this.bunifuSeparator1.TabIndex = 1;
@@ -474,14 +353,20 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.PanelContenedor.Controls.Add(this.monthCalendar1);
             this.PanelContenedor.Controls.Add(this.bunifuCustomLabel10);
-            this.PanelContenedor.Controls.Add(this.bunifuCards3);
-            this.PanelContenedor.Controls.Add(this.bunifuCards2);
             this.PanelContenedor.Location = new System.Drawing.Point(269, 0);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1433, 886);
             this.PanelContenedor.TabIndex = 32;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.monthCalendar1.Location = new System.Drawing.Point(388, 265);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 31;
             // 
             // PanelPadre
             // 
@@ -508,10 +393,6 @@
             this.Name = "ViewDashboard";
             this.RightToLeftLayout = true;
             this.Text = "ViewDashboard";
-            this.bunifuCards2.ResumeLayout(false);
-            this.bunifuGradientPanel3.ResumeLayout(false);
-            this.bunifuCards3.ResumeLayout(false);
-            this.bunifuGradientPanel4.ResumeLayout(false);
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -525,21 +406,10 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton29;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuGradientPanel ok;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnCerrarSesion;
@@ -551,5 +421,9 @@
         public System.Windows.Forms.Panel PanelPadre;
         public Bunifu.Framework.UI.BunifuThinButton2 btnUsuarios;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
+        public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
     }
 }

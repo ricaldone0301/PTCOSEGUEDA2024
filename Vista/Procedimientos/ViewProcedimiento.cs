@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PTC.Controller.Cita;
+using PTC.Controller.Procedimiento;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +12,12 @@ using System.Windows.Forms;
 
 namespace PTC.Vista.Padecimientos
 {
-    public partial class ViewPadecimientos : Form
+    public partial class ViewProcedimiento : Form
     {
-        public ViewPadecimientos()
+        public ViewProcedimiento()
         {
             InitializeComponent();
+            ControllerAdminProcedimientos ObjProcedimientos = new ControllerAdminProcedimientos(this);
         }
     }
 }

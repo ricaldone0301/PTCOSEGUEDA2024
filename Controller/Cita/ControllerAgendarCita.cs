@@ -16,6 +16,9 @@ namespace PTC.Controller.Cita
 
         private int accion;
         private string consultorio;
+        private string personal;
+        private string paciente;
+        private string procedimiento;
 
         public ControllerAgendarCita(ViewAgendarcita Vista, int accion)
         {
@@ -57,37 +60,71 @@ namespace PTC.Controller.Cita
                             ObjAgendarCita.cbConsultorio.Text = rows[0]["nombreConsultorio"].ToString();
                         }
                     }
-                 
+
                 }
                 DataSet dsProcedimientos = objAdmin.ComboBoxProcedimiento();
                 if (dsProcedimientos != null && dsProcedimientos.Tables.Contains("Procedimientos"))
                 {
-                    DataTable dtProcedimientos = dsProcedimientos.Tables["Prodecimientos"];
+                    DataTable dtProcedimientos = dsProcedimientos.Tables["Procedimientos"];
                     ObjAgendarCita.cbProcedimiento.DataSource = dtProcedimientos;
                     ObjAgendarCita.cbProcedimiento.ValueMember = "procedimientoID";
                     ObjAgendarCita.cbProcedimiento.DisplayMember = "nombreProcedimiento";
+
+                    if (accion == 1)
+                    {
+                        DataRow[] rows = dtProcedimientos.Select($"nombreProcedimiento = '{procedimiento}'");
+                        if (rows.Length > 0)
+                        {
+                            ObjAgendarCita.cbProcedimiento.Text = rows[0]["nombreProcedimiento"].ToString();
+                        }
+                    }
                 }
 
-                DataSet dsPersonal = objAdmin.ComboBoxDoctor();
-                if (dsPersonal != null && dsPersonal.Tables.Contains("Personal"))
-                {
-                    DataTable dtPersonal = dsPersonal.Tables["Personal"];
-                    ObjAgendarCita.cbDoctor.DataSource = dtPersonal;
-                    ObjAgendarCita.cbDoctor.ValueMember = "roleID = 1";
-                    ObjAgendarCita.cbDoctor.DisplayMember = "nombrePersonal";
+
+                    DataSet dsPersonal = objAdmin.ComboBoxDoctor();
+                     if (dsPersonal != null && dsPersonal.Tables.Contains("Personal"))
+                     {
+                         DataTable dtPersonal = dsPersonal.Tables["Personal"];
+                         DataView dvPersonal = new DataView(dtPersonal);
+                         dvPersonal.RowFilter = "roleID = 1";
+                         ObjAgendarCita.cbDoctor.DataSource = dvPersonal;
+                         ObjAgendarCita.cbDoctor.ValueMember = "roleID";
+                         ObjAgendarCita.cbDoctor.DisplayMember = "nombrePersonal";
+
+
+                         if (accion == 1)
+                         {
+                             DataRow[] rows = dtPersonal.Select($"nombrePersonal = '{personal}'");
+                             if (rows.Length > 0)
+                             {
+                                 ObjAgendarCita.cbDoctor.Text = rows[0]["nombrePersonal"].ToString();
+                             }
+                         }
+
+                     }
+
+                    DataSet dsPacientes = objAdmin.ComboBoxPacientes();
+                    if (dsPacientes != null && dsPacientes.Tables.Contains("Pacientes"))
+                    {
+                        DataTable dtPacientes = dsPacientes.Tables["Pacientes"];
+                        ObjAgendarCita.cbPaciente.DataSource = dtPacientes;
+                        ObjAgendarCita.cbPaciente.ValueMember = "pacienteID";
+                        ObjAgendarCita.cbPaciente.DisplayMember = "nombrePaciente";
+
+                    if (accion == 1)
+                    {
+                        DataRow[] rows = dtPacientes.Select($"nombrePaciente = '{paciente}'");
+                        if (rows.Length > 0)
+                        {
+                            ObjAgendarCita.cbDoctor.Text = rows[0]["nombrePacientel"].ToString();
+                        }
+                    }
+
 
                 }
-
-                DataSet dsPacientes = objAdmin.ComboBoxPacientes();
-                if (dsPacientes != null && dsPacientes.Tables.Contains("Pacientes"))
-                {
-                    DataTable dtPacientes = dsPacientes.Tables["Pacientes"];
-                    ObjAgendarCita.cbDoctor.DataSource = dtPacientes;
-                    ObjAgendarCita.cbDoctor.ValueMember = "pacienteID";
-                    ObjAgendarCita.cbDoctor.DisplayMember = "nombrePaciente";
-
-                }
+                
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);

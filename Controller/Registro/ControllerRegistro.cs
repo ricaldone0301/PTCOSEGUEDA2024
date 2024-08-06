@@ -1,4 +1,6 @@
-﻿using PTC.Modelo.DAORegistro;
+﻿using PTC.Controller.Common;
+using PTC.Modelo.DAOContrasena;
+using PTC.Modelo.DAORegistro;
 using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.Registro;
@@ -124,13 +126,14 @@ namespace PTC.Controller.Registro
                 try
                 {
                     DAORegistro daoRegistro = new DAORegistro();
-
+                    CommonClass common = new CommonClass();
+                    string cadenaencriptada = common.ComputeSha256Hash(ObjRegistro.txtContrasena.Text);
                     daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
                     daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
                     daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
                     daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
                     daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
-                    daoRegistro.Contrasena = ObjRegistro.txtContrasena.Text.Trim();
+                    daoRegistro.Contrasena = cadenaencriptada;
                     daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
                     daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
 

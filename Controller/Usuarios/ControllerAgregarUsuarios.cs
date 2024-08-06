@@ -1,4 +1,5 @@
-﻿using PTC.Modelo.DAOUsuarios;
+﻿using PTC.Controller.Common;
+using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.Registro;
 using System;
@@ -36,7 +37,7 @@ namespace PTC.Controller.Usuarios
             ObjAgregarUsuario.Load += new EventHandler(InitialCharge);
             verificarAccion();
             ChargeValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
-            this.personalId = int.Parse(PersonalID);
+            this.personalId = int.Parse(PersonalID.ToString());
             ObjAgregarUsuario.btnActualizar.Click += new EventHandler(UpdateRegister);
         }
 
@@ -108,14 +109,14 @@ namespace PTC.Controller.Usuarios
             try
             {
                 DAOUsuarios daoAdmin = new DAOUsuarios();
+                CommonClass commonClass = new CommonClass();
 
                 daoAdmin.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
-                //daoAdmin.PersonalId = personalId;
                 daoAdmin.EspecialidadId = (int)ObjAgregarUsuario.cbEsp.SelectedValue;
                 daoAdmin.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
                 daoAdmin.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
                 daoAdmin.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-                daoAdmin.Contrasena = ObjAgregarUsuario.txtContrasena.Text.Trim();
+                daoAdmin.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
                 daoAdmin.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
                 daoAdmin.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
 

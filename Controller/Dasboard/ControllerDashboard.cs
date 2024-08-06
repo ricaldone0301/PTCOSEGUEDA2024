@@ -1,5 +1,5 @@
 ﻿using PTC.Vista.Dashboard;
-using PTC.Vista.Pacientes;
+//using PTC.Vista.Pacientes;
 using PTC.Vista.Calendario;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.AgendarCita;
@@ -13,6 +13,10 @@ using System.Windows.Forms;
 using PTC.Vista.Cita;
 using PTC.Vista.Login;
 using PTC.Vista.Doctores;
+using PTC.Vista.Padecimientos;
+using PTC.Modelo.DTOLogin;
+using PTC.Modelo.DTOContrasena;
+using PTC.Controller.Common;
 
 namespace PTC.Controller.Dasboard
 {
@@ -25,17 +29,26 @@ namespace PTC.Controller.Dasboard
         public ControllerDashboard(ViewDashboard View)
         {
             ObjDashboard = View;
+            View.Load += new EventHandler(EventosIniciales);
+            ObjDashboard.lblUsuario.Text = SessionVar.Usuario;
+            ObjDashboard.lblNombre.Text = SessionVar.Nombre;
             ObjDashboard.btnCerrarSesion.Click += new EventHandler(CerrarSesion);
             ObjDashboard.btnPacientes.Click += new EventHandler(Pacientes);
             ObjDashboard.btnCalendario.Click += new EventHandler(Calendario);
             ObjDashboard.btnCitas.Click += new EventHandler(Citas);
             ObjDashboard.btnInicio.Click += new EventHandler(Inicio);
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
+            ObjDashboard.btnProcedimientos.Click += new EventHandler(Procedimientos);
         }
 
         private void Pacientes(object sender, EventArgs e)
         {
-            AbrirFormulario<ViewPacientes>();
+            AbrirFormulario<ViewUsuarios>();
+        }
+
+        private void Procedimientos(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewProcedimiento>();
         }
 
         private void Citas(object sender, EventArgs e)
@@ -63,6 +76,28 @@ namespace PTC.Controller.Dasboard
         {
             AbrirFormulario<ViewUsuarios>();
 
+        }
+
+        void EventosIniciales(object sender, EventArgs e)
+        {
+            Acceso();
+        }
+
+
+        public void Acceso()
+        {
+            switch (SessionVar.Access)
+            {
+                case "Asistente":
+                    break;
+                case "Secretario":
+                    break;
+                case "Doctor":
+                    ObjDashboard.btnUsuarios.Visible = false;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
