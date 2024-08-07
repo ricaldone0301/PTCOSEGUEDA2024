@@ -33,10 +33,10 @@ namespace PTC.Modelo.DAOLogin
 
                 while (rd.Read())
                 {
-                    SessionVar.Usuario = rd.GetString(6);
-                    SessionVar.Contrasena = rd.GetString(7);
-                    SessionVar.Rol = rd.GetInt32(8);
-                    SessionVar.Nombre = rd.GetString(1);
+                    SessionVar.Usuario = rd.GetString(1);
+                    SessionVar.Contrasena = rd.GetString(2);
+                    SessionVar.Rol = rd.GetString(3);
+                    SessionVar.Nombre = rd.GetString(0);
                }
                     return rd.HasRows;
 

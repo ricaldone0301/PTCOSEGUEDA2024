@@ -22,8 +22,8 @@ namespace PTC.Controller.Dasboard
 {
     public class ControllerDashboard
     {
-        private ViewDashboard ObjDashboard;
-        private Form currentForm;
+        ViewDashboard ObjDashboard;
+        Form currentForm;
     
 
         public ControllerDashboard(ViewDashboard View)
@@ -31,7 +31,7 @@ namespace PTC.Controller.Dasboard
             ObjDashboard = View;
             View.Load += new EventHandler(EventosIniciales);
             ObjDashboard.lblUsuario.Text = SessionVar.Usuario;
-            ObjDashboard.lblNombre.Text = SessionVar.Nombre;
+            ObjDashboard.lblNombre.Text = SessionVar.Rol;
             ObjDashboard.btnCerrarSesion.Click += new EventHandler(CerrarSesion);
             ObjDashboard.btnPacientes.Click += new EventHandler(Pacientes);
             ObjDashboard.btnCalendario.Click += new EventHandler(Calendario);
@@ -86,7 +86,7 @@ namespace PTC.Controller.Dasboard
 
         public void Acceso()
         {
-            switch (SessionVar.Access)
+            switch (SessionVar.Rol)
             {
                 case "Asistente":
                     break;
