@@ -11,6 +11,7 @@ using PTC.Modelo.DTOLogin;
 using System.Security.Cryptography.X509Certificates;
 using System.Data.SqlTypes;
 using System.Runtime.Remoting.Messaging;
+using PTC.Controller.Common;
 
 namespace PTC.Modelo.DAOLogin
 {
@@ -29,14 +30,14 @@ namespace PTC.Modelo.DAOLogin
                 cmd.Parameters.AddWithValue("username", Usuario);
                 cmd.Parameters.AddWithValue("password", Contrasena);
                 SqlDataReader rd = cmd.ExecuteReader();
-                /*while (rd.Read())
+
+                while (rd.Read())
                 {
-                    SessionVar.Username = rd.GetString(0);
-                    SessionVar.Password = rd.GetString(1);
-                    SessionVar.RoleId = rd.GetInt32(3);
-                    SessionVar.Access = rd.GetString(4);
-                    SessionVar.FullName = rd.GetString(5);
-               }*/
+                    SessionVar.Usuario = rd.GetString(1);
+                    SessionVar.Contrasena = rd.GetString(2);
+                    SessionVar.Rol = rd.GetString(3);
+                    SessionVar.Nombre = rd.GetString(0);
+               }
                     return rd.HasRows;
 
                 }

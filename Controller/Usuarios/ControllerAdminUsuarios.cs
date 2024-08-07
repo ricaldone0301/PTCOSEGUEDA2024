@@ -23,10 +23,8 @@ namespace PTC.Controller.Usuarios
             ObjAdminUsuario = Vista;
             ObjAdminUsuario.Load += new EventHandler(LoadData);
             ObjAdminUsuario.btnNuevo.Click += new EventHandler(NewUser);
-            //ObjRegistro.btnEnviar.Click += new EventHandler(NewUser);
             ObjAdminUsuario.cmsActualizar.Click += new EventHandler(UpdateUser);
             ObjAdminUsuario.cmsEliminar.Click += new EventHandler(DeleteUser);
-           // ObjAdminUsuario.dgvPersonas.CellContentClick += new DataGridViewCellEventHandler(dgvPersonas_CellContentClick);
         }
 
         private void DeleteUser(object sender, EventArgs e)
