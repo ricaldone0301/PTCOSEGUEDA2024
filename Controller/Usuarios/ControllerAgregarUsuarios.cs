@@ -28,7 +28,6 @@ namespace PTC.Controller.Usuarios
             verificarAccion();
             ObjAgregarUsuario.Load += new EventHandler(InitialCharge);
             ObjAgregarUsuario.btnAgregar.Click += new EventHandler(NewRegister);
-            //ObjRegistro.btnEnviar.Click += new EventHandler(NewRegister);
         }
         public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
         {

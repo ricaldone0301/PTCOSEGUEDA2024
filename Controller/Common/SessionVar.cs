@@ -10,7 +10,7 @@ namespace PTC.Controller.Common
     {
         private static string usuarioPersonal;
         private static string contraseñaPersonal;
-        private static int rolID;
+        private static string nombreRol;
         private static string nombrePersonal;
         public static string access;
 
@@ -19,6 +19,6 @@ namespace PTC.Controller.Common
         public static string Contrasena { get => contraseñaPersonal; set => contraseñaPersonal = value; }
 
         public static string Access { get => access; set => access = value; }
-        public static int Rol { get => rolID; set => rolID = value; }
+        public static string Rol { get => nombreRol; set => nombreRol = value; }
     }
 }
