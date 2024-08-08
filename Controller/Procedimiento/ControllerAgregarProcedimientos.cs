@@ -65,9 +65,6 @@ namespace PTC.Controller.Procedimiento
                 daoAdmin.PrecioProcedimiento = result;
                 daoAdmin.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.Text.ToString();
 
-
-                //daoAdmin.CitaID = ObjAgendarCita.txtUsuario.Text.Trim();
-
                 int valorRetornado = daoAdmin.RegistrarProcedimiento();
 
                 if (valorRetornado == 1)

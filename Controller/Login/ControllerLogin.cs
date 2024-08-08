@@ -19,6 +19,7 @@ namespace PTC.Controller.Login
     public class ControllerLogin
     {
         private ViewLogin ObjLogin;
+        private int intentosFallidos = 0;
 
         public ControllerLogin(ViewLogin Vista)
         {
@@ -49,26 +50,32 @@ namespace PTC.Controller.Login
         }
         private void DataAccess(object sender, EventArgs e)
         {
-      
+
             DAOLogin DAOData = new DAOLogin();
             CommonClass common = new CommonClass();
             DAOData.Usuario = ObjLogin.TxtUsuario.Text;
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.TxtContra.Text);
             DAOData.Contrasena = cadenaencriptada;
 
-            
+
             bool answer = DAOData.Login();
 
 
             if (answer == true)
             {
+                intentosFallidos = 0;
                 ViewDashboard viewDashboard = new ViewDashboard();
                 viewDashboard.Show();
                 ObjLogin.Hide();
             }
             else
             {
+                intentosFallidos++;
                 MessageBox.Show("Credenciales incorectas", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (intentosFallidos >= 3)
+                {
+                    MessageBox.Show("Ha superado el número máximo de intentos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

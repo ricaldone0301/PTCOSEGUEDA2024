@@ -25,13 +25,22 @@ namespace PTC.Controller.Usuarios
             ObjAdminUsuario.btnNuevo.Click += new EventHandler(NewUser);
             ObjAdminUsuario.cmsActualizar.Click += new EventHandler(UpdateUser);
             ObjAdminUsuario.cmsEliminar.Click += new EventHandler(DeleteUser);
+            ObjAdminUsuario.btnBuscar.Click += new EventHandler(BuscarPersonasController);
         }
-
+        private void BuscarPersonasController(object sender, EventArgs e)
+        {
+            //Objeto de la clase DAOAdminUsuarios
+            DAOUsuarios ObjAdmin = new DAOUsuarios();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminUsuario.txtBuscar.Text.Trim());
+            //Llenar DataGridView
+            ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["viewPersonal"];
+        }
         private void DeleteUser(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
             int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;
-            if (MessageBox.Show($"¿Esta seguro que desea eliminar a:\n{ObjAdminUsuario.dgvPersonas[2, pos].Value.ToString()}\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOUsuarios daoDel = new DAOUsuarios();
                 daoDel.PersonalId = int.Parse(ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString());

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PTC.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PTC.Controller.Common
 {
-    internal class SessionVar
+    internal class SessionVar : dbContext
     {
         private static string usuarioPersonal;
         private static string contraseñaPersonal;

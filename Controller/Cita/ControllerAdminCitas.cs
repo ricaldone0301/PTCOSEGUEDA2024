@@ -22,7 +22,6 @@ namespace PTC.Controller.Cita
             ObjAdminCitas.btnNuevo.Click += new EventHandler(NewUser);
             ObjAdminCitas.cmsActualizar.Click += new EventHandler(UpdateUser);
             ObjAdminCitas.cmsEliminar.Click += new EventHandler(DeleteUser);
-            // ObjAdminUsuario.dgvPersonas.CellContentClick += new DataGridViewCellEventHandler(dgvPersonas_CellContentClick);
         }
 
         private void DeleteUser(object sender, EventArgs e)

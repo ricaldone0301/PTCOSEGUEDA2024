@@ -131,8 +131,6 @@ namespace PTC.Modelo.DAOCitas
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = getConnection();
-                    //cmd.CommandText = "SELECT SCOPE_IDENTITY()";
-                    //int personalId = Convert.ToInt32(cmd.ExecuteScalar());
 
                     String query = "INSERT INTO Citas (pacienteID, personalID, consultorioID, hora, fecha, citaID, procedimientoID) VALUES (@pacienteID, @personalID, @nombreConsultorio, @nombre, @hora, @fecha, @citaID, @procedimientoID)";
                     cmd.CommandText = query;

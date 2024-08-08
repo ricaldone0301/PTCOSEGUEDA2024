@@ -33,6 +33,8 @@
             this.cmsEliminar = new System.Windows.Forms.Button();
             this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,11 +97,30 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(68, 21);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(244, 22);
+            this.txtBuscar.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AccessibleName = "btnBuscar";
+            this.btnBuscar.Location = new System.Drawing.Point(334, 20);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Actualizar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // ViewUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 828);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPersonas);
             this.Name = "ViewUsuarios";
@@ -107,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,5 +139,7 @@
         public System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.Button cmsEliminar;
         public System.Windows.Forms.Button cmsActualizar;
+        public System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox txtBuscar;
     }
 }
