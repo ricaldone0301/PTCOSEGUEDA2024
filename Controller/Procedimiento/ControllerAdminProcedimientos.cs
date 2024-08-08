@@ -29,7 +29,6 @@ namespace PTC.Controller.Procedimiento
             ObjAdminProcedimiento.btnNuevo.Click += new EventHandler(Nuevo);
             ObjAdminProcedimiento.cmsActualizar.Click += new EventHandler(Actualizar);
              ObjAdminProcedimiento.cmsEliminar.Click += new EventHandler(Eliminar);
-                // ObjAdminUsuario.dgvPersonas.CellContentClick += new DataGridViewCellEventHandler(dgvPersonas_CellContentClick);
             }
 
             private void Eliminar(object sender, EventArgs e)

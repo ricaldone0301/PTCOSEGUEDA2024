@@ -33,6 +33,8 @@
             this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new Bunifu.Framework.UI.BunifuSearchEngine();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.SuspendLayout();
@@ -93,14 +95,32 @@
             this.dgvCitas.Size = new System.Drawing.Size(1070, 589);
             this.dgvCitas.TabIndex = 5;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtBuscar.ForeColor = System.Drawing.Color.Tomato;
+            this.txtBuscar.Location = new System.Drawing.Point(266, 24);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(292, 38);
+            this.txtBuscar.TabIndex = 7;
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // ViewTratamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 826);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCitas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1701, 873);
             this.MinimumSize = new System.Drawing.Size(1701, 873);
             this.Name = "ViewTratamientos";
@@ -119,5 +139,7 @@
         public System.Windows.Forms.Button cmsActualizar;
         public System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.DataGridView dgvCitas;
+        private Bunifu.Framework.UI.BunifuSearchEngine txtBuscar;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }

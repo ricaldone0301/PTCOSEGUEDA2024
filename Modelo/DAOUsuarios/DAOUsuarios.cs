@@ -106,8 +106,6 @@ namespace PTC.Modelo.DAOUsuarios
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = getConnection();
-                    //cmd.CommandText = "SELECT SCOPE_IDENTITY()";
-                    //int personalId = Convert.ToInt32(cmd.ExecuteScalar());
 
                     String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email)";
                     cmd.CommandText = query;
@@ -115,7 +113,6 @@ namespace PTC.Modelo.DAOUsuarios
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
                     cmd.Parameters.AddWithValue("@roleID", Rol);
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    //cmd.Parameters.AddWithValue("@personalId", personalId);
                     cmd.Parameters.AddWithValue("@especialidadId", EspecialidadId);
                     cmd.Parameters.AddWithValue("@telefono", Telefono);
                     cmd.Parameters.AddWithValue("@consultorioId", ConsultorioId);
@@ -225,7 +222,36 @@ namespace PTC.Modelo.DAOUsuarios
                 getConnection().Close();
             }
         }
-
+        public DataSet BuscarPersonas(string valor)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = $"SELECT * FROM viewPersonal WHERE nombrePersonal LIKE '%{valor}%' OR usuarioPersonal LIKE '%{valor}%' OR personalID LIKE '%{valor}%' OR especialidadID LIKE '%{valor}%' OR telefono LIKE '%{valor}%' OR contraseñaPersonal LIKE '%{valor}% 'OR roleID LIKE '%{valor}%' OR Email LIKE '%{valor}%'  OR consultorioID LIKE '%{valor}%'";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
+                //ExecuteNonQuery devuelve un valor entero.
+                cmd.ExecuteNonQuery();
+                //Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                //Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+                //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
+                adp.Fill(ds, "viewPersonal");
+                //Devolvemos el Dataset
+                return ds;
+            }
+            catch (Exception)
+            {
+                //Retornamos null si existiera algún error durante la ejecución
+                return null;
+            }
+            finally
+            {
+                //Independientemente se haga o no el proceso cerramos la conexión
+                getConnection().Close();
+            }
+        }
     }
 }
 

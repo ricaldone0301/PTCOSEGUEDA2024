@@ -20,8 +20,6 @@ namespace PTC.Controller
     {
         ViewOlvidoContrasena ObjContrasena;
 
-        private string rol;
-
 
         private string verificationCode = string.Empty;
 
