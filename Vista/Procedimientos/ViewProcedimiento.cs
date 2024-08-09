@@ -19,5 +19,10 @@ namespace PTC.Vista.Padecimientos
             InitializeComponent();
             ControllerAdminProcedimientos ObjProcedimientos = new ControllerAdminProcedimientos(this);
         }
+
+        private void ViewProcedimiento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
