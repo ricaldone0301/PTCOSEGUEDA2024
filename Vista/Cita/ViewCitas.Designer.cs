@@ -33,6 +33,8 @@
             this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.SuspendLayout();
@@ -94,12 +96,31 @@
             this.dgvCitas.Size = new System.Drawing.Size(1070, 589);
             this.dgvCitas.TabIndex = 3;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AccessibleName = "btnBuscar";
+            this.btnBuscar.Location = new System.Drawing.Point(306, 61);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(56, 61);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(244, 22);
+            this.txtBuscar.TabIndex = 12;
+            // 
             // ViewCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1683, 828);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCitas);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -110,6 +131,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +142,7 @@
         public System.Windows.Forms.Button cmsActualizar;
         public System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.DataGridView dgvCitas;
+        public System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox txtBuscar;
     }
 }

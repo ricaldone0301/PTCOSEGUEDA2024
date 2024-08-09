@@ -229,26 +229,18 @@ namespace PTC.Modelo.DAOUsuarios
                 Command.Connection = getConnection();
                 string query = $"SELECT * FROM viewPersonal WHERE nombrePersonal LIKE '%{valor}%' OR usuarioPersonal LIKE '%{valor}%' OR personalID LIKE '%{valor}%' OR especialidadID LIKE '%{valor}%' OR telefono LIKE '%{valor}%' OR contraseñaPersonal LIKE '%{valor}% 'OR roleID LIKE '%{valor}%' OR Email LIKE '%{valor}%'  OR consultorioID LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
-                //ExecuteNonQuery devuelve un valor entero.
                 cmd.ExecuteNonQuery();
-                //Se utiliza un adaptador sql para rellenar el dataset
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                //Se crea un objeto Dataset que es donde se devolverán los resultados
                 DataSet ds = new DataSet();
-                //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
                 adp.Fill(ds, "viewPersonal");
-                //Devolvemos el Dataset
                 return ds;
             }
             catch (Exception)
             {
-                //Retornamos null si existiera algún error durante la ejecución
                 return null;
             }
             finally
             {
-                //Independientemente se haga o no el proceso cerramos la conexión
                 getConnection().Close();
             }
         }

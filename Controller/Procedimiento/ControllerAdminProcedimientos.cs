@@ -28,10 +28,19 @@ namespace PTC.Controller.Procedimiento
             ObjAdminProcedimiento.Load += new EventHandler(LoadData);
             ObjAdminProcedimiento.btnNuevo.Click += new EventHandler(Nuevo);
             ObjAdminProcedimiento.cmsActualizar.Click += new EventHandler(Actualizar);
-             ObjAdminProcedimiento.cmsEliminar.Click += new EventHandler(Eliminar);
+            ObjAdminProcedimiento.cmsEliminar.Click += new EventHandler(Eliminar);
+            ObjAdminProcedimiento.btnBuscar.Click += new EventHandler(BuscarPersonas);
             }
 
-            private void Eliminar(object sender, EventArgs e)
+
+        private void BuscarPersonas(object sender, EventArgs e)
+        {
+            DAOProcedimiento ObjAdmin = new DAOProcedimiento();
+            DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminProcedimiento.txtBuscar.Text.Trim());
+            ObjAdminProcedimiento.dgvProcedimientos.DataSource = ds.Tables["ViewProcedimientos"];
+        }
+
+        private void Eliminar(object sender, EventArgs e)
             {
                 int rowIndex = ObjAdminProcedimiento.dgvProcedimientos.CurrentCell.RowIndex;
                 int pos = ObjAdminProcedimiento.dgvProcedimientos.CurrentRow.Index;

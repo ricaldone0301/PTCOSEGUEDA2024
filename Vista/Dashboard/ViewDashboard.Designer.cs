@@ -117,7 +117,7 @@
             this.btnProcedimientos.BackColor = System.Drawing.Color.Transparent;
             this.btnProcedimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProcedimientos.BackgroundImage")));
             this.btnProcedimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnProcedimientos.ButtonText = "PADECIMIENTOS";
+            this.btnProcedimientos.ButtonText = "PROCEDIMIENTOS";
             this.btnProcedimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProcedimientos.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcedimientos.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -233,7 +233,7 @@
             this.btnCalendario.BackColor = System.Drawing.Color.Transparent;
             this.btnCalendario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalendario.BackgroundImage")));
             this.btnCalendario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCalendario.ButtonText = "CALENDARIO";
+            this.btnCalendario.ButtonText = "PADECIMIENTOS";
             this.btnCalendario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalendario.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalendario.ForeColor = System.Drawing.Color.MidnightBlue;

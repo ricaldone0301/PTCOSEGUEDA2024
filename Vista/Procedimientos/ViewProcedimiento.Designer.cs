@@ -33,6 +33,8 @@
             this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
             this.SuspendLayout();
@@ -93,11 +95,30 @@
             this.dgvProcedimientos.Size = new System.Drawing.Size(1070, 589);
             this.dgvProcedimientos.TabIndex = 7;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AccessibleName = "btnBuscar";
+            this.btnBuscar.Location = new System.Drawing.Point(340, 47);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(90, 47);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(244, 22);
+            this.txtBuscar.TabIndex = 10;
+            // 
             // ViewProcedimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 828);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvProcedimientos);
             this.MaximumSize = new System.Drawing.Size(1701, 875);
@@ -107,6 +128,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,5 +139,7 @@
         public System.Windows.Forms.Button cmsActualizar;
         public System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.DataGridView dgvProcedimientos;
+        public System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox txtBuscar;
     }
 }

@@ -99,7 +99,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(68, 21);
+            this.txtBuscar.Location = new System.Drawing.Point(51, 33);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(244, 22);
             this.txtBuscar.TabIndex = 3;
@@ -107,11 +107,11 @@
             // btnBuscar
             // 
             this.btnBuscar.AccessibleName = "btnBuscar";
-            this.btnBuscar.Location = new System.Drawing.Point(334, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(301, 33);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Actualizar";
+            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // ViewUsuarios

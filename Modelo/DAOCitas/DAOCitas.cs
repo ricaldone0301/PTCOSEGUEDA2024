@@ -219,5 +219,27 @@ namespace PTC.Modelo.DAOCitas
             }
         }
 
+        public DataSet BuscarPersonas(string valor)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = $"SELECT * FROM ViewCitas WHERE citaID LIKE '%{valor}%' OR fecha LIKE '%{valor}%' OR hora LIKE '%{valor}%' OR consultorioID LIKE '%{valor}%' OR doctorID LIKE '%{valor}%' OR pacienteID LIKE '%{valor}%'";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "ViewCitas");
+                return ds;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
     }
 }
