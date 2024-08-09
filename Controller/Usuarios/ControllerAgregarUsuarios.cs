@@ -132,7 +132,7 @@ namespace PTC.Controller.Usuarios
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar usuario: {ex.Message}",
+                MessageBox.Show($"ERRU001: {ex.Message}",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);

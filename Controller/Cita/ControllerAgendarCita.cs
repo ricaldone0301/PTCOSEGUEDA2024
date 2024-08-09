@@ -144,7 +144,7 @@ namespace PTC.Controller.Cita
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar Cita: {ex.Message}",
+                MessageBox.Show($"ERRC002: {ex.Message}",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
