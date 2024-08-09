@@ -30,7 +30,8 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                string messageError = ErrorCode.Codes["ERRC001"];
+                Console.WriteLine(messageError);
                 ds = null;
             }
             finally
