@@ -121,7 +121,30 @@ namespace PTC.Modelo.DAOProcedimiento
                 getConnection().Close();
             }
         }
-          
-        }
-    }
+        public DataSet BuscarPersonas(string valor)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = $"SELECT * FROM viewProcedimientos WHERE procedimientoID LIKE '%{valor}%' OR nombreProcedimiento LIKE '%{valor}%' OR precioProcedimiento LIKE '%{valor}%' OR descProcedimiento LIKE '%{valor}%'";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "viewProcedimientos");
+                return ds;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
 
+        }
+
+
+    }
+}

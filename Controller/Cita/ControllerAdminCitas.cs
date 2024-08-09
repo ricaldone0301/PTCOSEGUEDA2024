@@ -1,4 +1,5 @@
 ﻿using PTC.Modelo.DAOCitas;
+using PTC.Modelo.DAOProcedimiento;
 using PTC.Vista.AgendarCita;
 using PTC.Vista.Cita;
 using PTC.Vista.Doctores;
@@ -22,8 +23,15 @@ namespace PTC.Controller.Cita
             ObjAdminCitas.btnNuevo.Click += new EventHandler(NewUser);
             ObjAdminCitas.cmsActualizar.Click += new EventHandler(UpdateUser);
             ObjAdminCitas.cmsEliminar.Click += new EventHandler(DeleteUser);
+            ObjAdminCitas.btnBuscar.Click += new EventHandler(BuscarPersonas);
         }
 
+        private void BuscarPersonas(object sender, EventArgs e)
+        {
+            DAOProcedimiento ObjAdmin = new DAOProcedimiento();
+            DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminCitas.txtBuscar.Text.Trim());
+            ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewProcedimientos"];
+        }
         private void DeleteUser(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;

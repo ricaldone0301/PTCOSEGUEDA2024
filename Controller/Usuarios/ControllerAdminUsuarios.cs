@@ -25,15 +25,12 @@ namespace PTC.Controller.Usuarios
             ObjAdminUsuario.btnNuevo.Click += new EventHandler(NewUser);
             ObjAdminUsuario.cmsActualizar.Click += new EventHandler(UpdateUser);
             ObjAdminUsuario.cmsEliminar.Click += new EventHandler(DeleteUser);
-            ObjAdminUsuario.btnBuscar.Click += new EventHandler(BuscarPersonasController);
+            ObjAdminUsuario.btnBuscar.Click += new EventHandler(BuscarPersonas);
         }
-        private void BuscarPersonasController(object sender, EventArgs e)
+        private void BuscarPersonas(object sender, EventArgs e)
         {
-            //Objeto de la clase DAOAdminUsuarios
             DAOUsuarios ObjAdmin = new DAOUsuarios();
-            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
             DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminUsuario.txtBuscar.Text.Trim());
-            //Llenar DataGridView
             ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["viewPersonal"];
         }
         private void DeleteUser(object sender, EventArgs e)
