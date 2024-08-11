@@ -196,6 +196,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
             this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // bunifuCustomLabel11
             // 
@@ -276,6 +277,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnAgregar
             // 
@@ -376,7 +378,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         public System.Windows.Forms.TextBox txtNombre;
@@ -386,12 +387,13 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
         public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.TextBox txtTelefono;
-        public System.Windows.Forms.TextBox txtContrasena;
         public System.Windows.Forms.TextBox txtUsuario;
         public System.Windows.Forms.TextBox txtEmail;
         public System.Windows.Forms.ComboBox cbRol;
         public System.Windows.Forms.ComboBox cbConsul;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         public System.Windows.Forms.ComboBox cbEsp;
+        public System.Windows.Forms.TextBox txtContrasena;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
     }
 }

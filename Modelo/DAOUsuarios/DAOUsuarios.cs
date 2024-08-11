@@ -99,27 +99,24 @@ namespace PTC.Modelo.DAOUsuarios
         }
 
 
-
         public int RegistrarUsuario()
-            {
+        {
             try
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = getConnection();
-                    //cmd.CommandText = "SELECT SCOPE_IDENTITY()";
-                    //int personalId = Convert.ToInt32(cmd.ExecuteScalar());
 
-                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId)";
+                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@usuario", Usuario);
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
                     cmd.Parameters.AddWithValue("@roleID", Rol);
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    //cmd.Parameters.AddWithValue("@personalId", personalId);
                     cmd.Parameters.AddWithValue("@especialidadId", EspecialidadId);
                     cmd.Parameters.AddWithValue("@telefono", Telefono);
                     cmd.Parameters.AddWithValue("@consultorioId", ConsultorioId);
+                    cmd.Parameters.AddWithValue("@email", Email);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -176,8 +173,9 @@ namespace PTC.Modelo.DAOUsuarios
                                 "consultorioID = @param4," +
                                 "usuarioPersonal = @param5, " +
                                 "contraseñaPersonal = @param6," +
-                                "roleID = @param7 " +
-                                "WHERE personalID = @param8";
+                                "roleID = @param7," +
+                                "email = @param8 " +
+                                "WHERE personalID = @param9";
               
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param1", Nombre);
@@ -187,7 +185,8 @@ namespace PTC.Modelo.DAOUsuarios
                 cmd.Parameters.AddWithValue("param5", Usuario);
                 cmd.Parameters.AddWithValue("param6", Contrasena);
                 cmd.Parameters.AddWithValue("param7", Rol);
-                cmd.Parameters.AddWithValue("param8", PersonalId);
+                cmd.Parameters.AddWithValue("param8", Email);
+                cmd.Parameters.AddWithValue("param9", PersonalId);
 
                 int respuesta = cmd.ExecuteNonQuery();               
                 return respuesta;
@@ -223,7 +222,28 @@ namespace PTC.Modelo.DAOUsuarios
                 getConnection().Close();
             }
         }
-
+        public DataSet BuscarPersonas(string valor)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = $"SELECT * FROM viewPersonal WHERE nombrePersonal LIKE '%{valor}%' OR usuarioPersonal LIKE '%{valor}%' OR personalID LIKE '%{valor}%' OR especialidadID LIKE '%{valor}%' OR telefono LIKE '%{valor}%' OR contraseñaPersonal LIKE '%{valor}% 'OR roleID LIKE '%{valor}%' OR Email LIKE '%{valor}%'  OR consultorioID LIKE '%{valor}%'";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "viewPersonal");
+                return ds;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
     }
 }
 

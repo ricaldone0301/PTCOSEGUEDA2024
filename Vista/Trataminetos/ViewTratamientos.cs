@@ -16,5 +16,10 @@ namespace PTC.Vista.Trataminetos
         {
             InitializeComponent();
         }
+
+        private void ViewTratamientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

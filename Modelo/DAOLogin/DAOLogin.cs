@@ -11,29 +11,40 @@ using PTC.Modelo.DTOLogin;
 using System.Security.Cryptography.X509Certificates;
 using System.Data.SqlTypes;
 using System.Runtime.Remoting.Messaging;
+using PTC.Controller.Common;
 
 namespace PTC.Modelo.DAOLogin
 {
     public class DAOLogin : DtoLogin
     {
-        //internal string usuarioPersonal;
-        //internal string contraseñaPersonal;
+        
         SqlCommand Command = new SqlCommand();
-        public int Login()
+        public bool Login() 
         {
             try
             {
+
                 Command.Connection = getConnection();
-                Command.CommandText = "sp_Login";
-                Command.CommandType = CommandType.StoredProcedure;
-                Command.Parameters.AddWithValue("@username", Usuario);
-                Command.Parameters.AddWithValue("@password", Contraseña);
-                return Command.ExecuteScalar().ToString() == Usuario ? 1 : 0;
-            }
+                string query = "SELECT * FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("username", Usuario);
+                cmd.Parameters.AddWithValue("password", Contrasena);
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    SessionVar.Usuario = rd.GetString(1);
+                    SessionVar.Contrasena = rd.GetString(2);
+                    SessionVar.Rol = rd.GetString(3);
+                    SessionVar.Nombre = rd.GetString(0);
+               }
+                    return rd.HasRows;
+
+                }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return -1;
+                return false;
             }
             finally { getConnection().Close(); }
         }

@@ -1,5 +1,5 @@
 ﻿using PTC.Vista.Dashboard;
-using PTC.Vista.Pacientes;
+//using PTC.Vista.Pacientes;
 using PTC.Vista.Calendario;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.AgendarCita;
@@ -13,29 +13,44 @@ using System.Windows.Forms;
 using PTC.Vista.Cita;
 using PTC.Vista.Login;
 using PTC.Vista.Doctores;
+using PTC.Vista.Padecimientos;
+using PTC.Modelo.DTOLogin;
+using PTC.Modelo.DTOContrasena;
+using PTC.Controller.Common;
+using PTC.Vista.Paciente;
+using PTC.Vista.Ocupaciones;
 
 namespace PTC.Controller.Dasboard
 {
     public class ControllerDashboard
     {
-        private ViewDashboard ObjDashboard;
-        private Form currentForm;
+        ViewDashboard ObjDashboard;
+        Form currentForm;
     
 
         public ControllerDashboard(ViewDashboard View)
         {
             ObjDashboard = View;
+            View.Load += new EventHandler(EventosIniciales);
+            ObjDashboard.lblUsuario.Text = SessionVar.Usuario;
+            ObjDashboard.lblNombre.Text = SessionVar.Rol;
             ObjDashboard.btnCerrarSesion.Click += new EventHandler(CerrarSesion);
             ObjDashboard.btnPacientes.Click += new EventHandler(Pacientes);
-            ObjDashboard.btnCalendario.Click += new EventHandler(Calendario);
+            ObjDashboard.btnOcupaciones.Click += new EventHandler(Ocupaciones);
             ObjDashboard.btnCitas.Click += new EventHandler(Citas);
             ObjDashboard.btnInicio.Click += new EventHandler(Inicio);
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
+            ObjDashboard.btnProcedimientos.Click += new EventHandler(Procedimientos);
         }
 
         private void Pacientes(object sender, EventArgs e)
         {
-            AbrirFormulario<ViewPacientes>();
+            AbrirFormulario<ViewPaciente>();
+        }
+
+        private void Procedimientos(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewProcedimiento>();
         }
 
         private void Citas(object sender, EventArgs e)
@@ -43,9 +58,9 @@ namespace PTC.Controller.Dasboard
             AbrirFormulario<ViewCitas>();
         }
 
-        private void Calendario(object sender, EventArgs e)
+        private void Ocupaciones(object sender, EventArgs e)
         {
-            AbrirFormulario<VistaCalendario>();
+            AbrirFormulario<ViewOcupaciones>();
         }
 
         private void Inicio(object sender, EventArgs e)
@@ -63,6 +78,28 @@ namespace PTC.Controller.Dasboard
         {
             AbrirFormulario<ViewUsuarios>();
 
+        }
+
+        void EventosIniciales(object sender, EventArgs e)
+        {
+            Acceso();
+        }
+
+
+        public void Acceso()
+        {
+            switch (SessionVar.Rol)
+            {
+                case "Asistente":
+                    break;
+                case "Secretario":
+                    break;
+                case "Doctor":
+                    ObjDashboard.btnUsuarios.Visible = false;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
