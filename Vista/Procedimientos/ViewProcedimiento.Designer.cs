@@ -125,6 +125,7 @@
             this.MinimumSize = new System.Drawing.Size(1701, 875);
             this.Name = "ViewProcedimiento";
             this.Text = "ViewPadecimientos";
+            this.Load += new System.EventHandler(this.ViewProcedimiento_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
             this.ResumeLayout(false);

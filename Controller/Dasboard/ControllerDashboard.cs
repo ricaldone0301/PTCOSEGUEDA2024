@@ -17,6 +17,7 @@ using PTC.Vista.Padecimientos;
 using PTC.Modelo.DTOLogin;
 using PTC.Modelo.DTOContrasena;
 using PTC.Controller.Common;
+using PTC.Vista.Paciente;
 
 namespace PTC.Controller.Dasboard
 {
@@ -43,7 +44,7 @@ namespace PTC.Controller.Dasboard
 
         private void Pacientes(object sender, EventArgs e)
         {
-            AbrirFormulario<ViewUsuarios>();
+            AbrirFormulario<ViewPaciente>();
         }
 
         private void Procedimientos(object sender, EventArgs e)

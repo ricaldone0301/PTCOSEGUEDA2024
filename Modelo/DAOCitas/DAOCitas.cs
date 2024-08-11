@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAOCitas
 {
@@ -30,8 +31,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                string messageError = ErrorCode.Codes["ERRC001"];
-                Console.WriteLine(messageError);
+                Console.WriteLine("Error: " + ex.Message);
                 ds = null;
             }
             finally
@@ -150,7 +150,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error en AgendarCita: {ex.Message}");
+                Console.WriteLine($"ERRC001: {ex.Message}");
                 return -1;
             }
         }

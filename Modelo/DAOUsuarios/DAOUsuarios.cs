@@ -125,7 +125,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error in RegistrarUsuario: {ex.Message}");
+                Console.WriteLine($"ERRU001: {ex.Message}");
                 return -1;
             }
             finally

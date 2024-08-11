@@ -45,7 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ok.SuspendLayout();
@@ -353,20 +352,12 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
-            this.PanelContenedor.Controls.Add(this.monthCalendar1);
             this.PanelContenedor.Controls.Add(this.bunifuCustomLabel10);
             this.PanelContenedor.Location = new System.Drawing.Point(269, 0);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1433, 886);
             this.PanelContenedor.TabIndex = 32;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.monthCalendar1.Location = new System.Drawing.Point(388, 265);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 31;
             // 
             // PanelPadre
             // 
@@ -422,7 +413,6 @@
         public Bunifu.Framework.UI.BunifuThinButton2 btnUsuarios;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
     }
