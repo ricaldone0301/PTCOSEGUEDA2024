@@ -25,18 +25,28 @@ namespace PTC.Controller.Procedimiento
             public ControllerAdminProcedimientos(ViewProcedimiento Vista)
             {
             ObjAdminProcedimiento = Vista;
-            ObjAdminProcedimiento.Load += new EventHandler(LoadData);
+            ObjAdminProcedimiento.Load += new EventHandler(Load);
             ObjAdminProcedimiento.btnNuevo.Click += new EventHandler(Nuevo);
             ObjAdminProcedimiento.cmsActualizar.Click += new EventHandler(Actualizar);
             ObjAdminProcedimiento.cmsEliminar.Click += new EventHandler(Eliminar);
-            ObjAdminProcedimiento.btnBuscar.Click += new EventHandler(BuscarPersonas);
+            ObjAdminProcedimiento.btnBuscar.Click += new EventHandler(Buscar);
             }
 
+        public void Load(object sender, EventArgs e)
+        {
+            RefrescarData();
+        }
+        public void RefrescarData()
+        {
+            DAOProcedimiento objAdmin = new DAOProcedimiento();
+            DataSet ds = objAdmin.ObtenerProcedimiento();
+            ObjAdminProcedimiento.dgvProcedimientos.DataSource = ds.Tables["Procedimientos"];
+        }
 
-        private void BuscarPersonas(object sender, EventArgs e)
+        private void Buscar(object sender, EventArgs e)
         {
             DAOProcedimiento ObjAdmin = new DAOProcedimiento();
-            DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminProcedimiento.txtBuscar.Text.Trim());
+            DataSet ds = ObjAdmin.BuscarProcedimiento(ObjAdminProcedimiento.txtBuscar.Text.Trim());
             ObjAdminProcedimiento.dgvProcedimientos.DataSource = ds.Tables["ViewProcedimientos"];
         }
 
@@ -62,10 +72,6 @@ namespace PTC.Controller.Procedimiento
                 }
             }
 
-            public void LoadData(object sender, EventArgs e)
-            {
-                RefrescarData();
-            }
 
             private void Actualizar(object sender, EventArgs e)
             {
@@ -85,13 +91,6 @@ namespace PTC.Controller.Procedimiento
             openForm.ShowDialog();
             RefrescarData();
 
-            }
-
-            public void RefrescarData()
-            {
-                DAOProcedimiento objAdmin = new DAOProcedimiento();
-                DataSet ds = objAdmin.ObtenerProcedimiento();
-                ObjAdminProcedimiento.dgvProcedimientos.DataSource = ds.Tables["Procedimientos"];
             }
 
             private void Nuevo(object sender, EventArgs e)

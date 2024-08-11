@@ -1,16 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Controller",
-    "\\Controller\\Login",
-    "\\Modelo\\DAOLogin",
-    "\\Modelo\\DTOUsuarios",
-    "\\Vista",
-    "\\Vista\\AgendarCita",
-    "\\Vista\\Calendario",
-    "\\Vista\\Dashboard",
-    "\\Vista\\Pacientes"
+    ""
   ],
-  "SelectedNode": "\\Vista\\Calendario\\VistaCalendario.cs",
   "PreviewInSolutionExplorer": false
 }

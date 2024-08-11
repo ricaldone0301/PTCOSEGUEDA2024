@@ -29,21 +29,21 @@ namespace PTC.Controller.Cita
             this.accion = accion;
             
             verificarAccion();
-            ObjAgendarCita.Load += new EventHandler(InitialCharge);
-            ObjAgendarCita.btnGuardar.Click += new EventHandler(NewRegister);
+            ObjAgendarCita.Load += new EventHandler(CargoInicial);
+            ObjAgendarCita.btnGuardar.Click += new EventHandler(NuevaCita);
         }
-        public ControllerAgendarCita(ViewAgendarcita Vista, int accion, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
+        public ControllerAgendarCita(ViewAgendarcita Vista, int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
         {
             ObjAgendarCita = Vista;
             this.accion = accion;
-            ObjAgendarCita.Load += new EventHandler(InitialCharge);
+            ObjAgendarCita.Load += new EventHandler(CargoInicial);
             verificarAccion();
             ChargeValues(Vista, accion, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
-            this.citaID = int.Parse(citaID.ToString());
+            this.citaID = citaID;
             ObjAgendarCita.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
 
-        public void InitialCharge(object sender, EventArgs e)
+        public void CargoInicial(object sender, EventArgs e)
         {
             try
             {
@@ -151,7 +151,7 @@ namespace PTC.Controller.Cita
             }
         }
 
-        public void NewRegister(object sender, EventArgs e)
+        public void NuevaCita(object sender, EventArgs e)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace PTC.Controller.Cita
                 daoAdmin.PacienteID = int.Parse(ObjAgendarCita.cbPaciente.SelectedValue.ToString());
                 daoAdmin.PersonalID = (int.Parse(ObjAgendarCita.cbDoctor.SelectedValue.ToString())).ToString();
                 daoAdmin.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
-                daoAdmin.Hora = ObjAgendarCita.Tiempo.Value.ToString();
+                daoAdmin.Hora = ObjAgendarCita.txtHora.Text.ToString();
                 daoAdmin.Fecha = ObjAgendarCita.Fecha.Value.Date;
                 daoAdmin.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
 
@@ -201,7 +201,10 @@ namespace PTC.Controller.Cita
             daoUpdate.PersonalID = ObjAgendarCita.cbDoctor.SelectedValue.ToString();
             daoUpdate.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
             daoUpdate.CitaID = citaID;
-            //daoUpdate.OcupacionID = (int)ObjAgregarOcupacion.cbOcupacion.SelectedValue;
+            daoUpdate.Hora = ObjAgendarCita.txtHora.Text.ToString();
+            daoUpdate.Fecha = ObjAgendarCita.Fecha.Value;
+            daoUpdate.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
+            //daoUpdate.Hora = DateTime.Parse(ObjAgendarCita.Tiempo.ToString()).ToString();
 
 
             int valorRetornado = daoUpdate.ActualizarUsuario();
@@ -266,7 +269,7 @@ namespace PTC.Controller.Cita
             ObjAgendarCita.cbPaciente.SelectedValue = pacienteID;
             ObjAgendarCita.cbDoctor.SelectedValue = personalID;
             ObjAgendarCita.cbConsultorio.SelectedValue = consultorioID;
-            ObjAgendarCita.Tiempo.Value = DateTime.Now;
+            ObjAgendarCita.txtHora.Text = hora;
             ObjAgendarCita.Fecha.Value = DateTime.Now;
             ObjAgendarCita.cbProcedimiento.SelectedValue = procedimientoID;
         }

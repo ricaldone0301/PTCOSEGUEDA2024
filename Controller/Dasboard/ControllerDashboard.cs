@@ -65,14 +65,28 @@ namespace PTC.Controller.Dasboard
 
         private void Inicio(object sender, EventArgs e)
         {
-            //AbrirFormulario<ViewD>
-            //currentForm.Close();
+            AbrirFormulario<ViewDashboard>();
+            currentForm.Close();
         }
 
         private void CerrarSesion(object sender, EventArgs e)
         {
-            AbrirFormulario<ViewLogin>();
 
+            var result = MessageBox.Show("Esta seguro que quiere cerrar sesion?",
+                                         "Confirm Logout",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+
+            if (result == DialogResult.Yes)
+            {
+
+                if (currentForm != null)
+                {
+                    currentForm.Close();
+                }
+                Application.Exit();
+            }
         }
         private void Usuarios(object sender, EventArgs e)
         {
@@ -115,6 +129,7 @@ namespace PTC.Controller.Dasboard
                 formulario.TopLevel = false;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
+                formulario.StartPosition = FormStartPosition.CenterScreen;
                 if (currentForm != null)
                 {
                     currentForm.Close();
@@ -134,8 +149,8 @@ namespace PTC.Controller.Dasboard
 
             if (formulariologin is ViewLogin)
             {
-                formulario.TopLevel = true; // Make it a top-level window
-                formulario.FormBorderStyle = FormBorderStyle.Sizable; // Or your preferred style
+                formulario.TopLevel = true;
+                formulario.FormBorderStyle = FormBorderStyle.Sizable;
                 formulario.StartPosition = FormStartPosition.CenterScreen;
                 formulario.Show();
 

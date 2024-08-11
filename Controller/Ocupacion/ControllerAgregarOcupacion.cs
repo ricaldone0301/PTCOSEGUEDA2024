@@ -30,14 +30,14 @@ namespace PTC.Controller.Ocupacion
             //ObjAgregarOcupacion.Load += new EventHandler(CargarData);
             ObjAgregarOcupacion.btnGuardar.Click += new EventHandler(NuevoRegistro);
         }
-        public ControllerAgregarOcupacion(ViewAgregarOcupacion Vista, int accion, string nombreConsultorio, int consultorioID)
+        public ControllerAgregarOcupacion(ViewAgregarOcupacion Vista, int accion, string nombreOcupacion, int ocupacionID)
         {
             ObjAgregarOcupacion = Vista;
             this.accion = accion;
             //ObjAgregarOcupacion.Load += new EventHandler(CargarData);
             verificarAccion();
-            CargarData(Vista, accion, nombreConsultorio, consultorioID);
-            this.ocupacionID = int.Parse(ocupacionID.ToString());
+            CargarData(Vista, accion, nombreOcupacion, ocupacionID);
+            this.ocupacionID = ocupacionID;
             ObjAgregarOcupacion.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
 

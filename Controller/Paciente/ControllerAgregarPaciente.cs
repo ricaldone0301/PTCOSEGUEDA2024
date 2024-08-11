@@ -22,7 +22,7 @@ namespace PTC.Controller.Paciente
 
         public bool hipertensionarterial, diabetes, autismo, antecedentespsiquiatricos, vih, cancer, tiroides, ronquidos, artritis, vph, migraña, hemofilia, lupus, parkinson, hemorragias, lentacicatrizacion, gastritis, colitis, otro;
         private int accion;
-        private string pacienteID;
+        private int pacienteID;
         private string ocupacion;
 
         public ControllerAgregarPaciente(ViewAgregarPaciente Vista, int accion)
@@ -43,14 +43,64 @@ namespace PTC.Controller.Paciente
             objAgregarPaciente = vista;
             this.accion = accion;
             this.ocupacion = ocupacion;
+            objAgregarPaciente.Load += new EventHandler(CargaInicial);
             VerificarAccion();
             CargarValores(pacienteID, nombrepaciente, edadpaciente, telefonopaciente, fechanac, correopaciente, ocupacion, direccionpaciente, dui, referencia, nombreemergencia, numemergencia, motivoconsulta, padecimientos, controlmedico, medicocabeceranombre, nummedicocabecera, alergiamedicamentos, medicamento, operacion, tipooperacion, recuperacionoperacion);
-            this.pacienteID = pacienteID.ToString();
+            this.pacienteID = pacienteID;
+            if (operacion.Equals("Sí"))
+            {
+                objAgregarPaciente.cbOperacionSi.Checked = true;
+            }
+            else
+            {
+                objAgregarPaciente.cbOperacionNo.Checked = true;
+            }
+
+            if (controlmedico.Equals("Sí"))
+            {
+                objAgregarPaciente.cbControlMedicoSi.Checked = true;
+            }
+            else
+            {
+                objAgregarPaciente.cbControlMedicoNo.Checked = true;
+            }
+
             objAgregarPaciente.btnGuardarPaciente.Click += new EventHandler(ActualizarExpediente);
             
         }
 
+        public void CargoInicial(object sender, EventArgs e)
+        {
+            try
+            {
+                DAOPaciente objAdmin = new DAOPaciente();
 
+                DataSet dsOcupaciones = objAdmin.ComboBoxOcupacion();
+                if (dsOcupaciones != null && dsOcupaciones.Tables.Contains("Ocupaciones"))
+                {
+                    DataTable dtOcupaciones = dsOcupaciones.Tables["Roles"];
+                    objAgregarPaciente.cmbOcupacion.DataSource = dtOcupaciones;
+                    objAgregarPaciente.cmbOcupacion.ValueMember = "OcupacionID";
+                    objAgregarPaciente.cmbOcupacion.DisplayMember = "nombreOcupacion";
+
+                    if (accion == 1)
+                    {
+                        DataRow[] rows = dtOcupaciones.Select($"nombreOcupacion = '{ocupacion}'");
+                        if (rows.Length > 0)
+                        {
+                            objAgregarPaciente.cmbOcupacion.Text = rows[0]["nombreOcupacion"].ToString();
+                        }
+                    }
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         public void NuevaOcupacion(object sender, EventArgs e)
         {
             try
@@ -242,7 +292,7 @@ namespace PTC.Controller.Paciente
         public void ActualizarExpediente(object sender, EventArgs e)
         {
             DAOPaciente objdao = new DAOPaciente();
-
+            objdao.PacienteID = this.pacienteID;
             //objdao.PacienteID = int.Parse(objAgregarPaciente.txtId.Text.Trim());
             objdao.NombrePaciente = objAgregarPaciente.txtNombrePaciente.Text.Trim();
             objdao.EdadPaciente = int.Parse(objAgregarPaciente.txtEdadPaciente.Text);
@@ -257,6 +307,21 @@ namespace PTC.Controller.Paciente
             objdao.NumEmergencia = objAgregarPaciente.txtNumEmergencia.Text.Trim();
             objdao.MotivoConsulta = objAgregarPaciente.txtMotivoConsulta.Text.Trim();
             objdao.Padecimientos = objAgregarPaciente.txtPadecimientos.Text.Trim();
+
+            if (objAgregarPaciente.cbControlMedicoSi.Checked)
+            {
+                objdao.ControlMedico = objAgregarPaciente.cbControlMedicoSi.Text;
+            }
+            else if (!objAgregarPaciente.cbControlMedicoNo.Checked)
+            {
+                objdao.ControlMedico = objAgregarPaciente.cbControlMedicoNo.Text;
+            }
+            else
+            {
+                objdao.ControlMedico = "No";
+            }
+
+            /*
             if (objAgregarPaciente.cbControlMedicoSi.Checked == true)
             {
                 objdao.ControlMedico = objAgregarPaciente.cbControlMedicoSi.Text;
@@ -264,16 +329,18 @@ namespace PTC.Controller.Paciente
             else if (objAgregarPaciente.cbControlMedicoNo.Checked == true)
             {
                 objdao.ControlMedico = objAgregarPaciente.cbControlMedicoNo.Text;
-            }
+            }*/
             objdao.MedicoCabeceraNombre = objAgregarPaciente.txtMedicoCabeceraNombre.Text.Trim();
             objdao.NumMedicoCabecera = objAgregarPaciente.txtNumMedicoCabecera.Text.Trim();
             objdao.AlergiaMedicamentos = objAgregarPaciente.txtNombreAlergiaMedicamento.Text.Trim();
             objdao.Medicamentos = objAgregarPaciente.txtNombreMedicamento.Text.Trim();
-            if (objAgregarPaciente.cbOperacionSi.Checked == true)
+
+            objAgregarPaciente.cbOperacionSi.Checked = true;
+            if (objAgregarPaciente.cbOperacionSi.Checked == (objdao.Operacion == "Sí"))
             {
                 objdao.Operacion = objAgregarPaciente.cbOperacionSi.Text;
             }
-            else if (objAgregarPaciente.cbOperacionNo.Checked == true)
+            else if (objAgregarPaciente.cbOperacionNo.Checked == (objdao.Operacion == "No"))
             {
                 objdao.Operacion = objAgregarPaciente.cbOperacionNo.Text;
             }
@@ -282,11 +349,11 @@ namespace PTC.Controller.Paciente
             //objdao.OtrosPadecimientos = objAgregarPaciente.txtOtroPadecimiento.Text.Trim();
 
             int valor = objdao.ActualizarUsuario();
-            if (valor == 2)
+            if (valor == 1)
             {
                 MessageBox.Show("Los datos fueron actualizados exitosamente.", "Actualización exitosa", MessageBoxButtons.OK);
             }
-            else if (valor == 1)
+            else if (valor == 2)
             {
                 MessageBox.Show("Los datos no pudieron ser actualizados completamente.", "Actualización interrumpida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

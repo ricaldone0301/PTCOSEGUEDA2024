@@ -135,6 +135,12 @@
     <Compile Include="Vista\AgregarUsuario\ViewAgregarUsuario.Designer.cs">
       <DependentUpon>ViewAgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\AgregarUsuario\ViewVerUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\AgregarUsuario\ViewVerUsuario.Designer.cs">
+      <DependentUpon>ViewVerUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Calendario\VistaCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\AgregarUsuario\ViewAgregarUsuario.resx">
       <DependentUpon>ViewAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\AgregarUsuario\ViewVerUsuario.resx">
+      <DependentUpon>ViewVerUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Calendario\VistaCalendario.resx">
       <DependentUpon>VistaCalendario.cs</DependentUpon>

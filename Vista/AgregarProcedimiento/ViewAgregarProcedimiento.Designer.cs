@@ -144,6 +144,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(517, 299);
             this.txtDescripcion.TabIndex = 14;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // txtPrecio
             // 
@@ -151,6 +152,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(151, 22);
             this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -170,6 +172,7 @@
             this.txtNombreProcedimiento.Name = "txtNombreProcedimiento";
             this.txtNombreProcedimiento.Size = new System.Drawing.Size(517, 22);
             this.txtNombreProcedimiento.TabIndex = 11;
+            this.txtNombreProcedimiento.TextChanged += new System.EventHandler(this.txtNombreProcedimiento_TextChanged);
             // 
             // bunifuCustomLabel4
             // 

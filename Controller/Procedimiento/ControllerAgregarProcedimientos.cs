@@ -26,15 +26,17 @@ namespace PTC.Controller.Procedimiento
             ObjAgregarProcedimiento = Vista;
             this.accion = accion;
             verificarAccion();
-            ObjAgregarProcedimiento.btnGuardar.Click += new EventHandler(NewRegister);
+            ObjAgregarProcedimiento.btnGuardar.Click += new EventHandler(NuevoProcedimeinto);
         }
         public ControllerAgregarProcedimientos(ViewAgregarProcedimiento Vista, int accion, int procedimientoID, string nombreProcedimiento, decimal precioProcedimiento, string descProcedimiento)
         {
             ObjAgregarProcedimiento = Vista;
             this.accion = accion;
+
             verificarAccion();
             this.procedimientoID = procedimientoID;
-            ObjAgregarProcedimiento.btnActualizar.Click += new EventHandler(UpdateRegister);
+            ObjAgregarProcedimiento.btnActualizar.Click += new EventHandler(Actualizar);
+            CargarValores(accion, procedimientoID, nombreProcedimiento, precioProcedimiento, descProcedimiento);
 
         }
 
@@ -52,7 +54,7 @@ namespace PTC.Controller.Procedimiento
             }
         }
 
-        public void NewRegister(object sender, EventArgs e)
+        public void NuevoProcedimeinto(object sender, EventArgs e)
         {
             try
             {
@@ -93,11 +95,13 @@ namespace PTC.Controller.Procedimiento
 
 
 
-        public void UpdateRegister(object sender, EventArgs e)
+        public void Actualizar(object sender, EventArgs e)
         {
             DAOProcedimiento daoUpdate = new DAOProcedimiento();
+            daoUpdate.ProcedimientoID = procedimientoID;
             daoUpdate.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
             String test = ObjAgregarProcedimiento.txtPrecio.Text.ToString().Trim();
+            //daoUpdate.PrecioProcedimiento = decimal.Parse(ObjAgregarProcedimiento.txtPrecio.Text.ToString().Trim());
             decimal result;
             decimal.TryParse(test, out result);
             daoUpdate.PrecioProcedimiento = result;
@@ -105,14 +109,14 @@ namespace PTC.Controller.Procedimiento
 
 
             int valorRetornado = daoUpdate.ActualizarProcedimiento();
-            if (valorRetornado == 2)
+            if (valorRetornado == 1)
             {
-                MessageBox.Show("Los datos de la cita han sido actualizado exitosamente",
+                MessageBox.Show("Los datos del procedimiento han sido actualizado exitosamente",
                                 "Proceso completado",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
-            else if (valorRetornado == 1)
+            else if (valorRetornado == 2)
             {
                 MessageBox.Show("Los datos de la cita no pudieron ser actualizados completamente",
                                 "Proceso interrumpido",
@@ -121,5 +125,23 @@ namespace PTC.Controller.Procedimiento
             }
         }
 
+        public void CargarValores(int accion, int procedimientoID, string nombreProcedimiento, decimal precioProcedimiento, string descProcedimiento)
+        {
+            try
+            {
+                //objAgregarPaciente.txtId.Text = id.ToString();
+                ObjAgregarProcedimiento.txtDescripcion.Text = descProcedimiento;
+                ObjAgregarProcedimiento.txtNombreProcedimiento.Text = nombreProcedimiento;
+                ObjAgregarProcedimiento.txtPrecio.Text = precioProcedimiento.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}");
+            }
+        }
     }
 }
+
+     
+

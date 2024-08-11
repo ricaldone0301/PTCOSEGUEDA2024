@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEnviar1 = new System.Windows.Forms.Button();
             this.txtConfirm = new System.Windows.Forms.TextBox();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,7 +52,6 @@
             this.panel2.BackColor = System.Drawing.Color.Tomato;
             this.panel2.Controls.Add(this.btnEnviar1);
             this.panel2.Controls.Add(this.txtConfirm);
-            this.panel2.Controls.Add(this.BtnExit);
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
             this.panel2.Location = new System.Drawing.Point(942, 129);
             this.panel2.Name = "panel2";
@@ -83,18 +81,6 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.Size = new System.Drawing.Size(209, 22);
             this.txtConfirm.TabIndex = 38;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
-            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.Location = new System.Drawing.Point(329, 4);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(40, 36);
-            this.BtnExit.TabIndex = 19;
-            this.BtnExit.UseVisualStyleBackColor = false;
             // 
             // bunifuCustomLabel2
             // 
@@ -224,7 +210,6 @@
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnEnviar1;
         public System.Windows.Forms.TextBox txtConfirm;
-        public System.Windows.Forms.Button BtnExit;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Panel panel1;

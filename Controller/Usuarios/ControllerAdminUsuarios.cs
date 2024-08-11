@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.AgregarDoctores;
+using PTC.Vista.AgregarUsuario;
 using PTC.Vista.Doctores;
 using PTC.Vista.Registro;
 using System;
@@ -60,7 +61,8 @@ namespace PTC.Controller.Usuarios
            RefrescarData();
         }
 
-       private void ActualizarUsuario(object sender, EventArgs e)
+
+        private void ActualizarUsuario(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
             int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;

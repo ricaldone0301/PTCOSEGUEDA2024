@@ -125,7 +125,7 @@ namespace PTC.Modelo.DAOPaciente
             try
             {
                 Command.Connection = getConnection();
-                string query = "UPDATE Pacientes SET" +
+                string query = "UPDATE Pacientes SET " +
                         "nombrePaciente = @param1," +
                         "edadPaciente = @param2," +
                         "telefonoPaciente = @param3," +
@@ -145,8 +145,8 @@ namespace PTC.Modelo.DAOPaciente
                         "medicamentos = @param17," +
                         "operacion = @param18," +
                         "tipoOperacion = @param19," +
-                        "recuperacionOperacion = @param20" +
-                        "padecimientos - @param21" +
+                        "recuperacionOperacion = @param20," +
+                        "padecimientos = @param21 " +
                         "WHERE PacienteID = @param22";
 
 
