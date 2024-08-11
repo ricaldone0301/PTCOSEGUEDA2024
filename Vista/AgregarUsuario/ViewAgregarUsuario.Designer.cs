@@ -114,6 +114,7 @@
             // 
             // cbEsp
             // 
+            this.cbEsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEsp.FormattingEnabled = true;
             this.cbEsp.Location = new System.Drawing.Point(315, 241);
             this.cbEsp.Name = "cbEsp";
@@ -122,6 +123,7 @@
             // 
             // cbConsul
             // 
+            this.cbConsul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsul.FormattingEnabled = true;
             this.cbConsul.Location = new System.Drawing.Point(42, 445);
             this.cbConsul.Name = "cbConsul";
@@ -159,6 +161,7 @@
             // 
             // cbRol
             // 
+            this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRol.FormattingEnabled = true;
             this.cbRol.Location = new System.Drawing.Point(315, 339);
             this.cbRol.Name = "cbRol";
@@ -257,6 +260,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
             this.txtEmail.TabIndex = 19;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // bunifuCustomLabel6
             // 

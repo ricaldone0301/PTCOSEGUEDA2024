@@ -151,7 +151,7 @@
             this.btnGuardarPaciente.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnGuardarPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarPaciente.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnGuardarPaciente.Location = new System.Drawing.Point(1094, 800);
+            this.btnGuardarPaciente.Location = new System.Drawing.Point(1057, 816);
             this.btnGuardarPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarPaciente.Name = "btnGuardarPaciente";
             this.btnGuardarPaciente.Size = new System.Drawing.Size(144, 76);
@@ -502,6 +502,7 @@
             // 
             // cmbOcupacion
             // 
+            this.cmbOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOcupacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOcupacion.FormattingEnabled = true;
             this.cmbOcupacion.Location = new System.Drawing.Point(568, 219);
@@ -699,6 +700,7 @@
             this.txtNombreOcupacion.Name = "txtNombreOcupacion";
             this.txtNombreOcupacion.Size = new System.Drawing.Size(303, 26);
             this.txtNombreOcupacion.TabIndex = 80;
+            this.txtNombreOcupacion.TextChanged += new System.EventHandler(this.txtNombreOcupacion_TextChanged_1);
             // 
             // txtPadecimientos
             // 
@@ -709,6 +711,7 @@
             this.txtPadecimientos.Name = "txtPadecimientos";
             this.txtPadecimientos.Size = new System.Drawing.Size(245, 48);
             this.txtPadecimientos.TabIndex = 176;
+            this.txtPadecimientos.TextChanged += new System.EventHandler(this.txtPadecimientos_TextChanged);
             // 
             // ViewAgregarPaciente
             // 

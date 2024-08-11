@@ -39,7 +39,7 @@ namespace PTC.Modelo.DAOProcedimiento
             }
             finally
             {
-
+                getConnection().Close();
             }
         }
 
@@ -52,7 +52,8 @@ namespace PTC.Modelo.DAOProcedimiento
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
                 SqlDataReader reader = cmd.ExecuteReader();
-
+                //Utiliza sql reader para leer los resultados y los carga
+                //en un dataset utilizando el metodo load
                 DataSet ds = new DataSet();
 
                 ds.Load(reader, LoadOption.OverwriteChanges, "Procedimientos");
@@ -78,7 +79,7 @@ namespace PTC.Modelo.DAOProcedimiento
                 string query = "UPDATE Procedimientos SET " +
                                 "nombreProcedimiento = @param2, " +
                                 "precioProcedimiento = @param3, " +
-                                "descProcedimiento = @param4, " +
+                                "descProcedimiento = @param4 " +
                                 "WHERE procedimientoID = @param1";
 
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
@@ -121,7 +122,7 @@ namespace PTC.Modelo.DAOProcedimiento
                 getConnection().Close();
             }
         }
-        public DataSet BuscarPersonas(string valor)
+        public DataSet BuscarProcedimiento(string valor)
         {
             try
             {

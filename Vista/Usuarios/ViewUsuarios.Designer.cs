@@ -31,10 +31,11 @@
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmsEliminar = new System.Windows.Forms.Button();
-            this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmsActualizar = new System.Windows.Forms.Button();
+            this.cmsVerPaciente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmsVerPaciente);
             this.panel1.Controls.Add(this.cmsEliminar);
             this.panel1.Controls.Add(this.cmsActualizar);
             this.panel1.Controls.Add(this.btnNuevo);
@@ -75,16 +77,6 @@
             this.cmsEliminar.TabIndex = 2;
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.UseVisualStyleBackColor = true;
-            // 
-            // cmsActualizar
-            // 
-            this.cmsActualizar.AccessibleName = "cmsActualizar";
-            this.cmsActualizar.Location = new System.Drawing.Point(821, 15);
-            this.cmsActualizar.Name = "cmsActualizar";
-            this.cmsActualizar.Size = new System.Drawing.Size(75, 23);
-            this.cmsActualizar.TabIndex = 1;
-            this.cmsActualizar.Text = "Actualizar";
-            this.cmsActualizar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
@@ -114,6 +106,26 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // cmsActualizar
+            // 
+            this.cmsActualizar.AccessibleName = "cmsActualizar";
+            this.cmsActualizar.Location = new System.Drawing.Point(821, 15);
+            this.cmsActualizar.Name = "cmsActualizar";
+            this.cmsActualizar.Size = new System.Drawing.Size(75, 23);
+            this.cmsActualizar.TabIndex = 1;
+            this.cmsActualizar.Text = "Actualizar";
+            this.cmsActualizar.UseVisualStyleBackColor = true;
+            // 
+            // cmsVerPaciente
+            // 
+            this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
+            this.cmsVerPaciente.Location = new System.Drawing.Point(740, 15);
+            this.cmsVerPaciente.Name = "cmsVerPaciente";
+            this.cmsVerPaciente.Size = new System.Drawing.Size(75, 23);
+            this.cmsVerPaciente.TabIndex = 4;
+            this.cmsVerPaciente.Text = "Ver";
+            this.cmsVerPaciente.UseVisualStyleBackColor = true;
+            // 
             // ViewUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,8 +150,9 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.Button cmsEliminar;
-        public System.Windows.Forms.Button cmsActualizar;
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.Button cmsVerPaciente;
+        public System.Windows.Forms.Button cmsActualizar;
     }
 }

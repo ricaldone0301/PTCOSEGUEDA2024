@@ -127,9 +127,9 @@ namespace PTC.Modelo.DAOOcupacion
             {
 
                 Command.Connection = getConnection();
-                string query = "DELETE Ocupaciones WHERE ocupacionID = @param1";
+                string query = "DELETE Ocupaciones WHERE ocupacionID = @param2";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                cmd.Parameters.AddWithValue("param1", OcupacionID);
+                cmd.Parameters.AddWithValue("param2", OcupacionID);
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }

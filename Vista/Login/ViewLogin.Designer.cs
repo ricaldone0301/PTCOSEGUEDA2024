@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewLogin));
             this.BtnIngresar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ContraHide = new System.Windows.Forms.Button();
-            this.ContraVisible = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.btnOlvido = new System.Windows.Forms.LinkLabel();
@@ -71,28 +69,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(448, 155);
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
-            // 
-            // ContraHide
-            // 
-            this.ContraHide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContraHide.BackgroundImage")));
-            this.ContraHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ContraHide.Location = new System.Drawing.Point(944, 453);
-            this.ContraHide.Margin = new System.Windows.Forms.Padding(4);
-            this.ContraHide.Name = "ContraHide";
-            this.ContraHide.Size = new System.Drawing.Size(40, 36);
-            this.ContraHide.TabIndex = 21;
-            this.ContraHide.UseVisualStyleBackColor = true;
-            // 
-            // ContraVisible
-            // 
-            this.ContraVisible.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContraVisible.BackgroundImage")));
-            this.ContraVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ContraVisible.Location = new System.Drawing.Point(944, 453);
-            this.ContraVisible.Margin = new System.Windows.Forms.Padding(4);
-            this.ContraVisible.Name = "ContraVisible";
-            this.ContraVisible.Size = new System.Drawing.Size(40, 36);
-            this.ContraVisible.TabIndex = 20;
-            this.ContraVisible.UseVisualStyleBackColor = true;
             // 
             // BtnExit
             // 
@@ -183,8 +159,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1683, 828);
             this.ControlBox = false;
-            this.Controls.Add(this.ContraHide);
-            this.Controls.Add(this.ContraVisible);
             this.Controls.Add(this.btnOlvido);
             this.Controls.Add(this.TxtContra);
             this.Controls.Add(this.TxtUsuario);
@@ -207,8 +181,6 @@
         public System.Windows.Forms.Button BtnIngresar;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Button BtnExit;
-        public System.Windows.Forms.Button ContraVisible;
-        public System.Windows.Forms.Button ContraHide;
         public System.Windows.Forms.TextBox TxtUsuario;
         public System.Windows.Forms.TextBox TxtContra;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;

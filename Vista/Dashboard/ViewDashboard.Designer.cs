@@ -47,11 +47,13 @@
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelContenedor.SuspendLayout();
             this.PanelPadre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel10
@@ -98,12 +100,12 @@
             this.ok.GradientBottomRight = System.Drawing.Color.LightGray;
             this.ok.GradientTopLeft = System.Drawing.Color.White;
             this.ok.GradientTopRight = System.Drawing.Color.White;
-            this.ok.Location = new System.Drawing.Point(3, 1);
+            this.ok.Location = new System.Drawing.Point(0, 1);
             this.ok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ok.Name = "ok";
             this.ok.Quality = 10;
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ok.Size = new System.Drawing.Size(267, 884);
+            this.ok.Size = new System.Drawing.Size(270, 884);
             this.ok.TabIndex = 20;
             // 
             // btnProcedimientos
@@ -352,11 +354,12 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.PanelContenedor.Controls.Add(this.pictureBox3);
             this.PanelContenedor.Controls.Add(this.bunifuCustomLabel10);
             this.PanelContenedor.Location = new System.Drawing.Point(269, 0);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1433, 886);
+            this.PanelContenedor.Size = new System.Drawing.Size(1433, 885);
             this.PanelContenedor.TabIndex = 32;
             // 
             // PanelPadre
@@ -366,8 +369,18 @@
             this.PanelPadre.Location = new System.Drawing.Point(1, 2);
             this.PanelPadre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelPadre.Name = "PanelPadre";
-            this.PanelPadre.Size = new System.Drawing.Size(1705, 887);
+            this.PanelPadre.Size = new System.Drawing.Size(1705, 885);
             this.PanelPadre.TabIndex = 33;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(331, 248);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(636, 284);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
             // 
             // ViewDashboard
             // 
@@ -383,6 +396,7 @@
             this.MinimumSize = new System.Drawing.Size(1707, 886);
             this.Name = "ViewDashboard";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewDashboard";
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
@@ -391,6 +405,7 @@
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
             this.PanelPadre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +430,6 @@
         public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
         public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

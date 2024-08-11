@@ -25,21 +25,22 @@ namespace PTC.Controller.Usuarios
             ObjAgregarUsuario = Vista;
             this.accion = accion;
             verificarAccion();
-            ObjAgregarUsuario.Load += new EventHandler(InitialCharge);
-            ObjAgregarUsuario.btnAgregar.Click += new EventHandler(NewRegister);
+            ObjAgregarUsuario.Load += new EventHandler(CargoInicial);
+            ObjAgregarUsuario.btnAgregar.Click += new EventHandler(Nuevo);
         }
         public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
         {
             ObjAgregarUsuario = Vista;
             this.accion = accion;
-            ObjAgregarUsuario.Load += new EventHandler(InitialCharge);
+            ObjAgregarUsuario.Load += new EventHandler(CargoInicial);
             verificarAccion();
-            ChargeValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
+            CargaValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
             this.personalId = int.Parse(PersonalID.ToString());
-            ObjAgregarUsuario.btnActualizar.Click += new EventHandler(UpdateRegister);
+            ObjAgregarUsuario.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
+        
 
-        public void InitialCharge(object sender, EventArgs e)
+        public void CargoInicial(object sender, EventArgs e)
         {
             try
             {
@@ -102,7 +103,7 @@ namespace PTC.Controller.Usuarios
             }
         }
 
-        public void NewRegister(object sender, EventArgs e)
+        public void Nuevo(object sender, EventArgs e)
         {
             try
             {
@@ -147,8 +148,9 @@ namespace PTC.Controller.Usuarios
 
 
 
-        public void UpdateRegister(object sender, EventArgs e)
+        public void ActualizarRegistro(object sender, EventArgs e)
         {
+            CommonClass commonClass = new CommonClass();
             DAOUsuarios daoUpdate = new DAOUsuarios();
             daoUpdate.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
             daoUpdate.PersonalId = personalId;
@@ -156,7 +158,7 @@ namespace PTC.Controller.Usuarios
             daoUpdate.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
             daoUpdate.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
             daoUpdate.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-            daoUpdate.Contrasena = ObjAgregarUsuario.txtContrasena.Text.Trim();
+            daoUpdate.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
             daoUpdate.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
             daoUpdate.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
 
@@ -177,7 +179,7 @@ namespace PTC.Controller.Usuarios
             }
         }
 
-        public void ChargeValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
+        public void CargaValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
         {
             ObjAgregarUsuario.txtNombre.Text = Nombre;
             ObjAgregarUsuario.txtEmail.Text = PersonalID.ToString();
@@ -185,7 +187,6 @@ namespace PTC.Controller.Usuarios
             ObjAgregarUsuario.txtUsuario.Text = UsuarioPersonal;
             ObjAgregarUsuario.txtContrasena.Text = contraseñaPersonal;
             ObjAgregarUsuario.txtEmail.Text = email;
-
 
         }
     }

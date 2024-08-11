@@ -46,9 +46,7 @@ namespace PTC.Controller.Ocupacion
             int pos = ObjAdminOcupacion.dgvOcupaciones.CurrentRow.Index;
             if (MessageBox.Show("¿Esta seguro que desea eliminar este registro? Considere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //DAOPaciente daoDel = new DAOPaciente();
-                //daoDel.PacienteID = int.Parse(ObjAdminPaciente.dgvPacientes[0, pos].Value.ToString());
-               // int valorRetornado = daoDel.EliminarUsuario();
+
                 DAOOcupacion daoDel = new DAOOcupacion();
                 daoDel.OcupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString());
                 int valorRetornado = daoDel.EliminarOcupacion();
