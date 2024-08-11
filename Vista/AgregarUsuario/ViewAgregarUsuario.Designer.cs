@@ -41,6 +41,8 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -196,6 +196,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
             this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // bunifuCustomLabel11
             // 
@@ -208,6 +209,26 @@
             this.bunifuCustomLabel11.Size = new System.Drawing.Size(108, 25);
             this.bunifuCustomLabel11.TabIndex = 26;
             this.bunifuCustomLabel11.Text = "TELÉFONO";
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(42, 341);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(209, 22);
+            this.txtContrasena.TabIndex = 25;
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(37, 297);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(142, 25);
+            this.bunifuCustomLabel9.TabIndex = 24;
+            this.bunifuCustomLabel9.Text = "CONTRASEÑA";
             // 
             // txtUsuario
             // 
@@ -256,6 +277,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnAgregar
             // 
@@ -328,26 +350,6 @@
             this.bunifuThinButton26.Size = new System.Drawing.Size(220, 32);
             this.bunifuThinButton26.TabIndex = 10;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel9
-            // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(37, 297);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(142, 25);
-            this.bunifuCustomLabel9.TabIndex = 24;
-            this.bunifuCustomLabel9.Text = "CONTRASEÑA";
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(42, 341);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(209, 22);
-            this.txtContrasena.TabIndex = 25;
             // 
             // ViewAgregarUsuario
             // 

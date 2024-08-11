@@ -37,7 +37,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnCalendario = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnOcupaciones = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPacientes = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblNombre = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -87,7 +87,7 @@
             this.ok.Controls.Add(this.pictureBox2);
             this.ok.Controls.Add(this.btnCerrarSesion);
             this.ok.Controls.Add(this.btnCitas);
-            this.ok.Controls.Add(this.btnCalendario);
+            this.ok.Controls.Add(this.btnOcupaciones);
             this.ok.Controls.Add(this.btnPacientes);
             this.ok.Controls.Add(this.btnInicio);
             this.ok.Controls.Add(this.lblNombre);
@@ -222,31 +222,31 @@
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
-            // btnCalendario
+            // btnOcupaciones
             // 
-            this.btnCalendario.ActiveBorderThickness = 1;
-            this.btnCalendario.ActiveCornerRadius = 20;
-            this.btnCalendario.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.btnCalendario.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btnCalendario.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.btnCalendario.BackColor = System.Drawing.Color.Transparent;
-            this.btnCalendario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalendario.BackgroundImage")));
-            this.btnCalendario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCalendario.ButtonText = "PADECIMIENTOS";
-            this.btnCalendario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalendario.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalendario.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnCalendario.IdleBorderThickness = 1;
-            this.btnCalendario.IdleCornerRadius = 20;
-            this.btnCalendario.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btnCalendario.IdleForecolor = System.Drawing.Color.MidnightBlue;
-            this.btnCalendario.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnCalendario.Location = new System.Drawing.Point(49, 342);
-            this.btnCalendario.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCalendario.Name = "btnCalendario";
-            this.btnCalendario.Size = new System.Drawing.Size(181, 46);
-            this.btnCalendario.TabIndex = 6;
-            this.btnCalendario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOcupaciones.ActiveBorderThickness = 1;
+            this.btnOcupaciones.ActiveCornerRadius = 20;
+            this.btnOcupaciones.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnOcupaciones.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnOcupaciones.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnOcupaciones.BackColor = System.Drawing.Color.Transparent;
+            this.btnOcupaciones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOcupaciones.BackgroundImage")));
+            this.btnOcupaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOcupaciones.ButtonText = "OCUPACIONES";
+            this.btnOcupaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOcupaciones.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOcupaciones.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnOcupaciones.IdleBorderThickness = 1;
+            this.btnOcupaciones.IdleCornerRadius = 20;
+            this.btnOcupaciones.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnOcupaciones.IdleForecolor = System.Drawing.Color.MidnightBlue;
+            this.btnOcupaciones.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnOcupaciones.Location = new System.Drawing.Point(49, 342);
+            this.btnOcupaciones.Margin = new System.Windows.Forms.Padding(5);
+            this.btnOcupaciones.Name = "btnOcupaciones";
+            this.btnOcupaciones.Size = new System.Drawing.Size(181, 46);
+            this.btnOcupaciones.TabIndex = 6;
+            this.btnOcupaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPacientes
             // 
@@ -405,7 +405,7 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnCerrarSesion;
         public Bunifu.Framework.UI.BunifuThinButton2 btnPacientes;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnCalendario;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnOcupaciones;
         public Bunifu.Framework.UI.BunifuThinButton2 btnInicio;
         public Bunifu.Framework.UI.BunifuThinButton2 btnCitas;
         public System.Windows.Forms.Panel PanelContenedor;

@@ -100,7 +100,7 @@ namespace PTC.Modelo.DAOUsuarios
 
 
         public int RegistrarUsuario()
-            {
+        {
             try
             {
                 using (SqlCommand cmd = new SqlCommand())

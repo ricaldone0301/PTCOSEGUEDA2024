@@ -33,6 +33,9 @@ namespace PTC.Controller.Login
             ObjLogin.btnOlvido.Click += new EventHandler(ContrasenaOlvidada);
 
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
+
+            ObjLogin.TxtUsuario.Text = "test2";
+            ObjLogin.TxtContra.Text = "test2";
         }
 
         private void Registro(object sender, EventArgs e)

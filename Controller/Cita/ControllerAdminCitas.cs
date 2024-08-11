@@ -6,6 +6,7 @@ using PTC.Vista.Doctores;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace PTC.Controller.Cita
         {
             DAOProcedimiento ObjAdmin = new DAOProcedimiento();
             DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminCitas.txtBuscar.Text.Trim());
-            ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewProcedimientos"];
+            ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewCitas"];
         }
         private void DeleteUser(object sender, EventArgs e)
         {
@@ -64,19 +65,20 @@ namespace PTC.Controller.Cita
             int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;
             int pos = ObjAdminCitas.dgvCitas.CurrentRow.Index;
             int pacienteID, consultorioID, citaID, procedimientoID;
-            string personalID;
-            DateTime hora, fecha;
+            string personalID, hora;
+            DateTime fecha;
+        
+            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
+            citaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
+            fecha = DateTime.ParseExact(ObjAdminCitas.dgvCitas[2, pos].Value.ToString(), "M/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
+            hora = fecha.ToString("HH:mm:ss.fffffff tt");
+            //hora = DateTime.ParseExact(ObjAdminCitas.dgvCitas[4, pos].Value.ToString(), "HH:mm:ss.fffffff", CultureInfo.InvariantCulture);
+            personalID = ObjAdminCitas.dgvCitas[5, pos].Value.ToString();
+            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[6, pos].Value.ToString());
 
-            citaID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
-            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
-            personalID = ObjAdminCitas.dgvCitas[3, pos].Value.ToString();
-            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[4, pos].Value.ToString());
-            hora = DateTime.Parse(ObjAdminCitas.dgvCitas[5, pos].Value.ToString());
-            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[6, pos].Value.ToString());
-            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[7, pos].Value.ToString());
 
-
-            ViewAgendarcita openForm = new ViewAgendarcita(2, pacienteID, personalID, consultorioID, hora, fecha, citaID, procedimientoID);
+            ViewAgendarcita openForm = new ViewAgendarcita(2, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
             openForm.ShowDialog();
             RefrescarData();
         }
@@ -84,8 +86,8 @@ namespace PTC.Controller.Cita
         public void RefrescarData()
         {
             DAOCitas objAdmin = new DAOCitas();
-            DataSet ds = objAdmin.ComboBoxDoctor();
-            ObjAdminCitas.dgvCitas.DataSource = ds.Tables["Citas"];
+            DataSet ds = objAdmin.ObtenerCita();
+            ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewCitas"];
         }
 
         private void NewUser(object sender, EventArgs e)

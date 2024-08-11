@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PTC.Vista.AgregarDoctores
 {
@@ -35,5 +36,28 @@ namespace PTC.Vista.AgregarDoctores
         {
 
         }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!String.IsNullOrWhiteSpace(txtNombre.Text)) // This will prevent exception when textbox is empty   
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtNombre.Text, "^[a-zA-Z ]+$"))
+                {
+                    MessageBox.Show("Ingrese un nombre valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtNombre.Text.Remove(txtNombre.Text.Length - 1);
+                    txtNombre.Clear();
+                    txtNombre.Focus();
+                }
+            }
+        }
     }
+
+
     }
+   

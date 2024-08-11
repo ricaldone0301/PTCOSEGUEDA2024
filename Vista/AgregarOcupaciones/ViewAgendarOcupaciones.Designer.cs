@@ -1,6 +1,6 @@
 ﻿namespace PTC.Vista.AgendarOcupaciones
 {
-    partial class ViewAgendarOcupaciones
+    partial class ViewAgregarOcupacion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAgendarOcupaciones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAgregarOcupacion));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnGuardarOcupacion = new System.Windows.Forms.Button();
-            this.txtNombreOcupacion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bpCerrarForm = new System.Windows.Forms.PictureBox();
             this.bunifuCards1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bpCerrarForm)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -47,9 +46,10 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.btnGuardar);
+            this.bunifuCards1.Controls.Add(this.btnActualizar);
             this.bunifuCards1.Controls.Add(this.bunifuGradientPanel2);
-            this.bunifuCards1.Controls.Add(this.btnGuardarOcupacion);
-            this.bunifuCards1.Controls.Add(this.txtNombreOcupacion);
+            this.bunifuCards1.Controls.Add(this.txtNombre);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel4);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(80, 105);
@@ -59,6 +59,38 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(637, 252);
             this.bunifuCards1.TabIndex = 77;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnGuardar.Location = new System.Drawing.Point(235, 183);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(171, 50);
+            this.btnGuardar.TabIndex = 41;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnActualizar.Location = new System.Drawing.Point(422, 183);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(171, 50);
+            this.btnActualizar.TabIndex = 40;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // bunifuGradientPanel2
             // 
@@ -90,26 +122,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "NUEVA OCUPACIÓN";
             // 
-            // btnGuardarOcupacion
+            // txtNombre
             // 
-            this.btnGuardarOcupacion.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnGuardarOcupacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarOcupacion.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnGuardarOcupacion.Location = new System.Drawing.Point(476, 175);
-            this.btnGuardarOcupacion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardarOcupacion.Name = "btnGuardarOcupacion";
-            this.btnGuardarOcupacion.Size = new System.Drawing.Size(133, 62);
-            this.btnGuardarOcupacion.TabIndex = 70;
-            this.btnGuardarOcupacion.Text = "GUARDAR";
-            this.btnGuardarOcupacion.UseVisualStyleBackColor = false;
-            // 
-            // txtNombreOcupacion
-            // 
-            this.txtNombreOcupacion.Location = new System.Drawing.Point(21, 108);
-            this.txtNombreOcupacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreOcupacion.Name = "txtNombreOcupacion";
-            this.txtNombreOcupacion.Size = new System.Drawing.Size(572, 22);
-            this.txtNombreOcupacion.TabIndex = 71;
+            this.txtNombre.Location = new System.Drawing.Point(21, 108);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(572, 22);
+            this.txtNombre.TabIndex = 71;
             // 
             // bunifuCustomLabel4
             // 
@@ -123,31 +142,18 @@
             this.bunifuCustomLabel4.TabIndex = 70;
             this.bunifuCustomLabel4.Text = "NOMBRE";
             // 
-            // bpCerrarForm
-            // 
-            this.bpCerrarForm.Image = ((System.Drawing.Image)(resources.GetObject("bpCerrarForm.Image")));
-            this.bpCerrarForm.Location = new System.Drawing.Point(711, 43);
-            this.bpCerrarForm.Margin = new System.Windows.Forms.Padding(4);
-            this.bpCerrarForm.Name = "bpCerrarForm";
-            this.bpCerrarForm.Size = new System.Drawing.Size(36, 33);
-            this.bpCerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bpCerrarForm.TabIndex = 76;
-            this.bpCerrarForm.TabStop = false;
-            // 
-            // ViewAgendarOcupaciones
+            // ViewAgregarOcupacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bunifuCards1);
-            this.Controls.Add(this.bpCerrarForm);
-            this.Name = "ViewAgendarOcupaciones";
+            this.Name = "ViewAgregarOcupacion";
             this.Text = "ViewAgendarOcupaciones";
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bpCerrarForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,9 +163,9 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGuardarOcupacion;
-        public System.Windows.Forms.TextBox txtNombreOcupacion;
         public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private System.Windows.Forms.PictureBox bpCerrarForm;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Button btnActualizar;
     }
 }

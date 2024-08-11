@@ -76,6 +76,8 @@
     <Compile Include="Controller\Contrasena\ControllerContrasena.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />
+    <Compile Include="Controller\Ocupacion\ControllerAdminOcupacion.cs" />
+    <Compile Include="Controller\Ocupacion\ControllerAgregarOcupacion.cs" />
     <Compile Include="Controller\Paciente\ControllerAdminPaciente.cs" />
     <Compile Include="Controller\Paciente\ControllerAgregarPaciente.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAdminProcedimientos.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Modelo\DAOCitas\DAOCitas.cs" />
     <Compile Include="Modelo\DAOContrasena\DAOContrasena.cs" />
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
+    <Compile Include="Modelo\DAOOcupacion\DAOOcupacion.cs" />
     <Compile Include="Modelo\DAOPaciente\DAOPaciente.cs" />
     <Compile Include="Modelo\DAOProcedimiento\DAOProcedimiento.cs" />
     <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Modelo\DTOCitas\DTOCitas.cs" />
     <Compile Include="Modelo\DTOContrasena\DTOContrasena.cs" />
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
+    <Compile Include="Modelo\DTOOcupacion\DTOOcupacion.cs" />
     <Compile Include="Modelo\DTOPaciente\DTOPaciente.cs" />
     <Compile Include="Modelo\DTOProcedimiento\DTOProcedimiento.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
@@ -107,11 +111,11 @@
     <Compile Include="Vista\AgendarCita\ViewAgendarcita.Designer.cs">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\AgendarOcupaciones\ViewAgendarOcupaciones.cs">
+    <Compile Include="Vista\AgregarOcupaciones\ViewAgregarOcupacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\AgendarOcupaciones\ViewAgendarOcupaciones.Designer.cs">
-      <DependentUpon>ViewAgendarOcupaciones.cs</DependentUpon>
+    <Compile Include="Vista\AgregarOcupaciones\ViewAgendarOcupaciones.Designer.cs">
+      <DependentUpon>ViewAgregarOcupacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\AgregarPaciente\ViewAgregarPaciente.cs">
       <SubType>Form</SubType>
@@ -210,8 +214,8 @@
     <EmbeddedResource Include="Vista\AgendarCita\ViewAgendarcita.resx">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\AgendarOcupaciones\ViewAgendarOcupaciones.resx">
-      <DependentUpon>ViewAgendarOcupaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\AgregarOcupaciones\ViewAgregarOcupacion.resx">
+      <DependentUpon>ViewAgregarOcupacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\AgregarPaciente\ViewAgregarPaciente.resx">
       <DependentUpon>ViewAgregarPaciente.cs</DependentUpon>

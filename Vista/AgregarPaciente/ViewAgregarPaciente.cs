@@ -13,65 +13,17 @@ namespace PTC.Vista.AgregarPaciente
 {
     public partial class ViewAgregarPaciente : Form
     {
-        private int id;
-        private string nombrepaciente;
-        private int edadpaciente;
-        private string telefonopaciente;
-        private DateTime fechanac;
-        private string correopaciente;
-        private string nombreocupacion;
-        private string direccionpaciente;
-        private string dui;
-        private string referencia;
-        private string nombreemergencia;
-        private string numemergencia;
-        private string motivoconsulta;
-        private string padecimientos;
-        private string controlmedico;
-        private string medicocabeceranombre;
-        private string nummedicocabecera;
-        private string alergiamedicamentos;
-        private string medicamentos;
-        private string operacion;
-        private string tipooperacion;
-        private string recuperacionoperacion;
-
+      
         public ViewAgregarPaciente(int accion)
         {
             InitializeComponent();
             ControllerAgregarPaciente ObjAgregarPaciente = new ControllerAgregarPaciente(this, accion);
         }
 
-        public ViewAgregarPaciente(int accion, int id, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string nombreocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamentos, string operacion, string tipooperacion, string recuperacionoperacion) : this(accion)
-        {
-            this.id = id;
-            this.nombrepaciente = nombrepaciente;
-            this.edadpaciente = edadpaciente;
-            this.telefonopaciente = telefonopaciente;
-            this.fechanac = fechanac;
-            this.correopaciente = correopaciente;
-            this.nombreocupacion = nombreocupacion;
-            this.direccionpaciente = direccionpaciente;
-            this.dui = dui;
-            this.referencia = referencia;
-            this.nombreemergencia = nombreemergencia;
-            this.numemergencia = numemergencia;
-            this.motivoconsulta = motivoconsulta;
-            this.padecimientos = padecimientos;
-            this.controlmedico = controlmedico;
-            this.medicocabeceranombre = medicocabeceranombre;
-            this.nummedicocabecera = nummedicocabecera;
-            this.alergiamedicamentos = alergiamedicamentos;
-            this.medicamentos = medicamentos;
-            this.operacion = operacion;
-            this.tipooperacion = tipooperacion;
-            this.recuperacionoperacion = recuperacionoperacion;
-        }
-
-        public ViewAgregarPaciente(int accion, int id, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string ocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamento, string operacion, string tipooperacion, string otrosPadecimientos, string recuperacionoperacion)
+        public ViewAgregarPaciente(int accion, int pacienteID, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string ocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamento, string operacion, string tipooperacion, string recuperacionoperacion)
         {
             InitializeComponent();
-            ControllerAgregarPaciente ObjAgregarPaciente = new ControllerAgregarPaciente(this, accion, id, nombrepaciente, edadpaciente, telefonopaciente, fechanac, correopaciente, ocupacion, direccionpaciente, dui, referencia, nombreemergencia, numemergencia, motivoconsulta, padecimientos, controlmedico, medicocabeceranombre, nummedicocabecera, alergiamedicamentos, medicamento, operacion, tipooperacion, otrosPadecimientos, recuperacionoperacion);
+            ControllerAgregarPaciente ObjAgregarPaciente = new ControllerAgregarPaciente(this, accion, pacienteID, nombrepaciente, edadpaciente, telefonopaciente, fechanac, correopaciente, ocupacion, direccionpaciente, dui, referencia, nombreemergencia, numemergencia, motivoconsulta, padecimientos, controlmedico, medicocabeceranombre, nummedicocabecera, alergiamedicamentos, medicamento, operacion, tipooperacion, recuperacionoperacion);
         }
 
         private void txtRecuperacionOperacion_TextChanged(object sender, EventArgs e)

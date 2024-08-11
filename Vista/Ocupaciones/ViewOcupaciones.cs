@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PTC.Controller.Ocupacion;
+using PTC.Controller.Procedimiento;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace PTC.Vista.Ocupaciones
         public ViewOcupaciones()
         {
             InitializeComponent();
+            ControllerAdminOcupacion ObjOcupacion = new ControllerAdminOcupacion(this);
         }
     }
 }
