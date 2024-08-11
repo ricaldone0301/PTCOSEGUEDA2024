@@ -12,8 +12,32 @@ namespace PTC.Modelo.DAOCitas
     class DAOCitas : DtoCitas
     {
         readonly SqlCommand Command = new SqlCommand();
-        public DataSet ComboBoxConsultorio()
+
+        public DataSet BuscarPersonas(string valor)
         {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = $"SELECT * FROM ViewCitas WHERE citaID LIKE '%{valor}%' OR fecha LIKE '%{valor}%' OR hora LIKE '%{valor}%' OR consultorioID LIKE '%{valor}%' OR doctorID LIKE '%{valor}%' OR pacienteID LIKE '%{valor}%'";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "ViewCitas");
+                return ds;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+
+        }
+            public DataSet ComboBoxConsultorio()
+            {
             DataSet ds = new DataSet();
             try
             {
@@ -132,14 +156,13 @@ namespace PTC.Modelo.DAOCitas
                 {
                     cmd.Connection = getConnection();
 
-                    String query = "INSERT INTO Citas (pacienteID, personalID, consultorioID, hora, fecha, citaID, procedimientoID) VALUES (@pacienteID, @personalID, @nombreConsultorio, @nombre, @hora, @fecha, @citaID, @procedimientoID)";
+                    String query = "INSERT INTO Citas (pacienteID, personalID, consultorioID, hora, fecha, procedimientoID) VALUES (@pacienteID, @personalID, @consultorioID, @hora, @fecha, @procedimientoID)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@pacienteID", PacienteID);
                     cmd.Parameters.AddWithValue("@personalID", PersonalID);
                     cmd.Parameters.AddWithValue("@consultorioID", ConsultorioID);
                     cmd.Parameters.AddWithValue("@hora", Hora);
                     cmd.Parameters.AddWithValue("@fecha", Fecha);
-                    cmd.Parameters.AddWithValue("@citaID", CitaID);
                     cmd.Parameters.AddWithValue("@procedimientoID", ProcedimientoID);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
@@ -167,7 +190,7 @@ namespace PTC.Modelo.DAOCitas
                                 "consultorioID = @param3," +
                                 "hora = @param4," +
                                 "fecha = @param5, " +
-                                "procedimeintoID = @param6, " +
+                                "procedimientoID = @param6 " +
                                 "WHERE citaID = @param7";
 
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
@@ -179,11 +202,6 @@ namespace PTC.Modelo.DAOCitas
                 cmd.Parameters.AddWithValue("param6", ProcedimientoID);
                 cmd.Parameters.AddWithValue("param7", CitaID);
                 int respuesta = cmd.ExecuteNonQuery();
-
-                if (respuesta == 1)
-                {
-                    respuesta = 1;
-                }
 
                 return respuesta;
             }
@@ -218,18 +236,21 @@ namespace PTC.Modelo.DAOCitas
                 getConnection().Close();
             }
         }
-
-        public DataSet BuscarPersonas(string valor)
+        public DataSet ObtenerCita()
         {
             try
             {
                 Command.Connection = getConnection();
-                string query = $"SELECT * FROM ViewCitas WHERE citaID LIKE '%{valor}%' OR fecha LIKE '%{valor}%' OR hora LIKE '%{valor}%' OR consultorioID LIKE '%{valor}%' OR doctorID LIKE '%{valor}%' OR pacienteID LIKE '%{valor}%'";
+                string query = "SELECT * FROM ViewCitas";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                cmd.ExecuteNonQuery();
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "ViewCitas");
+
+                ds.Load(reader, LoadOption.OverwriteChanges, "ViewCitas");
+                reader.Close();
+
                 return ds;
             }
             catch (Exception)

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSeleccionarPadecimientos = new System.Windows.Forms.Button();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNombreAlergiaMedicamento = new System.Windows.Forms.TextBox();
             this.btnAgregarOcupacion = new System.Windows.Forms.Button();
@@ -80,41 +79,9 @@
             this.gbAgregarOcupacion = new System.Windows.Forms.GroupBox();
             this.btnGuardarOcupacion = new System.Windows.Forms.Button();
             this.txtNombreOcupacion = new System.Windows.Forms.TextBox();
-            this.bcPadecimientos = new Bunifu.Framework.UI.BunifuCards();
-            this.txtOtroPadecimiento = new System.Windows.Forms.TextBox();
-            this.cbHemofilia = new System.Windows.Forms.CheckBox();
-            this.cbLupus = new System.Windows.Forms.CheckBox();
-            this.cbParkinson = new System.Windows.Forms.CheckBox();
-            this.cbHemorragias = new System.Windows.Forms.CheckBox();
-            this.cbLentaCicatrizacion = new System.Windows.Forms.CheckBox();
-            this.cbGastritis = new System.Windows.Forms.CheckBox();
-            this.cbColitis = new System.Windows.Forms.CheckBox();
-            this.cbAutismo = new System.Windows.Forms.CheckBox();
-            this.cbAntecedentesPsiquiatricos = new System.Windows.Forms.CheckBox();
-            this.cbVIH = new System.Windows.Forms.CheckBox();
-            this.cbCancer = new System.Windows.Forms.CheckBox();
-            this.cbTiroides = new System.Windows.Forms.CheckBox();
-            this.cbRonquidos = new System.Windows.Forms.CheckBox();
-            this.cbArtritis = new System.Windows.Forms.CheckBox();
-            this.cbVPH = new System.Windows.Forms.CheckBox();
-            this.cbMigrana = new System.Windows.Forms.CheckBox();
-            this.cbOtros = new System.Windows.Forms.CheckBox();
-            this.cbDiabetes = new System.Windows.Forms.CheckBox();
-            this.cbHipertensionArterial = new System.Windows.Forms.CheckBox();
+            this.txtPadecimientos = new System.Windows.Forms.TextBox();
             this.gbAgregarOcupacion.SuspendLayout();
-            this.bcPadecimientos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSeleccionarPadecimientos
-            // 
-            this.btnSeleccionarPadecimientos.Location = new System.Drawing.Point(799, 439);
-            this.btnSeleccionarPadecimientos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSeleccionarPadecimientos.Name = "btnSeleccionarPadecimientos";
-            this.btnSeleccionarPadecimientos.Size = new System.Drawing.Size(179, 42);
-            this.btnSeleccionarPadecimientos.TabIndex = 172;
-            this.btnSeleccionarPadecimientos.Text = "Seleccionar";
-            this.btnSeleccionarPadecimientos.UseVisualStyleBackColor = true;
-            this.btnSeleccionarPadecimientos.Click += new System.EventHandler(this.btnSeleccionarPadecimientos_Click);
             // 
             // bunifuCustomLabel11
             // 
@@ -733,269 +700,24 @@
             this.txtNombreOcupacion.Size = new System.Drawing.Size(303, 26);
             this.txtNombreOcupacion.TabIndex = 80;
             // 
-            // bcPadecimientos
+            // txtPadecimientos
             // 
-            this.bcPadecimientos.BackColor = System.Drawing.Color.White;
-            this.bcPadecimientos.BorderRadius = 5;
-            this.bcPadecimientos.BottomSahddow = true;
-            this.bcPadecimientos.color = System.Drawing.Color.White;
-            this.bcPadecimientos.Controls.Add(this.txtOtroPadecimiento);
-            this.bcPadecimientos.Controls.Add(this.cbHemofilia);
-            this.bcPadecimientos.Controls.Add(this.cbLupus);
-            this.bcPadecimientos.Controls.Add(this.cbParkinson);
-            this.bcPadecimientos.Controls.Add(this.cbHemorragias);
-            this.bcPadecimientos.Controls.Add(this.cbLentaCicatrizacion);
-            this.bcPadecimientos.Controls.Add(this.cbGastritis);
-            this.bcPadecimientos.Controls.Add(this.cbColitis);
-            this.bcPadecimientos.Controls.Add(this.cbAutismo);
-            this.bcPadecimientos.Controls.Add(this.cbAntecedentesPsiquiatricos);
-            this.bcPadecimientos.Controls.Add(this.cbVIH);
-            this.bcPadecimientos.Controls.Add(this.cbCancer);
-            this.bcPadecimientos.Controls.Add(this.cbTiroides);
-            this.bcPadecimientos.Controls.Add(this.cbRonquidos);
-            this.bcPadecimientos.Controls.Add(this.cbArtritis);
-            this.bcPadecimientos.Controls.Add(this.cbVPH);
-            this.bcPadecimientos.Controls.Add(this.cbMigrana);
-            this.bcPadecimientos.Controls.Add(this.cbOtros);
-            this.bcPadecimientos.Controls.Add(this.cbDiabetes);
-            this.bcPadecimientos.Controls.Add(this.cbHipertensionArterial);
-            this.bcPadecimientos.LeftSahddow = false;
-            this.bcPadecimientos.Location = new System.Drawing.Point(1289, 200);
-            this.bcPadecimientos.Margin = new System.Windows.Forms.Padding(4);
-            this.bcPadecimientos.Name = "bcPadecimientos";
-            this.bcPadecimientos.RightSahddow = true;
-            this.bcPadecimientos.ShadowDepth = 20;
-            this.bcPadecimientos.Size = new System.Drawing.Size(329, 716);
-            this.bcPadecimientos.TabIndex = 175;
-            this.bcPadecimientos.Paint += new System.Windows.Forms.PaintEventHandler(this.bcPadecimientos_Paint);
-            // 
-            // txtOtroPadecimiento
-            // 
-            this.txtOtroPadecimiento.Location = new System.Drawing.Point(8, 561);
-            this.txtOtroPadecimiento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOtroPadecimiento.Multiline = true;
-            this.txtOtroPadecimiento.Name = "txtOtroPadecimiento";
-            this.txtOtroPadecimiento.Size = new System.Drawing.Size(301, 85);
-            this.txtOtroPadecimiento.TabIndex = 20;
-            // 
-            // cbHemofilia
-            // 
-            this.cbHemofilia.AutoSize = true;
-            this.cbHemofilia.Location = new System.Drawing.Point(7, 332);
-            this.cbHemofilia.Margin = new System.Windows.Forms.Padding(4);
-            this.cbHemofilia.Name = "cbHemofilia";
-            this.cbHemofilia.Size = new System.Drawing.Size(86, 20);
-            this.cbHemofilia.TabIndex = 19;
-            this.cbHemofilia.Text = "Hemofilia";
-            this.cbHemofilia.UseVisualStyleBackColor = true;
-            // 
-            // cbLupus
-            // 
-            this.cbLupus.AutoSize = true;
-            this.cbLupus.Location = new System.Drawing.Point(7, 361);
-            this.cbLupus.Margin = new System.Windows.Forms.Padding(4);
-            this.cbLupus.Name = "cbLupus";
-            this.cbLupus.Size = new System.Drawing.Size(65, 20);
-            this.cbLupus.TabIndex = 18;
-            this.cbLupus.Text = "Lupus";
-            this.cbLupus.UseVisualStyleBackColor = true;
-            // 
-            // cbParkinson
-            // 
-            this.cbParkinson.AutoSize = true;
-            this.cbParkinson.Location = new System.Drawing.Point(7, 389);
-            this.cbParkinson.Margin = new System.Windows.Forms.Padding(4);
-            this.cbParkinson.Name = "cbParkinson";
-            this.cbParkinson.Size = new System.Drawing.Size(89, 20);
-            this.cbParkinson.TabIndex = 17;
-            this.cbParkinson.Text = "Parkinson";
-            this.cbParkinson.UseVisualStyleBackColor = true;
-            // 
-            // cbHemorragias
-            // 
-            this.cbHemorragias.AutoSize = true;
-            this.cbHemorragias.Location = new System.Drawing.Point(7, 417);
-            this.cbHemorragias.Margin = new System.Windows.Forms.Padding(4);
-            this.cbHemorragias.Name = "cbHemorragias";
-            this.cbHemorragias.Size = new System.Drawing.Size(108, 20);
-            this.cbHemorragias.TabIndex = 16;
-            this.cbHemorragias.Text = "Hemorragias";
-            this.cbHemorragias.UseVisualStyleBackColor = true;
-            // 
-            // cbLentaCicatrizacion
-            // 
-            this.cbLentaCicatrizacion.AutoSize = true;
-            this.cbLentaCicatrizacion.Location = new System.Drawing.Point(7, 446);
-            this.cbLentaCicatrizacion.Margin = new System.Windows.Forms.Padding(4);
-            this.cbLentaCicatrizacion.Name = "cbLentaCicatrizacion";
-            this.cbLentaCicatrizacion.Size = new System.Drawing.Size(139, 20);
-            this.cbLentaCicatrizacion.TabIndex = 15;
-            this.cbLentaCicatrizacion.Text = "Lenta cicatrización";
-            this.cbLentaCicatrizacion.UseVisualStyleBackColor = true;
-            // 
-            // cbGastritis
-            // 
-            this.cbGastritis.AutoSize = true;
-            this.cbGastritis.Location = new System.Drawing.Point(8, 474);
-            this.cbGastritis.Margin = new System.Windows.Forms.Padding(4);
-            this.cbGastritis.Name = "cbGastritis";
-            this.cbGastritis.Size = new System.Drawing.Size(77, 20);
-            this.cbGastritis.TabIndex = 14;
-            this.cbGastritis.Text = "Gastritis";
-            this.cbGastritis.UseVisualStyleBackColor = true;
-            // 
-            // cbColitis
-            // 
-            this.cbColitis.AutoSize = true;
-            this.cbColitis.Location = new System.Drawing.Point(8, 503);
-            this.cbColitis.Margin = new System.Windows.Forms.Padding(4);
-            this.cbColitis.Name = "cbColitis";
-            this.cbColitis.Size = new System.Drawing.Size(65, 20);
-            this.cbColitis.TabIndex = 13;
-            this.cbColitis.Text = "Colitis";
-            this.cbColitis.UseVisualStyleBackColor = true;
-            // 
-            // cbAutismo
-            // 
-            this.cbAutismo.AutoSize = true;
-            this.cbAutismo.Location = new System.Drawing.Point(7, 80);
-            this.cbAutismo.Margin = new System.Windows.Forms.Padding(4);
-            this.cbAutismo.Name = "cbAutismo";
-            this.cbAutismo.Size = new System.Drawing.Size(77, 20);
-            this.cbAutismo.TabIndex = 12;
-            this.cbAutismo.Text = "Autismo";
-            this.cbAutismo.UseVisualStyleBackColor = true;
-            // 
-            // cbAntecedentesPsiquiatricos
-            // 
-            this.cbAntecedentesPsiquiatricos.AutoSize = true;
-            this.cbAntecedentesPsiquiatricos.Location = new System.Drawing.Point(7, 108);
-            this.cbAntecedentesPsiquiatricos.Margin = new System.Windows.Forms.Padding(4);
-            this.cbAntecedentesPsiquiatricos.Name = "cbAntecedentesPsiquiatricos";
-            this.cbAntecedentesPsiquiatricos.Size = new System.Drawing.Size(192, 20);
-            this.cbAntecedentesPsiquiatricos.TabIndex = 11;
-            this.cbAntecedentesPsiquiatricos.Text = "Antecedentes Psiquiátricos";
-            this.cbAntecedentesPsiquiatricos.UseVisualStyleBackColor = true;
-            // 
-            // cbVIH
-            // 
-            this.cbVIH.AutoSize = true;
-            this.cbVIH.Location = new System.Drawing.Point(7, 137);
-            this.cbVIH.Margin = new System.Windows.Forms.Padding(4);
-            this.cbVIH.Name = "cbVIH";
-            this.cbVIH.Size = new System.Drawing.Size(58, 20);
-            this.cbVIH.TabIndex = 10;
-            this.cbVIH.Text = "VIH+";
-            this.cbVIH.UseVisualStyleBackColor = true;
-            // 
-            // cbCancer
-            // 
-            this.cbCancer.AutoSize = true;
-            this.cbCancer.Location = new System.Drawing.Point(7, 165);
-            this.cbCancer.Margin = new System.Windows.Forms.Padding(4);
-            this.cbCancer.Name = "cbCancer";
-            this.cbCancer.Size = new System.Drawing.Size(72, 20);
-            this.cbCancer.TabIndex = 9;
-            this.cbCancer.Text = "Cáncer";
-            this.cbCancer.UseVisualStyleBackColor = true;
-            // 
-            // cbTiroides
-            // 
-            this.cbTiroides.AutoSize = true;
-            this.cbTiroides.Location = new System.Drawing.Point(7, 193);
-            this.cbTiroides.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTiroides.Name = "cbTiroides";
-            this.cbTiroides.Size = new System.Drawing.Size(79, 20);
-            this.cbTiroides.TabIndex = 8;
-            this.cbTiroides.Text = "Tiroides";
-            this.cbTiroides.UseVisualStyleBackColor = true;
-            // 
-            // cbRonquidos
-            // 
-            this.cbRonquidos.AutoSize = true;
-            this.cbRonquidos.Location = new System.Drawing.Point(7, 222);
-            this.cbRonquidos.Margin = new System.Windows.Forms.Padding(4);
-            this.cbRonquidos.Name = "cbRonquidos";
-            this.cbRonquidos.Size = new System.Drawing.Size(153, 20);
-            this.cbRonquidos.TabIndex = 7;
-            this.cbRonquidos.Text = "Roca por las noches";
-            this.cbRonquidos.UseVisualStyleBackColor = true;
-            // 
-            // cbArtritis
-            // 
-            this.cbArtritis.AutoSize = true;
-            this.cbArtritis.Location = new System.Drawing.Point(7, 250);
-            this.cbArtritis.Margin = new System.Windows.Forms.Padding(4);
-            this.cbArtritis.Name = "cbArtritis";
-            this.cbArtritis.Size = new System.Drawing.Size(65, 20);
-            this.cbArtritis.TabIndex = 6;
-            this.cbArtritis.Text = "Artritis";
-            this.cbArtritis.UseVisualStyleBackColor = true;
-            // 
-            // cbVPH
-            // 
-            this.cbVPH.AutoSize = true;
-            this.cbVPH.Location = new System.Drawing.Point(7, 276);
-            this.cbVPH.Margin = new System.Windows.Forms.Padding(4);
-            this.cbVPH.Name = "cbVPH";
-            this.cbVPH.Size = new System.Drawing.Size(57, 20);
-            this.cbVPH.TabIndex = 5;
-            this.cbVPH.Text = "VPH";
-            this.cbVPH.UseVisualStyleBackColor = true;
-            // 
-            // cbMigrana
-            // 
-            this.cbMigrana.AutoSize = true;
-            this.cbMigrana.Location = new System.Drawing.Point(7, 304);
-            this.cbMigrana.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMigrana.Name = "cbMigrana";
-            this.cbMigrana.Size = new System.Drawing.Size(78, 20);
-            this.cbMigrana.TabIndex = 4;
-            this.cbMigrana.Text = "Migraña";
-            this.cbMigrana.UseVisualStyleBackColor = true;
-            // 
-            // cbOtros
-            // 
-            this.cbOtros.AutoSize = true;
-            this.cbOtros.Location = new System.Drawing.Point(8, 532);
-            this.cbOtros.Margin = new System.Windows.Forms.Padding(4);
-            this.cbOtros.Name = "cbOtros";
-            this.cbOtros.Size = new System.Drawing.Size(121, 20);
-            this.cbOtros.TabIndex = 3;
-            this.cbOtros.Text = "Otros, explique:";
-            this.cbOtros.UseVisualStyleBackColor = true;
-            // 
-            // cbDiabetes
-            // 
-            this.cbDiabetes.AutoSize = true;
-            this.cbDiabetes.Location = new System.Drawing.Point(7, 52);
-            this.cbDiabetes.Margin = new System.Windows.Forms.Padding(4);
-            this.cbDiabetes.Name = "cbDiabetes";
-            this.cbDiabetes.Size = new System.Drawing.Size(84, 20);
-            this.cbDiabetes.TabIndex = 2;
-            this.cbDiabetes.Text = "Diabetes";
-            this.cbDiabetes.UseVisualStyleBackColor = true;
-            // 
-            // cbHipertensionArterial
-            // 
-            this.cbHipertensionArterial.AutoSize = true;
-            this.cbHipertensionArterial.Location = new System.Drawing.Point(7, 22);
-            this.cbHipertensionArterial.Margin = new System.Windows.Forms.Padding(4);
-            this.cbHipertensionArterial.Name = "cbHipertensionArterial";
-            this.cbHipertensionArterial.Size = new System.Drawing.Size(150, 20);
-            this.cbHipertensionArterial.TabIndex = 1;
-            this.cbHipertensionArterial.Text = "Hipertensión Arterial";
-            this.cbHipertensionArterial.UseVisualStyleBackColor = true;
+            this.txtPadecimientos.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPadecimientos.Location = new System.Drawing.Point(795, 439);
+            this.txtPadecimientos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPadecimientos.Multiline = true;
+            this.txtPadecimientos.Name = "txtPadecimientos";
+            this.txtPadecimientos.Size = new System.Drawing.Size(245, 48);
+            this.txtPadecimientos.TabIndex = 176;
             // 
             // ViewAgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1710, 926);
+            this.Controls.Add(this.txtPadecimientos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbAgregarOcupacion);
-            this.Controls.Add(this.bcPadecimientos);
-            this.Controls.Add(this.btnSeleccionarPadecimientos);
             this.Controls.Add(this.bunifuCustomLabel11);
             this.Controls.Add(this.txtNombreAlergiaMedicamento);
             this.Controls.Add(this.btnAgregarOcupacion);
@@ -1047,16 +769,12 @@
             this.Text = "ViewAgregarPaciente";
             this.gbAgregarOcupacion.ResumeLayout(false);
             this.gbAgregarOcupacion.PerformLayout();
-            this.bcPadecimientos.ResumeLayout(false);
-            this.bcPadecimientos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Button btnSeleccionarPadecimientos;
         public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         public System.Windows.Forms.TextBox txtNombreAlergiaMedicamento;
         public System.Windows.Forms.Button btnAgregarOcupacion;
@@ -1108,26 +826,6 @@
         public System.Windows.Forms.GroupBox gbAgregarOcupacion;
         public System.Windows.Forms.Button btnGuardarOcupacion;
         public System.Windows.Forms.TextBox txtNombreOcupacion;
-        public Bunifu.Framework.UI.BunifuCards bcPadecimientos;
-        public System.Windows.Forms.TextBox txtOtroPadecimiento;
-        public System.Windows.Forms.CheckBox cbHemofilia;
-        public System.Windows.Forms.CheckBox cbLupus;
-        public System.Windows.Forms.CheckBox cbParkinson;
-        public System.Windows.Forms.CheckBox cbHemorragias;
-        public System.Windows.Forms.CheckBox cbLentaCicatrizacion;
-        public System.Windows.Forms.CheckBox cbGastritis;
-        public System.Windows.Forms.CheckBox cbColitis;
-        public System.Windows.Forms.CheckBox cbAutismo;
-        public System.Windows.Forms.CheckBox cbAntecedentesPsiquiatricos;
-        public System.Windows.Forms.CheckBox cbVIH;
-        public System.Windows.Forms.CheckBox cbCancer;
-        public System.Windows.Forms.CheckBox cbTiroides;
-        public System.Windows.Forms.CheckBox cbRonquidos;
-        public System.Windows.Forms.CheckBox cbArtritis;
-        public System.Windows.Forms.CheckBox cbVPH;
-        public System.Windows.Forms.CheckBox cbMigrana;
-        public System.Windows.Forms.CheckBox cbOtros;
-        public System.Windows.Forms.CheckBox cbDiabetes;
-        public System.Windows.Forms.CheckBox cbHipertensionArterial;
+        public System.Windows.Forms.TextBox txtPadecimientos;
     }
 }

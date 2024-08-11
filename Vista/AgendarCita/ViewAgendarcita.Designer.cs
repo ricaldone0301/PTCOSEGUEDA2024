@@ -38,16 +38,15 @@
             this.cbProcedimiento = new System.Windows.Forms.ComboBox();
             this.cbDoctor = new System.Windows.Forms.ComboBox();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
-            this.Tiempo = new System.Windows.Forms.DateTimePicker();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Tiempo = new System.Windows.Forms.DateTimePicker();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -84,16 +83,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.Tiempo);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.cbPaciente);
             this.panel1.Controls.Add(this.cbConsultorio);
             this.panel1.Controls.Add(this.cbProcedimiento);
             this.panel1.Controls.Add(this.cbDoctor);
             this.panel1.Controls.Add(this.Fecha);
-            this.panel1.Controls.Add(this.Tiempo);
             this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.bunifuCustomLabel10);
-            this.panel1.Controls.Add(this.bunifuCustomLabel11);
             this.panel1.Controls.Add(this.bunifuCustomLabel7);
             this.panel1.Controls.Add(this.bunifuCustomLabel8);
             this.panel1.Controls.Add(this.bunifuCustomLabel6);
@@ -136,6 +134,7 @@
             this.cbConsultorio.Name = "cbConsultorio";
             this.cbConsultorio.Size = new System.Drawing.Size(209, 24);
             this.cbConsultorio.TabIndex = 35;
+            this.cbConsultorio.SelectedIndexChanged += new System.EventHandler(this.cbConsultorio_SelectedIndexChanged);
             // 
             // cbProcedimiento
             // 
@@ -155,18 +154,10 @@
             // 
             // Fecha
             // 
-            this.Fecha.Location = new System.Drawing.Point(299, 229);
+            this.Fecha.Location = new System.Drawing.Point(299, 173);
             this.Fecha.Name = "Fecha";
-            this.Fecha.Size = new System.Drawing.Size(226, 22);
+            this.Fecha.Size = new System.Drawing.Size(260, 22);
             this.Fecha.TabIndex = 32;
-            // 
-            // Tiempo
-            // 
-            this.Tiempo.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.Tiempo.Location = new System.Drawing.Point(299, 150);
-            this.Tiempo.Name = "Tiempo";
-            this.Tiempo.Size = new System.Drawing.Size(107, 22);
-            this.Tiempo.TabIndex = 31;
             // 
             // btnActualizar
             // 
@@ -196,18 +187,6 @@
             this.bunifuCustomLabel10.TabIndex = 28;
             this.bunifuCustomLabel10.Text = "DOCTOR";
             // 
-            // bunifuCustomLabel11
-            // 
-            this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(294, 201);
-            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(73, 25);
-            this.bunifuCustomLabel11.TabIndex = 26;
-            this.bunifuCustomLabel11.Text = "FECHA";
-            // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
@@ -228,9 +207,9 @@
             this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
             this.bunifuCustomLabel8.Location = new System.Drawing.Point(294, 122);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(69, 25);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(152, 25);
             this.bunifuCustomLabel8.TabIndex = 20;
-            this.bunifuCustomLabel8.Text = "HORA";
+            this.bunifuCustomLabel8.Text = "HORA Y FECHA";
             // 
             // bunifuCustomLabel6
             // 
@@ -300,6 +279,14 @@
             this.bunifuThinButton26.TabIndex = 10;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Tiempo
+            // 
+            this.Tiempo.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.Tiempo.Location = new System.Drawing.Point(299, 226);
+            this.Tiempo.Name = "Tiempo";
+            this.Tiempo.Size = new System.Drawing.Size(260, 22);
+            this.Tiempo.TabIndex = 38;
+            // 
             // ViewAgendarcita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,7 +314,6 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
@@ -336,11 +322,11 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
         public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.Button btnGuardar;
-        public System.Windows.Forms.DateTimePicker Tiempo;
         public System.Windows.Forms.DateTimePicker Fecha;
         public System.Windows.Forms.ComboBox cbPaciente;
         public System.Windows.Forms.ComboBox cbConsultorio;
         public System.Windows.Forms.ComboBox cbProcedimiento;
         public System.Windows.Forms.ComboBox cbDoctor;
+        public System.Windows.Forms.DateTimePicker Tiempo;
     }
 }

@@ -21,10 +21,10 @@ namespace PTC.Controller.Usuarios
         public ControllerAdminUsuarios(ViewUsuarios Vista)
         {
             ObjAdminUsuario = Vista;
-            ObjAdminUsuario.Load += new EventHandler(LoadData);
-            ObjAdminUsuario.btnNuevo.Click += new EventHandler(NewUser);
-            ObjAdminUsuario.cmsActualizar.Click += new EventHandler(UpdateUser);
-            ObjAdminUsuario.cmsEliminar.Click += new EventHandler(DeleteUser);
+            ObjAdminUsuario.Load += new EventHandler(CargarData);
+            ObjAdminUsuario.btnNuevo.Click += new EventHandler(NuevoUsuario);
+            ObjAdminUsuario.cmsActualizar.Click += new EventHandler(ActualizarUsuario);
+            ObjAdminUsuario.cmsEliminar.Click += new EventHandler(EliminarUsuario);
             ObjAdminUsuario.btnBuscar.Click += new EventHandler(BuscarPersonas);
         }
         private void BuscarPersonas(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace PTC.Controller.Usuarios
             DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminUsuario.txtBuscar.Text.Trim());
             ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["viewPersonal"];
         }
-        private void DeleteUser(object sender, EventArgs e)
+        private void EliminarUsuario(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
             int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;
@@ -55,12 +55,12 @@ namespace PTC.Controller.Usuarios
             }
         }
 
-        public void LoadData(object sender, EventArgs e)
+        public void CargarData(object sender, EventArgs e)
         {
            RefrescarData();
         }
 
-       private void UpdateUser(object sender, EventArgs e)
+       private void ActualizarUsuario(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
             int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;
@@ -91,7 +91,7 @@ namespace PTC.Controller.Usuarios
             ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["Personal"];
         }
 
-        private void NewUser(object sender, EventArgs e)
+        private void NuevoUsuario(object sender, EventArgs e)
         {
             ViewAgregarUsuario Vista = new ViewAgregarUsuario(1);
             Vista.ShowDialog();

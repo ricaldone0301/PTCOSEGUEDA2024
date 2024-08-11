@@ -18,6 +18,7 @@ using PTC.Modelo.DTOLogin;
 using PTC.Modelo.DTOContrasena;
 using PTC.Controller.Common;
 using PTC.Vista.Paciente;
+using PTC.Vista.Ocupaciones;
 
 namespace PTC.Controller.Dasboard
 {
@@ -35,7 +36,7 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.lblNombre.Text = SessionVar.Rol;
             ObjDashboard.btnCerrarSesion.Click += new EventHandler(CerrarSesion);
             ObjDashboard.btnPacientes.Click += new EventHandler(Pacientes);
-            ObjDashboard.btnCalendario.Click += new EventHandler(Calendario);
+            ObjDashboard.btnOcupaciones.Click += new EventHandler(Ocupaciones);
             ObjDashboard.btnCitas.Click += new EventHandler(Citas);
             ObjDashboard.btnInicio.Click += new EventHandler(Inicio);
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
@@ -57,9 +58,9 @@ namespace PTC.Controller.Dasboard
             AbrirFormulario<ViewCitas>();
         }
 
-        private void Calendario(object sender, EventArgs e)
+        private void Ocupaciones(object sender, EventArgs e)
         {
-            AbrirFormulario<VistaCalendario>();
+            AbrirFormulario<ViewOcupaciones>();
         }
 
         private void Inicio(object sender, EventArgs e)

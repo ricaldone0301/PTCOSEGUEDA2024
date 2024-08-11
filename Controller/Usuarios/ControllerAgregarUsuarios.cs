@@ -15,7 +15,6 @@ namespace PTC.Controller.Usuarios
     class ControllerAgregarusuario
     {
         ViewAgregarUsuario ObjAgregarUsuario;
-        ViewRegistro ObjRegistro;
 
         private int accion;
         private string rol;
@@ -135,6 +134,7 @@ namespace PTC.Controller.Usuarios
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
+
             }
             catch (Exception ex)
             {

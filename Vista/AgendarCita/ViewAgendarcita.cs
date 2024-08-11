@@ -20,10 +20,11 @@ namespace PTC.Vista.AgendarCita
             ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion);
         }
 
-        public ViewAgendarcita(int accion, int pacienteID, string personalID, int consultorioID, DateTime hora, DateTime fecha, int citaID, int procedimientoID)
+        
+        public ViewAgendarcita(int accion, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
         {
             InitializeComponent();
-            ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion, pacienteID, personalID, consultorioID, hora, fecha, citaID, procedimientoID);
+            ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
 
         }
 
@@ -33,6 +34,11 @@ namespace PTC.Vista.AgendarCita
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbConsultorio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
