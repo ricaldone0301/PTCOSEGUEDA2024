@@ -20,7 +20,6 @@ namespace PTC.Controller.Paciente
      {
         ViewAgregarPaciente objAgregarPaciente;
 
-        public bool hipertensionarterial, diabetes, autismo, antecedentespsiquiatricos, vih, cancer, tiroides, ronquidos, artritis, vph, migraña, hemofilia, lupus, parkinson, hemorragias, lentacicatrizacion, gastritis, colitis, otro;
         private int accion;
         private int pacienteID;
         private string ocupacion;
@@ -114,7 +113,6 @@ namespace PTC.Controller.Paciente
 
                 if (valorRetornado == 1 )
                 {
-                    //objAgregarPaciente.btnAgregarOcupacion.Click += new EventHandler();
                     MessageBox.Show("La ocupacion ha sido registrada exitosamente",
                                     "Proceso completado",
                                     MessageBoxButtons.OK,
@@ -169,7 +167,6 @@ namespace PTC.Controller.Paciente
                 objAgregarPaciente.txtNombreEmergencia.Enabled = false;
                 objAgregarPaciente.txtNumEmergencia.Enabled = false;
                 objAgregarPaciente.txtMotivoConsulta.Enabled = false;
-                //objAgregarPaciente.txtOtroPadecimiento.Enabled = false;
                 objAgregarPaciente.cbControlMedicoSi.Enabled = false;
                 objAgregarPaciente.cbControlMedicoNo.Enabled = false;
                 objAgregarPaciente.txtMedicoCabeceraNombre.Enabled = false;
@@ -211,32 +208,12 @@ namespace PTC.Controller.Paciente
             }
 
         }
-            public void NuevoExpediente(object sender, EventArgs e)
-            {
-            hipertensionarterial = false;
-            diabetes = false;
-            autismo = false;
-            antecedentespsiquiatricos = false;
-            vih = false;
-            cancer = false;
-            tiroides = false;
-            ronquidos = false;
-            artritis = false;
-            vph = false;
-            migraña = false;
-            hemofilia = false;
-            lupus = false;
-            parkinson = false;
-            hemorragias = false;
-            lentacicatrizacion = false;
-            gastritis = false;
-            colitis = false;
-            otro = false;
+        public void NuevoExpediente(object sender, EventArgs e)
+        {
 
             DAOPaciente objdao = new DAOPaciente();
             CommonClass commonClass = new CommonClass();
 
-            //objdao.PacienteID = int.Parse(objAgregarPaciente.txtId.Text.Trim());
             objdao.NombrePaciente = objAgregarPaciente.txtNombrePaciente.Text.Trim();
             objdao.EdadPaciente = int.Parse(objAgregarPaciente.txtEdadPaciente.Text);
             objdao.TelefonoPaciente = objAgregarPaciente.txtTelefonoPaciente.Text.Trim();
@@ -251,7 +228,6 @@ namespace PTC.Controller.Paciente
             objdao.MotivoConsulta = objAgregarPaciente.txtMotivoConsulta.Text.Trim();
             objdao.Padecimientos = objAgregarPaciente.txtPadecimientos.Text.Trim();
 
-            //objdao.Padecimientos = objAgregarPaciente.txtOtroPadecimiento.Text.Trim();
             if (objAgregarPaciente.cbControlMedicoSi.Checked == true)
             {
                 objdao.ControlMedico = objAgregarPaciente.cbControlMedicoSi.Text;
@@ -274,7 +250,6 @@ namespace PTC.Controller.Paciente
             }
             objdao.TipoOperacion = objAgregarPaciente.txtTipoOperacion.Text.Trim();
             objdao.RecuperacionOperacion = objAgregarPaciente.txtRecuperacionOperacion.Text.Trim();
-            //objdao.OtrosPadecimientos = objAgregarPaciente.txtOtroPadecimiento.Text.Trim();
             
 
             int valor = objdao.RegistrarPaciente();
@@ -293,7 +268,6 @@ namespace PTC.Controller.Paciente
         {
             DAOPaciente objdao = new DAOPaciente();
             objdao.PacienteID = this.pacienteID;
-            //objdao.PacienteID = int.Parse(objAgregarPaciente.txtId.Text.Trim());
             objdao.NombrePaciente = objAgregarPaciente.txtNombrePaciente.Text.Trim();
             objdao.EdadPaciente = int.Parse(objAgregarPaciente.txtEdadPaciente.Text);
             objdao.TelefonoPaciente = objAgregarPaciente.txtTelefonoPaciente.Text.Trim();
@@ -320,16 +294,6 @@ namespace PTC.Controller.Paciente
             {
                 objdao.ControlMedico = "No";
             }
-
-            /*
-            if (objAgregarPaciente.cbControlMedicoSi.Checked == true)
-            {
-                objdao.ControlMedico = objAgregarPaciente.cbControlMedicoSi.Text;
-            }
-            else if (objAgregarPaciente.cbControlMedicoNo.Checked == true)
-            {
-                objdao.ControlMedico = objAgregarPaciente.cbControlMedicoNo.Text;
-            }*/
             objdao.MedicoCabeceraNombre = objAgregarPaciente.txtMedicoCabeceraNombre.Text.Trim();
             objdao.NumMedicoCabecera = objAgregarPaciente.txtNumMedicoCabecera.Text.Trim();
             objdao.AlergiaMedicamentos = objAgregarPaciente.txtNombreAlergiaMedicamento.Text.Trim();
@@ -346,7 +310,6 @@ namespace PTC.Controller.Paciente
             }
             objdao.TipoOperacion = objAgregarPaciente.txtTipoOperacion.Text.Trim();
             objdao.RecuperacionOperacion = objAgregarPaciente.txtRecuperacionOperacion.Text.Trim();
-            //objdao.OtrosPadecimientos = objAgregarPaciente.txtOtroPadecimiento.Text.Trim();
 
             int valor = objdao.ActualizarUsuario();
             if (valor == 1)
@@ -367,7 +330,6 @@ namespace PTC.Controller.Paciente
         {
             try
             {
-                //objAgregarPaciente.txtId.Text = id.ToString();
                 objAgregarPaciente.txtNombrePaciente.Text = nombrepaciente;
                 objAgregarPaciente.txtEdadPaciente.Text = edadpaciente.ToString();
                 objAgregarPaciente.txtTelefonoPaciente.Text = telefonopaciente;
@@ -403,13 +365,12 @@ namespace PTC.Controller.Paciente
                 }
                 objAgregarPaciente.txtTipoOperacion.Text = tipooperacion;
                 objAgregarPaciente.txtRecuperacionOperacion.Text = recuperacionoperacion;
-                //objAgregarPaciente.txtOtroPadecimiento.Text = otropadecimiento;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}");
             }
         }
-    }
+     }
 }
 

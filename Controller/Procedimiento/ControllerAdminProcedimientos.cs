@@ -63,6 +63,7 @@ namespace PTC.Controller.Procedimiento
             //crea una instancia del formulario ViewAgregarProcedimiento
             //pasan 1 como el parámetro de acción
             ViewAgregarProcedimiento Vista = new ViewAgregarProcedimiento(1);
+            //Al ser creado tambien se crea una instancia del controlador
             Vista.ShowDialog();
             RefrescarData();
         }

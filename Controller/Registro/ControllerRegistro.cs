@@ -94,7 +94,6 @@ namespace PTC.Controller.Registro
             to = ObjRegistro.txtEmail.Text;
             from = "clinicadentalosegueda01@gmail.com";
             pass = "aops ysuj qrda jfkm";
-            //svgm hivi nkxl jceh
             MailMessage message = new MailMessage();
             message.To.Add(to);
             message.From = new MailAddress(from);

@@ -36,9 +36,9 @@ namespace PTC.Modelo.DAOCitas
             }
 
         }
-            public DataSet ComboBoxConsultorio()
+        public DataSet ComboBoxConsultorio()
             {
-            DataSet ds = new DataSet();
+               DataSet ds = new DataSet();
             try
             {
                 using (SqlConnection connection = getConnection())
@@ -62,7 +62,7 @@ namespace PTC.Modelo.DAOCitas
                 getConnection().Close();
             }
             return ds;
-        }
+            }
 
         public DataSet ComboBoxDoctor()
         {

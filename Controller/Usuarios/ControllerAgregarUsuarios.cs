@@ -38,7 +38,7 @@ namespace PTC.Controller.Usuarios
             this.personalId = int.Parse(PersonalID.ToString());
             ObjAgregarUsuario.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
-        
+
 
         public void CargoInicial(object sender, EventArgs e)
         {
@@ -86,7 +86,8 @@ namespace PTC.Controller.Usuarios
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-    }
+        
+        }
 
         public void verificarAccion()
         {

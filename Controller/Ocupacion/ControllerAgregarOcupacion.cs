@@ -27,14 +27,12 @@ namespace PTC.Controller.Ocupacion
             ObjAgregarOcupacion = Vista;
             this.accion = accion;
             verificarAccion();
-            //ObjAgregarOcupacion.Load += new EventHandler(CargarData);
             ObjAgregarOcupacion.btnGuardar.Click += new EventHandler(NuevoRegistro);
         }
         public ControllerAgregarOcupacion(ViewAgregarOcupacion Vista, int accion, string nombreOcupacion, int ocupacionID)
         {
             ObjAgregarOcupacion = Vista;
             this.accion = accion;
-            //ObjAgregarOcupacion.Load += new EventHandler(CargarData);
             verificarAccion();
             CargarData(Vista, accion, nombreOcupacion, ocupacionID);
             this.ocupacionID = ocupacionID;
@@ -52,7 +50,6 @@ namespace PTC.Controller.Ocupacion
             {
                 ObjAgregarOcupacion.btnGuardar.Enabled = false;
                 ObjAgregarOcupacion.btnActualizar.Enabled = true;
-                //ObjAgregarOcupacion.txtUsuario.Enabled = false;
             }
         }
 
@@ -93,7 +90,6 @@ namespace PTC.Controller.Ocupacion
         }
 
 
-
         public void ActualizarRegistro(object sender, EventArgs e)
         {
             DAOOcupacion daoUpdate = new DAOOcupacion();
@@ -122,7 +118,6 @@ namespace PTC.Controller.Ocupacion
         public void CargarData(ViewAgregarOcupacion Vista, int accion, string nombreOcupacion, int ocupacionID)
         {
             ObjAgregarOcupacion.txtNombre.Text = nombreOcupacion;
-            //ObjAgregarOcupacion.txtEmail.Text = ocupacionID;
 
         }
     }

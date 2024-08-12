@@ -15,12 +15,14 @@ namespace PTC.Vista.AgregarProcedimiento
 {
     public partial class ViewAgregarProcedimiento : Form
     {
+        //Se obtienen las variables de creacion
         public ViewAgregarProcedimiento(int accion)
         {
             InitializeComponent();
             ControllerAgregarProcedimientos ObjAgregarProcedimientos = new ControllerAgregarProcedimientos(this, accion);
         }
 
+        //Se obtienen las variables de actualizacion en la vista
         public ViewAgregarProcedimiento(int accion, int procedimientoID, string nombreProcedimiento, decimal precioProcedimiento, string descProcedimiento)
         {
             InitializeComponent();

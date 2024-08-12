@@ -124,7 +124,7 @@ namespace PTC.Controller.Cita
                             ObjAgendarCita.cbDoctor.Text = rows[0]["nombrePacientel"].ToString();
                         }
                     }
-
+ 
 
                 }
                 
@@ -223,47 +223,6 @@ namespace PTC.Controller.Cita
                                 MessageBoxIcon.Error);
             }
         }
-
-        /*public void UpdateRegister(object sender, EventArgs e)
-        {
-            DAOCitas daoUpdate = new DAOCitas();
-            daoUpdate.PacienteID = int.Parse(ObjAgendarCita.cbPaciente.SelectedValue.ToString());
-            daoUpdate.PersonalID = ObjAgendarCita.cbDoctor.SelectedValue.ToString();
-            daoUpdate.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
-            //daoUpdate.CitaID = int.Parse(ObjAgendarCita.Cita.SelectedValue.ToString());
-
-            //string dummy2 = ObjAgendarCita.Tiempo.ToString();
-
-            // daoUpdate.Fecha = DateTime.ParseExact(ObjAgendarCita.Fecha.ToString(), "M/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
-
-
-            //daoUpdate.Hora = DateTime.Parse(ObjAgendarCita.Tiempo.ToString());
-            //String fechaTest = ObjAgendarCita.Fecha.ToString();
-            //daoUpdate.Fecha = DateTime.ParseExact(ObjAgendarCita.Fecha.Value.ToString(), "M/dd/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-            daoUpdate.Fecha = ObjAgendarCita.Fecha.Value;
-            daoUpdate.Hora = daoUpdate.Fecha.ToString("HH:mm:ss.fffffff tt");
-            //daoUpdate.Hora = DateTime.ParseExact(ObjAgendarCita.Tiempo.ToString(), "M/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
-            //daoUpdate.Fecha = DateTime.Parse(ObjAgendarCita.Fecha.ToString());
-
-            // daoUpdate.Fecha = DateTime.ParseExact(ObjAgendarCita.Fecha.ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            daoUpdate.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
-
-            int valorRetornado = daoUpdate.ActualizarUsuario();
-            if (valorRetornado == 2)
-            {
-                MessageBox.Show("Los datos de la cita han sido actualizado exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
-            else if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos de la cita no pudieron ser actualizados completamente",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-        }*/
         public void ChargeValues(ViewAgendarcita Vista, int accion, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
         {
             ObjAgendarCita.cbPaciente.SelectedValue = pacienteID;
