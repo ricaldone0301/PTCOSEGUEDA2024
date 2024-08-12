@@ -19,7 +19,7 @@ namespace PTC.Modelo.DAOLogin
     {
         
         SqlCommand Command = new SqlCommand();
-        public bool Login() 
+        public bool Login()
         {
             try
             {

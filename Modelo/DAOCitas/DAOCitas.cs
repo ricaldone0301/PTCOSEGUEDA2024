@@ -14,7 +14,7 @@ namespace PTC.Modelo.DAOCitas
     {
         readonly SqlCommand Command = new SqlCommand();
 
-        public DataSet BuscarPersonas(string valor)
+        public DataSet BuscarCitas(string valor)
         {
             try
             {
@@ -37,9 +37,9 @@ namespace PTC.Modelo.DAOCitas
             }
 
         }
-            public DataSet ComboBoxConsultorio()
+        public DataSet ComboBoxConsultorio()
             {
-            DataSet ds = new DataSet();
+               DataSet ds = new DataSet();
             try
             {
                 using (SqlConnection connection = getConnection())
@@ -63,7 +63,7 @@ namespace PTC.Modelo.DAOCitas
                 getConnection().Close();
             }
             return ds;
-        }
+            }
 
         public DataSet ComboBoxDoctor()
         {

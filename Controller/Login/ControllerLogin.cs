@@ -24,11 +24,11 @@ namespace PTC.Controller.Login
         public ControllerLogin(ViewLogin Vista)
         {
             ObjLogin = Vista;
-            ObjLogin.TxtUsuario.Enter += new EventHandler(EnterUsername);
-            ObjLogin.TxtUsuario.Leave += new EventHandler(LeaveUsername);
+            ObjLogin.TxtUsuario.Enter += new EventHandler(IntroducirUsuario);
+            ObjLogin.TxtUsuario.Leave += new EventHandler(LeaveUsuario);
 
-            ObjLogin.TxtContra.Enter += new EventHandler(EnterPassword);
-            ObjLogin.TxtContra.Leave += new EventHandler(LeavePassword);
+            ObjLogin.TxtContra.Enter += new EventHandler(IntroducirContrasena);
+            ObjLogin.TxtContra.Leave += new EventHandler(LeaveContrasena);
             ObjLogin.BtnRegistro.Click += new EventHandler(Registro);
             ObjLogin.btnOlvido.Click += new EventHandler(ContrasenaOlvidada);
 
@@ -82,7 +82,7 @@ namespace PTC.Controller.Login
             }
         }
 
-        private void EnterUsername(object sender, EventArgs e)
+        private void IntroducirUsuario(object sender, EventArgs e)
         {
             if (ObjLogin.TxtUsuario.Text.Trim().Equals("Usuario"))
             {
@@ -90,7 +90,7 @@ namespace PTC.Controller.Login
             }
         }
 
-        private void LeaveUsername(object sender, EventArgs e)
+        private void LeaveUsuario(object sender, EventArgs e)
         {
             if (ObjLogin.TxtUsuario.Text.Trim().Equals(""))
             {
@@ -98,7 +98,7 @@ namespace PTC.Controller.Login
             }
         }
 
-        private void EnterPassword(object sender, EventArgs e)
+        private void IntroducirContrasena(object sender, EventArgs e)
         {
             if (ObjLogin.TxtContra.Text.Trim().Equals("Contraseña"))
             {
@@ -108,7 +108,7 @@ namespace PTC.Controller.Login
             }
         }
 
-        private void LeavePassword(object sender, EventArgs e)
+        private void LeaveContrasena(object sender, EventArgs e)
         {
             if (ObjLogin.TxtContra.Text.Trim().Equals(""))
             {

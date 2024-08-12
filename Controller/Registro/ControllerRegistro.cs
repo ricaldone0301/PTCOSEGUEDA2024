@@ -28,7 +28,7 @@ namespace PTC.Controller.Registro
         public ControllerRegistro(ViewRegistro Vista)
         {
             ObjRegistro = Vista;
-            ObjRegistro.Load += new EventHandler(InitialCharge);
+            ObjRegistro.Load += new EventHandler(CargoInicial);
             ObjRegistro.btnEnviar.Click += new EventHandler(ConseguirCorreo);
             ObjRegistro.btnEnviar1.Click += new EventHandler(VerificarCodigoYRegistrar);
             ObjRegistro.timevcode.Tick  += new EventHandler(Tick);
@@ -36,7 +36,7 @@ namespace PTC.Controller.Registro
 
    
 
-        public void InitialCharge(object sender, EventArgs e)
+        public void CargoInicial(object sender, EventArgs e)
         {
             try
             {
@@ -94,7 +94,6 @@ namespace PTC.Controller.Registro
             to = ObjRegistro.txtEmail.Text;
             from = "clinicadentalosegueda01@gmail.com";
             pass = "aops ysuj qrda jfkm";
-            //svgm hivi nkxl jceh
             MailMessage message = new MailMessage();
             message.To.Add(to);
             message.From = new MailAddress(from);

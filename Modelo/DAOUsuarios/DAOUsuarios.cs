@@ -121,7 +121,7 @@ namespace PTC.Modelo.DAOUsuarios
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     return rowsAffected;
-                    }
+                }
             }
             catch (Exception ex)
             {
