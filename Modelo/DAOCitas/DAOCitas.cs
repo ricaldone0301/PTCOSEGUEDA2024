@@ -13,7 +13,7 @@ namespace PTC.Modelo.DAOCitas
     {
         readonly SqlCommand Command = new SqlCommand();
 
-        public DataSet BuscarPersonas(string valor)
+        public DataSet BuscarCitas(string valor)
         {
             try
             {
