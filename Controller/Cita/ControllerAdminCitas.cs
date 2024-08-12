@@ -20,20 +20,20 @@ namespace PTC.Controller.Cita
         public ControllerAdminCitas(ViewCitas Vista)
         {
             ObjAdminCitas = Vista;
-            ObjAdminCitas.Load += new EventHandler(LoadData);
-            ObjAdminCitas.btnNuevo.Click += new EventHandler(NewUser);
-            ObjAdminCitas.cmsActualizar.Click += new EventHandler(UpdateUser);
-            ObjAdminCitas.cmsEliminar.Click += new EventHandler(DeleteUser);
-            ObjAdminCitas.btnBuscar.Click += new EventHandler(BuscarPersonas);
+            ObjAdminCitas.Load += new EventHandler(Load);
+            ObjAdminCitas.btnNuevo.Click += new EventHandler(NuevaCita);
+            ObjAdminCitas.cmsActualizar.Click += new EventHandler(ActualizarCita);
+            ObjAdminCitas.cmsEliminar.Click += new EventHandler(EliminarCita);
+            ObjAdminCitas.btnBuscar.Click += new EventHandler(BuscarCitas);
         }
 
-        private void BuscarPersonas(object sender, EventArgs e)
+        private void BuscarCitas(object sender, EventArgs e)
         {
-            DAOProcedimiento ObjAdmin = new DAOProcedimiento();
-            DataSet ds = ObjAdmin.BuscarProcedimiento(ObjAdminCitas.txtBuscar.Text.Trim());
+            DAOCitas ObjAdmin = new DAOCitas();
+            DataSet ds = ObjAdmin.BuscarCitas(ObjAdminCitas.txtBuscar.Text.Trim());
             ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewCitas"];
         }
-        private void DeleteUser(object sender, EventArgs e)
+        private void EliminarCita(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;
             int pos = ObjAdminCitas.dgvCitas.CurrentRow.Index;
@@ -55,12 +55,12 @@ namespace PTC.Controller.Cita
             }
         }
 
-        public void LoadData(object sender, EventArgs e)
+        public void Load(object sender, EventArgs e)
         {
             RefrescarData();
         }
 
-        private void UpdateUser(object sender, EventArgs e)
+        private void ActualizarCita(object sender, EventArgs e)
         {
             int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;
             int pos = ObjAdminCitas.dgvCitas.CurrentRow.Index;
@@ -92,7 +92,7 @@ namespace PTC.Controller.Cita
             ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewCitas"];
         }
 
-        private void NewUser(object sender, EventArgs e)
+        private void NuevaCita(object sender, EventArgs e)
         {
             ViewAgendarcita Vista = new ViewAgendarcita(1);
             Vista.ShowDialog();

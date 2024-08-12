@@ -21,51 +21,12 @@ namespace PTC.Controller.Paciente
         public ControllerAdminPaciente(ViewPaciente vistaPacientes)
         {
             ObjAdminPaciente = vistaPacientes;
-            ObjAdminPaciente.Load += new EventHandler(LoadData);
+            ObjAdminPaciente.Load += new EventHandler(Load);
             ObjAdminPaciente.btnNuevoPaciente.Click += new EventHandler(NuevoPaciente);
             ObjAdminPaciente.cmsActualizarPaciente.Click += new EventHandler(ActualizarPaciente);
             ObjAdminPaciente.cmsEliminarPaciente.Click += new EventHandler(EliminarPaciente);
             ObjAdminPaciente.btnBuscar.Click += new EventHandler(Buscar);
-            //ObjAdminPaciente.cmsVerPaciente.Click += new EventHandler(Ver);
         }
-
-      /*  private void Ver(object sender, EventArgs e)
-        {
-            int rowIndex = ObjAdminPaciente.dgvPacientes.CurrentCell.RowIndex;
-            int pos = ObjAdminPaciente.dgvPacientes.CurrentRow.Index;
-            int edadpaciente;
-            int pacienteID;
-            DateTime fechaNac;
-            string nombrepaciente, telefonopaciente, correopaciente, ocupacion, direccionpaciente, dui, referencia, nombreemergencia, numemergencia, motivoconsulta, padecimientos, controlmedico, medicocabeceranombre, nummedicocabecera, alergiamedicamentos, medicamento, operacion, tipooperacion, recuperacionoperacion;
-
-            pacienteID = int.Parse(ObjAdminPaciente.dgvPacientes[0, pos].Value.ToString());
-            nombrepaciente = ObjAdminPaciente.dgvPacientes[1, pos].Value.ToString();
-            edadpaciente = int.Parse(ObjAdminPaciente.dgvPacientes[2, pos].Value.ToString());
-            telefonopaciente = ObjAdminPaciente.dgvPacientes[3, pos].Value.ToString();
-            fechaNac = DateTime.Parse(ObjAdminPaciente.dgvPacientes[4, pos].Value.ToString());
-            correopaciente = ObjAdminPaciente.dgvPacientes[5, pos].Value.ToString();
-            ocupacion = ObjAdminPaciente.dgvPacientes[6, pos].Value.ToString();
-            direccionpaciente = ObjAdminPaciente.dgvPacientes[7, pos].Value.ToString();
-            dui = ObjAdminPaciente.dgvPacientes[8, pos].Value.ToString();
-            referencia = ObjAdminPaciente.dgvPacientes[9, pos].Value.ToString();
-            nombreemergencia = ObjAdminPaciente.dgvPacientes[10, pos].Value.ToString();
-            numemergencia = ObjAdminPaciente.dgvPacientes[11, pos].Value.ToString();
-            motivoconsulta = ObjAdminPaciente.dgvPacientes[12, pos].Value.ToString();
-            padecimientos = ObjAdminPaciente.dgvPacientes[13, pos].Value.ToString();
-            controlmedico = ObjAdminPaciente.dgvPacientes[14, pos].Value.ToString();
-            medicocabeceranombre = ObjAdminPaciente.dgvPacientes[15, pos].Value.ToString();
-            nummedicocabecera = ObjAdminPaciente.dgvPacientes[16, pos].Value.ToString();
-            alergiamedicamentos = ObjAdminPaciente.dgvPacientes[17, pos].Value.ToString();
-            medicamento = ObjAdminPaciente.dgvPacientes[18, pos].Value.ToString();
-            operacion = ObjAdminPaciente.dgvPacientes[19, pos].Value.ToString();
-            tipooperacion = ObjAdminPaciente.dgvPacientes[20, pos].Value.ToString();
-            recuperacionoperacion = ObjAdminPaciente.dgvPacientes[21, pos].Value.ToString();
-
-
-            ViewAgregarPaciente openForm = new ViewAgregarPaciente(2, pacienteID, nombrepaciente, edadpaciente, telefonopaciente, fechaNac, correopaciente, ocupacion, direccionpaciente, dui, referencia, nombreemergencia, numemergencia, motivoconsulta, padecimientos, controlmedico, medicocabeceranombre, nummedicocabecera, alergiamedicamentos, medicamento, operacion, tipooperacion, recuperacionoperacion);
-            openForm.ShowDialog();
-
-        }*/
         private void Buscar(object sender, EventArgs e)
         {
             DAOPaciente ObjAdminBuscar = new DAOPaciente();
@@ -94,7 +55,7 @@ namespace PTC.Controller.Paciente
             }
         }
 
-        public void LoadData(object sender, EventArgs e)
+        public void Load(object sender, EventArgs e)
         {
             RefrescarData();
         }
