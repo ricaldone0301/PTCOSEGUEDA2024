@@ -35,6 +35,7 @@
             this.cmsActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvOcupaciones = new System.Windows.Forms.DataGridView();
+            this.cmsVerPaciente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOcupaciones)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmsVerPaciente);
             this.panel1.Controls.Add(this.cmsEliminar);
             this.panel1.Controls.Add(this.cmsActualizar);
             this.panel1.Controls.Add(this.btnNuevo);
@@ -112,6 +114,16 @@
             this.dgvOcupaciones.Size = new System.Drawing.Size(1060, 589);
             this.dgvOcupaciones.TabIndex = 97;
             // 
+            // cmsVerPaciente
+            // 
+            this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
+            this.cmsVerPaciente.Location = new System.Drawing.Point(729, 15);
+            this.cmsVerPaciente.Name = "cmsVerPaciente";
+            this.cmsVerPaciente.Size = new System.Drawing.Size(75, 23);
+            this.cmsVerPaciente.TabIndex = 101;
+            this.cmsVerPaciente.Text = "Ver";
+            this.cmsVerPaciente.UseVisualStyleBackColor = true;
+            // 
             // ViewOcupaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,5 +151,6 @@
         public System.Windows.Forms.Button cmsActualizar;
         public System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.DataGridView dgvOcupaciones;
+        public System.Windows.Forms.Button cmsVerPaciente;
     }
 }

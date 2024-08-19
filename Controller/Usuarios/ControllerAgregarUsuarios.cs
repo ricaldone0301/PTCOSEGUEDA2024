@@ -22,28 +22,36 @@ namespace PTC.Controller.Usuarios
 
         public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion)
         {
+            //Se asocia la vista crea un parametro como objecto local
             ObjAgregarUsuario = Vista;
+            //Se establece el tipo de accion a realizar.
             this.accion = accion;
+            //llama al metodo para que verifica la accion.
             verificarAccion();
+            //Es la carga inicial cuando se abre la vista
             ObjAgregarUsuario.Load += new EventHandler(CargoInicial);
+            //Al dar click en el boton agregar se llama al evento nuevo.
             ObjAgregarUsuario.btnAgregar.Click += new EventHandler(Nuevo);
         }
         public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
         {
             ObjAgregarUsuario = Vista;
             this.accion = accion;
+            //llena la vista con los valores del usuario que se va a actualizar.
             ObjAgregarUsuario.Load += new EventHandler(CargoInicial);
             verificarAccion();
             CargaValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
             this.personalId = int.Parse(PersonalID.ToString());
+            //Al dar click al botn de actualizar se llama al metodo actualizarregistro.
             ObjAgregarUsuario.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
 
-
+        //En este metodo se encarga de la configuracion inicial de la vista cuando se carga para llenar de informacion varios controles especificamente combobox.
         public void CargoInicial(object sender, EventArgs e)
         {
             try
             {
+                //Se crea la instancia  del daousuarios para manejar la interaccion con la base de datos.
                 DAOUsuarios objAdmin = new DAOUsuarios();
 
                 DataSet dsRoles = objAdmin.ComboBoxRoles();
@@ -89,26 +97,44 @@ namespace PTC.Controller.Usuarios
         
         }
 
+        //Este metodo verifica las acciones especificas como agreggar o actualizar.
         public void verificarAccion()
         {
+            //Si es 1 se hace el btn agregar se deshabilita el btn actualizar
             if (accion == 1)
             {
                 ObjAgregarUsuario.btnAgregar.Enabled = true;
                 ObjAgregarUsuario.btnActualizar.Enabled = false;
-            }
+            }// Viceversa
             else if (accion == 2)
             {
                 ObjAgregarUsuario.btnAgregar.Enabled = false;
                 ObjAgregarUsuario.btnActualizar.Enabled = true;
+               // ObjAgregarUsuario.txtUsuario.Enabled = false;
+            }
+            else if (accion == 3)
+            {
+                ObjAgregarUsuario.btnAgregar.Enabled = false;
+                ObjAgregarUsuario.btnActualizar.Enabled = false;
                 ObjAgregarUsuario.txtUsuario.Enabled = false;
+                ObjAgregarUsuario.txtContrasena.Enabled = false;
+                ObjAgregarUsuario.txtNombre.Enabled = false;
+                ObjAgregarUsuario.txtTelefono.Enabled = false;
+                ObjAgregarUsuario.txtEmail.Enabled = false;
+                ObjAgregarUsuario.cbConsul.Enabled = false;
+                ObjAgregarUsuario.cbEsp.Enabled = false;
+                ObjAgregarUsuario.cbRol.Enabled = false;
             }
         }
 
+        //En este metodo se utiliza cuando  hacemos click en registrar un usuario
         public void Nuevo(object sender, EventArgs e)
         {
             try
             {
+                //Se crea la instancia del dao para que interactue con l base de datows
                 DAOUsuarios daoAdmin = new DAOUsuarios();
+                //Extrae los datos del formulario.
                 CommonClass commonClass = new CommonClass();
 
                 daoAdmin.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
@@ -120,6 +146,8 @@ namespace PTC.Controller.Usuarios
                 daoAdmin.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
                 daoAdmin.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
 
+                //Registra al usuario en la base de datos.
+                //Si fue exitoso retorana 1 cy si no retorna 2 que no fueron exitosos
                 int valorRetornado = daoAdmin.RegistrarUsuario();
 
                 if (valorRetornado == 1)
@@ -148,11 +176,14 @@ namespace PTC.Controller.Usuarios
         }
 
 
-
+        //Este metodo se activ cuan hemos dado click al botn actualizar
         public void ActualizarRegistro(object sender, EventArgs e)
         {
+
             CommonClass commonClass = new CommonClass();
+            //Se crea la instancia del dao que gestiona las operaciones en la base 
             DAOUsuarios daoUpdate = new DAOUsuarios();
+            //Asigna y captura los datos al dao
             daoUpdate.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
             daoUpdate.PersonalId = personalId;
             daoUpdate.EspecialidadId = (int)ObjAgregarUsuario.cbEsp.SelectedValue;
@@ -162,7 +193,7 @@ namespace PTC.Controller.Usuarios
             daoUpdate.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
             daoUpdate.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
             daoUpdate.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
-
+            //Envia la consulta al sql para que actualice los datos y si la accion es 1 es exitosa y si no es 2.
             int valorRetornado = daoUpdate.ActualizarUsuario();
             if (valorRetornado == 1)
             {
@@ -180,6 +211,7 @@ namespace PTC.Controller.Usuarios
             }
         }
 
+        //Este metodo carga los valores ya actualizados en la vista.
         public void CargaValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
         {
             ObjAgregarUsuario.txtNombre.Text = Nombre;

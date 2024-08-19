@@ -127,6 +127,7 @@
             this.txtNombre.Location = new System.Drawing.Point(21, 108);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(572, 22);
             this.txtNombre.TabIndex = 71;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);

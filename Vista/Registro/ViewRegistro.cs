@@ -19,6 +19,7 @@ namespace PTC.Vista.Registro
         public ViewRegistro()
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerRegistro control = new ControllerRegistro(this);
         }
 
@@ -32,8 +33,21 @@ namespace PTC.Vista.Registro
 
         }
 
-        private void timevcode_Tick(object sender, EventArgs e)
+
+        private void ContextMenuEliminar(TextBox textBox)
         {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtUsuario);
+            ContextMenuEliminar(txtTelefono);
+            ContextMenuEliminar(txtNombre);
+            ContextMenuEliminar(txtEmail);
+            ContextMenuEliminar(txtContrasena);
+            ContextMenuEliminar(txtConfirm);
         }
 
         private void txtTelefono_TextChanged(object sender, EventArgs e)

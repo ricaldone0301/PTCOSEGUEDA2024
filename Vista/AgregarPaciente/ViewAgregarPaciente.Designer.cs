@@ -89,7 +89,7 @@
             this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(854, 551);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(812, 496);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
             this.bunifuCustomLabel11.Size = new System.Drawing.Size(217, 25);
             this.bunifuCustomLabel11.TabIndex = 171;
@@ -99,10 +99,11 @@
             // txtNombreAlergiaMedicamento
             // 
             this.txtNombreAlergiaMedicamento.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreAlergiaMedicamento.Location = new System.Drawing.Point(859, 577);
+            this.txtNombreAlergiaMedicamento.Location = new System.Drawing.Point(817, 522);
             this.txtNombreAlergiaMedicamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreAlergiaMedicamento.Multiline = true;
             this.txtNombreAlergiaMedicamento.Name = "txtNombreAlergiaMedicamento";
+            this.txtNombreAlergiaMedicamento.ShortcutsEnabled = false;
             this.txtNombreAlergiaMedicamento.Size = new System.Drawing.Size(412, 81);
             this.txtNombreAlergiaMedicamento.TabIndex = 170;
             this.txtNombreAlergiaMedicamento.TextChanged += new System.EventHandler(this.txtNombreAlergiaMedicamento_TextChanged);
@@ -115,7 +116,7 @@
             this.btnAgregarOcupacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarOcupacion.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarOcupacion.ForeColor = System.Drawing.Color.OliveDrab;
-            this.btnAgregarOcupacion.Location = new System.Drawing.Point(734, 200);
+            this.btnAgregarOcupacion.Location = new System.Drawing.Point(692, 145);
             this.btnAgregarOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarOcupacion.Name = "btnAgregarOcupacion";
             this.btnAgregarOcupacion.Size = new System.Drawing.Size(40, 67);
@@ -127,10 +128,11 @@
             // txtMotivoConsulta
             // 
             this.txtMotivoConsulta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMotivoConsulta.Location = new System.Drawing.Point(375, 439);
+            this.txtMotivoConsulta.Location = new System.Drawing.Point(333, 384);
             this.txtMotivoConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMotivoConsulta.Multiline = true;
             this.txtMotivoConsulta.Name = "txtMotivoConsulta";
+            this.txtMotivoConsulta.ShortcutsEnabled = false;
             this.txtMotivoConsulta.Size = new System.Drawing.Size(397, 81);
             this.txtMotivoConsulta.TabIndex = 167;
             this.txtMotivoConsulta.TextChanged += new System.EventHandler(this.txtMotivoConsulta_TextChanged);
@@ -138,10 +140,11 @@
             // txtNombreMedicamento
             // 
             this.txtNombreMedicamento.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreMedicamento.Location = new System.Drawing.Point(70, 674);
+            this.txtNombreMedicamento.Location = new System.Drawing.Point(28, 619);
             this.txtNombreMedicamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreMedicamento.Multiline = true;
             this.txtNombreMedicamento.Name = "txtNombreMedicamento";
+            this.txtNombreMedicamento.ShortcutsEnabled = false;
             this.txtNombreMedicamento.Size = new System.Drawing.Size(572, 81);
             this.txtNombreMedicamento.TabIndex = 166;
             this.txtNombreMedicamento.TextChanged += new System.EventHandler(this.txtNombreMedicamento_TextChanged);
@@ -151,7 +154,7 @@
             this.btnGuardarPaciente.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnGuardarPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarPaciente.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnGuardarPaciente.Location = new System.Drawing.Point(1057, 816);
+            this.btnGuardarPaciente.Location = new System.Drawing.Point(1015, 761);
             this.btnGuardarPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarPaciente.Name = "btnGuardarPaciente";
             this.btnGuardarPaciente.Size = new System.Drawing.Size(144, 76);
@@ -166,7 +169,7 @@
             this.bunifuCustomLabel22.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel22.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel22.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(64, 413);
+            this.bunifuCustomLabel22.Location = new System.Drawing.Point(22, 358);
             this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
             this.bunifuCustomLabel22.Size = new System.Drawing.Size(250, 25);
             this.bunifuCustomLabel22.TabIndex = 164;
@@ -176,10 +179,11 @@
             // txtRecuperacionOperacion
             // 
             this.txtRecuperacionOperacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecuperacionOperacion.Location = new System.Drawing.Point(69, 794);
+            this.txtRecuperacionOperacion.Location = new System.Drawing.Point(27, 739);
             this.txtRecuperacionOperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRecuperacionOperacion.Multiline = true;
             this.txtRecuperacionOperacion.Name = "txtRecuperacionOperacion";
+            this.txtRecuperacionOperacion.ShortcutsEnabled = false;
             this.txtRecuperacionOperacion.Size = new System.Drawing.Size(959, 89);
             this.txtRecuperacionOperacion.TabIndex = 163;
             this.txtRecuperacionOperacion.TextChanged += new System.EventHandler(this.txtRecuperacionOperacion_TextChanged);
@@ -190,7 +194,7 @@
             this.bunifuCustomLabel21.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel21.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel21.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(64, 768);
+            this.bunifuCustomLabel21.Location = new System.Drawing.Point(22, 713);
             this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
             this.bunifuCustomLabel21.Size = new System.Drawing.Size(423, 25);
             this.bunifuCustomLabel21.TabIndex = 162;
@@ -200,10 +204,11 @@
             // txtTipoOperacion
             // 
             this.txtTipoOperacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoOperacion.Location = new System.Drawing.Point(962, 710);
+            this.txtTipoOperacion.Location = new System.Drawing.Point(920, 655);
             this.txtTipoOperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTipoOperacion.Multiline = true;
             this.txtTipoOperacion.Name = "txtTipoOperacion";
+            this.txtTipoOperacion.ShortcutsEnabled = false;
             this.txtTipoOperacion.Size = new System.Drawing.Size(309, 81);
             this.txtTipoOperacion.TabIndex = 161;
             this.txtTipoOperacion.TextChanged += new System.EventHandler(this.txtTipoOperacion_TextChanged);
@@ -214,7 +219,7 @@
             this.bunifuCustomLabel20.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel20.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel20.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel20.Location = new System.Drawing.Point(956, 674);
+            this.bunifuCustomLabel20.Location = new System.Drawing.Point(914, 619);
             this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
             this.bunifuCustomLabel20.Size = new System.Drawing.Size(217, 25);
             this.bunifuCustomLabel20.TabIndex = 160;
@@ -225,7 +230,7 @@
             // 
             this.cbOperacionNo.AutoSize = true;
             this.cbOperacionNo.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOperacionNo.Location = new System.Drawing.Point(852, 714);
+            this.cbOperacionNo.Location = new System.Drawing.Point(810, 659);
             this.cbOperacionNo.Margin = new System.Windows.Forms.Padding(4);
             this.cbOperacionNo.Name = "cbOperacionNo";
             this.cbOperacionNo.Size = new System.Drawing.Size(51, 24);
@@ -238,7 +243,7 @@
             // 
             this.cbOperacionSi.AutoSize = true;
             this.cbOperacionSi.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOperacionSi.Location = new System.Drawing.Point(706, 714);
+            this.cbOperacionSi.Location = new System.Drawing.Point(664, 659);
             this.cbOperacionSi.Margin = new System.Windows.Forms.Padding(4);
             this.cbOperacionSi.Name = "cbOperacionSi";
             this.cbOperacionSi.Size = new System.Drawing.Size(43, 24);
@@ -253,7 +258,7 @@
             this.bunifuCustomLabel19.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel19.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel19.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(700, 674);
+            this.bunifuCustomLabel19.Location = new System.Drawing.Point(658, 619);
             this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
             this.bunifuCustomLabel19.Size = new System.Drawing.Size(190, 25);
             this.bunifuCustomLabel19.TabIndex = 157;
@@ -266,7 +271,7 @@
             this.bunifuCustomLabel18.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel18.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel18.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(64, 638);
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(22, 583);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
             this.bunifuCustomLabel18.Size = new System.Drawing.Size(421, 25);
             this.bunifuCustomLabel18.TabIndex = 156;
@@ -279,7 +284,7 @@
             this.bunifuCustomLabel17.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel17.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel17.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(854, 528);
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(812, 473);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
             this.bunifuCustomLabel17.Size = new System.Drawing.Size(322, 25);
             this.bunifuCustomLabel17.TabIndex = 155;
@@ -289,9 +294,10 @@
             // txtNumMedicoCabecera
             // 
             this.txtNumMedicoCabecera.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumMedicoCabecera.Location = new System.Drawing.Point(558, 577);
+            this.txtNumMedicoCabecera.Location = new System.Drawing.Point(516, 522);
             this.txtNumMedicoCabecera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumMedicoCabecera.Name = "txtNumMedicoCabecera";
+            this.txtNumMedicoCabecera.ShortcutsEnabled = false;
             this.txtNumMedicoCabecera.Size = new System.Drawing.Size(272, 26);
             this.txtNumMedicoCabecera.TabIndex = 154;
             this.txtNumMedicoCabecera.TextChanged += new System.EventHandler(this.txtNumMedicoCabecera_TextChanged);
@@ -302,7 +308,7 @@
             this.bunifuCustomLabel16.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel16.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel16.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(552, 551);
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(510, 496);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
             this.bunifuCustomLabel16.Size = new System.Drawing.Size(203, 25);
             this.bunifuCustomLabel16.TabIndex = 153;
@@ -312,9 +318,10 @@
             // txtMedicoCabeceraNombre
             // 
             this.txtMedicoCabeceraNombre.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedicoCabeceraNombre.Location = new System.Drawing.Point(70, 577);
+            this.txtMedicoCabeceraNombre.Location = new System.Drawing.Point(28, 522);
             this.txtMedicoCabeceraNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMedicoCabeceraNombre.Name = "txtMedicoCabeceraNombre";
+            this.txtMedicoCabeceraNombre.ShortcutsEnabled = false;
             this.txtMedicoCabeceraNombre.Size = new System.Drawing.Size(453, 26);
             this.txtMedicoCabeceraNombre.TabIndex = 152;
             this.txtMedicoCabeceraNombre.TextChanged += new System.EventHandler(this.txtMedicoCabeceraNombre_TextChanged);
@@ -325,7 +332,7 @@
             this.bunifuCustomLabel15.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel15.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(64, 551);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(22, 496);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
             this.bunifuCustomLabel15.Size = new System.Drawing.Size(318, 25);
             this.bunifuCustomLabel15.TabIndex = 151;
@@ -338,7 +345,7 @@
             this.bunifuCustomLabel14.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel14.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(794, 413);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(752, 358);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
             this.bunifuCustomLabel14.Size = new System.Drawing.Size(167, 25);
             this.bunifuCustomLabel14.TabIndex = 150;
@@ -349,7 +356,7 @@
             // 
             this.cbControlMedicoNo.AutoSize = true;
             this.cbControlMedicoNo.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbControlMedicoNo.Location = new System.Drawing.Point(1219, 444);
+            this.cbControlMedicoNo.Location = new System.Drawing.Point(1177, 389);
             this.cbControlMedicoNo.Margin = new System.Windows.Forms.Padding(4);
             this.cbControlMedicoNo.Name = "cbControlMedicoNo";
             this.cbControlMedicoNo.Size = new System.Drawing.Size(51, 24);
@@ -362,7 +369,7 @@
             // 
             this.cbControlMedicoSi.AutoSize = true;
             this.cbControlMedicoSi.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbControlMedicoSi.Location = new System.Drawing.Point(1078, 444);
+            this.cbControlMedicoSi.Location = new System.Drawing.Point(1036, 389);
             this.cbControlMedicoSi.Margin = new System.Windows.Forms.Padding(4);
             this.cbControlMedicoSi.Name = "cbControlMedicoSi";
             this.cbControlMedicoSi.Size = new System.Drawing.Size(43, 24);
@@ -377,7 +384,7 @@
             this.bunifuCustomLabel13.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(1072, 413);
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(1030, 358);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
             this.bunifuCustomLabel13.Size = new System.Drawing.Size(184, 25);
             this.bunifuCustomLabel13.TabIndex = 147;
@@ -390,7 +397,7 @@
             this.bunifuCustomLabel12.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(370, 413);
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(328, 358);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
             this.bunifuCustomLabel12.Size = new System.Drawing.Size(227, 25);
             this.bunifuCustomLabel12.TabIndex = 146;
@@ -400,9 +407,10 @@
             // txtNumEmergencia
             // 
             this.txtNumEmergencia.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumEmergencia.Location = new System.Drawing.Point(70, 439);
+            this.txtNumEmergencia.Location = new System.Drawing.Point(28, 384);
             this.txtNumEmergencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumEmergencia.Name = "txtNumEmergencia";
+            this.txtNumEmergencia.ShortcutsEnabled = false;
             this.txtNumEmergencia.Size = new System.Drawing.Size(269, 26);
             this.txtNumEmergencia.TabIndex = 145;
             this.txtNumEmergencia.TextChanged += new System.EventHandler(this.txtNumEmergencia_TextChanged);
@@ -410,9 +418,10 @@
             // txtNombreEmergencia
             // 
             this.txtNombreEmergencia.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEmergencia.Location = new System.Drawing.Point(876, 353);
+            this.txtNombreEmergencia.Location = new System.Drawing.Point(834, 298);
             this.txtNombreEmergencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreEmergencia.Name = "txtNombreEmergencia";
+            this.txtNombreEmergencia.ShortcutsEnabled = false;
             this.txtNombreEmergencia.Size = new System.Drawing.Size(395, 26);
             this.txtNombreEmergencia.TabIndex = 144;
             this.txtNombreEmergencia.TextChanged += new System.EventHandler(this.txtNombreEmergencia_TextChanged);
@@ -423,7 +432,7 @@
             this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(871, 327);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(829, 272);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(355, 25);
             this.bunifuCustomLabel10.TabIndex = 143;
@@ -433,9 +442,10 @@
             // txtReferencia
             // 
             this.txtReferencia.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReferencia.Location = new System.Drawing.Point(368, 353);
+            this.txtReferencia.Location = new System.Drawing.Point(326, 298);
             this.txtReferencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.ShortcutsEnabled = false;
             this.txtReferencia.Size = new System.Drawing.Size(469, 26);
             this.txtReferencia.TabIndex = 142;
             this.txtReferencia.TextChanged += new System.EventHandler(this.txtReferencia_TextChanged);
@@ -446,7 +456,7 @@
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(363, 327);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(321, 272);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(125, 25);
             this.bunifuCustomLabel9.TabIndex = 141;
@@ -456,9 +466,10 @@
             // txtDUI
             // 
             this.txtDUI.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDUI.Location = new System.Drawing.Point(70, 353);
+            this.txtDUI.Location = new System.Drawing.Point(28, 298);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDUI.Name = "txtDUI";
+            this.txtDUI.ShortcutsEnabled = false;
             this.txtDUI.Size = new System.Drawing.Size(263, 26);
             this.txtDUI.TabIndex = 140;
             this.txtDUI.TextChanged += new System.EventHandler(this.txtDUI_TextChanged);
@@ -469,7 +480,7 @@
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(64, 327);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(22, 272);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(46, 25);
             this.bunifuCustomLabel8.TabIndex = 139;
@@ -479,10 +490,11 @@
             // txtDireccionPaciente
             // 
             this.txtDireccionPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionPaciente.Location = new System.Drawing.Point(811, 221);
+            this.txtDireccionPaciente.Location = new System.Drawing.Point(769, 166);
             this.txtDireccionPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccionPaciente.Multiline = true;
             this.txtDireccionPaciente.Name = "txtDireccionPaciente";
+            this.txtDireccionPaciente.ShortcutsEnabled = false;
             this.txtDireccionPaciente.Size = new System.Drawing.Size(460, 81);
             this.txtDireccionPaciente.TabIndex = 138;
             this.txtDireccionPaciente.TextChanged += new System.EventHandler(this.txtDireccionPaciente_TextChanged);
@@ -493,7 +505,7 @@
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(806, 189);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(764, 134);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(115, 25);
             this.bunifuCustomLabel7.TabIndex = 137;
@@ -505,7 +517,7 @@
             this.cmbOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOcupacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOcupacion.FormattingEnabled = true;
-            this.cmbOcupacion.Location = new System.Drawing.Point(568, 219);
+            this.cmbOcupacion.Location = new System.Drawing.Point(526, 164);
             this.cmbOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.cmbOcupacion.Name = "cmbOcupacion";
             this.cmbOcupacion.Size = new System.Drawing.Size(164, 28);
@@ -518,7 +530,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(563, 189);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(521, 134);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(127, 25);
             this.bunifuCustomLabel6.TabIndex = 135;
@@ -528,9 +540,10 @@
             // txtCorreoPaciente
             // 
             this.txtCorreoPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoPaciente.Location = new System.Drawing.Point(70, 215);
+            this.txtCorreoPaciente.Location = new System.Drawing.Point(28, 160);
             this.txtCorreoPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreoPaciente.Name = "txtCorreoPaciente";
+            this.txtCorreoPaciente.ShortcutsEnabled = false;
             this.txtCorreoPaciente.Size = new System.Drawing.Size(453, 26);
             this.txtCorreoPaciente.TabIndex = 134;
             this.txtCorreoPaciente.TextChanged += new System.EventHandler(this.txtCorreoPaciente_TextChanged);
@@ -541,7 +554,7 @@
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(64, 189);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(22, 134);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(224, 25);
             this.bunifuCustomLabel5.TabIndex = 133;
@@ -551,7 +564,7 @@
             // dtpFechaNac
             // 
             this.dtpFechaNac.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNac.Location = new System.Drawing.Point(990, 135);
+            this.dtpFechaNac.Location = new System.Drawing.Point(948, 80);
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(281, 26);
@@ -564,7 +577,7 @@
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(984, 103);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(942, 48);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(230, 25);
             this.bunifuCustomLabel3.TabIndex = 131;
@@ -574,9 +587,10 @@
             // txtTelefonoPaciente
             // 
             this.txtTelefonoPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoPaciente.Location = new System.Drawing.Point(683, 135);
+            this.txtTelefonoPaciente.Location = new System.Drawing.Point(642, 82);
             this.txtTelefonoPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefonoPaciente.Name = "txtTelefonoPaciente";
+            this.txtTelefonoPaciente.ShortcutsEnabled = false;
             this.txtTelefonoPaciente.Size = new System.Drawing.Size(272, 26);
             this.txtTelefonoPaciente.TabIndex = 130;
             this.txtTelefonoPaciente.TextChanged += new System.EventHandler(this.txtTelefonoPaciente_TextChanged);
@@ -587,7 +601,7 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(678, 103);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(636, 48);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(108, 25);
             this.bunifuCustomLabel2.TabIndex = 129;
@@ -597,7 +611,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(608, 135);
+            this.label1.Location = new System.Drawing.Point(566, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 16);
@@ -608,9 +622,10 @@
             // txtEdadPaciente
             // 
             this.txtEdadPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdadPaciente.Location = new System.Drawing.Point(568, 131);
+            this.txtEdadPaciente.Location = new System.Drawing.Point(526, 76);
             this.txtEdadPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEdadPaciente.Name = "txtEdadPaciente";
+            this.txtEdadPaciente.ShortcutsEnabled = false;
             this.txtEdadPaciente.Size = new System.Drawing.Size(32, 26);
             this.txtEdadPaciente.TabIndex = 127;
             this.txtEdadPaciente.TextChanged += new System.EventHandler(this.txtEdadPaciente_TextChanged);
@@ -621,7 +636,7 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(563, 103);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(521, 48);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(64, 25);
             this.bunifuCustomLabel1.TabIndex = 126;
@@ -631,9 +646,10 @@
             // txtNombrePaciente
             // 
             this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombrePaciente.Location = new System.Drawing.Point(70, 131);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(28, 76);
             this.txtNombrePaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombrePaciente.Name = "txtNombrePaciente";
+            this.txtNombrePaciente.ShortcutsEnabled = false;
             this.txtNombrePaciente.Size = new System.Drawing.Size(469, 26);
             this.txtNombrePaciente.TabIndex = 125;
             this.txtNombrePaciente.TextChanged += new System.EventHandler(this.txtNombrePaciente_TextChanged);
@@ -644,7 +660,7 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(64, 103);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(22, 48);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(96, 25);
             this.bunifuCustomLabel4.TabIndex = 124;
@@ -654,7 +670,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Location = new System.Drawing.Point(1289, 13);
+            this.panel1.Location = new System.Drawing.Point(1237, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(329, 20);
@@ -668,7 +684,7 @@
             this.gbAgregarOcupacion.Controls.Add(this.txtNombreOcupacion);
             this.gbAgregarOcupacion.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAgregarOcupacion.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.gbAgregarOcupacion.Location = new System.Drawing.Point(1289, 41);
+            this.gbAgregarOcupacion.Location = new System.Drawing.Point(1237, 59);
             this.gbAgregarOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.gbAgregarOcupacion.Name = "gbAgregarOcupacion";
             this.gbAgregarOcupacion.Padding = new System.Windows.Forms.Padding(4);
@@ -698,6 +714,7 @@
             this.txtNombreOcupacion.Location = new System.Drawing.Point(7, 38);
             this.txtNombreOcupacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreOcupacion.Name = "txtNombreOcupacion";
+            this.txtNombreOcupacion.ShortcutsEnabled = false;
             this.txtNombreOcupacion.Size = new System.Drawing.Size(303, 26);
             this.txtNombreOcupacion.TabIndex = 80;
             this.txtNombreOcupacion.TextChanged += new System.EventHandler(this.txtNombreOcupacion_TextChanged_1);
@@ -705,10 +722,11 @@
             // txtPadecimientos
             // 
             this.txtPadecimientos.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPadecimientos.Location = new System.Drawing.Point(795, 439);
+            this.txtPadecimientos.Location = new System.Drawing.Point(753, 384);
             this.txtPadecimientos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPadecimientos.Multiline = true;
             this.txtPadecimientos.Name = "txtPadecimientos";
+            this.txtPadecimientos.ShortcutsEnabled = false;
             this.txtPadecimientos.Size = new System.Drawing.Size(245, 48);
             this.txtPadecimientos.TabIndex = 176;
             this.txtPadecimientos.TextChanged += new System.EventHandler(this.txtPadecimientos_TextChanged);
@@ -717,7 +735,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 926);
+            this.ClientSize = new System.Drawing.Size(1735, 946);
             this.Controls.Add(this.txtPadecimientos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbAgregarOcupacion);
@@ -769,7 +787,9 @@
             this.Controls.Add(this.txtNombrePaciente);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Name = "ViewAgregarPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewAgregarPaciente";
+            this.Load += new System.EventHandler(this.ViewAgregarPaciente_Load);
             this.gbAgregarOcupacion.ResumeLayout(false);
             this.gbAgregarOcupacion.PerformLayout();
             this.ResumeLayout(false);

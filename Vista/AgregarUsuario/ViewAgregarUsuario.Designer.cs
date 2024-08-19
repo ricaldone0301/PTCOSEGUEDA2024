@@ -197,6 +197,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(42, 149);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
             this.txtTelefono.TabIndex = 27;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
@@ -218,8 +219,10 @@
             this.txtContrasena.Location = new System.Drawing.Point(42, 341);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
             this.txtContrasena.TabIndex = 25;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
             // bunifuCustomLabel9
             // 
@@ -238,8 +241,10 @@
             this.txtUsuario.Location = new System.Drawing.Point(42, 243);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(209, 22);
             this.txtUsuario.TabIndex = 23;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // bunifuCustomLabel7
             // 
@@ -258,6 +263,7 @@
             this.txtEmail.Location = new System.Drawing.Point(315, 149);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
             this.txtEmail.TabIndex = 19;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
@@ -279,6 +285,7 @@
             this.txtNombre.Location = new System.Drawing.Point(42, 63);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
             this.txtNombre.TabIndex = 17;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);

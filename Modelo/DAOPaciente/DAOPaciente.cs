@@ -10,40 +10,15 @@ using PTC.Controller.Paciente;
 using PTC.Vista.AgregarPaciente;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Microsoft.VisualBasic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace PTC.Modelo.DAOPaciente
 {
     class DAOPaciente : DtoPaciente
     {
+        //Se crea una variable llamada Command de tipo SqlCommand
         readonly SqlCommand Command = new SqlCommand();
-        public DataSet ComboBoxOcupacion()
-        {
-            DataSet ds = new DataSet();
-            try
-            {
-                using (SqlConnection connection = getConnection())
-                {
-                    string query = "SELECT * FROM Ocupacion";
-                    SqlCommand cmd = new SqlCommand(query, connection);
-
-                    using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
-                    {
-                        adp.Fill(ds, "Ocupacion");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-                ds = null;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-            return ds;
-        }
-
 
         public int RegistrarPaciente()
         {
@@ -51,8 +26,10 @@ namespace PTC.Modelo.DAOPaciente
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
+                    //Establece conexion con la base de datos
                     cmd.Connection = getConnection();
 
+                    //Se manda una consulta donde indica que se hace un intert a la tabla Pacientes, se llenan sus campos con las variables previamente llenas con los valores obtenidos
                     String query = "INSERT INTO Pacientes(nombrePaciente, edadPaciente, telefonoPaciente, fechaNac, correoPaciente, ocupacionID, direccionPaciente, DUI, referencia, nombreEmergencia, numEmergencia, motivoConsulta, controlMedico, medicoCabeceraNombre, numMedicoCabecera, alergiaMedicamentos, medicamentos, operacion, tipoOperacion, recuperacionOperacion, padecimientos) VALUES (@nombre, @edad, @telefono, @fechaNac, @correo, @ocupacionID, @direccion, @DUI, @referencia, @nombreEmergencia, @numEmergencia, @motivoConsulta, @controlMedico, @medicoCabeceranombre, @numMedicoCabecera, @alergia, @medicamentos, @operacion, @tipoOperacion, @recuperacion, @padecimientos)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("nombre", NombrePaciente);
@@ -97,14 +74,16 @@ namespace PTC.Modelo.DAOPaciente
         {
             try
             {
+                //Establece conexion con la base de datos
                 Command.Connection = getConnection();
+                //Se manda una consulta donde indica que se hace un select a la vista de pacientes
                 string query = "SELECT * FROM ViewPacientes";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
                 SqlDataReader reader = cmd.ExecuteReader();
-
+                
                 DataSet ds = new DataSet();
-
+                //Lee los datos de la Vista pacientes y los retorna
                 ds.Load(reader, LoadOption.OverwriteChanges, "ViewPacientes");
                 reader.Close();
 
@@ -124,7 +103,9 @@ namespace PTC.Modelo.DAOPaciente
         {
             try
             {
+                //Establece conexion con la base de datos
                 Command.Connection = getConnection();
+                //Se manda una consulta donde indica que hace un update a la tabla de pacientes para modificar sus datos, se llenan sus campos con las variables previamente llenas con los valores obtenidos
                 string query = "UPDATE Pacientes SET " +
                         "nombrePaciente = @param1," +
                         "edadPaciente = @param2," +
@@ -173,8 +154,8 @@ namespace PTC.Modelo.DAOPaciente
                 cmd.Parameters.AddWithValue("param20", RecuperacionOperacion);
                 cmd.Parameters.AddWithValue("param21", Padecimientos);
                 cmd.Parameters.AddWithValue("param22", PacienteID);
-                int respuesta = cmd.ExecuteNonQuery();
-                return respuesta;
+
+                return 1;
             }
             catch (Exception)
             {
@@ -190,8 +171,9 @@ namespace PTC.Modelo.DAOPaciente
         {
             try
             {
-
+                //Establece conexion con la base de datos
                 Command.Connection = getConnection();
+                //Se manda una consulta donde indica que hace delete a la tabla de pacientes donde el ID del paciente sea igual al previamente obtenido
                 string query = "DELETE Pacientes WHERE pacienteID = @param22";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param22", PacienteID);
@@ -211,13 +193,16 @@ namespace PTC.Modelo.DAOPaciente
         {
             try
             {
+                //Establece conexion con la base de datos
                 Command.Connection = getConnection();
+                //Se seleccionan los datos que cumplen con los requisitos del valor
                 string query = $"SELECT * FROM ViewPacientes WHERE [Nombre completo] LIKE '%{valor}%' OR [Edad] LIKE '%{valor}%' OR [Número de teléfono] LIKE '%{valor}%' OR [Fecha de nacimiento] LIKE '%{valor}%' OR [Correo electrónico] LIKE '%{valor}%' OR [Ocupación] LIKE '%{valor}%' OR [Dirección] LIKE '%{valor}%'  OR [DUI] LIKE '%{valor}%'  OR [En caso de emergencia llamar a] LIKE '%{valor}%' OR [En caso de emergencia llamar a] LIKE '%{valor}%'  OR [Número de teléfono (emergencia)] LIKE '%{valor}%' OR [Motivo de consulta] LIKE '%{valor}%' OR [Padecimientos] LIKE '%{valor}%' OR [Control médico] LIKE '%{valor}%'  OR [Médico cabecera] LIKE '%{valor}%' OR [Número de teléfono del médico cabecera] LIKE '%{valor}%' OR [Medicamentos a los que es alérgico] LIKE '%{valor}%' OR [Medicamentos que toma actualmente] LIKE '%{valor}%' OR [Ha sido operado] LIKE '%{valor}%' OR [Operaciones realizadas] LIKE '%{valor}%' OR [Recuperación de la operación] LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adp.Fill(ds, "ViewPacientes");
+                //Devuelve los datos obtenidos
                 return ds; 
             }
             catch (Exception)

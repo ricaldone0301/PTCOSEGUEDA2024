@@ -106,6 +106,7 @@
             // 
             // cbEsp
             // 
+            this.cbEsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEsp.FormattingEnabled = true;
             this.cbEsp.Location = new System.Drawing.Point(350, 293);
             this.cbEsp.Name = "cbEsp";
@@ -114,6 +115,7 @@
             // 
             // cbConsul
             // 
+            this.cbConsul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConsul.FormattingEnabled = true;
             this.cbConsul.Location = new System.Drawing.Point(71, 452);
             this.cbConsul.Name = "cbConsul";
@@ -151,6 +153,7 @@
             // 
             // cbRol
             // 
+            this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRol.FormattingEnabled = true;
             this.cbRol.Location = new System.Drawing.Point(350, 391);
             this.cbRol.Name = "cbRol";
@@ -186,6 +189,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(71, 156);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
             this.txtTelefono.TabIndex = 27;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
@@ -207,6 +211,7 @@
             this.txtContrasena.Location = new System.Drawing.Point(71, 348);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
             this.txtContrasena.TabIndex = 25;
             // 
@@ -227,6 +232,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(71, 250);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(209, 22);
             this.txtUsuario.TabIndex = 23;
             // 
@@ -247,6 +253,7 @@
             this.txtEmail.Location = new System.Drawing.Point(350, 201);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
             this.txtEmail.TabIndex = 19;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
@@ -268,6 +275,7 @@
             this.txtNombre.Location = new System.Drawing.Point(71, 70);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
             this.txtNombre.TabIndex = 17;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
@@ -289,6 +297,7 @@
             this.txtConfirm.Location = new System.Drawing.Point(90, 272);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.ShortcutsEnabled = false;
             this.txtConfirm.Size = new System.Drawing.Size(209, 22);
             this.txtConfirm.TabIndex = 38;
             this.txtConfirm.TextChanged += new System.EventHandler(this.txtConfirm_TextChanged);
@@ -336,7 +345,7 @@
             // 
             this.timevcode.Enabled = true;
             this.timevcode.Interval = 1000;
-            this.timevcode.Tick += new System.EventHandler(this.timevcode_Tick);
+//            this.timevcode.Tick += new System.EventHandler(this.timevcode_Tick);
             // 
             // ViewRegistro
             // 
@@ -347,6 +356,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "ViewRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewRegistro";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

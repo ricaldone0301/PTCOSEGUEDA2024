@@ -33,6 +33,7 @@ namespace PTC.Controller.Procedimiento
             {
             ObjAdminProcedimiento = Vista;
             ObjAdminProcedimiento.Load += new EventHandler(Load);
+            ObjAdminProcedimiento.cmsVerPaciente.Click += new EventHandler(Ver);
             ObjAdminProcedimiento.btnNuevo.Click += new EventHandler(Nuevo);
             ObjAdminProcedimiento.cmsActualizar.Click += new EventHandler(Actualizar);
             ObjAdminProcedimiento.cmsEliminar.Click += new EventHandler(Eliminar);
@@ -104,8 +105,29 @@ namespace PTC.Controller.Procedimiento
                 }
             }
 
+        private void Ver(object sender, EventArgs e)
+        {
+            //obtiene el índice de la fila seleccionada (rowIndex) y la posición de la fila actual (pos) en el datagrid
+            int rowIndex = ObjAdminProcedimiento.dgvProcedimientos.CurrentCell.RowIndex;
+            int pos = ObjAdminProcedimiento.dgvProcedimientos.CurrentRow.Index;
+            //extrae los valores de las celdas correspondientes a la fila seleccionada
+            int procedimientoID;
+            string nombreProcedimiento, descProcedimiento;
+            decimal precioProcedimiento;
 
-            private void Actualizar(object sender, EventArgs e)
+            procedimientoID = int.Parse(ObjAdminProcedimiento.dgvProcedimientos[0, pos].Value.ToString());
+            nombreProcedimiento = ObjAdminProcedimiento.dgvProcedimientos[1, pos].Value.ToString();
+            precioProcedimiento = decimal.Parse(ObjAdminProcedimiento.dgvProcedimientos[2, pos].Value.ToString());
+            descProcedimiento = ObjAdminProcedimiento.dgvProcedimientos[3, pos].Value.ToString();
+
+            //Con estos datos, crea una instancia de ViewAgregarProcedimiento
+            //Pasa el valor dos como valor de accion, junto con los datos extraidos 
+            ViewAgregarProcedimiento openForm = new ViewAgregarProcedimiento(3, procedimientoID, nombreProcedimiento, precioProcedimiento, descProcedimiento);
+            openForm.ShowDialog();
+            RefrescarData();
+
+        }
+        private void Actualizar(object sender, EventArgs e)
             {
             //obtiene el índice de la fila seleccionada (rowIndex) y la posición de la fila actual (pos) en el datagrid
                 int rowIndex = ObjAdminProcedimiento.dgvProcedimientos.CurrentCell.RowIndex;

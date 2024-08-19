@@ -51,6 +51,12 @@ namespace PTC.Controller.Ocupacion
                 ObjAgregarOcupacion.btnGuardar.Enabled = false;
                 ObjAgregarOcupacion.btnActualizar.Enabled = true;
             }
+            else if (accion == 3)
+            {
+                ObjAgregarOcupacion.btnGuardar.Enabled = false;
+                ObjAgregarOcupacion.btnActualizar.Enabled = false;
+                ObjAgregarOcupacion.txtNombre.Enabled = false;
+            }
         }
 
         public void NuevoRegistro(object sender, EventArgs e)

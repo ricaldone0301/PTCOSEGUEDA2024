@@ -18,6 +18,7 @@ namespace PTC.Controller.Paciente
 {
      class ControllerAgregarPaciente
      {
+        //Objeto de la vista
         ViewAgregarPaciente objAgregarPaciente;
 
         private int accion;
@@ -26,24 +27,33 @@ namespace PTC.Controller.Paciente
 
         public ControllerAgregarPaciente(ViewAgregarPaciente Vista, int accion)
         {
+            //Eventos
             objAgregarPaciente = Vista;
             this.accion = accion;
-            VerificarAccion();
+            //VerificarAccion();
+            //Mientras se carga el formulario, se ejecuta el metodo CargaInicial
             objAgregarPaciente.Load += new EventHandler(CargaInicial);
+            //Cuando se le da clic al boton de agregar ocupacion, se ejecuta el metodo MotrarAgregarOcupacion
             objAgregarPaciente.btnAgregarOcupacion.Click += new EventHandler(MostrarAgregarOcupacion);
+            //Cuando se le da clic al boton de guardar ocupacion, se ejecuta el metodo NuevaOcupacion
             objAgregarPaciente.btnGuardarOcupacion.Click += new EventHandler(NuevaOcupacion);
-            objAgregarPaciente.cmbOcupacion.Click += new EventHandler(RefrescarCombobox);
+            //Cuando se le da clic al ComboBox de ocupacion, se ejecura el metodo RefrescarCombobox
+            objAgregarPaciente.cmbOcupacion.Click += new EventHandler(CargaInicial);
+            //Cuando se le da clic al boton de guardar paciente, se ejecuta el metodo NuevoExpediente
             objAgregarPaciente.btnGuardarPaciente.Click += new EventHandler(NuevoExpediente);
         }
 
     
         public ControllerAgregarPaciente(ViewAgregarPaciente vista, int accion, int pacienteID, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string ocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamento, string operacion, string tipooperacion, string recuperacionoperacion)
         {
+            //Se crea un objeto de la vista
             objAgregarPaciente = vista;
             this.accion = accion;
             this.ocupacion = ocupacion;
+            //Mientras el formulario carga, se ejecuta el metodo CargaInicial
             objAgregarPaciente.Load += new EventHandler(CargaInicial);
-            VerificarAccion();
+            //VerificarAccion();
+            //Se ejecuta el metodo CargarValores con las variables que se reciben de la vista
             CargarValores(pacienteID, nombrepaciente, edadpaciente, telefonopaciente, fechanac, correopaciente, ocupacion, direccionpaciente, dui, referencia, nombreemergencia, numemergencia, motivoconsulta, padecimientos, controlmedico, medicocabeceranombre, nummedicocabecera, alergiamedicamentos, medicamento, operacion, tipooperacion, recuperacionoperacion);
             this.pacienteID = pacienteID;
             if (operacion.Equals("Sí"))
@@ -64,51 +74,21 @@ namespace PTC.Controller.Paciente
                 objAgregarPaciente.cbControlMedicoNo.Checked = true;
             }
 
+            //Cuando se da clic en el boton de guardar paciente, se ejecuta el metodo ActualizarExpediente
             objAgregarPaciente.btnGuardarPaciente.Click += new EventHandler(ActualizarExpediente);
             
-        }
-
-        public void CargoInicial(object sender, EventArgs e)
-        {
-            try
-            {
-                DAOPaciente objAdmin = new DAOPaciente();
-
-                DataSet dsOcupaciones = objAdmin.ComboBoxOcupacion();
-                if (dsOcupaciones != null && dsOcupaciones.Tables.Contains("Ocupaciones"))
-                {
-                    DataTable dtOcupaciones = dsOcupaciones.Tables["Roles"];
-                    objAgregarPaciente.cmbOcupacion.DataSource = dtOcupaciones;
-                    objAgregarPaciente.cmbOcupacion.ValueMember = "OcupacionID";
-                    objAgregarPaciente.cmbOcupacion.DisplayMember = "nombreOcupacion";
-
-                    if (accion == 1)
-                    {
-                        DataRow[] rows = dtOcupaciones.Select($"nombreOcupacion = '{ocupacion}'");
-                        if (rows.Length > 0)
-                        {
-                            objAgregarPaciente.cmbOcupacion.Text = rows[0]["nombreOcupacion"].ToString();
-                        }
-                    }
-
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
         public void NuevaOcupacion(object sender, EventArgs e)
         {
             try
             {
+                //Se crea un objeto del DAO
                 DAOOcupacion daoAdmin = new DAOOcupacion();
-                CommonClass commonClass = new CommonClass();
 
+                //La variable NombreOcupacion se llena con el texto del txtNombreOcupacion
                 daoAdmin.NombreOcupacion = objAgregarPaciente.txtNombreOcupacion.Text.Trim();
 
+                //Se obtiene el resultado que devuelve la clase RegistrarOcupacion del DAO
                 int valorRetornado = daoAdmin.RegistrarOcupacion();
 
                 if (valorRetornado == 1 )
@@ -130,74 +110,90 @@ namespace PTC.Controller.Paciente
             }
         }
 
-
-
-        public void RefrescarCombobox(object sender, EventArgs e)
-        {
-            DAOOcupacion objdao = new DAOOcupacion();
-            DataSet dataset = objdao.ComboBoxOcupacion();
-            objAgregarPaciente.cmbOcupacion.DataSource = dataset.Tables["Ocupaciones"];
-            objAgregarPaciente.cmbOcupacion.ValueMember = "ocupacionID";
-            objAgregarPaciente.cmbOcupacion.DisplayMember = "nombreOcupacion";
-
-            if (accion == 2)
-            {
-                objAgregarPaciente.cmbOcupacion.Text = ocupacion;
-            }
-        }
         public void MostrarAgregarOcupacion(object sender, EventArgs e)
         {
+            //Se muetra el groupBox AgregarOcupacion
             objAgregarPaciente.gbAgregarOcupacion.Show();
         }
 
-        public void VerificarAccion()
-        {
-            if (accion == 3)
-            {
-                objAgregarPaciente.btnGuardarPaciente.Enabled = false;
-                objAgregarPaciente.txtNombrePaciente.Enabled = false;
-                objAgregarPaciente.txtEdadPaciente.Enabled = false;
-                objAgregarPaciente.txtTelefonoPaciente.Enabled = false;
-                objAgregarPaciente.dtpFechaNac.Enabled = false;
-                objAgregarPaciente.txtCorreoPaciente.Enabled = false;
-                objAgregarPaciente.cmbOcupacion.Enabled = false;
-                objAgregarPaciente.txtDireccionPaciente.Enabled = false;
-                objAgregarPaciente.txtDUI.Enabled = false;
-                objAgregarPaciente.txtReferencia.Enabled = false;
-                objAgregarPaciente.txtNombreEmergencia.Enabled = false;
-                objAgregarPaciente.txtNumEmergencia.Enabled = false;
-                objAgregarPaciente.txtMotivoConsulta.Enabled = false;
-                objAgregarPaciente.cbControlMedicoSi.Enabled = false;
-                objAgregarPaciente.cbControlMedicoNo.Enabled = false;
-                objAgregarPaciente.txtMedicoCabeceraNombre.Enabled = false;
-                objAgregarPaciente.txtNumMedicoCabecera.Enabled = false;
-                objAgregarPaciente.txtNombreAlergiaMedicamento.Enabled = false;
-                objAgregarPaciente.txtNombreMedicamento.Enabled = false;
-                objAgregarPaciente.cbOperacionSi.Enabled = false;
-                objAgregarPaciente.cbOperacionNo.Enabled = false;
-                objAgregarPaciente.txtTipoOperacion.Enabled = false;
-                objAgregarPaciente.txtRecuperacionOperacion.Enabled = false;
-                objAgregarPaciente.txtPadecimientos.Enabled = false;
-            }
-        }
+        //public void VerificarAccion()
+        //{
+        //    if (accion == 3)
+        //    {
+        //        objAgregarPaciente.btnGuardarPaciente.Enabled = false;
+        //        objAgregarPaciente.txtNombrePaciente.Enabled = false;
+        //        objAgregarPaciente.txtEdadPaciente.Enabled = false;
+        //        objAgregarPaciente.txtTelefonoPaciente.Enabled = false;
+        //        objAgregarPaciente.dtpFechaNac.Enabled = false;
+        //        objAgregarPaciente.txtCorreoPaciente.Enabled = false;
+        //        objAgregarPaciente.cmbOcupacion.Enabled = false;
+        //        objAgregarPaciente.txtDireccionPaciente.Enabled = false;
+        //        objAgregarPaciente.txtDUI.Enabled = false;
+        //        objAgregarPaciente.txtReferencia.Enabled = false;
+        //        objAgregarPaciente.txtNombreEmergencia.Enabled = false;
+        //        objAgregarPaciente.txtNumEmergencia.Enabled = false;
+        //        objAgregarPaciente.txtMotivoConsulta.Enabled = false;
+        //        objAgregarPaciente.cbControlMedicoSi.Enabled = false;
+        //        objAgregarPaciente.cbControlMedicoNo.Enabled = false;
+        //        objAgregarPaciente.txtMedicoCabeceraNombre.Enabled = false;
+        //        objAgregarPaciente.txtNumMedicoCabecera.Enabled = false;
+        //        objAgregarPaciente.txtNombreAlergiaMedicamento.Enabled = false;
+        //        objAgregarPaciente.txtNombreMedicamento.Enabled = false;
+        //        objAgregarPaciente.cbOperacionSi.Enabled = false;
+        //        objAgregarPaciente.cbOperacionNo.Enabled = false;
+        //        objAgregarPaciente.txtTipoOperacion.Enabled = false;
+        //        objAgregarPaciente.txtRecuperacionOperacion.Enabled = false;
+        //        objAgregarPaciente.txtPadecimientos.Enabled = false;
+        //    }
+        //}
 
         public void CargaInicial(object sender, EventArgs e)
         {
             try
             {
-                DAOOcupacion objAdmin = new DAOOcupacion();
-
-                DataSet dsOcupacion = objAdmin.ComboBoxOcupacion();
-
+                //Se crea un objeto de DAO Ocupaciones
                 DAOOcupacion objdao = new DAOOcupacion();
+
+                //Se obtienen los datos del metodo ComboBoxOcupacion
                 DataSet dataset = objdao.ComboBoxOcupacion();
+                //Se llena el combobox con los datos de la tabla Ocupaciones
                 objAgregarPaciente.cmbOcupacion.DataSource = dataset.Tables["Ocupaciones"];
                 objAgregarPaciente.cmbOcupacion.ValueMember = "ocupacionID";
                 objAgregarPaciente.cmbOcupacion.DisplayMember = "nombreOcupacion";
 
                 if (accion == 2)
                 {
+                    //Si la accion es 2, el texto de la opcion del combobox seleccionada sera guardada en su variable respectiva
                     objAgregarPaciente.cmbOcupacion.Text = ocupacion;
+                }
+                else if (accion == 3)
+                {
+                    objAgregarPaciente.txtCorreoPaciente.Enabled = false;
+                    objAgregarPaciente.txtNombrePaciente.Enabled=false;
+                    objAgregarPaciente.dtpFechaNac.Enabled = false;
+                    objAgregarPaciente.txtDireccionPaciente.Enabled = false;
+                    objAgregarPaciente.txtDUI.Enabled = false;
+                    objAgregarPaciente.txtMotivoConsulta.Enabled = false;
+                    objAgregarPaciente.txtEdadPaciente.Enabled = false;
+                    objAgregarPaciente.txtMedicoCabeceraNombre.Enabled = false;
+                    objAgregarPaciente.txtNombreAlergiaMedicamento.Enabled = false;
+                    objAgregarPaciente.txtNombreEmergencia.Enabled = false;
+                    objAgregarPaciente.txtNombreMedicamento.Enabled = false;
+                    objAgregarPaciente.txtNombreOcupacion.Enabled = false;
+                    objAgregarPaciente.txtPadecimientos.Enabled = false;
+                    objAgregarPaciente.txtNumMedicoCabecera.Enabled = false;
+                    objAgregarPaciente.txtNumEmergencia.Enabled = false;
+                    objAgregarPaciente.txtRecuperacionOperacion.Enabled = false;
+                    objAgregarPaciente.txtReferencia.Enabled = false;
+                    objAgregarPaciente.txtTelefonoPaciente.Enabled=false;
+                    objAgregarPaciente.txtTipoOperacion.Enabled=false;
+                    objAgregarPaciente.cbControlMedicoNo.Enabled=false;
+                    objAgregarPaciente.cbControlMedicoSi.Enabled=false;
+                    objAgregarPaciente.cbOperacionNo.Enabled=false;
+                    objAgregarPaciente.cbOperacionSi.Enabled=false;
+                    objAgregarPaciente.cmbOcupacion.Enabled=false;
+
+
                 }
 
             }
@@ -210,10 +206,10 @@ namespace PTC.Controller.Paciente
         }
         public void NuevoExpediente(object sender, EventArgs e)
         {
-
+            //Se crea un objeto del DAO
             DAOPaciente objdao = new DAOPaciente();
-            CommonClass commonClass = new CommonClass();
 
+            //Se guarda los textos de los textos en sus variables respectivas
             objdao.NombrePaciente = objAgregarPaciente.txtNombrePaciente.Text.Trim();
             objdao.EdadPaciente = int.Parse(objAgregarPaciente.txtEdadPaciente.Text);
             objdao.TelefonoPaciente = objAgregarPaciente.txtTelefonoPaciente.Text.Trim();
@@ -266,7 +262,9 @@ namespace PTC.Controller.Paciente
 
         public void ActualizarExpediente(object sender, EventArgs e)
         {
+            //Se crea un objeto del DAO
             DAOPaciente objdao = new DAOPaciente();
+            //Se guardan los datos en sus variables respectivas
             objdao.PacienteID = this.pacienteID;
             objdao.NombrePaciente = objAgregarPaciente.txtNombrePaciente.Text.Trim();
             objdao.EdadPaciente = int.Parse(objAgregarPaciente.txtEdadPaciente.Text);
@@ -330,6 +328,7 @@ namespace PTC.Controller.Paciente
         {
             try
             {
+                //Se cargan los valores de las variables en los textbox correspondientes
                 objAgregarPaciente.txtNombrePaciente.Text = nombrepaciente;
                 objAgregarPaciente.txtEdadPaciente.Text = edadpaciente.ToString();
                 objAgregarPaciente.txtTelefonoPaciente.Text = telefonopaciente;

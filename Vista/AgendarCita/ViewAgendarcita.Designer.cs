@@ -32,6 +32,7 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtHora = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cbPaciente = new System.Windows.Forms.ComboBox();
             this.cbConsultorio = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,6 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtHora = new System.Windows.Forms.TextBox();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -102,6 +102,15 @@
             this.panel1.Size = new System.Drawing.Size(584, 492);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(299, 229);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.ShortcutsEnabled = false;
+            this.txtHora.Size = new System.Drawing.Size(102, 22);
+            this.txtHora.TabIndex = 38;
+            this.txtHora.TextChanged += new System.EventHandler(this.txtHora_TextChanged);
             // 
             // btnGuardar
             // 
@@ -160,9 +169,11 @@
             // Fecha
             // 
             this.Fecha.Location = new System.Drawing.Point(299, 177);
+            this.Fecha.MinDate = new System.DateTime(2024, 8, 12, 0, 0, 0, 0);
             this.Fecha.Name = "Fecha";
             this.Fecha.Size = new System.Drawing.Size(260, 22);
             this.Fecha.TabIndex = 32;
+            this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
             // 
             // btnActualizar
             // 
@@ -283,13 +294,6 @@
             this.bunifuThinButton26.Size = new System.Drawing.Size(220, 32);
             this.bunifuThinButton26.TabIndex = 10;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(299, 229);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(102, 22);
-            this.txtHora.TabIndex = 38;
             // 
             // ViewAgendarcita
             // 

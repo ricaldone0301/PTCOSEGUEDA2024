@@ -19,10 +19,13 @@ namespace PTC.Controller.Ocupacion
     {
         ViewOcupaciones ObjAdminOcupacion;
 
+        //Maneja la interacion con la vista de administrador de ocupaciones
+        
         public ControllerAdminOcupacion(ViewOcupaciones Vista)
         {
             ObjAdminOcupacion = Vista;
             ObjAdminOcupacion.Load += new EventHandler(CargarData);
+            ObjAdminOcupacion.cmsVerPaciente.Click += new EventHandler(Ver);
             ObjAdminOcupacion.btnNuevo.Click += new EventHandler(Nuevo);
             ObjAdminOcupacion.cmsActualizar.Click += new EventHandler(Actualizar);
             ObjAdminOcupacion.cmsEliminar.Click += new EventHandler(Eliminar);
@@ -80,7 +83,23 @@ namespace PTC.Controller.Ocupacion
             RefrescarData();
 
         }
+        private void Ver(object sender, EventArgs e)
+        {
+            int rowIndex = ObjAdminOcupacion.dgvOcupaciones.CurrentCell.RowIndex;
+            int pos = ObjAdminOcupacion.dgvOcupaciones.CurrentRow.Index;
+            int ocupacionID;
+            string nombreOcupacion;
 
+
+            ocupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString());
+            nombreOcupacion = ObjAdminOcupacion.dgvOcupaciones[0, pos].Value.ToString();
+
+
+            ViewAgregarOcupacion openForm = new ViewAgregarOcupacion(3, nombreOcupacion, ocupacionID);
+            openForm.ShowDialog();
+            RefrescarData();
+
+        }
         public void RefrescarData()
         {
             DAOOcupacion objAdmin = new DAOOcupacion();

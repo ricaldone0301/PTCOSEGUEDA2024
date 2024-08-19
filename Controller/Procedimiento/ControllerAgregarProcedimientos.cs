@@ -60,6 +60,16 @@ namespace PTC.Controller.Procedimiento
                 ObjAgregarProcedimiento.btnActualizar.Enabled = true;
                 ObjAgregarProcedimiento.btnGuardar.Enabled = false;
             }
+            else if (accion == 3)
+            {
+                ObjAgregarProcedimiento.btnGuardar.Enabled = false;
+                ObjAgregarProcedimiento.btnActualizar.Enabled = false;
+                ObjAgregarProcedimiento.txtDescripcion.Enabled = false;
+                ObjAgregarProcedimiento.txtNombreProcedimiento.Enabled = false;
+                ObjAgregarProcedimiento.txtPrecio.Enabled = false;
+
+
+            }
         }
 
 

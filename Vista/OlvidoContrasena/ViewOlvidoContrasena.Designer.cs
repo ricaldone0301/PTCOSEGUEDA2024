@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewOlvidoContrasena));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEnviar1 = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.timevcode = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,6 +77,7 @@
             this.txtConfirm.Location = new System.Drawing.Point(90, 272);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.ShortcutsEnabled = false;
             this.txtConfirm.Size = new System.Drawing.Size(209, 22);
             this.txtConfirm.TabIndex = 38;
             // 
@@ -130,8 +129,10 @@
             this.txtContrasena.Location = new System.Drawing.Point(210, 292);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
             this.txtContrasena.TabIndex = 35;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
             // bunifuCustomLabel3
             // 
@@ -166,8 +167,10 @@
             this.txtEmail.Location = new System.Drawing.Point(210, 196);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
             this.txtEmail.TabIndex = 19;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // bunifuCustomLabel6
             // 
@@ -181,11 +184,6 @@
             this.bunifuCustomLabel6.TabIndex = 18;
             this.bunifuCustomLabel6.Text = "EMAIL";
             // 
-            // timevcode
-            // 
-            this.timevcode.Enabled = true;
-            this.timevcode.Interval = 1000;
-            // 
             // ViewOlvidoContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,6 +193,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "ViewOlvidoContrasena";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewOlvidoContrasena";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -216,7 +215,6 @@
         public System.Windows.Forms.Button btnEnviar;
         public System.Windows.Forms.TextBox txtEmail;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        public System.Windows.Forms.Timer timevcode;
         public System.Windows.Forms.TextBox txtContrasena;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
     }
