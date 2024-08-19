@@ -147,7 +147,18 @@ namespace PTC.Controller.Cita
             {
                 ObjAgendarCita.btnGuardar.Enabled = false;
                 ObjAgendarCita.btnActualizar.Enabled = true;
-                //ObjAgendarCita.txtUsuario.Enabled = false;
+            }
+            else if (accion == 3)
+            {
+                ObjAgendarCita.btnGuardar.Enabled = false;
+                ObjAgendarCita.btnActualizar.Enabled = false;
+                ObjAgendarCita.txtHora.Enabled = false;
+                ObjAgendarCita.cbConsultorio.Enabled = false;
+                ObjAgendarCita.cbDoctor.Enabled = false;
+                ObjAgendarCita.cbPaciente.Enabled = false;
+                ObjAgendarCita.cbProcedimiento.Enabled = false;
+
+
             }
         }
 

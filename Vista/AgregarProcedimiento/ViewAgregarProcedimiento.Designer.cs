@@ -142,6 +142,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(28, 195);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ShortcutsEnabled = false;
             this.txtDescripcion.Size = new System.Drawing.Size(517, 299);
             this.txtDescripcion.TabIndex = 14;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
@@ -150,6 +151,7 @@
             // 
             this.txtPrecio.Location = new System.Drawing.Point(25, 120);
             this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.ShortcutsEnabled = false;
             this.txtPrecio.Size = new System.Drawing.Size(151, 22);
             this.txtPrecio.TabIndex = 13;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
@@ -170,6 +172,7 @@
             // 
             this.txtNombreProcedimiento.Location = new System.Drawing.Point(25, 53);
             this.txtNombreProcedimiento.Name = "txtNombreProcedimiento";
+            this.txtNombreProcedimiento.ShortcutsEnabled = false;
             this.txtNombreProcedimiento.Size = new System.Drawing.Size(517, 22);
             this.txtNombreProcedimiento.TabIndex = 11;
             this.txtNombreProcedimiento.TextChanged += new System.EventHandler(this.txtNombreProcedimiento_TextChanged);

@@ -31,11 +31,11 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmsVerPaciente = new System.Windows.Forms.Button();
             this.cmsEliminarPaciente = new System.Windows.Forms.Button();
             this.cmsActualizarPaciente = new System.Windows.Forms.Button();
             this.btnNuevoPaciente = new System.Windows.Forms.Button();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
-            this.cmsVerPaciente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
@@ -63,10 +63,20 @@
             this.panel1.Controls.Add(this.cmsEliminarPaciente);
             this.panel1.Controls.Add(this.cmsActualizarPaciente);
             this.panel1.Controls.Add(this.btnNuevoPaciente);
-            this.panel1.Location = new System.Drawing.Point(159, 87);
+            this.panel1.Location = new System.Drawing.Point(40, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 51);
+            this.panel1.Size = new System.Drawing.Size(1215, 51);
             this.panel1.TabIndex = 12;
+            // 
+            // cmsVerPaciente
+            // 
+            this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
+            this.cmsVerPaciente.Location = new System.Drawing.Point(740, 15);
+            this.cmsVerPaciente.Name = "cmsVerPaciente";
+            this.cmsVerPaciente.Size = new System.Drawing.Size(75, 23);
+            this.cmsVerPaciente.TabIndex = 3;
+            this.cmsVerPaciente.Text = "Ver";
+            this.cmsVerPaciente.UseVisualStyleBackColor = true;
             // 
             // cmsEliminarPaciente
             // 
@@ -106,23 +116,13 @@
             this.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPacientes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPacientes.Location = new System.Drawing.Point(159, 131);
+            this.dgvPacientes.Location = new System.Drawing.Point(40, 131);
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.ReadOnly = true;
             this.dgvPacientes.RowHeadersWidth = 51;
             this.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPacientes.Size = new System.Drawing.Size(1070, 589);
+            this.dgvPacientes.Size = new System.Drawing.Size(1215, 589);
             this.dgvPacientes.TabIndex = 11;
-            // 
-            // cmsVerPaciente
-            // 
-            this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
-            this.cmsVerPaciente.Location = new System.Drawing.Point(740, 15);
-            this.cmsVerPaciente.Name = "cmsVerPaciente";
-            this.cmsVerPaciente.Size = new System.Drawing.Size(75, 23);
-            this.cmsVerPaciente.TabIndex = 3;
-            this.cmsVerPaciente.Text = "Ver";
-            this.cmsVerPaciente.UseVisualStyleBackColor = true;
             // 
             // ViewPaciente
             // 

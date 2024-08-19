@@ -15,14 +15,17 @@ namespace PTC.Modelo.DTOCitas
         private string hora;
         private DateTime fecha;
         private int citaID;
+        private DateTime FechaMaxima;
+        private DateTime FechaMinima;
 
         public int PacienteID { get => pacienteID; set => pacienteID = value; }
-
         public string PersonalID { get => personalID; set => personalID = value; }
         public int ConsultorioID { get => consultorioID; set => consultorioID = value; }
         public string Hora { get => hora; set => hora = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public int CitaID { get => citaID; set => citaID = value; }
         public int ProcedimientoID {  get => procedimientoID; set => procedimientoID = value;}
+       // public DateTime FechaMaxima { get => FechaMaxima; set => FechaMaxima = value; }
+       // public DateTime FechaMinima { get => FechaMinima; set => FechaMinima = value; }
     }
 }

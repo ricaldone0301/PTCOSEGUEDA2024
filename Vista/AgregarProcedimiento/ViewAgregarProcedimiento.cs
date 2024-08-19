@@ -19,6 +19,7 @@ namespace PTC.Vista.AgregarProcedimiento
         public ViewAgregarProcedimiento(int accion)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgregarProcedimientos ObjAgregarProcedimientos = new ControllerAgregarProcedimientos(this, accion);
         }
 
@@ -26,8 +27,23 @@ namespace PTC.Vista.AgregarProcedimiento
         public ViewAgregarProcedimiento(int accion, int procedimientoID, string nombreProcedimiento, decimal precioProcedimiento, string descProcedimiento)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgregarProcedimientos ObjAgregarProcedimiento = new ControllerAgregarProcedimientos(this, accion, procedimientoID, nombreProcedimiento, precioProcedimiento, descProcedimiento);
         }
+
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtDescripcion);
+            ContextMenuEliminar(txtNombreProcedimiento);
+            ContextMenuEliminar(txtPrecio);
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -43,6 +59,12 @@ namespace PTC.Vista.AgregarProcedimiento
             if (!regex.IsMatch(text))
             {
                 txtNombreProcedimiento.Text = new string(text.Where(c => char.IsLetter(c) || char.IsWhiteSpace(c)).ToArray());
+
+                txtNombreProcedimiento.SelectionStart = txtNombreProcedimiento.Text.Length;
+            }
+            if (txtNombreProcedimiento.Text.Length > 255)
+            {
+                txtNombreProcedimiento.Text = txtNombreProcedimiento.Text.Substring(0, 255);
 
                 txtNombreProcedimiento.SelectionStart = txtNombreProcedimiento.Text.Length;
             }
@@ -63,6 +85,13 @@ namespace PTC.Vista.AgregarProcedimiento
                                                                           c == ',').ToArray());
 
                 txtDescripcion.SelectionStart = txtNombreProcedimiento.Text.Length;
+            }
+
+            if (txtDescripcion.Text.Length > 400)
+            {
+                txtDescripcion.Text = txtDescripcion.Text.Substring(0, 400);
+
+                txtDescripcion.SelectionStart = txtDescripcion.Text.Length;
             }
         }
 

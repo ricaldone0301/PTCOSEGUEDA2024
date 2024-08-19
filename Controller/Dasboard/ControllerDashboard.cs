@@ -1,6 +1,5 @@
 ﻿using PTC.Vista.Dashboard;
 //using PTC.Vista.Pacientes;
-using PTC.Vista.Calendario;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.AgendarCita;
 using System;

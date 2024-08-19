@@ -35,12 +35,14 @@
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.cmsVerPaciente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmsVerPaciente);
             this.panel1.Controls.Add(this.cmsEliminar);
             this.panel1.Controls.Add(this.cmsActualizar);
             this.panel1.Controls.Add(this.btnNuevo);
@@ -112,6 +114,16 @@
             this.txtBuscar.Size = new System.Drawing.Size(244, 22);
             this.txtBuscar.TabIndex = 10;
             // 
+            // cmsVerPaciente
+            // 
+            this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
+            this.cmsVerPaciente.Location = new System.Drawing.Point(740, 15);
+            this.cmsVerPaciente.Name = "cmsVerPaciente";
+            this.cmsVerPaciente.Size = new System.Drawing.Size(75, 23);
+            this.cmsVerPaciente.TabIndex = 11;
+            this.cmsVerPaciente.Text = "Ver";
+            this.cmsVerPaciente.UseVisualStyleBackColor = true;
+            // 
             // ViewProcedimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,5 +154,6 @@
         public System.Windows.Forms.DataGridView dgvProcedimientos;
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.Button cmsVerPaciente;
     }
 }

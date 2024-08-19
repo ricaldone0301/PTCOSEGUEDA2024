@@ -17,17 +17,27 @@ namespace PTC.Vista.AgendarCita
         public ViewAgendarcita(int accion)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion);
         }
-
-        
         public ViewAgendarcita(int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this,  accion, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
 
         }
 
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtHora);
+        }
         private void bunifuCustomLabel4_Click(object sender, EventArgs e)
         {
 
@@ -55,6 +65,26 @@ namespace PTC.Vista.AgendarCita
 
         private void cbProcedimiento_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Fecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHora_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtHora.Text;
+            string validChars = "0123456789/";
+
+            string filteredText = new string(text.Where(c => validChars.Contains(c)).ToArray());
+
+            if (text != filteredText)
+            {
+                txtHora.Text = filteredText;
+                txtHora.SelectionStart = txtHora.Text.Length;
+            }
 
         }
     }

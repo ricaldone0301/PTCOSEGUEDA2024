@@ -18,6 +18,31 @@ namespace PTC.Vista.OlvidoContrasena
         {
             InitializeComponent();
             ControllerContrasena control = new ControllerContrasena(this);
+            TextBoxMenuEliminar();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtEmail);
+            ContextMenuEliminar(txtContrasena);
+            ContextMenuEliminar(txtConfirm);
+        }
+
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

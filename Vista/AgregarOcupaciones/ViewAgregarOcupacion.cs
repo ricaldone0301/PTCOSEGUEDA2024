@@ -18,15 +18,27 @@ namespace PTC.Vista.AgendarOcupaciones
         public ViewAgregarOcupacion(int accion)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgregarOcupacion ObjAgregarOcupacion = new ControllerAgregarOcupacion(this, accion);
         }
 
         public ViewAgregarOcupacion(int accion, string nombreOcupacion, int ocupacionID)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgregarOcupacion ObjAgregarOcupacion = new ControllerAgregarOcupacion(this, accion, nombreOcupacion, ocupacionID);
         }
 
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtNombre);
+        }
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             string text = txtNombre.Text;
@@ -39,7 +51,14 @@ namespace PTC.Vista.AgendarOcupaciones
 
                 txtNombre.SelectionStart = txtNombre.Text.Length;
             }
+            if (txtNombre.Text.Length > 70)
+            {
+                txtNombre.Text = txtNombre.Text.Substring(0, 70);
+
+                txtNombre.SelectionStart = txtNombre.Text.Length;
+            }
         }
+    }
     }
     
 }

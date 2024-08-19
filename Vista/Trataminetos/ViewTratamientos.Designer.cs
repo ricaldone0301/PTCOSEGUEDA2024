@@ -35,12 +35,14 @@
             this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new Bunifu.Framework.UI.BunifuSearchEngine();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.cmsVerPaciente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmsVerPaciente);
             this.panel1.Controls.Add(this.cmsEliminar);
             this.panel1.Controls.Add(this.cmsActualizar);
             this.panel1.Controls.Add(this.btnNuevo);
@@ -112,6 +114,16 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // cmsVerPaciente
+            // 
+            this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
+            this.cmsVerPaciente.Location = new System.Drawing.Point(740, 15);
+            this.cmsVerPaciente.Name = "cmsVerPaciente";
+            this.cmsVerPaciente.Size = new System.Drawing.Size(75, 23);
+            this.cmsVerPaciente.TabIndex = 8;
+            this.cmsVerPaciente.Text = "Ver";
+            this.cmsVerPaciente.UseVisualStyleBackColor = true;
+            // 
             // ViewTratamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,5 +153,6 @@
         public System.Windows.Forms.DataGridView dgvCitas;
         private Bunifu.Framework.UI.BunifuSearchEngine txtBuscar;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        public System.Windows.Forms.Button cmsVerPaciente;
     }
 }

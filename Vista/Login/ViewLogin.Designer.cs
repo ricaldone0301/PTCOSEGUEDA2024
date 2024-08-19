@@ -89,6 +89,7 @@
             this.TxtUsuario.Location = new System.Drawing.Point(603, 373);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.ShortcutsEnabled = false;
             this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
             this.TxtUsuario.TabIndex = 13;
             this.TxtUsuario.Text = "Usuario";
@@ -114,6 +115,7 @@
             this.TxtContra.Location = new System.Drawing.Point(603, 453);
             this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
             this.TxtContra.Name = "TxtContra";
+            this.TxtContra.ShortcutsEnabled = false;
             this.TxtContra.Size = new System.Drawing.Size(380, 39);
             this.TxtContra.TabIndex = 14;
             this.TxtContra.Text = "Contraseña";

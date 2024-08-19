@@ -45,15 +45,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelContenedor.SuspendLayout();
-            this.PanelPadre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.PanelPadre.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel10
@@ -84,6 +85,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ok.Controls.Add(this.bunifuThinButton21);
             this.ok.Controls.Add(this.btnProcedimientos);
             this.ok.Controls.Add(this.btnUsuarios);
             this.ok.Controls.Add(this.pictureBox2);
@@ -153,7 +155,7 @@
             this.btnUsuarios.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnUsuarios.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.Location = new System.Drawing.Point(49, 626);
+            this.btnUsuarios.Location = new System.Drawing.Point(49, 579);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(181, 46);
@@ -362,6 +364,16 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1433, 885);
             this.PanelContenedor.TabIndex = 32;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(331, 248);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(636, 284);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
+            // 
             // PanelPadre
             // 
             this.PanelPadre.Controls.Add(this.ok);
@@ -372,15 +384,31 @@
             this.PanelPadre.Size = new System.Drawing.Size(1705, 885);
             this.PanelPadre.TabIndex = 33;
             // 
-            // pictureBox3
+            // bunifuThinButton21
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(331, 248);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(636, 284);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bunifuThinButton21.ButtonText = "RECUPERAR CONTRASEÑA";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.Tomato;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Tomato;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 626);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(280, 46);
+            this.bunifuThinButton21.TabIndex = 12;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewDashboard
             // 
@@ -404,8 +432,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
-            this.PanelPadre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.PanelPadre.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,5 +459,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
         private System.Windows.Forms.PictureBox pictureBox3;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }

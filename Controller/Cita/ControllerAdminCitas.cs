@@ -21,6 +21,7 @@ namespace PTC.Controller.Cita
         {
             ObjAdminCitas = Vista;
             ObjAdminCitas.Load += new EventHandler(Load);
+            ObjAdminCitas.cmsVerPaciente.Click += new EventHandler(Ver);
             ObjAdminCitas.btnNuevo.Click += new EventHandler(NuevaCita);
             ObjAdminCitas.cmsActualizar.Click += new EventHandler(ActualizarCita);
             ObjAdminCitas.cmsEliminar.Click += new EventHandler(EliminarCita);
@@ -57,6 +58,30 @@ namespace PTC.Controller.Cita
 
         public void Load(object sender, EventArgs e)
         {
+            RefrescarData();
+        }
+
+        private void Ver(object sender, EventArgs e)
+        {
+            int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;
+            int pos = ObjAdminCitas.dgvCitas.CurrentRow.Index;
+            int pacienteID, consultorioID, citaID, procedimientoID;
+            string personalID, hora;
+            DateTime fecha;
+
+
+
+            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
+            citaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
+            fecha = DateTime.ParseExact(ObjAdminCitas.dgvCitas[2, pos].Value.ToString(), "M/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
+            hora = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();
+            personalID = ObjAdminCitas.dgvCitas[6, pos].Value.ToString();
+            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[5, pos].Value.ToString());
+
+
+            ViewAgendarcita openForm = new ViewAgendarcita(3, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
+            openForm.ShowDialog();
             RefrescarData();
         }
 

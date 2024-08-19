@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PTC.Vista.AgregarDoctores
 {
@@ -19,14 +20,34 @@ namespace PTC.Vista.AgregarDoctores
         public ViewAgregarUsuario(int accion)
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerAgregarusuario objAgregarUsuario = new ControllerAgregarusuario(this, accion);
         }
 
         public ViewAgregarUsuario(int accion, string Nombre, string PersonalID, int rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
         {
             InitializeComponent();
-            ControllerAgregarusuario objAgregarUsuario = new ControllerAgregarusuario(this, accion, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
+            TextBoxMenuEliminar();
+            ControllerAgregarusuario objActualiarUsuario = new ControllerAgregarusuario(this, accion, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
         }
+
+
+
+        private void ContextMenuEliminar(System.Windows.Forms.TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtContrasena);
+            ContextMenuEliminar(txtEmail);
+            ContextMenuEliminar(txtNombre);
+            ContextMenuEliminar(txtTelefono);
+            ContextMenuEliminar(txtUsuario);
+        }
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -51,6 +72,13 @@ namespace PTC.Vista.AgregarDoctores
                 txtTelefono.Text = filteredText;
                 txtTelefono.SelectionStart = txtTelefono.Text.Length;
             }
+
+            if (txtTelefono.Text.Length > 20)
+            {
+                txtTelefono.Text = txtTelefono.Text.Substring(0, 20);
+
+                txtTelefono.SelectionStart = txtTelefono.Text.Length;
+            }
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -65,13 +93,45 @@ namespace PTC.Vista.AgregarDoctores
                 txtNombre.SelectionStart = txtNombre.Text.Length;
             }
 
+            if (txtNombre.Text.Length > 50)
+            {
+                txtNombre.Text = txtNombre.Text.Substring(0, 50);
+
+                txtNombre.SelectionStart = txtNombre.Text.Length;
+            }
+
 
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
+            if (txtEmail.Text.Length > 255)
+            {
+                txtEmail.Text = txtEmail.Text.Substring(0, 255);
 
+                txtEmail.SelectionStart = txtEmail.Text.Length;
+            }
 
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Length > 30)
+            {
+                txtUsuario.Text = txtUsuario.Text.Substring(0, 30);
+
+                txtUsuario.SelectionStart = txtUsuario.Text.Length;
+            }
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+            if (txtContrasena.Text.Length > 256)
+            {
+                txtContrasena.Text = txtEmail.Text.Substring(0, 256);
+
+                txtContrasena.SelectionStart = txtContrasena.Text.Length;
+            }
         }
     }
 

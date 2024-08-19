@@ -92,8 +92,8 @@ namespace PTC.Controller.Registro
             verificationCode = generateCode();
 
             to = ObjRegistro.txtEmail.Text;
-            from = "clinicadentalosegueda01@gmail.com";
-            pass = "aops ysuj qrda jfkm";
+            from = "clinicaosegueda02@gmail.com";
+            pass = "vacr eukm hfxg xclp";
             MailMessage message = new MailMessage();
             message.To.Add(to);
             message.From = new MailAddress(from);

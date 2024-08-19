@@ -20,30 +20,34 @@ namespace PTC.Controller
     {
         ViewOlvidoContrasena ObjContrasena;
 
-
-        private string verificationCode = string.Empty;
+        //Se genera una variable solamente en el Controller 
+        private string codigoVerificacion = string.Empty;
 
         public ControllerContrasena(ViewOlvidoContrasena Vista)
         {
             ObjContrasena = Vista;
             ObjContrasena.btnEnviar.Click += new EventHandler(ConseguirCorreo);
             ObjContrasena.btnEnviar1.Click += new EventHandler(ActualizarContrasena);
-            ObjContrasena.timevcode.Tick += new EventHandler(Tick);
+            //ObjContrasena.timevcode.Tick += new EventHandler(Tick);
         }
 
+        //Se define un método ConseguirCorreo que envía un correo electrónico con un código de verificación
         public void ConseguirCorreo(object sender, EventArgs e)
         {
             string to, from, pass;
 
-            verificationCode = generateCode();
+            //genera un código de verificación y lo asigna a la variable codigoVerificacion
+            codigoVerificacion = GenerarCodigo();
 
+
+            //configura los detalles del mensaje de correo
             to = ObjContrasena.txtEmail.Text;
-            from = "clinicadentalosegueda01@gmail.com";
-            pass = "aops ysuj qrda jfkm";
+            from = "clinicaosegueda02@gmail.com";
+            pass = "vacr eukm hfxg xclp";
             MailMessage message = new MailMessage();
             message.To.Add(to);
             message.From = new MailAddress(from);
-            message.Body = $"Tu código de verificación es: {verificationCode}";
+            message.Body = $"Tu código de verificación es: {codigoVerificacion}";
             message.Subject = "Clinica Dental Osegueda - Codigo de verificacion";
             SmtpClient smtp = new SmtpClient("smtp.gmail.com");
             smtp.EnableSsl = true;
@@ -64,9 +68,9 @@ namespace PTC.Controller
 
         public void ActualizarContrasena(object sender, EventArgs e)
         {
-            string inputCode = ObjContrasena.txtConfirm.Text.Trim();
+            string codigoIngresado = ObjContrasena.txtConfirm.Text.Trim();
 
-            if (inputCode == verificationCode)
+            if (codigoIngresado == codigoVerificacion)
             {
                 try
                 {
@@ -110,7 +114,7 @@ namespace PTC.Controller
 
         }
 
-        public String generateCode()
+        public String GenerarCodigo()
         {
             Random r = new Random();
             int randNum = r.Next(1000000);
