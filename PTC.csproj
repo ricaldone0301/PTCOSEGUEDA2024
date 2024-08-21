@@ -82,7 +82,6 @@
     <Compile Include="Controller\Paciente\ControllerAgregarPaciente.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAdminProcedimientos.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAgregarProcedimientos.cs" />
-    <Compile Include="Controller\RecuperarContra\ControllerRecuperarContra.cs" />
     <Compile Include="Controller\Registro\ControllerRegistro.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
@@ -92,7 +91,6 @@
     <Compile Include="Modelo\DAOOcupacion\DAOOcupacion.cs" />
     <Compile Include="Modelo\DAOPaciente\DAOPaciente.cs" />
     <Compile Include="Modelo\DAOProcedimiento\DAOProcedimiento.cs" />
-    <Compile Include="Modelo\DAORecuperar\DAORecuperar.cs" />
     <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
     <Compile Include="Modelo\DAOUsuarios\DAOUsuarios.cs" />
     <Compile Include="Modelo\dbContext.cs" />
@@ -102,7 +100,6 @@
     <Compile Include="Modelo\DTOOcupacion\DTOOcupacion.cs" />
     <Compile Include="Modelo\DTOPaciente\DTOPaciente.cs" />
     <Compile Include="Modelo\DTOProcedimiento\DTOProcedimiento.cs" />
-    <Compile Include="Modelo\DTORecuperar\DTORecuperar.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
     <Compile Include="Modelo\ModelInit.cs" />
@@ -186,6 +183,12 @@
     <Compile Include="Vista\RecuperarContra\ViewRecuperarContra.Designer.cs">
       <DependentUpon>ViewRecuperarContra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\RecuperarContra\ViewVerContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RecuperarContra\ViewVerContra.Designer.cs">
+      <DependentUpon>ViewVerContra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Registro\ViewRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\RecuperarContra\ViewRecuperarContra.resx">
       <DependentUpon>ViewRecuperarContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RecuperarContra\ViewVerContra.resx">
+      <DependentUpon>ViewVerContra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Registro\ViewRegistro.resx">
       <DependentUpon>ViewRegistro.cs</DependentUpon>

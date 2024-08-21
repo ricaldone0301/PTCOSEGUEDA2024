@@ -244,6 +244,41 @@ namespace PTC.Modelo.DAOUsuarios
                 getConnection().Close();
             }
         }
+
+        public DtoUsuarios GetUsuarioById(int id)
+        {
+            DtoUsuarios usuario = null;
+            try
+            {
+                using (SqlConnection conn = getConnection())
+                {
+                    string query = "SELECT * FROM Personal WHERE personalID = @id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        usuario = new DtoUsuarios
+                        {
+                            Nombre = reader["nombrePersonal"].ToString(),
+                            Email = reader["email"].ToString(),
+                            Telefono = reader["telefono"].ToString(),
+                            Usuario = reader["usuarioPersonal"].ToString(),
+                            EspecialidadId = Convert.ToInt32(reader["especialidadID"]),
+                            ConsultorioId = Convert.ToInt32(reader["consultorioID"]),
+                            Rol = Convert.ToInt32(reader["roleID"])
+                        };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+            }
+            return usuario;
+        }
     }
 }
+
 

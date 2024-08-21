@@ -32,6 +32,7 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnRecuperar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,7 +49,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,7 +85,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ok.Controls.Add(this.bunifuThinButton21);
+            this.ok.Controls.Add(this.btnRecuperar);
             this.ok.Controls.Add(this.btnProcedimientos);
             this.ok.Controls.Add(this.btnUsuarios);
             this.ok.Controls.Add(this.pictureBox2);
@@ -109,6 +109,32 @@
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ok.Size = new System.Drawing.Size(270, 884);
             this.ok.TabIndex = 20;
+            // 
+            // btnRecuperar
+            // 
+            this.btnRecuperar.ActiveBorderThickness = 1;
+            this.btnRecuperar.ActiveCornerRadius = 20;
+            this.btnRecuperar.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnRecuperar.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnRecuperar.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnRecuperar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecuperar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecuperar.BackgroundImage")));
+            this.btnRecuperar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRecuperar.ButtonText = "RECUPERAR CONTRASEÑA";
+            this.btnRecuperar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecuperar.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperar.ForeColor = System.Drawing.Color.Tomato;
+            this.btnRecuperar.IdleBorderThickness = 1;
+            this.btnRecuperar.IdleCornerRadius = 20;
+            this.btnRecuperar.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnRecuperar.IdleForecolor = System.Drawing.Color.Tomato;
+            this.btnRecuperar.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnRecuperar.Location = new System.Drawing.Point(0, 626);
+            this.btnRecuperar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRecuperar.Name = "btnRecuperar";
+            this.btnRecuperar.Size = new System.Drawing.Size(280, 46);
+            this.btnRecuperar.TabIndex = 12;
+            this.btnRecuperar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnProcedimientos
             // 
@@ -384,32 +410,6 @@
             this.PanelPadre.Size = new System.Drawing.Size(1705, 885);
             this.PanelPadre.TabIndex = 33;
             // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuThinButton21.ButtonText = "RECUPERAR CONTRASEÑA";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.Tomato;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Tomato;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 626);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(280, 46);
-            this.bunifuThinButton21.TabIndex = 12;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ViewDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,6 +459,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
         private System.Windows.Forms.PictureBox pictureBox3;
-        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnRecuperar;
     }
 }

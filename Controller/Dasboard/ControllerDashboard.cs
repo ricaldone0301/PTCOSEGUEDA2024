@@ -18,6 +18,7 @@ using PTC.Modelo.DTOContrasena;
 using PTC.Controller.Common;
 using PTC.Vista.Paciente;
 using PTC.Vista.Ocupaciones;
+using PTC.Vista.RecuperarContra;
 
 namespace PTC.Controller.Dasboard
 {
@@ -40,6 +41,7 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.btnInicio.Click += new EventHandler(Inicio);
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
             ObjDashboard.btnProcedimientos.Click += new EventHandler(Procedimientos);
+            ObjDashboard.lblUsuario.Click += new EventHandler(Recuperar);
         }
 
         private void Pacientes(object sender, EventArgs e)
@@ -62,6 +64,11 @@ namespace PTC.Controller.Dasboard
             AbrirFormulario<ViewOcupaciones>();
         }
 
+        private void Recuperar(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewVerContra>();
+        }
+
         private void Inicio(object sender, EventArgs e)
         {
             AbrirFormulario<ViewDashboard>();
@@ -72,7 +79,7 @@ namespace PTC.Controller.Dasboard
         {
 
             var result = MessageBox.Show("Esta seguro que quiere cerrar sesion?",
-                                         "Confirm Logout",
+                                         "Confirm Salida",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Question);
 
