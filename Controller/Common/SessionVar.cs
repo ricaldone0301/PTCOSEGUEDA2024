@@ -14,6 +14,7 @@ namespace PTC.Controller.Common
         private static string nombreRol;
         private static string nombrePersonal;
         public static string access;
+  
 
         public static string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
         public static string Usuario { get => usuarioPersonal; set => usuarioPersonal = value; }

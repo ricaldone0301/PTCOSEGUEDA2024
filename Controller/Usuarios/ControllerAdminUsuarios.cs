@@ -66,6 +66,7 @@ namespace PTC.Controller.Usuarios
             }
         }
 
+
         private void VerUsuario(object sender, EventArgs e)
         {
             //nuevamente con row y pos se obtienen los datos de la fila que hemos seleccionado en el dgv
