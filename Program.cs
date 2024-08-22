@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PTC.Controller;
 using PTC.Vista;
 using PTC.Vista.Login;
 
@@ -15,7 +16,7 @@ namespace PTC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewLogin());
+            ControllerInit.DeterminarVistaInicial();
         }
     }
 }

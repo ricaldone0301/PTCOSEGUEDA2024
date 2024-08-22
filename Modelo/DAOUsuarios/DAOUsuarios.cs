@@ -274,7 +274,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                // Manejo de errores
+
             }
             return usuario;
         }

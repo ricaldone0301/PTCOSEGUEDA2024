@@ -17,13 +17,11 @@ namespace PTC.Vista.RecuperarContra
     {
         private int personalId;
 
-        // Parameterless constructor
         public ViewVerContra()
         {
             InitializeComponent();
         }
 
-        // Method to set the personalId and load user data
         public void Initialize(int personalId)
         {
             this.personalId = personalId;
@@ -32,11 +30,11 @@ namespace PTC.Vista.RecuperarContra
 
         private void LoadUserData()
         {
-            // Crear instancia del DAO para obtener la información del usuario
+
             DAOUsuarios dao = new DAOUsuarios();
             var usuario = dao.GetUsuarioById(personalId);
 
-            // Mostrar la información en los controles del formulario
+
             txtNombre.Text = usuario.Nombre;
             txtEmail.Text = usuario.Email;
             txtTelefono.Text = usuario.Telefono;
@@ -44,7 +42,7 @@ namespace PTC.Vista.RecuperarContra
             cbEsp.SelectedValue = usuario.EspecialidadId;
             cbConsul.SelectedValue = usuario.ConsultorioId;
             cbRol.SelectedValue = usuario.Rol;
-            // Completa con otros campos que tengas
+
         }
     }
 }

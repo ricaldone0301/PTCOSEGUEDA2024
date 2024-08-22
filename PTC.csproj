@@ -74,12 +74,14 @@
     <Compile Include="Controller\Common\CommonClass.cs" />
     <Compile Include="Controller\Common\SessionVar.cs" />
     <Compile Include="Controller\Contrasena\ControllerContrasena.cs" />
+    <Compile Include="Controller\ControllerInit.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />
     <Compile Include="Controller\Ocupacion\ControllerAdminOcupacion.cs" />
     <Compile Include="Controller\Ocupacion\ControllerAgregarOcupacion.cs" />
     <Compile Include="Controller\Paciente\ControllerAdminPaciente.cs" />
     <Compile Include="Controller\Paciente\ControllerAgregarPaciente.cs" />
+    <Compile Include="Controller\PrimerUso\ControllerPrimerUso.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAdminProcedimientos.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAgregarProcedimientos.cs" />
     <Compile Include="Controller\Registro\ControllerRegistro.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
     <Compile Include="Modelo\DAOOcupacion\DAOOcupacion.cs" />
     <Compile Include="Modelo\DAOPaciente\DAOPaciente.cs" />
+    <Compile Include="Modelo\DAOPrimerUso\DAOPrimerUso.cs" />
     <Compile Include="Modelo\DAOProcedimiento\DAOProcedimiento.cs" />
     <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
     <Compile Include="Modelo\DAOUsuarios\DAOUsuarios.cs" />
@@ -99,6 +102,7 @@
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
     <Compile Include="Modelo\DTOOcupacion\DTOOcupacion.cs" />
     <Compile Include="Modelo\DTOPaciente\DTOPaciente.cs" />
+    <Compile Include="Modelo\DTOPrimerUso\DTOPrimerUso.cs" />
     <Compile Include="Modelo\DTOProcedimiento\DTOProcedimiento.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
@@ -213,6 +217,12 @@
     <Compile Include="Vista\Login\ViewLogin.Designer.cs">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\PrimerUso\ViewPrimerUso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\PrimerUso\ViewPrimerUso.Designer.cs">
+      <DependentUpon>ViewPrimerUso.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -258,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Paciente\ViewPaciente.resx">
       <DependentUpon>ViewPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\PrimerUso\ViewPrimerUso.resx">
+      <DependentUpon>ViewPrimerUso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Procedimientos\ViewProcedimiento.resx">
       <DependentUpon>ViewProcedimiento.cs</DependentUpon>
