@@ -108,3 +108,4 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Age
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.AgregarUsuario.ViewVerUsuario.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.RecuperarContra.ViewRecuperarContra.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.RecuperarContra.ViewVerContra.resources
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.ViewPrimerUso.resources
