@@ -76,6 +76,16 @@ namespace PTC.Controller.Registro
                     ObjRegistro.cbConsul.DisplayMember = "nombreConsultorio";
 
                 }
+
+                DataSet dsPreguntas = objAdmin.ComboBoxPreguntas();
+                if (dsPreguntas != null && dsPreguntas.Tables.Contains("Preguntas"))
+                {
+                    DataTable dtPreguntas = dsPreguntas.Tables["Preguntas"];
+                    ObjRegistro.cbPregunta.DataSource = dtPreguntas;
+                    ObjRegistro.cbPregunta.ValueMember = "preguntaID";
+                    ObjRegistro.cbPregunta.DisplayMember = "tituloPregunta";
+
+                }
             }
             catch (Exception ex)
             {
@@ -135,6 +145,8 @@ namespace PTC.Controller.Registro
                     daoRegistro.Contrasena = cadenaencriptada;
                     daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
                     daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
+                    daoRegistro.PreguntaID = (int)ObjRegistro.cbPregunta.SelectedValue;
+                    daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
 
                     int valorRetornado = daoRegistro.RegistrarUsuario();
 

@@ -82,6 +82,7 @@
     <Compile Include="Controller\Ocupacion\ControllerAgregarOcupacion.cs" />
     <Compile Include="Controller\Paciente\ControllerAdminPaciente.cs" />
     <Compile Include="Controller\Paciente\ControllerAgregarPaciente.cs" />
+    <Compile Include="Controller\PreguntaContra\ControllerPreguntaContra.cs" />
     <Compile Include="Controller\PrimerUso\ControllerPrimerUso.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAdminProcedimientos.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAgregarProcedimientos.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Modelo\DAOLogin\DAOLogin.cs" />
     <Compile Include="Modelo\DAOOcupacion\DAOOcupacion.cs" />
     <Compile Include="Modelo\DAOPaciente\DAOPaciente.cs" />
+    <Compile Include="Modelo\DAOPreguntaContra\DAOPreguntaContra.cs" />
     <Compile Include="Modelo\DAOPrimerUso\DAOPrimerUso.cs" />
     <Compile Include="Modelo\DAOProcedimiento\DAOProcedimiento.cs" />
     <Compile Include="Modelo\DAORegistro\DAORegistro.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
     <Compile Include="Modelo\DTOOcupacion\DTOOcupacion.cs" />
     <Compile Include="Modelo\DTOPaciente\DTOPaciente.cs" />
+    <Compile Include="Modelo\DTOPreguntaContra\DTOPreguntaContra.cs" />
     <Compile Include="Modelo\DTOPrimerUso\DTOPrimerUso.cs" />
     <Compile Include="Modelo\DTOProcedimiento\DTOProcedimiento.cs" />
     <Compile Include="Modelo\DTORegistro\DTORegistro.cs" />
@@ -178,6 +181,12 @@
     </Compile>
     <Compile Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.Designer.cs">
       <DependentUpon>ViewOlvidoContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\OlvidoPregunta\ViewOlvidoPregunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\OlvidoPregunta\ViewOlvidoPregunta.Designer.cs">
+      <DependentUpon>ViewOlvidoPregunta.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Paciente\ViewPaciente.cs">
       <SubType>Form</SubType>
@@ -284,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\OlvidoContrasena\ViewOlvidoContrasena.resx">
       <DependentUpon>ViewOlvidoContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\OlvidoPregunta\ViewOlvidoPregunta.resx">
+      <DependentUpon>ViewOlvidoPregunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Paciente\ViewPaciente.resx">
       <DependentUpon>ViewPaciente.cs</DependentUpon>

@@ -37,6 +37,7 @@
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.BtnRegistro = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnIngresar.Location = new System.Drawing.Point(269, 416);
+            this.BtnIngresar.Location = new System.Drawing.Point(266, 422);
             this.BtnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(144, 50);
@@ -103,10 +104,10 @@
             this.btnOlvido.Location = new System.Drawing.Point(599, 511);
             this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnOlvido.Name = "btnOlvido";
-            this.btnOlvido.Size = new System.Drawing.Size(147, 16);
+            this.btnOlvido.Size = new System.Drawing.Size(157, 16);
             this.btnOlvido.TabIndex = 16;
             this.btnOlvido.TabStop = true;
-            this.btnOlvido.Text = "¿Olvido su contraseña?";
+            this.btnOlvido.Text = "Recuperacion por correo";
             // 
             // TxtContra
             // 
@@ -125,6 +126,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.White;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.linkLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.BtnRegistro);
             this.bunifuGradientPanel1.Controls.Add(this.BtnExit);
             this.bunifuGradientPanel1.Controls.Add(this.BtnIngresar);
@@ -153,6 +155,21 @@
             this.BtnRegistro.TabIndex = 23;
             this.BtnRegistro.TabStop = true;
             this.BtnRegistro.Text = "Registro";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.linkLabel1.Location = new System.Drawing.Point(130, 392);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(171, 16);
+            this.linkLabel1.TabIndex = 23;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Recuperacion por pregunta";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // ViewLogin
             // 
@@ -188,5 +205,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         public System.Windows.Forms.LinkLabel BtnRegistro;
         public System.Windows.Forms.LinkLabel btnOlvido;
+        public System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

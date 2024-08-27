@@ -98,11 +98,12 @@ namespace PTC.Controller.VerPerfil
 
         public void CambiarContra(object sender, EventArgs e)
         {
-            DAOUsuarios objUsuario = new DAOUsuarios();
+            DAOLogin DAOData = new DAOLogin();
             CommonClass common = new CommonClass();
-            objUsuario.UsuarioNormal = ObjVerContra.txtUsuario.Text;
+            DAOData.Usuario = ObjVerContra.txtUsuario.Text;
+            DAOData.UsuarioNormal = DAOData.Usuario;
             string cadenaencriptada = common.ComputeSha256Hash(ObjVerContra.txtContrasena.Text);
-            objUsuario.ContrasenaNormal = cadenaencriptada;
+            DAOData.Contrasena = cadenaencriptada;
             ViewCambiarContra vistacambiarcontra = new ViewCambiarContra();
             vistacambiarcontra.ShowDialog();
 

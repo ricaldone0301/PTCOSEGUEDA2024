@@ -17,6 +17,8 @@ namespace PTC.Modelo.DTORegistro
             private string contraseñaPersonal;
             private int rolID;
             private string email;
+            private int preguntaID;
+            private string respuesta;
 
             public string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
             public string PersonalId { get => personalID; set => personalID = value; }
@@ -27,5 +29,7 @@ namespace PTC.Modelo.DTORegistro
             public string Contrasena { get => contraseñaPersonal; set => contraseñaPersonal = value; }
             public int Rol { get => rolID; set => rolID = value; }
             public string Email { get => email; set => email = value; }
-        }
+        public int PreguntaID { get => preguntaID; set => preguntaID = value; }
+        public string Respuesta { get => respuesta; set => respuesta = value; }
+    }
     }
