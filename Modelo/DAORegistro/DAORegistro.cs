@@ -42,6 +42,33 @@ namespace PTC.Modelo.DAORegistro
             return ds;
         }
 
+        public DataSet ComboBoxPreguntas()
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    string query = "SELECT * FROM Preguntas";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+
+                    using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                    {
+                        adp.Fill(ds, "Preguntas");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                ds = null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+            return ds;
+        }
         public DataSet ComboBoxEspecialidad()
         {
             DataSet ds = new DataSet();
@@ -107,7 +134,7 @@ namespace PTC.Modelo.DAORegistro
                 {
                     cmd.Connection = getConnection();
 
-                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email)";
+                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email, preguntaID, Respuesta) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email, @pregunta, @respuesta)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@usuario", Usuario);
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
@@ -117,6 +144,8 @@ namespace PTC.Modelo.DAORegistro
                     cmd.Parameters.AddWithValue("@telefono", Telefono);
                     cmd.Parameters.AddWithValue("@consultorioId", ConsultorioId);
                     cmd.Parameters.AddWithValue("@email", Email);
+                    cmd.Parameters.AddWithValue("@pregunta", PreguntaID);
+                    cmd.Parameters.AddWithValue("@respuesta", Respuesta);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 

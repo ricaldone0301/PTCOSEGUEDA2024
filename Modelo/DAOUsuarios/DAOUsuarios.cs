@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using PTC.Modelo.DTOUsuarios;
+using PTC.Modelo.DAOLogin;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -15,6 +16,7 @@ namespace PTC.Modelo.DAOUsuarios
 {
     class DAOUsuarios : DtoUsuarios
     {
+
         readonly SqlCommand Command = new SqlCommand();
         public DataSet ComboBoxRoles()
         {
@@ -341,10 +343,11 @@ namespace PTC.Modelo.DAOUsuarios
         {
             try
             {
+                //DAo daologin = new DAOLogin();
                 Command.Connection = getConnection();
                 string query = "UPDATE Personal SET contraseñaPersonal = @contra WHERE usuarioPersonal = @usuario";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                cmd.Parameters.AddWithValue("@usuario", UsuarioNormal);
+                //cmd.Parameters.AddWithValue("@usuario", UsuarioNormal);
                 cmd.Parameters.AddWithValue("@contra",ContrasenaNormal);
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;

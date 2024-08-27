@@ -3,6 +3,8 @@ using PTC.Modelo.DAOLogin;
 using PTC.Vista.Dashboard;
 using PTC.Vista.Login;
 using PTC.Vista.OlvidoContrasena;
+using PTC.Vista.OlvidoPregunta;
+
 //using PTC.Vista.Pacientes;
 using PTC.Vista.Registro;
 using System;
@@ -31,13 +33,19 @@ namespace PTC.Controller.Login
             ObjLogin.TxtContra.Leave += new EventHandler(LeaveContrasena);
             ObjLogin.BtnRegistro.Click += new EventHandler(Registro);
             ObjLogin.btnOlvido.Click += new EventHandler(ContrasenaOlvidada);
-
+            ObjLogin.linkLabel1.Click += new EventHandler(ContraPregunta);
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
 
             //ObjLogin.TxtUsuario.Text = "test2";
             //ObjLogin.TxtContra.Text = "test2";
         }
 
+        private void ContraPregunta(object sender, EventArgs e)
+        {
+            ViewOlvidoPregunta viewPregunta = new ViewOlvidoPregunta();
+            viewPregunta.ShowDialog();
+
+        }
         private void Registro(object sender, EventArgs e)
         {
             ViewRegistro viewRegistro = new ViewRegistro();
@@ -57,6 +65,7 @@ namespace PTC.Controller.Login
             DAOLogin DAOData = new DAOLogin();
             CommonClass common = new CommonClass();
             DAOData.Usuario = ObjLogin.TxtUsuario.Text;
+            DAOData.UsuarioNormal = DAOData.Usuario;
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.TxtContra.Text);
             DAOData.Contrasena = cadenaencriptada;
 

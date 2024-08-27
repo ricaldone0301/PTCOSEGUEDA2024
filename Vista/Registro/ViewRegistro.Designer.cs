@@ -54,6 +54,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEnviar1 = new System.Windows.Forms.Button();
             this.timevcode = new System.Windows.Forms.Timer(this.components);
+            this.cbPregunta = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtRespuesta = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,17 +73,21 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(233, 172);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(133, 122);
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(947, 569);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1047, 619);
             this.bunifuGradientPanel1.TabIndex = 28;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtRespuesta);
+            this.panel1.Controls.Add(this.bunifuCustomLabel8);
+            this.panel1.Controls.Add(this.cbPregunta);
+            this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.cbEsp);
             this.panel1.Controls.Add(this.cbConsul);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
@@ -100,7 +108,7 @@
             this.panel1.Location = new System.Drawing.Point(-31, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1010, 569);
+            this.panel1.Size = new System.Drawing.Size(1010, 617);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -108,7 +116,7 @@
             // 
             this.cbEsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEsp.FormattingEnabled = true;
-            this.cbEsp.Location = new System.Drawing.Point(350, 293);
+            this.cbEsp.Location = new System.Drawing.Point(322, 248);
             this.cbEsp.Name = "cbEsp";
             this.cbEsp.Size = new System.Drawing.Size(209, 24);
             this.cbEsp.TabIndex = 36;
@@ -142,7 +150,7 @@
             this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnEnviar.Location = new System.Drawing.Point(375, 477);
+            this.btnEnviar.Location = new System.Drawing.Point(106, 533);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(131, 46);
@@ -155,7 +163,7 @@
             // 
             this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(350, 391);
+            this.cbRol.Location = new System.Drawing.Point(322, 346);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(209, 24);
             this.cbRol.TabIndex = 33;
@@ -166,7 +174,7 @@
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(345, 349);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(317, 304);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(50, 25);
             this.bunifuCustomLabel5.TabIndex = 30;
@@ -178,7 +186,7 @@
             this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(345, 256);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(317, 211);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(145, 25);
             this.bunifuCustomLabel10.TabIndex = 28;
@@ -250,7 +258,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(350, 201);
+            this.txtEmail.Location = new System.Drawing.Point(322, 156);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
@@ -264,7 +272,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(345, 163);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(317, 118);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(71, 25);
             this.bunifuCustomLabel6.TabIndex = 18;
@@ -294,7 +302,7 @@
             // 
             // txtConfirm
             // 
-            this.txtConfirm.Location = new System.Drawing.Point(90, 272);
+            this.txtConfirm.Location = new System.Drawing.Point(167, 306);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.ShortcutsEnabled = false;
@@ -308,7 +316,7 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(71, 232);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(148, 266);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(254, 25);
             this.bunifuCustomLabel2.TabIndex = 37;
@@ -320,9 +328,9 @@
             this.panel2.Controls.Add(this.btnEnviar1);
             this.panel2.Controls.Add(this.txtConfirm);
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
-            this.panel2.Location = new System.Drawing.Point(807, 172);
+            this.panel2.Location = new System.Drawing.Point(707, 122);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(373, 571);
+            this.panel2.Size = new System.Drawing.Size(473, 621);
             this.panel2.TabIndex = 39;
             // 
             // btnEnviar1
@@ -333,7 +341,7 @@
             this.btnEnviar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.btnEnviar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnEnviar1.Location = new System.Drawing.Point(134, 316);
+            this.btnEnviar1.Location = new System.Drawing.Point(211, 350);
             this.btnEnviar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar1.Name = "btnEnviar1";
             this.btnEnviar1.Size = new System.Drawing.Size(131, 46);
@@ -345,7 +353,48 @@
             // 
             this.timevcode.Enabled = true;
             this.timevcode.Interval = 1000;
-//            this.timevcode.Tick += new System.EventHandler(this.timevcode_Tick);
+            // 
+            // cbPregunta
+            // 
+            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPregunta.FormattingEnabled = true;
+            this.cbPregunta.Location = new System.Drawing.Point(322, 432);
+            this.cbPregunta.Name = "cbPregunta";
+            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
+            this.cbPregunta.TabIndex = 38;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(317, 390);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(259, 25);
+            this.bunifuCustomLabel3.TabIndex = 37;
+            this.bunifuCustomLabel3.Text = "PREGUNTA DE SEGURIDAD";
+            // 
+            // txtRespuesta
+            // 
+            this.txtRespuesta.Location = new System.Drawing.Point(322, 510);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta.Name = "txtRespuesta";
+            this.txtRespuesta.ShortcutsEnabled = false;
+            this.txtRespuesta.Size = new System.Drawing.Size(254, 22);
+            this.txtRespuesta.TabIndex = 40;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(317, 472);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(118, 25);
+            this.bunifuCustomLabel8.TabIndex = 39;
+            this.bunifuCustomLabel8.Text = "RESPUESTA";
             // 
             // ViewRegistro
             // 
@@ -392,5 +441,9 @@
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnEnviar1;
         public System.Windows.Forms.Timer timevcode;
+        public System.Windows.Forms.TextBox txtRespuesta;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        public System.Windows.Forms.ComboBox cbPregunta;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
     }
 }

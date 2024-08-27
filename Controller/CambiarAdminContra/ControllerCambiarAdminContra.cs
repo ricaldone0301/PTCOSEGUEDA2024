@@ -1,4 +1,5 @@
 ﻿using PTC.Controller.Common;
+using PTC.Modelo.DAOLogin;
 using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.RecuperarContra;
 using System;
@@ -25,8 +26,9 @@ namespace PTC.Controller.CambiarAdminContra
         public void Realizar(object sender, EventArgs e)
         {
             DAOUsuarios objUsuario = new DAOUsuarios();
+            DAOLogin objUsuarioLogin = new DAOLogin();
             CommonClass common = new CommonClass();
-            objUsuario.Usuario = ObjCambiarContra.TxtUsuario.Text;
+            objUsuarioLogin.UsuarioNormal = ObjCambiarContra.TxtUsuario.Text;
             string cadenaencriptada = common.ComputeSha256Hash(ObjCambiarContra.TxtContra.Text);
             objUsuario.Contrasena = cadenaencriptada;
 
