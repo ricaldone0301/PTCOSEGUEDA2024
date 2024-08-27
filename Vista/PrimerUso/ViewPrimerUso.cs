@@ -18,5 +18,10 @@ namespace PTC.Vista
             InitializeComponent();
             ControllerPrimerUso control = new ControllerPrimerUso(this);
         }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

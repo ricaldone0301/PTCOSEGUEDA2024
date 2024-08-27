@@ -37,6 +37,11 @@ namespace PTC.Modelo.DAOLogin
                     SessionVar.Contrasena = rd.GetString(2);
                     SessionVar.Rol = rd.GetString(3);
                     SessionVar.Nombre = rd.GetString(0);
+                    //
+                    SessionVar.NombreConsul = rd.GetString(6);
+                    SessionVar.Telefono = rd.GetString(7);
+                    SessionVar.NombreEsp = rd.GetString(4);
+                    SessionVar.Email = rd.GetString(5);
                 }
                 return rd.HasRows;
 

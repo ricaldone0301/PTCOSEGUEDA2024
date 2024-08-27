@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PTC.Controller.CambiarAdminContra;
+using PTC.Controller.VerPerfil;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +12,14 @@ using System.Windows.Forms;
 
 namespace PTC.Vista.RecuperarContra
 {
-    public partial class ViewRecuperarContra : Form
+    public partial class ViewCambiarContra : Form
     {
-        public ViewRecuperarContra()
+        public ViewCambiarContra()
         {
             InitializeComponent();
+            ControllerCambiarAdminContra objPerfil = new ControllerCambiarAdminContra(this);
         }
+
+
     }
 }

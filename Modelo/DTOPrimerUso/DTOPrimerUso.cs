@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTC.Modelo.DTOPrimerUso
 {
-    internal class DtoPrimerUso: dbContext
+     class DtoPrimerUso: dbContext
     {
         private string nombrePersonal;
         private string personalID;
@@ -17,6 +17,11 @@ namespace PTC.Modelo.DTOPrimerUso
         private string contraseñaPersonal;
         private int rolID;
         private string email;
+        //Creacion Empresa info
+        private string nombreEmpresa;
+        private string telefonoEmpresa;
+        private string direccion;
+        private string emailEmpresa;
 
         public string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
         public string PersonalId { get => personalID; set => personalID = value; }
@@ -27,6 +32,10 @@ namespace PTC.Modelo.DTOPrimerUso
         public string Contrasena { get => contraseñaPersonal; set => contraseñaPersonal = value; }
         public int Rol { get => rolID; set => rolID = value; }
         public string Email { get => email; set => email = value; }
+        public string NombreEmpresa { get => nombreEmpresa; set => nombreEmpresa = value; }
+        public string TelefonoEmpresa { get => telefonoEmpresa; set => telefonoEmpresa = value; }
+        public string Direccion { get => direccion; set => direccion = value; }
+        public string EmailEmpresa { get => emailEmpresa; set => emailEmpresa = value; }
     }
 }
     
