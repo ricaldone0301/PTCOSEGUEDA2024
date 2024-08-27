@@ -2,6 +2,7 @@
 using PTC.Modelo.DAOPrimerUso;
 using PTC.Vista;
 using PTC.Vista.Login;
+using PTC.Vista.PrimerUso;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,13 +17,19 @@ namespace PTC.Controller
         public static void DeterminarVistaInicial()
         {
             DAOPrimerUso ObjPrimerUso = new DAOPrimerUso();
-
+            
+            int primerEmpresa =  ObjPrimerUso.VerificarEmpresa();
             int primerUsuario = ObjPrimerUso.VerificarRegistro();
-            if (primerUsuario == 0)
+            if (primerEmpresa == 0)
+            {
+                Application.Run(new ViewPrimerUsoInfo());
+            }
+            else if (primerUsuario == 0)
             {
                 Application.Run(new ViewPrimerUso());
             }
             else
+
             {
                 Application.Run(new ViewLogin());
             }

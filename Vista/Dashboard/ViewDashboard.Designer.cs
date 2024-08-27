@@ -32,6 +32,7 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnAcercaDe = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnRecuperar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -85,6 +86,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ok.Controls.Add(this.btnAcercaDe);
             this.ok.Controls.Add(this.btnRecuperar);
             this.ok.Controls.Add(this.btnProcedimientos);
             this.ok.Controls.Add(this.btnUsuarios);
@@ -110,6 +112,32 @@
             this.ok.Size = new System.Drawing.Size(270, 884);
             this.ok.TabIndex = 20;
             // 
+            // btnAcercaDe
+            // 
+            this.btnAcercaDe.ActiveBorderThickness = 1;
+            this.btnAcercaDe.ActiveCornerRadius = 20;
+            this.btnAcercaDe.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnAcercaDe.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnAcercaDe.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnAcercaDe.BackColor = System.Drawing.Color.Transparent;
+            this.btnAcercaDe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAcercaDe.BackgroundImage")));
+            this.btnAcercaDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAcercaDe.ButtonText = "ACERCA DE";
+            this.btnAcercaDe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcercaDe.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcercaDe.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnAcercaDe.IdleBorderThickness = 1;
+            this.btnAcercaDe.IdleCornerRadius = 20;
+            this.btnAcercaDe.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnAcercaDe.IdleForecolor = System.Drawing.Color.MidnightBlue;
+            this.btnAcercaDe.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnAcercaDe.Location = new System.Drawing.Point(49, 587);
+            this.btnAcercaDe.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Size = new System.Drawing.Size(181, 46);
+            this.btnAcercaDe.TabIndex = 13;
+            this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnRecuperar
             // 
             this.btnRecuperar.ActiveBorderThickness = 1;
@@ -129,7 +157,7 @@
             this.btnRecuperar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnRecuperar.IdleForecolor = System.Drawing.Color.Tomato;
             this.btnRecuperar.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnRecuperar.Location = new System.Drawing.Point(0, 626);
+            this.btnRecuperar.Location = new System.Drawing.Point(0, 445);
             this.btnRecuperar.Margin = new System.Windows.Forms.Padding(5);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(280, 46);
@@ -181,7 +209,7 @@
             this.btnUsuarios.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnUsuarios.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.Location = new System.Drawing.Point(49, 579);
+            this.btnUsuarios.Location = new System.Drawing.Point(49, 643);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(181, 46);
@@ -460,5 +488,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
         private System.Windows.Forms.PictureBox pictureBox3;
         public Bunifu.Framework.UI.BunifuThinButton2 btnRecuperar;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnAcercaDe;
     }
 }

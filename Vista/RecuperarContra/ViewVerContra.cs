@@ -1,5 +1,7 @@
 ﻿//using PTC.Controller.RecuperarContra;
+using PTC.Controller.Dasboard;
 using PTC.Controller.Usuarios;
+using PTC.Controller.VerPerfil;
 using PTC.Modelo.DAOUsuarios;
 using System;
 using System.Collections.Generic;
@@ -15,34 +17,11 @@ namespace PTC.Vista.RecuperarContra
 {
     public partial class ViewVerContra : Form
     {
-        private int personalId;
 
         public ViewVerContra()
         {
             InitializeComponent();
-        }
-
-        public void Initialize(int personalId)
-        {
-            this.personalId = personalId;
-            LoadUserData();
-        }
-
-        private void LoadUserData()
-        {
-
-            DAOUsuarios dao = new DAOUsuarios();
-            var usuario = dao.GetUsuarioById(personalId);
-
-
-            txtNombre.Text = usuario.Nombre;
-            txtEmail.Text = usuario.Email;
-            txtTelefono.Text = usuario.Telefono;
-            txtUsuario.Text = usuario.Usuario;
-            cbEsp.SelectedValue = usuario.EspecialidadId;
-            cbConsul.SelectedValue = usuario.ConsultorioId;
-            cbRol.SelectedValue = usuario.Rol;
-
+            ControllerVerPerfil objPerfil = new ControllerVerPerfil(this);
         }
     }
 }

@@ -130,12 +130,69 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             finally
             {
-
+                Command.Connection.Close();
             }
 
 
         }
 
+        public int RegistrarEmpresa()
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = getConnection();
+
+                    String query = "INSERT INTO Empresa (nombreEmpresa, telefonoEmpresa, direccion, emailEmpresa) VALUES (@nombre, @telefono, @direccion, @email)";
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@direccion", Direccion);
+                    cmd.Parameters.AddWithValue("@nombre", NombreEmpresa);
+                    cmd.Parameters.AddWithValue("@telefono", TelefonoEmpresa);
+                    cmd.Parameters.AddWithValue("@email", EmailEmpresa);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    return rowsAffected;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return -1;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+
+
+        }
+        public int VerificarEmpresa()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT COUNT(*) FROM Empresa";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                int totalPersonal = (int)cmd.ExecuteScalar();
+                return totalPersonal;
+            }
+            catch (SqlException sqlex)
+            {
+                MessageBox.Show(sqlex.Message);
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
         public int VerificarRegistro()
         {
             try

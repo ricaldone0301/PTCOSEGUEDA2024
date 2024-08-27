@@ -1,6 +1,6 @@
-﻿namespace PTC.Vista
+﻿namespace PTC.Vista.PrimerUso
 {
-    partial class ViewPrimerUso
+    partial class ViewPrimerUsoInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPrimerUso));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPrimerUsoInfo));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEnviar1 = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbEsp = new System.Windows.Forms.ComboBox();
-            this.cbConsul = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cbRol = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -59,7 +53,7 @@
             this.panel2.Location = new System.Drawing.Point(942, 129);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(373, 571);
-            this.panel2.TabIndex = 41;
+            this.panel2.TabIndex = 43;
             // 
             // btnEnviar1
             // 
@@ -92,20 +86,14 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(947, 569);
-            this.bunifuGradientPanel1.TabIndex = 40;
+            this.bunifuGradientPanel1.TabIndex = 42;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cbEsp);
-            this.panel1.Controls.Add(this.cbConsul);
-            this.panel1.Controls.Add(this.bunifuCustomLabel1);
-            this.panel1.Controls.Add(this.cbRol);
-            this.panel1.Controls.Add(this.bunifuCustomLabel5);
-            this.panel1.Controls.Add(this.bunifuCustomLabel10);
-            this.panel1.Controls.Add(this.txtTelefono);
+            this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.bunifuCustomLabel11);
-            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.bunifuCustomLabel7);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.bunifuCustomLabel6);
@@ -117,77 +105,16 @@
             this.panel1.Size = new System.Drawing.Size(1010, 569);
             this.panel1.TabIndex = 20;
             // 
-            // cbEsp
+            // txtDireccion
             // 
-            this.cbEsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEsp.FormattingEnabled = true;
-            this.cbEsp.Location = new System.Drawing.Point(358, 333);
-            this.cbEsp.Name = "cbEsp";
-            this.cbEsp.Size = new System.Drawing.Size(209, 24);
-            this.cbEsp.TabIndex = 36;
-            // 
-            // cbConsul
-            // 
-            this.cbConsul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbConsul.FormattingEnabled = true;
-            this.cbConsul.Location = new System.Drawing.Point(79, 434);
-            this.cbConsul.Name = "cbConsul";
-            this.cbConsul.Size = new System.Drawing.Size(209, 24);
-            this.cbConsul.TabIndex = 35;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(74, 389);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(149, 25);
-            this.bunifuCustomLabel1.TabIndex = 34;
-            this.bunifuCustomLabel1.Text = "CONSULTORIO";
-            // 
-            // cbRol
-            // 
-            this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(358, 431);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(209, 24);
-            this.cbRol.TabIndex = 33;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(353, 389);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(50, 25);
-            this.bunifuCustomLabel5.TabIndex = 30;
-            this.bunifuCustomLabel5.Text = "ROL";
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(353, 296);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(145, 25);
-            this.bunifuCustomLabel10.TabIndex = 28;
-            this.bunifuCustomLabel10.Text = "ESPECIALIDAD";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(79, 196);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.ShortcutsEnabled = false;
-            this.txtTelefono.Size = new System.Drawing.Size(209, 22);
-            this.txtTelefono.TabIndex = 27;
+            this.txtDireccion.Location = new System.Drawing.Point(58, 205);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.ShortcutsEnabled = false;
+            this.txtDireccion.Size = new System.Drawing.Size(519, 90);
+            this.txtDireccion.TabIndex = 27;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // bunifuCustomLabel11
             // 
@@ -195,20 +122,20 @@
             this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(74, 158);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(53, 167);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(108, 25);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(115, 25);
             this.bunifuCustomLabel11.TabIndex = 26;
-            this.bunifuCustomLabel11.Text = "TELÉFONO";
+            this.bunifuCustomLabel11.Text = "DIRECCION";
             // 
-            // txtUsuario
+            // txtTelefono
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(79, 290);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.ShortcutsEnabled = false;
-            this.txtUsuario.Size = new System.Drawing.Size(209, 22);
-            this.txtUsuario.TabIndex = 23;
+            this.txtTelefono.Location = new System.Drawing.Point(58, 361);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.ShortcutsEnabled = false;
+            this.txtTelefono.Size = new System.Drawing.Size(257, 22);
+            this.txtTelefono.TabIndex = 23;
             // 
             // bunifuCustomLabel7
             // 
@@ -216,19 +143,19 @@
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(74, 251);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(53, 322);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(99, 25);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(108, 25);
             this.bunifuCustomLabel7.TabIndex = 22;
-            this.bunifuCustomLabel7.Text = "USUARIO";
+            this.bunifuCustomLabel7.Text = "TELEFONO";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(358, 241);
+            this.txtEmail.Location = new System.Drawing.Point(58, 461);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
-            this.txtEmail.Size = new System.Drawing.Size(209, 22);
+            this.txtEmail.Size = new System.Drawing.Size(519, 22);
             this.txtEmail.TabIndex = 19;
             // 
             // bunifuCustomLabel6
@@ -237,19 +164,20 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(353, 203);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(53, 423);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(71, 25);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(165, 25);
             this.bunifuCustomLabel6.TabIndex = 18;
-            this.bunifuCustomLabel6.Text = "EMAIL";
+            this.bunifuCustomLabel6.Text = "EMAIL EMPRESA";
+            this.bunifuCustomLabel6.Click += new System.EventHandler(this.bunifuCustomLabel6_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(79, 110);
+            this.txtNombre.Location = new System.Drawing.Point(58, 119);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
-            this.txtNombre.Size = new System.Drawing.Size(499, 22);
+            this.txtNombre.Size = new System.Drawing.Size(519, 22);
             this.txtNombre.TabIndex = 17;
             // 
             // bunifuCustomLabel4
@@ -258,21 +186,22 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(74, 75);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(53, 84);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(96, 25);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(219, 25);
             this.bunifuCustomLabel4.TabIndex = 10;
-            this.bunifuCustomLabel4.Text = "NOMBRE";
+            this.bunifuCustomLabel4.Text = "NOMBRE DE EMPRESA";
             // 
-            // ViewPrimerUso
+            // ViewPrimerUsoInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 828);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Name = "ViewPrimerUso";
-            this.Text = "ViewPrimerUso";
+            this.Name = "ViewPrimerUsoInfo";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "ViewPrimerUsoInfo";
             this.panel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -287,15 +216,9 @@
         public System.Windows.Forms.Button btnEnviar1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.ComboBox cbEsp;
-        public System.Windows.Forms.ComboBox cbConsul;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        public System.Windows.Forms.ComboBox cbRol;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtDireccion;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        public System.Windows.Forms.TextBox txtUsuario;
+        public System.Windows.Forms.TextBox txtTelefono;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         public System.Windows.Forms.TextBox txtEmail;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;

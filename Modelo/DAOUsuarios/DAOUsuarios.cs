@@ -8,6 +8,8 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using PTC.Controller.Common;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAOUsuarios
 {
@@ -277,6 +279,85 @@ namespace PTC.Modelo.DAOUsuarios
 
             }
             return usuario;
+        }
+
+        public bool EsAdministrador()
+        {
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    string query = "SELECT COUNT(*) FROM ViewLogin WHERE usuarioPersonal = @username AND rolPersonal = 'Administrador'";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@username", Usuario);
+
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al verificar el rol del usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
+        public bool VerificarCredenciales()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT * FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password AND nombreRol = 'Administrador'";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", Usuario);
+                cmd.Parameters.AddWithValue("@password", Contrasena);
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    SessionVar.Usuario = rd.GetString(1);
+                    SessionVar.Contrasena = rd.GetString(2);
+                    SessionVar.Rol = rd.GetString(3);
+                    SessionVar.Nombre = rd.GetString(0);
+                    //
+                    SessionVar.NombreConsul = rd.GetString(6);
+                    SessionVar.Telefono = rd.GetString(7);
+                    SessionVar.NombreEsp = rd.GetString(4);
+                    SessionVar.Email = rd.GetString(5);
+                }
+                return rd.HasRows;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally { getConnection().Close(); }
+        }
+
+        public int CambiarContra()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "UPDATE Personal SET contraseñaPersonal = @contra WHERE usuarioPersonal = @usuario";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@usuario", UsuarioNormal);
+                cmd.Parameters.AddWithValue("@contra",ContrasenaNormal);
+                int respuesta = cmd.ExecuteNonQuery();
+                return respuesta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
         }
     }
 }

@@ -106,6 +106,8 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Ocu
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Paciente.ViewPaciente.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.AgendarOcupaciones.ViewAgregarOcupacion.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.AgregarUsuario.ViewVerUsuario.resources
-C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.RecuperarContra.ViewRecuperarContra.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.RecuperarContra.ViewVerContra.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.ViewPrimerUso.resources
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.AcercaDe.ViewAcercaDe.resources
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.PrimerUso.ViewPrimerUsoInfo.resources
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.RecuperarContra.ViewCambiarContra.resources

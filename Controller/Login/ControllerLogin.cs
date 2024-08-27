@@ -77,6 +77,9 @@ namespace PTC.Controller.Login
                 MessageBox.Show("Credenciales incorectas", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (intentosFallidos >= 3)
                 {
+                    ObjLogin.TxtUsuario.Enabled = false;
+                    ObjLogin.TxtContra.Enabled = false;
+                    ObjLogin.BtnIngresar.Enabled = false;
                     MessageBox.Show("Ha superado el número máximo de intentos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
