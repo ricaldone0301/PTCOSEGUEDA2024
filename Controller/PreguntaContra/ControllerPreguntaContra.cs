@@ -70,41 +70,51 @@ namespace PTC.Controller.PreguntaContra
         public void ActualizarContrasena(object sender, EventArgs e)
         {
             string codigoIngresado = ObjPregunta.txtConfirm.Text.Trim();
-            string pregunta = ObjPregunta.cbPregunta.Text.Trim();
+            string pregunta = ObjPregunta.cbPregunta.SelectedValue.ToString();
             string respuesta = ObjPregunta.txtRespuesta.Text.Trim();
+            string email = ObjPregunta.txtEmail.Text.Trim();
+            string nuevaContrasena = ObjPregunta.txtContrasena.Text.Trim();
 
-            if (codigoIngresado == codigoVerificacion)
-            {
-                try
-                {
-                    DAOPreguntaContra dAOContrasena = new DAOPreguntaContra();
-                    if (dAOContrasena.ValidarPreguntaRespuestaSeguridad(ObjPregunta.txtEmail.Text.Trim(), pregunta, respuesta))
-                    {
-                        CommonClass common = new CommonClass();
-                        string cadenaencriptada = common.ComputeSha256Hash(ObjPregunta.txtContrasena.Text);
-                        dAOContrasena.Contrasena = cadenaencriptada;
-                        dAOContrasena.Email = ObjPregunta.txtEmail.Text.Trim();
-
-                        int valorRetornado = dAOContrasena.ActualizarContra();
-
-                        if (valorRetornado == 1)
-                        {
-                            MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (codigoIngresado != codigoVerificacion)
             {
                 MessageBox.Show("El código de verificación es incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                DAOPreguntaContra dAOContrasena = new DAOPreguntaContra();
+
+                bool esValido = dAOContrasena.ValidarPreguntaRespuestaSeguridad(email, pregunta, respuesta);
+
+                if (esValido == false)
+                {
+                    MessageBox.Show("La pregunta de seguridad o la respuesta son incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (esValido == true) {
+                 CommonClass common = new CommonClass();
+                string cadenaencriptada = common.ComputeSha256Hash(nuevaContrasena);
+
+                dAOContrasena.Contrasena = cadenaencriptada;
+                dAOContrasena.Email = email;
+
+                int valorRetornado = dAOContrasena.ActualizarContra();
+
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+              }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

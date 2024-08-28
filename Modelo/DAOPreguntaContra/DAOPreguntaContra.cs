@@ -37,48 +37,60 @@ namespace PTC.Modelo.DAOPreguntaContra
                 Console.WriteLine($"Error: {ex.Message}");
                 return -1;
             }
-        }
+            finally
+            {
+                getConnection().Close();
+            }
+        
+    }
 
 
         public bool ValidarPreguntaRespuestaSeguridad(string email, string preguntaSeguridadIngresada, string respuestaSeguridadIngresada)
         {
             try
             {
-                using (SqlConnection conn = getConnection())
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    conn.Open(); // Asegúrate de abrir la conexión
+                    cmd.Connection = getConnection();
 
-                    using (SqlCommand cmd = new SqlCommand())
-                    {
-                        cmd.Connection = conn;
-                        cmd.CommandText = "SELECT preguntaSeguridad, respuestaSeguridad FROM Personal WHERE Email = @email";
+                    string query = "SELECT preguntaID, Respuesta FROM Personal WHERE Email = @email";
+
+                        cmd.CommandText = query;
                         cmd.Parameters.AddWithValue("@email", email);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                string preguntaSeguridad = reader["preguntaSeguridad"].ToString();
-                                string respuestaSeguridad = reader["respuestaSeguridad"].ToString();
+                                string preguntaSeguridad = reader["preguntaID"].ToString();
+                                string respuestaSeguridad = reader["Respuesta"].ToString();
 
-                                // Verificar la pregunta y respuesta de seguridad
-                                return preguntaSeguridad == preguntaSeguridadIngresada && respuestaSeguridad == respuestaSeguridadIngresada;
+                            if (preguntaSeguridad == preguntaSeguridadIngresada && respuestaSeguridad == respuestaSeguridadIngresada)
+                            {
+                                return true;
                             }
                         }
+
+                        return false;
                     }
+
+
                 }
+                    
+                
             }
             catch (Exception ex)
             {
+
                 Console.WriteLine($"Error al validar pregunta y respuesta de seguridad: {ex.Message}");
             }
             finally
             {
                 getConnection().Close();
             }
-
             return false;
-        }
+        
+    }
 
             public DataSet ComboBoxPreguntas()
         {
