@@ -89,7 +89,6 @@
     <Compile Include="Controller\Registro\ControllerRegistro.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
-    <Compile Include="Controller\VerInfo\ControllerVerInfo.cs" />
     <Compile Include="Controller\VerPerfil\ControllerVerPerfil.cs" />
     <Compile Include="Modelo\DAOCitas\DAOCitas.cs" />
     <Compile Include="Modelo\DAOContrasena\DAOContrasena.cs" />

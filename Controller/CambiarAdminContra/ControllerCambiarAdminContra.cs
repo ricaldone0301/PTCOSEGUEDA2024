@@ -1,4 +1,5 @@
 ﻿using PTC.Controller.Common;
+using PTC.Modelo.DAOContrasena;
 using PTC.Modelo.DAOLogin;
 using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.RecuperarContra;
@@ -14,6 +15,7 @@ namespace PTC.Controller.CambiarAdminContra
     internal class ControllerCambiarAdminContra
     {
         ViewCambiarContra ObjCambiarContra;
+        ViewVerContra ObjViewverContra;
         private int accion;
         private string rol;
         private int intentosFallidos;
@@ -28,9 +30,18 @@ namespace PTC.Controller.CambiarAdminContra
             DAOUsuarios objUsuario = new DAOUsuarios();
             DAOLogin objUsuarioLogin = new DAOLogin();
             CommonClass common = new CommonClass();
-            objUsuarioLogin.UsuarioNormal = ObjCambiarContra.TxtUsuario.Text;
+            objUsuario.Usuario = ObjCambiarContra.TxtUsuario.Text;
             string cadenaencriptada = common.ComputeSha256Hash(ObjCambiarContra.TxtContra.Text);
             objUsuario.Contrasena = cadenaencriptada;
+
+
+
+           /* objUsuario.Usuario = ObjViewverContra.txtUsuario.Text;
+            string cadenaencriptada = common.ComputeSha256Hash
+                (ObjViewverContra.TxtContra.Text);
+            objUsuario.ContrasenaNormal = cadenaencriptada*/
+
+
 
 
             bool answer = objUsuario.VerificarCredenciales();
@@ -39,17 +50,20 @@ namespace PTC.Controller.CambiarAdminContra
 
             if (answer == true)
             {
-                if (objUsuario.CambiarContra() == 1)
-                {
+                
+                objUsuario.Usuario = SessionVar.Usuario;
+                objUsuario.Contrasena = SessionVar.NuevaContra;
+
+                objUsuario.CambiarContra();
                     MessageBox.Show("Las credenciales son correctas, contrasea cambiada.", "Cambio de contrasea exitoso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ObjCambiarContra.Hide();
                 }
-                else
+                  else if (answer == false)
                 {
                     MessageBox.Show("Las credenciales son correctas, pero la contrasea no pudo ser cambiada.", "Cambio de contrasea interrumpido.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                
             }
-            else
+             else
             {
                 MessageBox.Show("Credenciales incorectas, verifique que las credenciales pertenezcan a un administrador.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

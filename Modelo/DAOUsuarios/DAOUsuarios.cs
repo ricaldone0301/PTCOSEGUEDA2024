@@ -310,25 +310,15 @@ namespace PTC.Modelo.DAOUsuarios
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT * FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password AND nombreRol = 'Administrador'";
+                string query = "SELECT COUNT(*) FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password AND nombreRol = 'Administrador'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", Usuario);
                 cmd.Parameters.AddWithValue("@password", Contrasena);
-                SqlDataReader rd = cmd.ExecuteReader();
 
-                while (rd.Read())
-                {
-                    SessionVar.Usuario = rd.GetString(1);
-                    SessionVar.Contrasena = rd.GetString(2);
-                    SessionVar.Rol = rd.GetString(3);
-                    SessionVar.Nombre = rd.GetString(0);
-                    //
-                    SessionVar.NombreConsul = rd.GetString(6);
-                    SessionVar.Telefono = rd.GetString(7);
-                    SessionVar.NombreEsp = rd.GetString(4);
-                    SessionVar.Email = rd.GetString(5);
-                }
-                return rd.HasRows;
+
+                    int count = (int)cmd.ExecuteScalar();
+
+                    return count > 0;
 
             }
             catch (Exception ex)
@@ -336,9 +326,11 @@ namespace PTC.Modelo.DAOUsuarios
                 MessageBox.Show(ex.Message);
                 return false;
             }
-            finally { getConnection().Close(); }
+            finally
+            {
+                getConnection().Close();
+            }
         }
-
         public int CambiarContra()
         {
             try
@@ -347,8 +339,8 @@ namespace PTC.Modelo.DAOUsuarios
                 Command.Connection = getConnection();
                 string query = "UPDATE Personal SET contraseñaPersonal = @contra WHERE usuarioPersonal = @usuario";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                //cmd.Parameters.AddWithValue("@usuario", UsuarioNormal);
-                cmd.Parameters.AddWithValue("@contra",ContrasenaNormal);
+                cmd.Parameters.AddWithValue("@usuario", Usuario);
+                cmd.Parameters.AddWithValue("@contra", Contrasena);
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }

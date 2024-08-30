@@ -18,6 +18,7 @@ namespace PTC.Controller.VerPerfil
     {
         ViewVerContra ObjVerContra;
         ViewCambiarContra ObjCambiarContra;
+        ViewDashboard ObjDashboard;
         private int accion;
         private string rol;
         private int intentosFallidos;
@@ -99,13 +100,24 @@ namespace PTC.Controller.VerPerfil
         public void CambiarContra(object sender, EventArgs e)
         {
             DAOLogin DAOData = new DAOLogin();
-            CommonClass common = new CommonClass();
+            DAOUsuarios dAOUsuarios = new DAOUsuarios();
+
+           CommonClass common = new CommonClass();
+
+
             DAOData.Usuario = ObjVerContra.txtUsuario.Text;
-            DAOData.UsuarioNormal = DAOData.Usuario;
+            DAOData.Contrasena = ObjVerContra.txtContrasena.Text;
+
             string cadenaencriptada = common.ComputeSha256Hash(ObjVerContra.txtContrasena.Text);
             DAOData.Contrasena = cadenaencriptada;
+
+            SessionVar.NuevaContra = cadenaencriptada;
+
+
             ViewCambiarContra vistacambiarcontra = new ViewCambiarContra();
             vistacambiarcontra.ShowDialog();
+
+
 
         }
     }
