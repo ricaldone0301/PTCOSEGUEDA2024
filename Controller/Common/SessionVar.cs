@@ -19,6 +19,7 @@ namespace PTC.Controller.Common
         public static string access;
         private static int personalId;
         private static string email;
+        private static string nuevaContra;
 
         public static string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
         public static string Usuario { get => usuarioPersonal; set => usuarioPersonal = value; }
@@ -32,5 +33,6 @@ namespace PTC.Controller.Common
         public static string Email { get => email; set => email = value; }
         public static string NombreConsul { get => nombreConsul; set => nombreConsul = value; }
         public static string NombreEsp { get => nombreEsp; set => nombreEsp = value; }
+        public static string NuevaContra { get => nuevaContra; set => nuevaContra = value; }
     }
 }
