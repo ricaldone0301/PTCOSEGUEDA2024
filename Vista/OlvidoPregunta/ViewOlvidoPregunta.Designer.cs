@@ -35,15 +35,15 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbPregunta = new System.Windows.Forms.ComboBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtRespuesta = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtRespuesta = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cbPregunta = new System.Windows.Forms.ComboBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -132,10 +132,64 @@
             this.panel1.Size = new System.Drawing.Size(1010, 569);
             this.panel1.TabIndex = 20;
             // 
+            // cbPregunta
+            // 
+            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPregunta.FormattingEnabled = true;
+            this.cbPregunta.Location = new System.Drawing.Point(210, 133);
+            this.cbPregunta.Name = "cbPregunta";
+            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
+            this.cbPregunta.TabIndex = 40;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(210, 300);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.MaxLength = 255;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ShortcutsEnabled = false;
+            this.txtEmail.Size = new System.Drawing.Size(209, 22);
+            this.txtEmail.TabIndex = 39;
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(205, 262);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(71, 25);
+            this.bunifuCustomLabel4.TabIndex = 38;
+            this.bunifuCustomLabel4.Text = "EMAIL";
+            // 
+            // txtRespuesta
+            // 
+            this.txtRespuesta.Location = new System.Drawing.Point(210, 218);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta.MaxLength = 300;
+            this.txtRespuesta.Name = "txtRespuesta";
+            this.txtRespuesta.ShortcutsEnabled = false;
+            this.txtRespuesta.Size = new System.Drawing.Size(209, 22);
+            this.txtRespuesta.TabIndex = 37;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(205, 180);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(118, 25);
+            this.bunifuCustomLabel1.TabIndex = 36;
+            this.bunifuCustomLabel1.Text = "RESPUESTA";
+            // 
             // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(210, 389);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.MaxLength = 256;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
@@ -180,57 +234,6 @@
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(115, 25);
             this.bunifuCustomLabel6.TabIndex = 18;
             this.bunifuCustomLabel6.Text = "PREGUNTA";
-            // 
-            // txtRespuesta
-            // 
-            this.txtRespuesta.Location = new System.Drawing.Point(210, 218);
-            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.ShortcutsEnabled = false;
-            this.txtRespuesta.Size = new System.Drawing.Size(209, 22);
-            this.txtRespuesta.TabIndex = 37;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(205, 180);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(118, 25);
-            this.bunifuCustomLabel1.TabIndex = 36;
-            this.bunifuCustomLabel1.Text = "RESPUESTA";
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(205, 262);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(71, 25);
-            this.bunifuCustomLabel4.TabIndex = 38;
-            this.bunifuCustomLabel4.Text = "EMAIL";
-            // 
-            // cbPregunta
-            // 
-            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPregunta.FormattingEnabled = true;
-            this.cbPregunta.Location = new System.Drawing.Point(210, 133);
-            this.cbPregunta.Name = "cbPregunta";
-            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
-            this.cbPregunta.TabIndex = 40;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(210, 300);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ShortcutsEnabled = false;
-            this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 39;
             // 
             // ViewOlvidoPregunta
             // 

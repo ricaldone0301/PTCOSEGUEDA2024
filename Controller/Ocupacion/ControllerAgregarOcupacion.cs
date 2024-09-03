@@ -63,27 +63,31 @@ namespace PTC.Controller.Ocupacion
         {
             try
             {
-                DAOOcupacion daoAdmin = new DAOOcupacion();
-                CommonClass commonClass = new CommonClass();
+                if (!(string.IsNullOrEmpty(ObjAgregarOcupacion.txtNombre.Text.Trim())))
 
-                daoAdmin.NombreOcupacion = ObjAgregarOcupacion.txtNombre.Text.Trim();
-                //daoAdmin.OcupacionID = (int)ObjAgregarOcupacion.cbOcupacion.SelectedValue;
-
-                int valorRetornado = daoAdmin.RegistrarOcupacion();
-
-                if (valorRetornado == 1)
                 {
-                    MessageBox.Show("Los datos han sido registrados exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    DAOOcupacion daoAdmin = new DAOOcupacion();
+                    CommonClass commonClass = new CommonClass();
+
+                    daoAdmin.NombreOcupacion = ObjAgregarOcupacion.txtNombre.Text.Trim();
+                    //daoAdmin.OcupacionID = (int)ObjAgregarOcupacion.cbOcupacion.SelectedValue;
+
+                    int valorRetornado = daoAdmin.RegistrarOcupacion();
+
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los datos han sido registrados exitosamente",
+                                        "Proceso completado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos no pudieron ser registrados",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

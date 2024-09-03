@@ -101,6 +101,7 @@
             this.txtNombreAlergiaMedicamento.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreAlergiaMedicamento.Location = new System.Drawing.Point(817, 522);
             this.txtNombreAlergiaMedicamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreAlergiaMedicamento.MaxLength = 300;
             this.txtNombreAlergiaMedicamento.Multiline = true;
             this.txtNombreAlergiaMedicamento.Name = "txtNombreAlergiaMedicamento";
             this.txtNombreAlergiaMedicamento.ShortcutsEnabled = false;
@@ -130,6 +131,7 @@
             this.txtMotivoConsulta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotivoConsulta.Location = new System.Drawing.Point(333, 384);
             this.txtMotivoConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMotivoConsulta.MaxLength = 300;
             this.txtMotivoConsulta.Multiline = true;
             this.txtMotivoConsulta.Name = "txtMotivoConsulta";
             this.txtMotivoConsulta.ShortcutsEnabled = false;
@@ -142,6 +144,7 @@
             this.txtNombreMedicamento.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreMedicamento.Location = new System.Drawing.Point(28, 619);
             this.txtNombreMedicamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreMedicamento.MaxLength = 300;
             this.txtNombreMedicamento.Multiline = true;
             this.txtNombreMedicamento.Name = "txtNombreMedicamento";
             this.txtNombreMedicamento.ShortcutsEnabled = false;
@@ -181,6 +184,7 @@
             this.txtRecuperacionOperacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecuperacionOperacion.Location = new System.Drawing.Point(27, 739);
             this.txtRecuperacionOperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRecuperacionOperacion.MaxLength = 300;
             this.txtRecuperacionOperacion.Multiline = true;
             this.txtRecuperacionOperacion.Name = "txtRecuperacionOperacion";
             this.txtRecuperacionOperacion.ShortcutsEnabled = false;
@@ -206,6 +210,7 @@
             this.txtTipoOperacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoOperacion.Location = new System.Drawing.Point(920, 655);
             this.txtTipoOperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTipoOperacion.MaxLength = 100;
             this.txtTipoOperacion.Multiline = true;
             this.txtTipoOperacion.Name = "txtTipoOperacion";
             this.txtTipoOperacion.ShortcutsEnabled = false;
@@ -296,6 +301,7 @@
             this.txtNumMedicoCabecera.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumMedicoCabecera.Location = new System.Drawing.Point(516, 522);
             this.txtNumMedicoCabecera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumMedicoCabecera.MaxLength = 20;
             this.txtNumMedicoCabecera.Name = "txtNumMedicoCabecera";
             this.txtNumMedicoCabecera.ShortcutsEnabled = false;
             this.txtNumMedicoCabecera.Size = new System.Drawing.Size(272, 26);
@@ -320,6 +326,7 @@
             this.txtMedicoCabeceraNombre.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicoCabeceraNombre.Location = new System.Drawing.Point(28, 522);
             this.txtMedicoCabeceraNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMedicoCabeceraNombre.MaxLength = 20;
             this.txtMedicoCabeceraNombre.Name = "txtMedicoCabeceraNombre";
             this.txtMedicoCabeceraNombre.ShortcutsEnabled = false;
             this.txtMedicoCabeceraNombre.Size = new System.Drawing.Size(453, 26);
@@ -409,6 +416,7 @@
             this.txtNumEmergencia.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumEmergencia.Location = new System.Drawing.Point(28, 384);
             this.txtNumEmergencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumEmergencia.MaxLength = 20;
             this.txtNumEmergencia.Name = "txtNumEmergencia";
             this.txtNumEmergencia.ShortcutsEnabled = false;
             this.txtNumEmergencia.Size = new System.Drawing.Size(269, 26);
@@ -420,6 +428,7 @@
             this.txtNombreEmergencia.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEmergencia.Location = new System.Drawing.Point(834, 298);
             this.txtNombreEmergencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreEmergencia.MaxLength = 20;
             this.txtNombreEmergencia.Name = "txtNombreEmergencia";
             this.txtNombreEmergencia.ShortcutsEnabled = false;
             this.txtNombreEmergencia.Size = new System.Drawing.Size(395, 26);
@@ -444,6 +453,7 @@
             this.txtReferencia.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReferencia.Location = new System.Drawing.Point(326, 298);
             this.txtReferencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtReferencia.MaxLength = 50;
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.ShortcutsEnabled = false;
             this.txtReferencia.Size = new System.Drawing.Size(469, 26);
@@ -468,6 +478,7 @@
             this.txtDUI.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDUI.Location = new System.Drawing.Point(28, 298);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDUI.MaxLength = 12;
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.ShortcutsEnabled = false;
             this.txtDUI.Size = new System.Drawing.Size(263, 26);
@@ -492,6 +503,7 @@
             this.txtDireccionPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionPaciente.Location = new System.Drawing.Point(769, 166);
             this.txtDireccionPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDireccionPaciente.MaxLength = 200;
             this.txtDireccionPaciente.Multiline = true;
             this.txtDireccionPaciente.Name = "txtDireccionPaciente";
             this.txtDireccionPaciente.ShortcutsEnabled = false;
@@ -542,6 +554,7 @@
             this.txtCorreoPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoPaciente.Location = new System.Drawing.Point(28, 160);
             this.txtCorreoPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCorreoPaciente.MaxLength = 50;
             this.txtCorreoPaciente.Name = "txtCorreoPaciente";
             this.txtCorreoPaciente.ShortcutsEnabled = false;
             this.txtCorreoPaciente.Size = new System.Drawing.Size(453, 26);
@@ -589,6 +602,7 @@
             this.txtTelefonoPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoPaciente.Location = new System.Drawing.Point(642, 82);
             this.txtTelefonoPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTelefonoPaciente.MaxLength = 20;
             this.txtTelefonoPaciente.Name = "txtTelefonoPaciente";
             this.txtTelefonoPaciente.ShortcutsEnabled = false;
             this.txtTelefonoPaciente.Size = new System.Drawing.Size(272, 26);
@@ -624,6 +638,7 @@
             this.txtEdadPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdadPaciente.Location = new System.Drawing.Point(526, 76);
             this.txtEdadPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEdadPaciente.MaxLength = 2;
             this.txtEdadPaciente.Name = "txtEdadPaciente";
             this.txtEdadPaciente.ShortcutsEnabled = false;
             this.txtEdadPaciente.Size = new System.Drawing.Size(32, 26);
@@ -648,6 +663,7 @@
             this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombrePaciente.Location = new System.Drawing.Point(28, 76);
             this.txtNombrePaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombrePaciente.MaxLength = 100;
             this.txtNombrePaciente.Name = "txtNombrePaciente";
             this.txtNombrePaciente.ShortcutsEnabled = false;
             this.txtNombrePaciente.Size = new System.Drawing.Size(469, 26);
@@ -713,6 +729,7 @@
             this.txtNombreOcupacion.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreOcupacion.Location = new System.Drawing.Point(7, 38);
             this.txtNombreOcupacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreOcupacion.MaxLength = 70;
             this.txtNombreOcupacion.Name = "txtNombreOcupacion";
             this.txtNombreOcupacion.ShortcutsEnabled = false;
             this.txtNombreOcupacion.Size = new System.Drawing.Size(303, 26);
@@ -722,8 +739,9 @@
             // txtPadecimientos
             // 
             this.txtPadecimientos.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPadecimientos.Location = new System.Drawing.Point(753, 384);
+            this.txtPadecimientos.Location = new System.Drawing.Point(757, 389);
             this.txtPadecimientos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPadecimientos.MaxLength = 300;
             this.txtPadecimientos.Multiline = true;
             this.txtPadecimientos.Name = "txtPadecimientos";
             this.txtPadecimientos.ShortcutsEnabled = false;

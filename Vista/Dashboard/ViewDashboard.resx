@@ -125,18 +125,21 @@
         VGJmqER3U4mqohKZSSUigkq4O5UwM/4bHxUBgqpAHCGvAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnAcercaDe.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAALUAAAAuCAYAAABu8lgpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVHhe7cExAQAAAMKg9U9tCF8gAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAABuNYJGAAFKZEayAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADsSURBVEhL7ZI9CgIxEIW3E6zsvImotY2eSrDz5zQKnkK9
+        g6KtFxD0vWVeWLJZMgGx8oOPZDLJTNhs9edbLOANvp1y7xy6KSkur9CNDnkp3f/7BqVxliUsKRjHgR7c
+        wYe5tTVytNFDZwMWVFKuIZnZ6EFnW/DWTIzhxOZ3SAY2krhALg6oAYtPba4GTeICuTiwgUpKfaISdLYF
+        H5RNeGvK4nrkEjobeIkL5OKaIVzBM3yanHONuSa5gnFc/zUsqEQscyPoRecCF8iFPWSzvsm/6QCZO0Ev
+        rQYvqMUuuUek8ikDqWRKkcql/JOjqj5Zu6keNL0oNAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnRecuperar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAARgAAAAuCAYAAADz2gaIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cEBDQAAAMKg909tDwcEAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFyrAcluAAFpqzpYAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAJcAAABOCAYAAAAtroSeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABESURBVHhe7cEBAQAAAIIg/69uSEAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwoga4VgABRUhj2wAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnProcedimientos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1020,6 +1023,14 @@
         yRdlVpAyE8kXZVaQMhPJF2VWkDITyRdlVpAyE8kXZVaQMhPJF2VWkDITyRdlVpAyE8kXZVaQMhPJF2VW
         0MnJqyYKTUSWz9HxS2UGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAABQi0uX/gd8FDaTDjZEaAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuSeparator2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA1EAAAARCAYAAAA8NSZbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABxSURBVHhe7dwxEQAgEAPBuEMI/jU8DQJIze7MiUiTAAAA
+        AAAAAAAAAAAAAAAAAAAAAACz10iSJEmS3jKiJEmSJKnIiJIkSZKkIiNKkiRJkoqMKEmSJEkquvcSAAAA
+        AAAAAAAAAAAAAAAAAAAAAPCt5ADEfA5dqcDUAwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

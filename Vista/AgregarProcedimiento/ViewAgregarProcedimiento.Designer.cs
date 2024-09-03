@@ -140,6 +140,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(28, 195);
+            this.txtDescripcion.MaxLength = 400;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ShortcutsEnabled = false;
@@ -171,6 +172,7 @@
             // txtNombreProcedimiento
             // 
             this.txtNombreProcedimiento.Location = new System.Drawing.Point(25, 53);
+            this.txtNombreProcedimiento.MaxLength = 255;
             this.txtNombreProcedimiento.Name = "txtNombreProcedimiento";
             this.txtNombreProcedimiento.ShortcutsEnabled = false;
             this.txtNombreProcedimiento.Size = new System.Drawing.Size(517, 22);

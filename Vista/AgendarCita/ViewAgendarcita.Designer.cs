@@ -106,6 +106,7 @@
             // txtHora
             // 
             this.txtHora.Location = new System.Drawing.Point(299, 229);
+            this.txtHora.MaxLength = 8;
             this.txtHora.Name = "txtHora";
             this.txtHora.ShortcutsEnabled = false;
             this.txtHora.Size = new System.Drawing.Size(102, 22);

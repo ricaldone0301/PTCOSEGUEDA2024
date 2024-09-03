@@ -19,7 +19,8 @@ namespace PTC.Modelo.DTOUsuarios
         private string email;
         private string usuarioNormal;
         private string contrasenaNormal;
-
+        private int preguntaID;
+        private string respuesta;
         public string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
         public int PersonalId { get => personalID; set => personalID = value; }
         public int EspecialidadId { get => especialidadID; set => especialidadID = value; }
@@ -32,5 +33,7 @@ namespace PTC.Modelo.DTOUsuarios
  
         public string ContrasenaNormal { get => contrasenaNormal; set => contrasenaNormal = value; }
         public string UsuarioNormal { get => usuarioNormal; set => usuarioNormal = value; }
+        public int PreguntaID { get => preguntaID; set => preguntaID = value; }
+        public string Respuesta { get => respuesta; set => respuesta = value; }
     }
 }

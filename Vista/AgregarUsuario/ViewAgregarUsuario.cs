@@ -24,11 +24,11 @@ namespace PTC.Vista.AgregarDoctores
             ControllerAgregarusuario objAgregarUsuario = new ControllerAgregarusuario(this, accion);
         }
 
-        public ViewAgregarUsuario(int accion, string Nombre, string PersonalID, int rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
+        public ViewAgregarUsuario(int accion, string Nombre, string PersonalID, int rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta)
         {
             InitializeComponent();
             TextBoxMenuEliminar();
-            ControllerAgregarusuario objActualiarUsuario = new ControllerAgregarusuario(this, accion, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
+            ControllerAgregarusuario objActualiarUsuario = new ControllerAgregarusuario(this, accion, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta);
         }
 
 

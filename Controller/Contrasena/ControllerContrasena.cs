@@ -74,21 +74,24 @@ namespace PTC.Controller
             {
                 try
                 {
-                    DAOContrasena dAOContrasena = new DAOContrasena();
-                    CommonClass common = new CommonClass();
-                    string cadenaencriptada = common.ComputeSha256Hash(ObjContrasena.txtContrasena.Text);
-                    dAOContrasena.Contrasena = cadenaencriptada;
-                    dAOContrasena.Email = ObjContrasena.txtEmail.Text.Trim();
-
-                    int valorRetornado = dAOContrasena.ActualizarContra();
-
-                    if (valorRetornado == 1)
+                    if (!(string.IsNullOrEmpty(ObjContrasena.txtContrasena.Text.Trim())))
                     {
-                        MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DAOContrasena dAOContrasena = new DAOContrasena();
+                        CommonClass common = new CommonClass();
+                        string cadenaencriptada = common.ComputeSha256Hash(ObjContrasena.txtContrasena.Text);
+                        dAOContrasena.Contrasena = cadenaencriptada;
+                        dAOContrasena.Email = ObjContrasena.txtEmail.Text.Trim();
+
+                        int valorRetornado = dAOContrasena.ActualizarContra();
+
+                        if (valorRetornado == 1)
+                        {
+                            MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 catch (Exception ex)

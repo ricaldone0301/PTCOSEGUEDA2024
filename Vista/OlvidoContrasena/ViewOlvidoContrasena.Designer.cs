@@ -128,6 +128,7 @@
             // 
             this.txtContrasena.Location = new System.Drawing.Point(210, 292);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.MaxLength = 255;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
@@ -166,6 +167,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(210, 196);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.MaxLength = 256;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);

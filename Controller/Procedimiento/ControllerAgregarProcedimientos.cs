@@ -78,8 +78,9 @@ namespace PTC.Controller.Procedimiento
         {
             try
             {
-                //Se crea para interatuar con la base de datos.
-                DAOProcedimiento daoAdmin = new DAOProcedimiento();
+
+                        //Se crea para interatuar con la base de datos.
+                        DAOProcedimiento daoAdmin = new DAOProcedimiento();
 
                 //Se les asigna valores de la vista y luego se le asigna al objeto en el dao.
                 daoAdmin.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();

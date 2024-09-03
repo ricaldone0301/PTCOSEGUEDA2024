@@ -214,6 +214,7 @@
             // 
             this.txtContrasena.Location = new System.Drawing.Point(42, 341);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.MaxLength = 256;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);

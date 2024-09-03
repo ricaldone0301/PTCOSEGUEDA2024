@@ -36,8 +36,8 @@
             this.btnOlvido = new System.Windows.Forms.LinkLabel();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.BtnRegistro = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.BtnRegistro = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,7 @@
             this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
             this.TxtUsuario.Location = new System.Drawing.Point(603, 373);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUsuario.MaxLength = 30;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.ShortcutsEnabled = false;
             this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
@@ -115,11 +116,13 @@
             this.TxtContra.ForeColor = System.Drawing.Color.Gray;
             this.TxtContra.Location = new System.Drawing.Point(603, 453);
             this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtContra.MaxLength = 256;
             this.TxtContra.Name = "TxtContra";
             this.TxtContra.ShortcutsEnabled = false;
             this.TxtContra.Size = new System.Drawing.Size(380, 39);
             this.TxtContra.TabIndex = 14;
             this.TxtContra.Text = "Contraseña";
+            this.TxtContra.TextChanged += new System.EventHandler(this.TxtContra_TextChanged);
             // 
             // bunifuGradientPanel1
             // 
@@ -142,20 +145,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(677, 485);
             this.bunifuGradientPanel1.TabIndex = 22;
             // 
-            // BtnRegistro
-            // 
-            this.BtnRegistro.ActiveLinkColor = System.Drawing.SystemColors.Window;
-            this.BtnRegistro.AutoSize = true;
-            this.BtnRegistro.BackColor = System.Drawing.Color.White;
-            this.BtnRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.BtnRegistro.Location = new System.Drawing.Point(456, 361);
-            this.BtnRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.BtnRegistro.Name = "BtnRegistro";
-            this.BtnRegistro.Size = new System.Drawing.Size(58, 16);
-            this.BtnRegistro.TabIndex = 23;
-            this.BtnRegistro.TabStop = true;
-            this.BtnRegistro.Text = "Registro";
-            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.Window;
@@ -170,6 +159,20 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperacion por pregunta";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // BtnRegistro
+            // 
+            this.BtnRegistro.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.BtnRegistro.AutoSize = true;
+            this.BtnRegistro.BackColor = System.Drawing.Color.White;
+            this.BtnRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.BtnRegistro.Location = new System.Drawing.Point(456, 361);
+            this.BtnRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.BtnRegistro.Name = "BtnRegistro";
+            this.BtnRegistro.Size = new System.Drawing.Size(58, 16);
+            this.BtnRegistro.TabIndex = 23;
+            this.BtnRegistro.TabStop = true;
+            this.BtnRegistro.Text = "Registro";
             // 
             // ViewLogin
             // 

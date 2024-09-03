@@ -166,33 +166,37 @@ namespace PTC.Controller.Cita
         {
             try
             {
-                DAOCitas daoAdmin = new DAOCitas();
-
-                daoAdmin.PacienteID = int.Parse(ObjAgendarCita.cbPaciente.SelectedValue.ToString());
-                daoAdmin.PersonalID = (int.Parse(ObjAgendarCita.cbDoctor.SelectedValue.ToString())).ToString();
-                daoAdmin.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
-                daoAdmin.Hora = ObjAgendarCita.txtHora.Text.ToString();
-                daoAdmin.Fecha = ObjAgendarCita.Fecha.Value.Date;
-                daoAdmin.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
-
-
-                //daoAdmin.CitaID = ObjAgendarCita.txtUsuario.Text.Trim();
-
-                int valorRetornado = daoAdmin.AgendarCita();
-
-                if (valorRetornado == 1)
+                if (ObjAgendarCita.Fecha != null &&
+                    !string.IsNullOrWhiteSpace(ObjAgendarCita.txtHora.Text))
                 {
-                    MessageBox.Show("Los cita ha sido registrados exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Los cita no pudo ser registrada.",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    DAOCitas daoAdmin = new DAOCitas();
+
+                    daoAdmin.PacienteID = int.Parse(ObjAgendarCita.cbPaciente.SelectedValue.ToString());
+                    daoAdmin.PersonalID = (int.Parse(ObjAgendarCita.cbDoctor.SelectedValue.ToString())).ToString();
+                    daoAdmin.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
+                    daoAdmin.Hora = ObjAgendarCita.txtHora.Text.ToString();
+                    daoAdmin.Fecha = ObjAgendarCita.Fecha.Value.Date;
+                    daoAdmin.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
+
+
+                    //daoAdmin.CitaID = ObjAgendarCita.txtUsuario.Text.Trim();
+
+                    int valorRetornado = daoAdmin.AgendarCita();
+
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los cita ha sido registrados exitosamente",
+                                        "Proceso completado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los cita no pudo ser registrada.",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

@@ -109,6 +109,7 @@
             // 
             this.txtDireccion.Location = new System.Drawing.Point(58, 205);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDireccion.MaxLength = 500;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
@@ -132,6 +133,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(58, 361);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTelefono.MaxLength = 20;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(257, 22);
@@ -153,6 +155,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(58, 461);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(519, 22);
@@ -175,6 +178,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(58, 119);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.MaxLength = 150;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(519, 22);

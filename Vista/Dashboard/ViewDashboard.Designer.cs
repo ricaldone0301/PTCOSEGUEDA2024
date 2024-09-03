@@ -32,7 +32,6 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnAcercaDe = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnRecuperar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -50,13 +49,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.PanelPadre.SuspendLayout();
-            this.SuspendLayout();
             // 
             // bunifuCustomLabel10
             // 
@@ -64,7 +64,7 @@
             this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(312, 188);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(92, 62);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(688, 31);
             this.bunifuCustomLabel10.TabIndex = 30;
@@ -86,7 +86,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ok.Controls.Add(this.btnAcercaDe);
+            this.ok.Controls.Add(this.pictureBox4);
             this.ok.Controls.Add(this.btnRecuperar);
             this.ok.Controls.Add(this.btnProcedimientos);
             this.ok.Controls.Add(this.btnUsuarios);
@@ -104,39 +104,13 @@
             this.ok.GradientBottomRight = System.Drawing.Color.LightGray;
             this.ok.GradientTopLeft = System.Drawing.Color.White;
             this.ok.GradientTopRight = System.Drawing.Color.White;
-            this.ok.Location = new System.Drawing.Point(0, 1);
+            this.ok.Location = new System.Drawing.Point(0, -10);
             this.ok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ok.Name = "ok";
             this.ok.Quality = 10;
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ok.Size = new System.Drawing.Size(270, 884);
+            this.ok.Size = new System.Drawing.Size(270, 895);
             this.ok.TabIndex = 20;
-            // 
-            // btnAcercaDe
-            // 
-            this.btnAcercaDe.ActiveBorderThickness = 1;
-            this.btnAcercaDe.ActiveCornerRadius = 20;
-            this.btnAcercaDe.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.btnAcercaDe.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btnAcercaDe.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.btnAcercaDe.BackColor = System.Drawing.Color.Transparent;
-            this.btnAcercaDe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAcercaDe.BackgroundImage")));
-            this.btnAcercaDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAcercaDe.ButtonText = "ACERCA DE";
-            this.btnAcercaDe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAcercaDe.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcercaDe.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnAcercaDe.IdleBorderThickness = 1;
-            this.btnAcercaDe.IdleCornerRadius = 20;
-            this.btnAcercaDe.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btnAcercaDe.IdleForecolor = System.Drawing.Color.MidnightBlue;
-            this.btnAcercaDe.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnAcercaDe.Location = new System.Drawing.Point(49, 587);
-            this.btnAcercaDe.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAcercaDe.Name = "btnAcercaDe";
-            this.btnAcercaDe.Size = new System.Drawing.Size(181, 46);
-            this.btnAcercaDe.TabIndex = 13;
-            this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRecuperar
             // 
@@ -157,10 +131,10 @@
             this.btnRecuperar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnRecuperar.IdleForecolor = System.Drawing.Color.Tomato;
             this.btnRecuperar.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnRecuperar.Location = new System.Drawing.Point(0, 445);
+            this.btnRecuperar.Location = new System.Drawing.Point(66, 569);
             this.btnRecuperar.Margin = new System.Windows.Forms.Padding(5);
             this.btnRecuperar.Name = "btnRecuperar";
-            this.btnRecuperar.Size = new System.Drawing.Size(280, 46);
+            this.btnRecuperar.Size = new System.Drawing.Size(151, 78);
             this.btnRecuperar.TabIndex = 12;
             this.btnRecuperar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -183,7 +157,7 @@
             this.btnProcedimientos.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnProcedimientos.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnProcedimientos.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnProcedimientos.Location = new System.Drawing.Point(49, 230);
+            this.btnProcedimientos.Location = new System.Drawing.Point(77, 243);
             this.btnProcedimientos.Margin = new System.Windows.Forms.Padding(5);
             this.btnProcedimientos.Name = "btnProcedimientos";
             this.btnProcedimientos.Size = new System.Drawing.Size(181, 46);
@@ -272,7 +246,7 @@
             this.btnCitas.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnCitas.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnCitas.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnCitas.Location = new System.Drawing.Point(49, 398);
+            this.btnCitas.Location = new System.Drawing.Point(77, 411);
             this.btnCitas.Margin = new System.Windows.Forms.Padding(5);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(181, 46);
@@ -299,7 +273,7 @@
             this.btnOcupaciones.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnOcupaciones.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnOcupaciones.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnOcupaciones.Location = new System.Drawing.Point(49, 342);
+            this.btnOcupaciones.Location = new System.Drawing.Point(77, 355);
             this.btnOcupaciones.Margin = new System.Windows.Forms.Padding(5);
             this.btnOcupaciones.Name = "btnOcupaciones";
             this.btnOcupaciones.Size = new System.Drawing.Size(181, 46);
@@ -325,7 +299,7 @@
             this.btnPacientes.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnPacientes.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnPacientes.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnPacientes.Location = new System.Drawing.Point(49, 286);
+            this.btnPacientes.Location = new System.Drawing.Point(77, 299);
             this.btnPacientes.Margin = new System.Windows.Forms.Padding(5);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(181, 46);
@@ -351,7 +325,7 @@
             this.btnInicio.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnInicio.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.btnInicio.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnInicio.Location = new System.Drawing.Point(49, 174);
+            this.btnInicio.Location = new System.Drawing.Point(77, 181);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(5);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(181, 46);
@@ -386,10 +360,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 19);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -410,20 +384,18 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
-            this.PanelContenedor.Controls.Add(this.pictureBox3);
-            this.PanelContenedor.Controls.Add(this.bunifuCustomLabel10);
-            this.PanelContenedor.Location = new System.Drawing.Point(269, 0);
+            this.PanelContenedor.Location = new System.Drawing.Point(266, -12);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1433, 885);
+            this.PanelContenedor.Size = new System.Drawing.Size(1436, 897);
             this.PanelContenedor.TabIndex = 32;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(331, 248);
+            this.pictureBox3.Location = new System.Drawing.Point(139, 112);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(636, 284);
+            this.pictureBox3.Size = new System.Drawing.Size(604, 318);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 31;
             this.pictureBox3.TabStop = false;
@@ -432,11 +404,43 @@
             // 
             this.PanelPadre.Controls.Add(this.ok);
             this.PanelPadre.Controls.Add(this.PanelContenedor);
-            this.PanelPadre.Location = new System.Drawing.Point(1, 2);
+            this.PanelPadre.Location = new System.Drawing.Point(1, 11);
             this.PanelPadre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelPadre.Name = "PanelPadre";
-            this.PanelPadre.Size = new System.Drawing.Size(1705, 885);
+            this.PanelPadre.Size = new System.Drawing.Size(1705, 876);
             this.PanelPadre.TabIndex = 33;
+            // 
+            // bunifuCards1
+            // 
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Tomato;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 5;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 485);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(849, 17);
+            this.bunifuSeparator2.TabIndex = 33;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(96, 411);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // ViewDashboard
             // 
@@ -454,14 +458,15 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewDashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelContenedor.ResumeLayout(false);
-            this.PanelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.PanelPadre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,6 +493,7 @@
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
         private System.Windows.Forms.PictureBox pictureBox3;
         public Bunifu.Framework.UI.BunifuThinButton2 btnRecuperar;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnAcercaDe;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

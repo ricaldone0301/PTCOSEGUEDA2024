@@ -46,6 +46,33 @@ namespace PTC.Modelo.DAOUsuarios
             return ds;
             }
 
+        public DataSet ComboBoxPreguntas()
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    string query = "SELECT * FROM Preguntas";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+
+                    using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                    {
+                        adp.Fill(ds, "Preguntas");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                ds = null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+            return ds;
+        }
         public DataSet ComboBoxEspecialidad()
         {
             DataSet ds = new DataSet();
@@ -179,7 +206,9 @@ namespace PTC.Modelo.DAOUsuarios
                                 "contraseñaPersonal = @param6," +
                                 "roleID = @param7," +
                                 "email = @param8 " +
-                                "WHERE personalID = @param9";
+                                "preguntaID = @param9," +
+                                "Respuesta = @param10 " +
+                                "WHERE personalID = @param11";
               
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param1", Nombre);
@@ -190,7 +219,9 @@ namespace PTC.Modelo.DAOUsuarios
                 cmd.Parameters.AddWithValue("param6", Contrasena);
                 cmd.Parameters.AddWithValue("param7", Rol);
                 cmd.Parameters.AddWithValue("param8", Email);
-                cmd.Parameters.AddWithValue("param9", PersonalId);
+                cmd.Parameters.AddWithValue("param9", PreguntaID);
+                cmd.Parameters.AddWithValue("param10", Respuesta);
+                cmd.Parameters.AddWithValue("param11", PersonalId);
 
                 int respuesta = cmd.ExecuteNonQuery();               
                 return respuesta;

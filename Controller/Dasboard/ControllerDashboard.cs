@@ -19,7 +19,6 @@ using PTC.Controller.Common;
 using PTC.Vista.Paciente;
 using PTC.Vista.Ocupaciones;
 using PTC.Vista.RecuperarContra;
-using PTC.Vista.AcercaDe;
 
 namespace PTC.Controller.Dasboard
 {
@@ -41,7 +40,6 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.btnCitas.Click += new EventHandler(Citas);
             ObjDashboard.btnInicio.Click += new EventHandler(Inicio);
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
-            ObjDashboard.btnAcercaDe.Click += new EventHandler(AcercaDe);
             ObjDashboard.btnProcedimientos.Click += new EventHandler(Procedimientos);
             ObjDashboard.lblUsuario.Click += new EventHandler(Recuperar);
         }
@@ -49,11 +47,6 @@ namespace PTC.Controller.Dasboard
         private void Pacientes(object sender, EventArgs e)
         {
             AbrirFormulario<ViewPaciente>();
-        }
-
-        private void AcercaDe(object sender, EventArgs e)
-        {
-            AbrirFormulario<ViewAcercaDe>();
         }
 
         private void Procedimientos(object sender, EventArgs e)

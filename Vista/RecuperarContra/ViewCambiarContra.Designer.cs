@@ -43,6 +43,7 @@
             this.TxtContra.ForeColor = System.Drawing.Color.Gray;
             this.TxtContra.Location = new System.Drawing.Point(66, 221);
             this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtContra.MaxLength = 256;
             this.TxtContra.Name = "TxtContra";
             this.TxtContra.ShortcutsEnabled = false;
             this.TxtContra.Size = new System.Drawing.Size(380, 39);
@@ -55,6 +56,7 @@
             this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
             this.TxtUsuario.Location = new System.Drawing.Point(66, 163);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUsuario.MaxLength = 30;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.ShortcutsEnabled = false;
             this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
@@ -114,7 +116,7 @@
             this.BtnExit.TabIndex = 29;
             this.BtnExit.UseVisualStyleBackColor = true;
             // 
-            // ViewRecuperarContra
+            // ViewCambiarContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +129,7 @@
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.TxtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ViewRecuperarContra";
+            this.Name = "ViewCambiarContra";
             this.Text = "ViewRecuperarContra";
             this.ResumeLayout(false);
             this.PerformLayout();

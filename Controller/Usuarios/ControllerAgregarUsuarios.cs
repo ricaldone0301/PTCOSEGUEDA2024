@@ -1,4 +1,5 @@
 ﻿using PTC.Controller.Common;
+using PTC.Modelo.DAORegistro;
 using PTC.Modelo.DAOUsuarios;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.Registro;
@@ -33,14 +34,14 @@ namespace PTC.Controller.Usuarios
             //Al dar click en el boton agregar se llama al evento nuevo.
             ObjAgregarUsuario.btnAgregar.Click += new EventHandler(Nuevo);
         }
-        public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
+        public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta)
         {
             ObjAgregarUsuario = Vista;
             this.accion = accion;
             //llena la vista con los valores del usuario que se va a actualizar.
             ObjAgregarUsuario.Load += new EventHandler(CargoInicial);
             verificarAccion();
-            CargaValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email);
+            CargaValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta);
             this.personalId = int.Parse(PersonalID.ToString());
             //Al dar click al botn de actualizar se llama al metodo actualizarregistro.
             ObjAgregarUsuario.btnActualizar.Click += new EventHandler(ActualizarRegistro);
@@ -89,6 +90,17 @@ namespace PTC.Controller.Usuarios
                     ObjAgregarUsuario.cbConsul.DisplayMember = "nombreConsultorio";
 
                 }
+
+
+                DataSet dsPreguntas = objAdmin.ComboBoxPreguntas();
+                if (dsPreguntas != null && dsPreguntas.Tables.Contains("Preguntas"))
+                {
+                    DataTable dtPreguntas = dsPreguntas.Tables["Preguntas"];
+                    ObjAgregarUsuario.cbPregunta.DataSource = dtPreguntas;
+                    ObjAgregarUsuario.cbPregunta.ValueMember = "preguntaID";
+                    ObjAgregarUsuario.cbPregunta.DisplayMember = "tituloPregunta";
+
+                }
             }
             catch (Exception ex)
             {
@@ -132,39 +144,50 @@ namespace PTC.Controller.Usuarios
         {
             try
             {
-                //Se crea la instancia del dao para que interactue con l base de datows
-                DAOUsuarios daoAdmin = new DAOUsuarios();
-                //Extrae los datos del formulario.
-                CommonClass commonClass = new CommonClass();
+                if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtTelefono.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtUsuario.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtEmail.Text.Trim())))
 
-                daoAdmin.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
-                daoAdmin.EspecialidadId = (int)ObjAgregarUsuario.cbEsp.SelectedValue;
-                daoAdmin.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
-                daoAdmin.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
-                daoAdmin.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-                daoAdmin.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
-                daoAdmin.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
-                daoAdmin.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
-
-                //Registra al usuario en la base de datos.
-                //Si fue exitoso retorana 1 cy si no retorna 2 que no fueron exitosos
-                int valorRetornado = daoAdmin.RegistrarUsuario();
-
-                if (valorRetornado == 1)
                 {
-                    MessageBox.Show("Los datos han sido registrados exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
 
+                    //Se crea la instancia del dao para que interactue con la base de datows
+                    DAOUsuarios daoAdmin = new DAOUsuarios();
+                    //Extrae los datos del formulario.
+                    CommonClass commonClass = new CommonClass();
+
+                    daoAdmin.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
+                    daoAdmin.EspecialidadId = (int)ObjAgregarUsuario.cbEsp.SelectedValue;
+                    daoAdmin.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
+                    daoAdmin.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
+                    daoAdmin.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
+                    daoAdmin.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
+                    daoAdmin.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
+                    daoAdmin.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
+                    daoAdmin.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;
+                    daoAdmin.Respuesta = ObjAgregarUsuario.txtRespuesta.Text.Trim();
+
+                    //Registra al usuario en la base de datos.
+                    //Si fue exitoso retorana 1 cy si no retorna 2 que no fueron exitosos
+                    int valorRetornado = daoAdmin.RegistrarUsuario();
+
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los datos han sido registrados exitosamente",
+                                        "Proceso completado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos no pudieron ser registrados",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+
+                }
             }
             catch (Exception ex)
             {
@@ -193,6 +216,8 @@ namespace PTC.Controller.Usuarios
             daoUpdate.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
             daoUpdate.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
             daoUpdate.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
+            daoUpdate.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;
+            daoUpdate.Respuesta = ObjAgregarUsuario.txtRespuesta.Text.Trim();
             //Envia la consulta al sql para que actualice los datos y si la accion es 1 es exitosa y si no es 2.
             int valorRetornado = daoUpdate.ActualizarUsuario();
             if (valorRetornado == 1)
@@ -212,7 +237,7 @@ namespace PTC.Controller.Usuarios
         }
 
         //Este metodo carga los valores ya actualizados en la vista.
-        public void CargaValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email)
+        public void CargaValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta)
         {
             ObjAgregarUsuario.txtNombre.Text = Nombre;
             ObjAgregarUsuario.txtEmail.Text = PersonalID.ToString();
@@ -220,6 +245,7 @@ namespace PTC.Controller.Usuarios
             ObjAgregarUsuario.txtUsuario.Text = UsuarioPersonal;
             ObjAgregarUsuario.txtContrasena.Text = contraseñaPersonal;
             ObjAgregarUsuario.txtEmail.Text = email;
+            ObjAgregarUsuario.txtRespuesta.Text = respuesta;
 
         }
     }

@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegistro));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRespuesta = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbPregunta = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cbEsp = new System.Windows.Forms.ComboBox();
             this.cbConsul = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -54,10 +58,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEnviar1 = new System.Windows.Forms.Button();
             this.timevcode = new System.Windows.Forms.Timer(this.components);
-            this.cbPregunta = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtRespuesta = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +111,49 @@
             this.panel1.Size = new System.Drawing.Size(1010, 617);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtRespuesta
+            // 
+            this.txtRespuesta.Location = new System.Drawing.Point(322, 510);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta.MaxLength = 300;
+            this.txtRespuesta.Name = "txtRespuesta";
+            this.txtRespuesta.ShortcutsEnabled = false;
+            this.txtRespuesta.Size = new System.Drawing.Size(254, 22);
+            this.txtRespuesta.TabIndex = 40;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(317, 472);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(118, 25);
+            this.bunifuCustomLabel8.TabIndex = 39;
+            this.bunifuCustomLabel8.Text = "RESPUESTA";
+            // 
+            // cbPregunta
+            // 
+            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPregunta.FormattingEnabled = true;
+            this.cbPregunta.Location = new System.Drawing.Point(322, 432);
+            this.cbPregunta.Name = "cbPregunta";
+            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
+            this.cbPregunta.TabIndex = 38;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(317, 390);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(259, 25);
+            this.bunifuCustomLabel3.TabIndex = 37;
+            this.bunifuCustomLabel3.Text = "PREGUNTA DE SEGURIDAD";
             // 
             // cbEsp
             // 
@@ -196,6 +239,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(71, 156);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTelefono.MaxLength = 20;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
@@ -218,6 +262,7 @@
             // 
             this.txtContrasena.Location = new System.Drawing.Point(71, 348);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.MaxLength = 256;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
@@ -239,6 +284,7 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(71, 250);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsuario.MaxLength = 30;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(209, 22);
@@ -260,6 +306,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(322, 156);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.MaxLength = 255;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
@@ -282,6 +329,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(71, 70);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
@@ -353,48 +401,6 @@
             // 
             this.timevcode.Enabled = true;
             this.timevcode.Interval = 1000;
-            // 
-            // cbPregunta
-            // 
-            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPregunta.FormattingEnabled = true;
-            this.cbPregunta.Location = new System.Drawing.Point(322, 432);
-            this.cbPregunta.Name = "cbPregunta";
-            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
-            this.cbPregunta.TabIndex = 38;
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(317, 390);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(259, 25);
-            this.bunifuCustomLabel3.TabIndex = 37;
-            this.bunifuCustomLabel3.Text = "PREGUNTA DE SEGURIDAD";
-            // 
-            // txtRespuesta
-            // 
-            this.txtRespuesta.Location = new System.Drawing.Point(322, 510);
-            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.ShortcutsEnabled = false;
-            this.txtRespuesta.Size = new System.Drawing.Size(254, 22);
-            this.txtRespuesta.TabIndex = 40;
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(317, 472);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(118, 25);
-            this.bunifuCustomLabel8.TabIndex = 39;
-            this.bunifuCustomLabel8.Text = "RESPUESTA";
             // 
             // ViewRegistro
             // 

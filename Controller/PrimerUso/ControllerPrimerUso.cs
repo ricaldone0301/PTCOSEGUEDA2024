@@ -14,6 +14,7 @@ using PTC.Modelo.DAOPrimerUso;
 using PTC.Vista;
 using PTC.Vista.Login;
 using PTC.Vista.PrimerUso;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace PTC.Controller.PrimerUso
 {
@@ -86,39 +87,48 @@ namespace PTC.Controller.PrimerUso
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+        
 
         public void VerificarCodigoYRegistrar(object sender, EventArgs e)
         {
 
             try
             {
-                ViewLogin viewLogin = new ViewLogin();
-                DAORegistro daoRegistro = new DAORegistro();
-                CommonClass common = new CommonClass();
-                daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
-                daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
-                daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
-                daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
-                daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
-                daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OS1");
-                daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
-                daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
-
-                int valorRetornado = daoRegistro.RegistrarUsuario();
-
-                if (valorRetornado == 1)
+                if (!(string.IsNullOrEmpty(ObjRegistro.txtNombre.Text.Trim()) ||
+    string.IsNullOrEmpty(ObjRegistro.txtTelefono.Text.Trim()) ||
+    string.IsNullOrEmpty(ObjRegistro.txtUsuario.Text.Trim()) ||
+    string.IsNullOrEmpty(ObjRegistro.txtUsuario.Text.Trim()) ||
+    string.IsNullOrEmpty(ObjRegistro.txtEmail.Text.Trim())))
                 {
-                    MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show($"Usuario administrador: {ObjRegistro.txtUsuario.Text.Trim()}\nContraseña de usuario: {ObjRegistro.txtUsuario.Text.Trim()}OS1",
-                "Credenciales de acceso",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
-                    viewLogin.Show();
-                    ObjRegistro.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ViewLogin viewLogin = new ViewLogin();
+
+                    DAORegistro daoRegistro = new DAORegistro();
+                    CommonClass common = new CommonClass();
+                    daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
+                    daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
+                    daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
+                    daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
+                    daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
+                    daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OS1");
+                    daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
+                    daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
+
+                    int valorRetornado = daoRegistro.RegistrarUsuario();
+
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Usuario administrador: {ObjRegistro.txtUsuario.Text.Trim()}\nContraseña de usuario: {ObjRegistro.txtUsuario.Text.Trim()}OS1",
+                    "Credenciales de acceso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                        viewLogin.Show();
+                        ObjRegistro.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -132,26 +142,32 @@ namespace PTC.Controller.PrimerUso
 
             try
             {
-                ViewPrimerUso viewPrimerUso = new ViewPrimerUso();
-                ViewPrimerUsoInfo viewEmpresa = new ViewPrimerUsoInfo();
-                DAOPrimerUso daoRegistro = new DAOPrimerUso();
-                CommonClass common = new CommonClass();
-                daoRegistro.EmailEmpresa = ObjRegistroEmpresa.txtEmail.Text.Trim();
-                daoRegistro.NombreEmpresa = ObjRegistroEmpresa.txtNombre.Text.Trim();
-                daoRegistro.Direccion = ObjRegistroEmpresa.txtDireccion.Text.Trim();
-                daoRegistro.TelefonoEmpresa = ObjRegistroEmpresa.txtTelefono.Text.Trim();
-
-                int valorRetornado = daoRegistro.RegistrarEmpresa();
-
-                if (valorRetornado == 1)
+                if (!(string.IsNullOrEmpty(ObjRegistroEmpresa.txtEmail.Text.Trim()) ||
+string.IsNullOrEmpty(ObjRegistroEmpresa.txtNombre.Text.Trim()) ||
+string.IsNullOrEmpty(ObjRegistroEmpresa.txtDireccion.Text.Trim()) ||
+string.IsNullOrEmpty(ObjRegistroEmpresa.txtTelefono.Text.Trim())))
                 {
-                    MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    viewPrimerUso.Show();
-                    ObjRegistroEmpresa.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ViewPrimerUso viewPrimerUso = new ViewPrimerUso();
+                    ViewPrimerUsoInfo viewEmpresa = new ViewPrimerUsoInfo();
+                    DAOPrimerUso daoRegistro = new DAOPrimerUso();
+                    CommonClass common = new CommonClass();
+                    daoRegistro.EmailEmpresa = ObjRegistroEmpresa.txtEmail.Text.Trim();
+                    daoRegistro.NombreEmpresa = ObjRegistroEmpresa.txtNombre.Text.Trim();
+                    daoRegistro.Direccion = ObjRegistroEmpresa.txtDireccion.Text.Trim();
+                    daoRegistro.TelefonoEmpresa = ObjRegistroEmpresa.txtTelefono.Text.Trim();
+
+                    int valorRetornado = daoRegistro.RegistrarEmpresa();
+
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        viewPrimerUso.Show();
+                        ObjRegistroEmpresa.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
