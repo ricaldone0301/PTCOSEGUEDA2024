@@ -97,30 +97,73 @@ namespace PTC.Controller.VerPerfil
             }
         }
 
+        private bool ValidarContra(string password)
+        {
+
+            if (password.Length < 8)
+            {
+                return false;
+            }
+
+            bool hasNumber = password.Any(char.IsDigit);
+            if (!hasNumber)
+            {
+                return false;
+            }
+            bool hasSpecialChar = password.Any(ch => "!@#$%^&*()_+[]{}|;:',.<>?/~`".Contains(ch));
+            if (!hasSpecialChar)
+            {
+                return false;
+            }
+            return true;
+        }
         public void CambiarContra(object sender, EventArgs e)
         {
-            DAOLogin DAOData = new DAOLogin();
-            DAOUsuarios dAOUsuarios = new DAOUsuarios();
+            if (!(string.IsNullOrEmpty(ObjCambiarContra.TxtContra.Text.Trim())))
 
-           CommonClass common = new CommonClass();
-
-
-            DAOData.Usuario = ObjVerContra.txtUsuario.Text;
-            DAOData.Contrasena = ObjVerContra.txtContrasena.Text;
-
-            string cadenaencriptada = common.ComputeSha256Hash(ObjVerContra.txtContrasena.Text);
-            DAOData.Contrasena = cadenaencriptada;
-
-            SessionVar.NuevaContra = cadenaencriptada;
+            {
+                string contrasena = ObjCambiarContra.TxtContra.Text;
+                if (!ValidarContra(contrasena))
+                {
+                    MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
 
-            ViewCambiarContra vistacambiarcontra = new ViewCambiarContra();
-            vistacambiarcontra.ShowDialog();
+                try
+                {
+                    DAOLogin DAOData = new DAOLogin();
+                    DAOUsuarios dAOUsuarios = new DAOUsuarios();
+
+                    CommonClass common = new CommonClass();
 
 
+                    DAOData.Usuario = ObjVerContra.txtUsuario.Text;
+                    DAOData.Contrasena = ObjVerContra.txtContrasena.Text;
 
-        }
+                    string cadenaencriptada = common.ComputeSha256Hash(ObjVerContra.txtContrasena.Text);
+                    DAOData.Contrasena = cadenaencriptada;
+
+                    SessionVar.NuevaContra = cadenaencriptada;
+
+
+                    ViewCambiarContra vistacambiarcontra = new ViewCambiarContra();
+                    vistacambiarcontra.ShowDialog();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"ERRU001: {ex.Message}",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+
+                }
+            }
+
+        } 
     }
-}
+} 
+
 
 

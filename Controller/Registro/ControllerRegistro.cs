@@ -128,48 +128,81 @@ namespace PTC.Controller.Registro
 
         public void VerificarCodigoYRegistrar(object sender, EventArgs e)
         {
+
             string inputCode = ObjRegistro.txtConfirm.Text.Trim();
 
-            if (inputCode == verificationCode)
-            {
-                try
-                {
-                    DAORegistro daoRegistro = new DAORegistro();
-                    CommonClass common = new CommonClass();
-                    string cadenaencriptada = common.ComputeSha256Hash(ObjRegistro.txtContrasena.Text);
-                    daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
-                    daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
-                    daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
-                    daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
-                    daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
-                    daoRegistro.Contrasena = cadenaencriptada;
-                    daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
-                    daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
-                    daoRegistro.PreguntaID = (int)ObjRegistro.cbPregunta.SelectedValue;
-                    daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
-
-                    int valorRetornado = daoRegistro.RegistrarUsuario();
-
-                    if (valorRetornado == 1)
-                    {
-                        MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (inputCode != verificationCode)
             {
                 MessageBox.Show("El código de verificación es incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+
+          string password = ObjRegistro.txtContrasena.Text;
+            if (!ValidatePassword(password))
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+
+                DAORegistro daoRegistro = new DAORegistro();
+                CommonClass common = new CommonClass();
+
+                string cadenaencriptada = common.ComputeSha256Hash(password);
+
+
+                daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
+                daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
+                daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
+                daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
+                daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
+                daoRegistro.Contrasena = cadenaencriptada;
+                daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
+                daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
+                daoRegistro.PreguntaID = (int)ObjRegistro.cbPregunta.SelectedValue;
+                daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
+
+                // Attempt to register the user
+                int valorRetornado = daoRegistro.RegistrarUsuario();
+
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private bool ValidatePassword(string password)
+        {
+
+            if (password.Length < 8)
+            {
+                return false;
+            }
+
+            bool hasNumber = password.Any(char.IsDigit);
+            if (!hasNumber)
+            {
+                return false;
+            }
+            bool hasSpecialChar = password.Any(ch => "!@#$%^&*()_+[]{}|;:',.<>?/~`".Contains(ch));
+            if (!hasSpecialChar)
+            {
+                return false;
+            }
+
+            return true;
+        }
         public void Tick(object sender, EventArgs e)
         {
             int vCode = 1000;

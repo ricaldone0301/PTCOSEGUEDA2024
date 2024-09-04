@@ -70,6 +70,7 @@
             this.btnEnviar1.TabIndex = 37;
             this.btnEnviar1.Text = "ENVIAR";
             this.btnEnviar1.UseVisualStyleBackColor = false;
+            this.btnEnviar1.Click += new System.EventHandler(this.btnEnviar1_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -183,6 +184,7 @@
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(519, 22);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // bunifuCustomLabel4
             // 

@@ -21,8 +21,13 @@ namespace PTC.Vista.AgregarPaciente
             InitializeComponent();
             ControllerAgregarPaciente ObjAgregarPaciente = new ControllerAgregarPaciente(this, accion);
             TextBoxMenuEliminar();
+            dtpFechaNac.MaxDate = DateTime.Today;
         }
 
+        private void ViewAgregarPaciente_Load(object sender, EventArgs e)
+        {
+            dtpFechaNac.MaxDate = DateTime.Today;
+        }
         public ViewAgregarPaciente(int accion, int pacienteID, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string ocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamento, string operacion, string tipooperacion, string recuperacionoperacion)
         {
             InitializeComponent();
@@ -649,10 +654,6 @@ namespace PTC.Vista.AgregarPaciente
             }
         }
 
-        private void ViewAgregarPaciente_Load(object sender, EventArgs e)
-        {
-
-        }
     }
     
 }

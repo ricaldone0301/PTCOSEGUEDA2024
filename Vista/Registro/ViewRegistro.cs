@@ -47,6 +47,7 @@ namespace PTC.Vista.Registro
             ContextMenuEliminar(txtNombre);
             ContextMenuEliminar(txtEmail);
             ContextMenuEliminar(txtContrasena);
+            ContextMenuEliminar(txtRespuesta);
             ContextMenuEliminar(txtConfirm);
         }
 
@@ -83,7 +84,7 @@ namespace PTC.Vista.Registro
         {
             if (!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.'))
             {
-                MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingresar un correo valida", "Correo Invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -104,6 +105,30 @@ namespace PTC.Vista.Registro
                 txtConfirm.Text = filteredText;
                 txtConfirm.SelectionStart = txtConfirm.Text.Length;
             }
+        }
+
+        private void txtRespuesta_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtRespuesta.Text;
+            string pattern = @"^[a-zA-Z\s.,]*$";
+            Regex regex = new Regex(pattern);
+
+            if (!regex.IsMatch(text))
+            {
+                txtRespuesta.Text = new string(text.Where(c => char.IsLetter(c) || char.IsWhiteSpace(c) || c == '.' || c == ',').ToArray());
+                txtRespuesta.SelectionStart = txtRespuesta.Text.Length;
+            }
+            if (txtRespuesta.Text.Length > 300)
+            {
+                txtRespuesta.Text = txtRespuesta.Text.Substring(0, 300);
+
+                txtRespuesta.SelectionStart = txtRespuesta.Text.Length;
+            }
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

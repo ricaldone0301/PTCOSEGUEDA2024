@@ -36,6 +36,16 @@ namespace PTC.Vista.AgregarUsuario
                 cbEsp.Enabled = false;
                 cbConsul.Enabled = false;
             }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 

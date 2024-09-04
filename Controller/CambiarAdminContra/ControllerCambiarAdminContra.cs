@@ -15,10 +15,6 @@ namespace PTC.Controller.CambiarAdminContra
     internal class ControllerCambiarAdminContra
     {
         ViewCambiarContra ObjCambiarContra;
-        ViewVerContra ObjViewverContra;
-        private int accion;
-        private string rol;
-        private int intentosFallidos;
         public ControllerCambiarAdminContra(ViewCambiarContra View)
         {
             ObjCambiarContra = View;

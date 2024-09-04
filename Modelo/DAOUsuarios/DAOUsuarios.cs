@@ -205,8 +205,8 @@ namespace PTC.Modelo.DAOUsuarios
                                 "usuarioPersonal = @param5, " +
                                 "contraseñaPersonal = @param6," +
                                 "roleID = @param7," +
-                                "email = @param8 " +
-                                "preguntaID = @param9," +
+                                "email = @param8, " +
+                                "preguntaID = @param9, " +
                                 "Respuesta = @param10 " +
                                 "WHERE personalID = @param11";
               

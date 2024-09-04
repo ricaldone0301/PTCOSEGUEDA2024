@@ -20,6 +20,7 @@ namespace PTC.Vista.AgendarCita
             TextBoxMenuEliminar();
             this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
             ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion);
+            Fecha.MinDate = DateTime.Today;
         }
         public ViewAgendarcita(int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
         {
@@ -27,9 +28,14 @@ namespace PTC.Vista.AgendarCita
             TextBoxMenuEliminar();
             this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
             ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this,  accion, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
+            Fecha.MinDate = DateTime.Today;
 
         }
 
+        private void ViewAgendarcita_load(object sender, EventArgs e)
+        {
+            Fecha.MinDate = DateTime.Today;
+        }
         private void ContextMenuEliminar(TextBox textBox)
         {
             var menuContexto = new ContextMenuStrip();
@@ -72,16 +78,6 @@ namespace PTC.Vista.AgendarCita
 
         private void Fecha_ValueChanged(object sender, EventArgs e)
         {
-            if (Fecha == null) return;
-
-            DateTime today = DateTime.Today;
-
-            Fecha.MinDate = today;
-
-            if (Fecha.Value < today)
-            {
-                Fecha.Value = today;
-            }
         }
 
         private void txtHora_TextChanged(object sender, EventArgs e)

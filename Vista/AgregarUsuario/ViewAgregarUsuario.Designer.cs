@@ -32,12 +32,17 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRespuesta = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.cbEsp = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.cbConsul = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.cbRol = new System.Windows.Forms.ComboBox();
+            this.cbPregunta = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -48,14 +53,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtRespuesta = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cbPregunta = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -120,6 +120,34 @@
             this.panel1.Size = new System.Drawing.Size(584, 560);
             this.panel1.TabIndex = 3;
             // 
+            // txtRespuesta
+            // 
+            this.txtRespuesta.Location = new System.Drawing.Point(300, 495);
+            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRespuesta.MaxLength = 300;
+            this.txtRespuesta.Name = "txtRespuesta";
+            this.txtRespuesta.ShortcutsEnabled = false;
+            this.txtRespuesta.Size = new System.Drawing.Size(254, 22);
+            this.txtRespuesta.TabIndex = 44;
+            this.txtRespuesta.TextChanged += new System.EventHandler(this.txtRespuesta_TextChanged);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnActualizar.Location = new System.Drawing.Point(157, 471);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(131, 46);
+            this.btnActualizar.TabIndex = 32;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // cbEsp
             // 
             this.cbEsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -128,6 +156,35 @@
             this.cbEsp.Name = "cbEsp";
             this.cbEsp.Size = new System.Drawing.Size(209, 24);
             this.cbEsp.TabIndex = 36;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(295, 457);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(118, 25);
+            this.bunifuCustomLabel8.TabIndex = 43;
+            this.bunifuCustomLabel8.Text = "RESPUESTA";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnAgregar.Location = new System.Drawing.Point(20, 471);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(131, 46);
+            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cbConsul
             // 
@@ -150,23 +207,6 @@
             this.bunifuCustomLabel1.TabIndex = 34;
             this.bunifuCustomLabel1.Text = "CONSULTORIO";
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnActualizar.Location = new System.Drawing.Point(157, 471);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(131, 46);
-            this.btnActualizar.TabIndex = 32;
-            this.btnActualizar.Text = "ACTUALIZAR";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // cbRol
             // 
             this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -175,6 +215,15 @@
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(209, 24);
             this.cbRol.TabIndex = 33;
+            // 
+            // cbPregunta
+            // 
+            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPregunta.FormattingEnabled = true;
+            this.cbPregunta.Location = new System.Drawing.Point(300, 417);
+            this.cbPregunta.Name = "cbPregunta";
+            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
+            this.cbPregunta.TabIndex = 42;
             // 
             // bunifuCustomLabel5
             // 
@@ -187,6 +236,18 @@
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(50, 25);
             this.bunifuCustomLabel5.TabIndex = 30;
             this.bunifuCustomLabel5.Text = "ROL";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(295, 375);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(259, 25);
+            this.bunifuCustomLabel2.TabIndex = 41;
+            this.bunifuCustomLabel2.Text = "PREGUNTA DE SEGURIDAD";
             // 
             // bunifuCustomLabel10
             // 
@@ -303,23 +364,6 @@
             this.txtNombre.TabIndex = 17;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnAgregar.Location = new System.Drawing.Point(20, 471);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(131, 46);
-            this.btnAgregar.TabIndex = 16;
-            this.btnAgregar.Text = "AGREGAR";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
@@ -374,49 +418,6 @@
             this.bunifuThinButton26.Size = new System.Drawing.Size(220, 32);
             this.bunifuThinButton26.TabIndex = 10;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtRespuesta
-            // 
-            this.txtRespuesta.Location = new System.Drawing.Point(300, 495);
-            this.txtRespuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRespuesta.MaxLength = 300;
-            this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.ShortcutsEnabled = false;
-            this.txtRespuesta.Size = new System.Drawing.Size(254, 22);
-            this.txtRespuesta.TabIndex = 44;
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(295, 457);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(118, 25);
-            this.bunifuCustomLabel8.TabIndex = 43;
-            this.bunifuCustomLabel8.Text = "RESPUESTA";
-            // 
-            // cbPregunta
-            // 
-            this.cbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPregunta.FormattingEnabled = true;
-            this.cbPregunta.Location = new System.Drawing.Point(300, 417);
-            this.cbPregunta.Name = "cbPregunta";
-            this.cbPregunta.Size = new System.Drawing.Size(254, 24);
-            this.cbPregunta.TabIndex = 42;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(295, 375);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(259, 25);
-            this.bunifuCustomLabel2.TabIndex = 41;
-            this.bunifuCustomLabel2.Text = "PREGUNTA DE SEGURIDAD";
             // 
             // ViewAgregarUsuario
             // 

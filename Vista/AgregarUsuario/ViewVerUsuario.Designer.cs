@@ -178,6 +178,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
             this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // bunifuCustomLabel11
             // 
@@ -258,6 +259,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // bunifuCustomLabel4
             // 
@@ -299,7 +301,6 @@
             this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
             this.bunifuThinButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bunifuThinButton26.ButtonText = "USUARIO";
-            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton26.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton26.ForeColor = System.Drawing.Color.White;
             this.bunifuThinButton26.IdleBorderThickness = 1;

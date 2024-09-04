@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PTC.Vista.AgregarDoctores
@@ -46,6 +47,7 @@ namespace PTC.Vista.AgregarDoctores
             ContextMenuEliminar(txtNombre);
             ContextMenuEliminar(txtTelefono);
             ContextMenuEliminar(txtUsuario);
+            ContextMenuEliminar(txtRespuesta);
         }
 
 
@@ -105,6 +107,7 @@ namespace PTC.Vista.AgregarDoctores
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
+
             if (txtEmail.Text.Length > 255)
             {
                 txtEmail.Text = txtEmail.Text.Substring(0, 255);
@@ -128,9 +131,28 @@ namespace PTC.Vista.AgregarDoctores
         {
             if (txtContrasena.Text.Length > 256)
             {
-                txtContrasena.Text = txtEmail.Text.Substring(0, 256);
+                txtContrasena.Text = txtContrasena.Text.Substring(0, 256);
 
                 txtContrasena.SelectionStart = txtContrasena.Text.Length;
+            }
+        }
+
+        private void txtRespuesta_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtRespuesta.Text;
+            string pattern = @"^[a-zA-Z\s.,]*$";
+            Regex regex = new Regex(pattern);
+
+            if (!regex.IsMatch(text))
+            {
+                txtRespuesta.Text = new string(text.Where(c => char.IsLetter(c) || char.IsWhiteSpace(c) || c == '.' || c == ',').ToArray());
+                txtRespuesta.SelectionStart = txtRespuesta.Text.Length;
+            }
+            if (txtRespuesta.Text.Length > 300)
+            {
+                txtRespuesta.Text = txtRespuesta.Text.Substring(0, 300);
+
+                txtRespuesta.SelectionStart = txtRespuesta.Text.Length;
             }
         }
     }
