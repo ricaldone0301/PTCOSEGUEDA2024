@@ -21,7 +21,22 @@ namespace PTC.Vista.RecuperarContra
         public ViewVerContra()
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerVerPerfil objPerfil = new ControllerVerPerfil(this);
+        }
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtContrasena);
+        }
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

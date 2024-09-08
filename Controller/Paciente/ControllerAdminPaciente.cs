@@ -26,11 +26,11 @@ namespace PTC.Controller.Paciente
             ObjAdminPaciente.Load += new EventHandler(Load);
             ObjAdminPaciente.cmsVerPaciente.Click += new EventHandler(Ver);
             //Cuando se le da clic al boton de agregar paciente se ejecuta el metodo NuevoPaciente
-            ObjAdminPaciente.btnNuevoPaciente.Click += new EventHandler(NuevoPaciente);
+            ObjAdminPaciente.btnNuevo.Click += new EventHandler(NuevoPaciente);
             //Cuando se le da clic al boton de actualizar se ejecuta el metodo ActualizarPaciente
-            ObjAdminPaciente.cmsActualizarPaciente.Click += new EventHandler(ActualizarPaciente);
+            ObjAdminPaciente.cmsActualizar.Click += new EventHandler(ActualizarPaciente);
             //Cuando se le da clic al boton de Eliminar, se ejecuta el metodo EliminarPaciente
-            ObjAdminPaciente.cmsEliminarPaciente.Click += new EventHandler(EliminarPaciente);
+            ObjAdminPaciente.cmsEliminar.Click += new EventHandler(EliminarPaciente);
             //Cuando se le da clic al boton de buscar, se ejecuta el metodo Buscar
             ObjAdminPaciente.btnBuscar.Click += new EventHandler(Buscar);
         }
@@ -39,7 +39,7 @@ namespace PTC.Controller.Paciente
             //Se crea un objeto del DAO
             DAOPaciente ObjAdminBuscar = new DAOPaciente();
             //Se ejecuta el metodo BuscarPersonas del DAO y se envia el texto del txtBuscar para que lo tome como el valor requerido
-            DataSet ds = ObjAdminBuscar.BuscarPersonas(ObjAdminPaciente.txtBuscar.Text.Trim());
+            DataSet ds = ObjAdminBuscar.BuscarPersonas(ObjAdminPaciente.textBox1.Text.Trim());
             //Se muestran las opciones que devuelve el metodo del DAO
             ObjAdminPaciente.dgvPacientes.DataSource = ds.Tables["ViewPacientes"];
         }

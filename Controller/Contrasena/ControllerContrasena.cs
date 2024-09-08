@@ -62,7 +62,7 @@ namespace PTC.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al enviar el correo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#003: No se pudo enviar el código de verificación." + ex.Message);
             }
         }
 
@@ -96,7 +96,7 @@ namespace PTC.Controller
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error OS#004: No se pudo actualizar la contraseña" + ex.Message);
                 }
             }
             else

@@ -93,7 +93,7 @@ namespace PTC.Controller.VerPerfil
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error OS#001: Error al cargar valores" + ex.Message);
             }
         }
 
@@ -119,10 +119,11 @@ namespace PTC.Controller.VerPerfil
         }
         public void CambiarContra(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(ObjCambiarContra.TxtContra.Text.Trim())))
+
+            if (!(string.IsNullOrEmpty(ObjVerContra.txtContrasena.Text.Trim())))
 
             {
-                string contrasena = ObjCambiarContra.TxtContra.Text;
+                string contrasena = ObjVerContra.txtContrasena.Text;
                 if (!ValidarContra(contrasena))
                 {
                     MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,10 +154,7 @@ namespace PTC.Controller.VerPerfil
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"ERRU001: {ex.Message}",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    MessageBox.Show("Error OS#004: No se pudo actualizar la contraseña" + ex.Message);
 
                 }
             }

@@ -13,11 +13,10 @@ namespace PTC.Modelo
         {
             try
             {
-                string server = "DELLNATA\\SQLEXPRESS";
-                string database = "PTCDOCTORES";
-                SqlConnection conexion = new SqlConnection("Server =" + server +
-                                                                 "; DataBase = " + database +
-                                                                 "; Integrated Security = true");
+                String test = "Server=SQL8020.site4now.net;Database=db_aacf79_ptcos;User Id= db_aacf79_ptcos_admin;Password=PTCOS123;";
+                string server = "SQL8020.site4now.net";
+                string database = "db_aacf79_ptcos";
+                SqlConnection conexion = new SqlConnection(test);
                 conexion.Open();
                 return conexion;
             }

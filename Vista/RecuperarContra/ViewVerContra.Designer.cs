@@ -282,6 +282,7 @@
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // bunifuCustomLabel4
             // 

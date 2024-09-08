@@ -19,5 +19,20 @@ namespace PTC.Vista.Paciente
             InitializeComponent();
             ControllerAdminPaciente ObjAdminPaciente = new ControllerAdminPaciente(this);
         }
+
+        private void btnNuevoPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

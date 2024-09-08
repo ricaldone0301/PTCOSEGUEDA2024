@@ -48,10 +48,13 @@ namespace PTC.Modelo.DAOLogin
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error OS#014: El metodo para validar el login fue interrumpido." + ex.Message);
                 return false;
             }
-            finally { getConnection().Close(); }
+            finally 
+            {
+                getConnection().Close();
+            }
         }
 
         public int ValidarPrimerUsoSistema()
@@ -66,12 +69,11 @@ namespace PTC.Modelo.DAOLogin
             }
             catch (SqlException sqlex)
             {
-                MessageBox.Show(sqlex.Message);
+                MessageBox.Show("Error OS#015: No se pudo validar el primer uso del sistema" + sqlex.Message);
                 return -1;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
                 return -1;
             }
             finally

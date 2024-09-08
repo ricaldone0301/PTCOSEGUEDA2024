@@ -151,6 +151,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(25, 120);
+            this.txtPrecio.MaxLength = 8;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.ShortcutsEnabled = false;
             this.txtPrecio.Size = new System.Drawing.Size(151, 22);

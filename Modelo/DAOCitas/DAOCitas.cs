@@ -55,7 +55,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -83,7 +83,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -111,7 +111,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -139,7 +139,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -173,7 +173,7 @@ namespace PTC.Modelo.DAOCitas
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"ERRC001: {ex.Message}");
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 return -1;
             }
         }

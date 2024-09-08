@@ -104,7 +104,7 @@ namespace PTC.Controller.Usuarios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error OS#001: Error al conseguir cargo inicial" + ex.Message);
             }
         
         }
@@ -144,10 +144,11 @@ namespace PTC.Controller.Usuarios
         {
             try
             {
-                if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text.Trim()) ||
+                if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text .Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtTelefono.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtUsuario.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
+        string.IsNullOrEmpty(ObjAgregarUsuario.txtRespuesta.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtEmail.Text.Trim())))
 
                 {
@@ -206,20 +207,15 @@ namespace PTC.Controller.Usuarios
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"ERRU001: {ex.Message}",
-                                        "Error",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
+                        MessageBox.Show("Error OS#002: Error al registrar usuario" + ex.Message);
                     }
                 }
 
             }
             catch (Exception ex)
+
             {
-                MessageBox.Show($"ERRU001: {ex.Message}",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#010: Error al validar datos" + ex.Message);
 
             }
         }
@@ -248,55 +244,60 @@ namespace PTC.Controller.Usuarios
         //Este metodo se activ cuan hemos dado click al botn actualizar
         public void ActualizarRegistro(object sender, EventArgs e)
         {
-            string contrasena = ObjAgregarUsuario.txtContrasena.Text;
-            if (!ValidarContra(contrasena))
-            {
-                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtTelefono.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtUsuario.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
+        string.IsNullOrEmpty(ObjAgregarUsuario.txtRespuesta.Text.Trim()) ||
+       string.IsNullOrEmpty(ObjAgregarUsuario.txtEmail.Text.Trim())))
 
-
-            try
             {
-                CommonClass commonClass = new CommonClass();
-                //Se crea la instancia del dao que gestiona las operaciones en la base 
-                DAOUsuarios daoUpdate = new DAOUsuarios();
-                //Asigna y captura los datos al dao
-                daoUpdate.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
-                daoUpdate.PersonalId = personalId;
-                daoUpdate.EspecialidadId = (int)ObjAgregarUsuario.cbEsp.SelectedValue;
-                daoUpdate.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
-                daoUpdate.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
-                daoUpdate.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-                daoUpdate.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
-                daoUpdate.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
-                daoUpdate.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
-                daoUpdate.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;
-                daoUpdate.Respuesta = ObjAgregarUsuario.txtRespuesta.Text.Trim();
-                //Envia la consulta al sql para que actualice los datos y si la accion es 1 es exitosa y si no es 2.
-                int valorRetornado = daoUpdate.ActualizarUsuario();
-                if (valorRetornado == 1)
+                string contrasena = ObjAgregarUsuario.txtContrasena.Text;
+                if (!ValidarContra(contrasena))
                 {
-                    MessageBox.Show("Los datos han sido actualizado exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                    MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERRU001: {ex.Message}",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
 
+
+                try
+                {
+                    CommonClass commonClass = new CommonClass();
+                    //Se crea la instancia del dao que gestiona las operaciones en la base 
+                    DAOUsuarios daoUpdate = new DAOUsuarios();
+                    //Asigna y captura los datos al dao
+                    daoUpdate.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
+                    daoUpdate.PersonalId = personalId;
+                    daoUpdate.EspecialidadId = (int)ObjAgregarUsuario.cbEsp.SelectedValue;
+                    daoUpdate.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
+                    daoUpdate.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
+                    daoUpdate.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
+                    daoUpdate.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
+                    daoUpdate.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
+                    daoUpdate.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
+                    daoUpdate.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;
+                    daoUpdate.Respuesta = ObjAgregarUsuario.txtRespuesta.Text.Trim();
+                    //Envia la consulta al sql para que actualice los datos y si la accion es 1 es exitosa y si no es 2.
+                    int valorRetornado = daoUpdate.ActualizarUsuario();
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los datos han sido actualizado exitosamente",
+                                        "Proceso completado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error OS#011: Error al actualizar usuario" + ex.Message);
+                }
             }
         }
 

@@ -79,8 +79,8 @@ namespace PTC.Controller.Procedimiento
             try
             {
 
-                        //Se crea para interatuar con la base de datos.
-                        DAOProcedimiento daoAdmin = new DAOProcedimiento();
+               //Se crea para interatuar con la base de datos.
+               DAOProcedimiento daoAdmin = new DAOProcedimiento();
 
                 //Se les asigna valores de la vista y luego se le asigna al objeto en el dao.
                 daoAdmin.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
@@ -112,10 +112,7 @@ namespace PTC.Controller.Procedimiento
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar Cita: {ex.Message}",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#009: Error al registrar nuevo procedimiento" + ex.Message);
             }
         }
 
@@ -170,7 +167,7 @@ namespace PTC.Controller.Procedimiento
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}");
+                MessageBox.Show("Error OS#007: Error al cargar valores" + ex.Message);
             }
         }
     }

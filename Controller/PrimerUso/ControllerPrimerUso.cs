@@ -81,10 +81,21 @@ namespace PTC.Controller.PrimerUso
                     ObjRegistro.cbConsul.DisplayMember = "nombreConsultorio";
 
                 }
+
+
+                DataSet dsPreguntas = objAdmin.ComboBoxPreguntas();
+                if (dsPreguntas != null && dsPreguntas.Tables.Contains("Preguntas"))
+                {
+                    DataTable dtPreguntas = dsPreguntas.Tables["Preguntas"];
+                    ObjRegistro.cbPregunta.DataSource = dtPreguntas;
+                    ObjRegistro.cbPregunta.ValueMember = "preguntaID";
+                    ObjRegistro.cbPregunta.DisplayMember = "tituloPregunta";
+
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error OS#001: Error al conseguir el cargo inicial" + ex.Message);
             }
         }
         
@@ -112,6 +123,8 @@ namespace PTC.Controller.PrimerUso
                     daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OS1");
                     daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
                     daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
+                    daoRegistro.PreguntaID = int.Parse(ObjRegistro.cbPregunta.SelectedValue.ToString());
+                    daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
 
                     int valorRetornado = daoRegistro.RegistrarUsuario();
 
@@ -133,7 +146,7 @@ namespace PTC.Controller.PrimerUso
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#002: Error al registrar usuario" + ex.Message);
             }
         }
 
@@ -172,7 +185,7 @@ string.IsNullOrEmpty(ObjRegistroEmpresa.txtTelefono.Text.Trim())))
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#008: Error al registrar empresa." + ex.Message);
             }
         }
 

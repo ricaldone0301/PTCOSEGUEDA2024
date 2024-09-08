@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAOContrasena
 {
@@ -35,7 +36,7 @@ namespace PTC.Modelo.DAOContrasena
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error OS#013: El metodo para actualizar contraseña fue interrumpido2" + ex.Message);
                 return -1;
             }
         }

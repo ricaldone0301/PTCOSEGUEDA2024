@@ -1,4 +1,5 @@
-﻿using PTC.Controller.Common;
+﻿using Microsoft.Win32;
+using PTC.Controller.Common;
 using PTC.Modelo.DAOOcupacion;
 using PTC.Modelo.DAOPaciente;
 using PTC.Modelo.DAOUsuarios;
@@ -82,6 +83,8 @@ namespace PTC.Controller.Paciente
         {
             try
             {
+                if (!(string.IsNullOrEmpty(objAgregarPaciente.txtNombreOcupacion.Text.Trim())))
+                {
                 //Se crea un objeto del DAO
                 DAOOcupacion daoAdmin = new DAOOcupacion();
 
@@ -100,13 +103,11 @@ namespace PTC.Controller.Paciente
 
                 }
 
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar usuario: {ex.Message}",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+               MessageBox.Show("Error OS#006: Error al registrar ocupación." + ex.Message);
             }
         }
 
@@ -115,37 +116,6 @@ namespace PTC.Controller.Paciente
             //Se muetra el groupBox AgregarOcupacion
             objAgregarPaciente.gbAgregarOcupacion.Show();
         }
-
-        //public void VerificarAccion()
-        //{
-        //    if (accion == 3)
-        //    {
-        //        objAgregarPaciente.btnGuardarPaciente.Enabled = false;
-        //        objAgregarPaciente.txtNombrePaciente.Enabled = false;
-        //        objAgregarPaciente.txtEdadPaciente.Enabled = false;
-        //        objAgregarPaciente.txtTelefonoPaciente.Enabled = false;
-        //        objAgregarPaciente.dtpFechaNac.Enabled = false;
-        //        objAgregarPaciente.txtCorreoPaciente.Enabled = false;
-        //        objAgregarPaciente.cmbOcupacion.Enabled = false;
-        //        objAgregarPaciente.txtDireccionPaciente.Enabled = false;
-        //        objAgregarPaciente.txtDUI.Enabled = false;
-        //        objAgregarPaciente.txtReferencia.Enabled = false;
-        //        objAgregarPaciente.txtNombreEmergencia.Enabled = false;
-        //        objAgregarPaciente.txtNumEmergencia.Enabled = false;
-        //        objAgregarPaciente.txtMotivoConsulta.Enabled = false;
-        //        objAgregarPaciente.cbControlMedicoSi.Enabled = false;
-        //        objAgregarPaciente.cbControlMedicoNo.Enabled = false;
-        //        objAgregarPaciente.txtMedicoCabeceraNombre.Enabled = false;
-        //        objAgregarPaciente.txtNumMedicoCabecera.Enabled = false;
-        //        objAgregarPaciente.txtNombreAlergiaMedicamento.Enabled = false;
-        //        objAgregarPaciente.txtNombreMedicamento.Enabled = false;
-        //        objAgregarPaciente.cbOperacionSi.Enabled = false;
-        //        objAgregarPaciente.cbOperacionNo.Enabled = false;
-        //        objAgregarPaciente.txtTipoOperacion.Enabled = false;
-        //        objAgregarPaciente.txtRecuperacionOperacion.Enabled = false;
-        //        objAgregarPaciente.txtPadecimientos.Enabled = false;
-        //    }
-        //}
 
         public void CargaInicial(object sender, EventArgs e)
         {
@@ -200,7 +170,8 @@ namespace PTC.Controller.Paciente
 
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+
+                MessageBox.Show("Error OS#001: Error al hacer el cargo inicial" + ex.Message);
             }
 
         }
@@ -270,7 +241,16 @@ namespace PTC.Controller.Paciente
             }
         }
 
-            public void ActualizarExpediente(object sender, EventArgs e)
+        public void ActualizarExpediente(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(objAgregarPaciente.txtNombrePaciente.Text.Trim()) ||
+string.IsNullOrEmpty(objAgregarPaciente.txtTelefonoPaciente.Text.Trim()) ||
+string.IsNullOrEmpty(objAgregarPaciente.txtCorreoPaciente.Text.Trim()) ||
+string.IsNullOrEmpty(objAgregarPaciente.txtTelefonoPaciente.Text.Trim()) ||
+string.IsNullOrEmpty(objAgregarPaciente.txtDireccionPaciente.Text.Trim()) ||
+string.IsNullOrEmpty(objAgregarPaciente.txtDUI.Text.Trim()) ||
+      string.IsNullOrEmpty(objAgregarPaciente.txtNombreEmergencia.Text.Trim()) ||
+string.IsNullOrEmpty(objAgregarPaciente.txtNumEmergencia.Text.Trim())))
             {
                 //Se crea un objeto del DAO
                 DAOPaciente objdao = new DAOPaciente();
@@ -333,6 +313,7 @@ namespace PTC.Controller.Paciente
                     MessageBox.Show("Los datos no pudieron ser actualizados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
 
             public void CargarValores(int id, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string ocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamento, string operacion, string tipooperacion, string recuperacionoperacion)
             {
@@ -377,8 +358,8 @@ namespace PTC.Controller.Paciente
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"{ex.Message}");
-                }
+                     MessageBox.Show("Error OS#007: Error al cargar valores." + ex.Message);
+                 }
             }
         }
     }

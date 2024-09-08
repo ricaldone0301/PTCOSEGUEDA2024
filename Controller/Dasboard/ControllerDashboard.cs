@@ -26,7 +26,7 @@ namespace PTC.Controller.Dasboard
     {
         ViewDashboard ObjDashboard;
         Form currentForm;
-    
+
 
         public ControllerDashboard(ViewDashboard View)
         {
@@ -42,6 +42,45 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.btnUsuarios.Click += new EventHandler(Usuarios);
             ObjDashboard.btnProcedimientos.Click += new EventHandler(Procedimientos);
             ObjDashboard.lblUsuario.Click += new EventHandler(Recuperar);
+            ObjDashboard.btnMaximizar.Click += new EventHandler(Maximizar);
+            ObjDashboard.btnCerrar.Click += new EventHandler(Cerrar);
+            ObjDashboard.btnMinimizar.Click += new EventHandler(Minimizar);
+        }
+
+        private void Maximizar(object sender, EventArgs e)
+        {
+            if (ObjDashboard.WindowState == FormWindowState.Normal)
+            {
+                ObjDashboard.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                ObjDashboard.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void Cerrar(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Esta seguro que quiere cerrarla aplicacion? Esto resultará en un cierre de sesión.",
+                                                    "Confirm Salida",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+
+
+            if (result == DialogResult.Yes)
+            {
+
+                if (currentForm != null)
+                {
+                    currentForm.Close();
+                }
+                Application.Exit();
+            }
+        }
+
+        private void Minimizar(object sender, EventArgs e)
+        {
+            ObjDashboard.WindowState = FormWindowState.Minimized;
         }
 
         private void Pacientes(object sender, EventArgs e)

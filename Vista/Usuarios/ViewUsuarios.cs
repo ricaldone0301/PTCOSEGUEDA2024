@@ -40,5 +40,10 @@ namespace PTC.Vista.Doctores
         {
 
         }
+
+        private void cmsVerPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

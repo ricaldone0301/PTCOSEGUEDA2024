@@ -239,6 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1683, 828);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);

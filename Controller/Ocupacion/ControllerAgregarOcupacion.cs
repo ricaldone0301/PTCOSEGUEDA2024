@@ -92,10 +92,7 @@ namespace PTC.Controller.Ocupacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar usuario: {ex.Message}",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#005: Error al registrar ocupacion." + ex.Message);
             }
         }
 

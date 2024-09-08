@@ -301,6 +301,7 @@
             this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
             this.bunifuThinButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bunifuThinButton26.ButtonText = "USUARIO";
+            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton26.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton26.ForeColor = System.Drawing.Color.White;
             this.bunifuThinButton26.IdleBorderThickness = 1;
@@ -319,6 +320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1683, 828);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCards1);

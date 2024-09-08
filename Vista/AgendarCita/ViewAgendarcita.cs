@@ -83,7 +83,7 @@ namespace PTC.Vista.AgendarCita
         private void txtHora_TextChanged(object sender, EventArgs e)
         {
             string text = txtHora.Text;
-            string validChars = "0123456789/";
+            string validChars = "0123456789:";
 
             string filteredText = new string(text.Where(c => validChars.Contains(c)).ToArray());
 

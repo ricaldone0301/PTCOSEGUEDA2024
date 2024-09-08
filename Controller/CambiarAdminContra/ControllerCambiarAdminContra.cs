@@ -21,26 +21,46 @@ namespace PTC.Controller.CambiarAdminContra
             ObjCambiarContra.BtnIngresar.Click += new EventHandler(Realizar);
         }
 
+        private bool ValidatePassword(string password)
+        {
+
+            if (password.Length < 8)
+            {
+                return false;
+            }
+
+            bool hasNumber = password.Any(char.IsDigit);
+            if (!hasNumber)
+            {
+                return false;
+            }
+            bool hasSpecialChar = password.Any(ch => "!@#$%^&*()_+[]{}|;:',.<>?/~`".Contains(ch));
+            if (!hasSpecialChar)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void Realizar(object sender, EventArgs e)
         {
+            string password = ObjCambiarContra.TxtContra.Text;
+            if (!ValidatePassword(password))
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (!(string.IsNullOrEmpty(ObjCambiarContra.TxtUsuario.Text)) ||
     string.IsNullOrEmpty(ObjCambiarContra.TxtContra.Text))
             {
+
                 DAOUsuarios objUsuario = new DAOUsuarios();
                 DAOLogin objUsuarioLogin = new DAOLogin();
                 CommonClass common = new CommonClass();
                 objUsuario.Usuario = ObjCambiarContra.TxtUsuario.Text;
                 string cadenaencriptada = common.ComputeSha256Hash(ObjCambiarContra.TxtContra.Text);
                 objUsuario.Contrasena = cadenaencriptada;
-
-
-
-                /* objUsuario.Usuario = ObjViewverContra.txtUsuario.Text;
-                 string cadenaencriptada = common.ComputeSha256Hash
-                     (ObjViewverContra.TxtContra.Text);
-                 objUsuario.ContrasenaNormal = cadenaencriptada*/
-
-
 
 
                 bool answer = objUsuario.VerificarCredenciales();
@@ -69,6 +89,8 @@ namespace PTC.Controller.CambiarAdminContra
                     }
 
                 }
+
+
             }
         }
     }

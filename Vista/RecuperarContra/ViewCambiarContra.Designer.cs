@@ -62,6 +62,7 @@
             this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
             this.TxtUsuario.TabIndex = 1;
             this.TxtUsuario.Text = "Usuario";
+            this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
             // bunifuCustomLabel1
             // 

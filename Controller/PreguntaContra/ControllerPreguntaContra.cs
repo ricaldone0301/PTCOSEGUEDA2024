@@ -77,29 +77,35 @@ namespace PTC.Controller.PreguntaContra
             {
                 try
                 {
-                    DAOPreguntaContra dAOContrasena = new DAOPreguntaContra();
-                    if (dAOContrasena.ValidarPreguntaRespuestaSeguridad(ObjPregunta.txtEmail.Text.Trim(), pregunta, respuesta))
+                    if (!(string.IsNullOrEmpty(ObjPregunta.txtRespuesta.Text.Trim()) ||
+           string.IsNullOrEmpty(ObjPregunta.txtEmail.Text.Trim()) ||
+           string.IsNullOrEmpty(ObjPregunta.txtContrasena.Text.Trim()) ||
+            string.IsNullOrEmpty(ObjPregunta.txtConfirm.Text.Trim())))
                     {
-                        CommonClass common = new CommonClass();
-                        string cadenaencriptada = common.ComputeSha256Hash(ObjPregunta.txtContrasena.Text);
-                        dAOContrasena.Contrasena = cadenaencriptada;
-                        dAOContrasena.Email = ObjPregunta.txtEmail.Text.Trim();
-
-                        int valorRetornado = dAOContrasena.ActualizarContra();
-
-                        if (valorRetornado == 1)
+                        DAOPreguntaContra dAOContrasena = new DAOPreguntaContra();
+                        if (dAOContrasena.ValidarPreguntaRespuestaSeguridad(ObjPregunta.txtEmail.Text.Trim(), pregunta, respuesta))
                         {
-                            MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            CommonClass common = new CommonClass();
+                            string cadenaencriptada = common.ComputeSha256Hash(ObjPregunta.txtContrasena.Text);
+                            dAOContrasena.Contrasena = cadenaencriptada;
+                            dAOContrasena.Email = ObjPregunta.txtEmail.Text.Trim();
+
+                            int valorRetornado = dAOContrasena.ActualizarContra();
+
+                            if (valorRetornado == 1)
+                            {
+                                MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Los datos no pudieron ser registrados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error OS#004: No se pudo actualizar la contraseña" + ex.Message);
                 }
             }
             else
@@ -126,7 +132,7 @@ namespace PTC.Controller.PreguntaContra
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error OS#001: Error al conseguir el cargo inicial" + ex.Message);
             }
 
         }

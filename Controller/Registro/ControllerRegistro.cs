@@ -89,7 +89,7 @@ namespace PTC.Controller.Registro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error OS#001: Error al cargar valores" + ex.Message);
             }
         }
 
@@ -97,6 +97,12 @@ namespace PTC.Controller.Registro
 
         public void ConseguirCorreo(object sender, EventArgs e)
         {
+            string password = ObjRegistro.txtContrasena.Text;
+            if (!ValidatePassword(password))
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string to, from, pass;
 
             verificationCode = generateCode();
@@ -122,7 +128,7 @@ namespace PTC.Controller.Registro
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al enviar el correo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#005: No se pudo enviar el codigo de verificación." + ex.Message);
             }
         }
 
@@ -137,18 +143,14 @@ namespace PTC.Controller.Registro
                 return; 
             }
 
-          string password = ObjRegistro.txtContrasena.Text;
-            if (!ValidatePassword(password))
-            {
-                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
             try
             {
 
                 DAORegistro daoRegistro = new DAORegistro();
                 CommonClass common = new CommonClass();
+
+                string password = ObjRegistro.txtContrasena.Text;
 
                 string cadenaencriptada = common.ComputeSha256Hash(password);
 
@@ -178,7 +180,7 @@ namespace PTC.Controller.Registro
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#002: Error al registrar usuario." + ex.Message);
             }
         }
 

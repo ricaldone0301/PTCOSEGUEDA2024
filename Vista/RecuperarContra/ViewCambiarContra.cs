@@ -21,5 +21,21 @@ namespace PTC.Vista.RecuperarContra
         }
 
 
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(TxtUsuario);
+            ContextMenuEliminar(TxtContra);
+        }
+
+            private void TxtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

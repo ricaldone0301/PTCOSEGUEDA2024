@@ -17,6 +17,7 @@ namespace PTC.Vista.Dashboard
         {
             InitializeComponent();
             ControllerDashboard objDash = new ControllerDashboard(this);
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
@@ -25,6 +26,21 @@ namespace PTC.Vista.Dashboard
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ok_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
         }

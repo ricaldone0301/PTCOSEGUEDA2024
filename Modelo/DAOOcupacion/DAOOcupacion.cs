@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAOOcupacion
 {
@@ -38,7 +39,7 @@ namespace PTC.Modelo.DAOOcupacion
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al llenar el ComboBox: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally

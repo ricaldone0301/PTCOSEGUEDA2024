@@ -132,7 +132,7 @@ namespace PTC.Controller.Cita
 
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error OS#001: Error al conseguir el cargo inicial. " + ex.Message);
             }
         }
 
@@ -201,10 +201,7 @@ namespace PTC.Controller.Cita
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"ERRC002: {ex.Message}",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Error OS#004: Error al crear la nueva cita " + ex.Message);
             }
         }
 

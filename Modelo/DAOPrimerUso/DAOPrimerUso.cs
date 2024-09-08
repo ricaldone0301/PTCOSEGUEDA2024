@@ -98,6 +98,34 @@ namespace PTC.Modelo.DAOPrimerUso
             return ds;
         }
 
+        public DataSet ComboBoxPreguntas()
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    string query = "SELECT * FROM Preguntas";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+
+                    using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                    {
+                        adp.Fill(ds, "Preguntas");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                ds = null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+            return ds;
+        }
+
 
         public int RegistrarUsuario()
         {

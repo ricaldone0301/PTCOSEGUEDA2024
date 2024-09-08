@@ -117,7 +117,6 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Buffer
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Memory.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\Bunifu.Licensing.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\BCrypt.Net-Next.xml
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Buffers.xml
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Memory.xml
@@ -126,3 +125,6 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\System.Runtim
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.Up2Date
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.exe
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.pdb
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Dashboard.viewDashboardd.resources
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.exe.licenses

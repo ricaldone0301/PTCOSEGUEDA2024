@@ -1,6 +1,6 @@
 ﻿namespace PTC.Vista.Dashboard
 {
-    partial class ViewDashboard
+    partial class viewDashboardd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDashboard));
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.PanelPadre = new System.Windows.Forms.Panel();
-            this.btnCerrar = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnMaximizar = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewDashboardd));
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -49,163 +42,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.PanelPadre.SuspendLayout();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(92, 62);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(688, 31);
-            this.bunifuCustomLabel10.TabIndex = 30;
-            this.bunifuCustomLabel10.Text = "Bienvenido al Sistema de Citas de Clínica Dental Osegueda";
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(465, 238);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(0, 31);
-            this.bunifuCustomLabel3.TabIndex = 24;
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1923, 1019);
-            this.PanelContenedor.TabIndex = 32;
-            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
-            // 
-            // PanelPadre
-            // 
-            this.PanelPadre.Controls.Add(this.btnCerrar);
-            this.PanelPadre.Controls.Add(this.btnMaximizar);
-            this.PanelPadre.Controls.Add(this.btnMinimizar);
-            this.PanelPadre.Controls.Add(this.ok);
-            this.PanelPadre.Controls.Add(this.PanelContenedor);
-            this.PanelPadre.Location = new System.Drawing.Point(1, 1);
-            this.PanelPadre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelPadre.Name = "PanelPadre";
-            this.PanelPadre.Size = new System.Drawing.Size(1923, 1019);
-            this.PanelPadre.TabIndex = 33;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.ActiveImage = null;
-            this.btnCerrar.AllowAnimations = true;
-            this.btnCerrar.AllowBuffering = false;
-            this.btnCerrar.AllowToggling = false;
-            this.btnCerrar.AllowZooming = false;
-            this.btnCerrar.AllowZoomingOnFocus = false;
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
-            this.btnCerrar.FadeWhenInactive = true;
-            this.btnCerrar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.ImageLocation = null;
-            this.btnCerrar.ImageMargin = 20;
-            this.btnCerrar.ImageSize = new System.Drawing.Size(44, 35);
-            this.btnCerrar.ImageZoomSize = new System.Drawing.Size(64, 55);
-            this.btnCerrar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.InitialImage")));
-            this.btnCerrar.Location = new System.Drawing.Point(1815, 16);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Rotation = 0;
-            this.btnCerrar.ShowActiveImage = true;
-            this.btnCerrar.ShowCursorChanges = true;
-            this.btnCerrar.ShowImageBorders = true;
-            this.btnCerrar.ShowSizeMarkers = false;
-            this.btnCerrar.Size = new System.Drawing.Size(64, 55);
-            this.btnCerrar.TabIndex = 36;
-            this.btnCerrar.ToolTipText = "";
-            this.btnCerrar.WaitOnLoad = false;
-            this.btnCerrar.Zoom = 20;
-            this.btnCerrar.ZoomSpeed = 10;
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.ActiveImage = null;
-            this.btnMaximizar.AllowAnimations = true;
-            this.btnMaximizar.AllowBuffering = false;
-            this.btnMaximizar.AllowToggling = false;
-            this.btnMaximizar.AllowZooming = false;
-            this.btnMaximizar.AllowZoomingOnFocus = false;
-            this.btnMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximizar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMaximizar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.ErrorImage")));
-            this.btnMaximizar.FadeWhenInactive = true;
-            this.btnMaximizar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.ImageActive = null;
-            this.btnMaximizar.ImageLocation = null;
-            this.btnMaximizar.ImageMargin = 20;
-            this.btnMaximizar.ImageSize = new System.Drawing.Size(44, 35);
-            this.btnMaximizar.ImageZoomSize = new System.Drawing.Size(64, 55);
-            this.btnMaximizar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.InitialImage")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1745, 16);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Rotation = 0;
-            this.btnMaximizar.ShowActiveImage = true;
-            this.btnMaximizar.ShowCursorChanges = true;
-            this.btnMaximizar.ShowImageBorders = true;
-            this.btnMaximizar.ShowSizeMarkers = false;
-            this.btnMaximizar.Size = new System.Drawing.Size(64, 55);
-            this.btnMaximizar.TabIndex = 35;
-            this.btnMaximizar.ToolTipText = "";
-            this.btnMaximizar.WaitOnLoad = false;
-            this.btnMaximizar.Zoom = 20;
-            this.btnMaximizar.ZoomSpeed = 10;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.ActiveImage = null;
-            this.btnMinimizar.AllowAnimations = true;
-            this.btnMinimizar.AllowBuffering = false;
-            this.btnMinimizar.AllowToggling = false;
-            this.btnMinimizar.AllowZooming = false;
-            this.btnMinimizar.AllowZoomingOnFocus = false;
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMinimizar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ErrorImage")));
-            this.btnMinimizar.FadeWhenInactive = true;
-            this.btnMinimizar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.ImageActive = null;
-            this.btnMinimizar.ImageLocation = null;
-            this.btnMinimizar.ImageMargin = 20;
-            this.btnMinimizar.ImageSize = new System.Drawing.Size(44, 35);
-            this.btnMinimizar.ImageZoomSize = new System.Drawing.Size(64, 55);
-            this.btnMinimizar.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.InitialImage")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1675, 16);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Rotation = 0;
-            this.btnMinimizar.ShowActiveImage = true;
-            this.btnMinimizar.ShowCursorChanges = true;
-            this.btnMinimizar.ShowImageBorders = true;
-            this.btnMinimizar.ShowSizeMarkers = false;
-            this.btnMinimizar.Size = new System.Drawing.Size(64, 55);
-            this.btnMinimizar.TabIndex = 34;
-            this.btnMinimizar.ToolTipText = "";
-            this.btnMinimizar.WaitOnLoad = false;
-            this.btnMinimizar.Zoom = 20;
-            this.btnMinimizar.ZoomSpeed = 10;
             // 
             // ok
             // 
@@ -234,9 +75,8 @@
             this.ok.Name = "ok";
             this.ok.Quality = 10;
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ok.Size = new System.Drawing.Size(270, 1019);
-            this.ok.TabIndex = 20;
-            this.ok.Paint += new System.Windows.Forms.PaintEventHandler(this.ok_Paint);
+            this.ok.Size = new System.Drawing.Size(270, 679);
+            this.ok.TabIndex = 21;
             // 
             // btnInicio
             // 
@@ -479,85 +319,51 @@
             this.btnCitas.Size = new System.Drawing.Size(129, 34);
             this.btnCitas.TabIndex = 7;
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
-            // pictureBox3
+            // PanelContenedor
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(139, 112);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(604, 318);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
+            this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(270, 0);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1076, 679);
+            this.PanelContenedor.TabIndex = 33;
             // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
-            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.Tomato;
-            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator2.LineThickness = 5;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 485);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(849, 17);
-            this.bunifuSeparator2.TabIndex = 33;
-            // 
-            // ViewDashboard
+            // viewDashboardd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 1020);
-            this.Controls.Add(this.PanelPadre);
-            this.Controls.Add(this.bunifuCustomLabel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(1346, 679);
+            this.Controls.Add(this.PanelContenedor);
+            this.Controls.Add(this.ok);
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1364, 726);
-            this.Name = "ViewDashboard";
-            this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ViewDashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ViewDashboard_Load);
-            this.PanelPadre.ResumeLayout(false);
+            this.Name = "viewDashboardd";
+            this.Text = "viewDashboardd";
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+
         private Bunifu.Framework.UI.BunifuGradientPanel ok;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnInicio;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnUsuarios;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnCerrarSesion;
         public Bunifu.Framework.UI.BunifuThinButton2 btnPacientes;
         public Bunifu.Framework.UI.BunifuThinButton2 btnOcupaciones;
-        public System.Windows.Forms.Panel PanelContenedor;
-        public System.Windows.Forms.Panel PanelPadre;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnUsuarios;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnCerrarSesion;
         public Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
         public Bunifu.Framework.UI.BunifuCustomLabel lblUsuario;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnInicio;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnCitas;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnProcedimientos;
-        public Bunifu.UI.WinForms.BunifuImageButton btnMinimizar;
-        public Bunifu.UI.WinForms.BunifuImageButton btnCerrar;
-        public Bunifu.UI.WinForms.BunifuImageButton btnMaximizar;
+        public System.Windows.Forms.Panel PanelContenedor;
     }
 }
