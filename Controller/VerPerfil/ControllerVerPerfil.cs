@@ -17,11 +17,8 @@ namespace PTC.Controller.VerPerfil
     internal class ControllerVerPerfil
     {
         ViewVerContra ObjVerContra;
-        ViewCambiarContra ObjCambiarContra;
-        ViewDashboard ObjDashboard;
         private int accion;
         private string rol;
-        private int intentosFallidos;
 
         public ControllerVerPerfil(ViewVerContra View)
         {

@@ -36,7 +36,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -64,7 +64,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -91,7 +91,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -119,7 +119,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -158,7 +158,7 @@ namespace PTC.Modelo.DAOUsuarios
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"ERRU001: {ex.Message}");
+                MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
             finally

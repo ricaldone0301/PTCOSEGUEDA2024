@@ -30,7 +30,7 @@ namespace PTC.Controller.PrimerUso
         {
             ObjRegistro = Vista;
             ObjRegistro.Load += new EventHandler(CargoInicial);
-            ObjRegistro.btnEnviar1.Click += new EventHandler(VerificarCodigoYRegistrar);
+            ObjRegistro.btnEnviar1.Click += new EventHandler(RegistrarUsuario);
 
         }
 
@@ -100,7 +100,7 @@ namespace PTC.Controller.PrimerUso
         }
         
 
-        public void VerificarCodigoYRegistrar(object sender, EventArgs e)
+        public void RegistrarUsuario(object sender, EventArgs e)
         {
 
             try

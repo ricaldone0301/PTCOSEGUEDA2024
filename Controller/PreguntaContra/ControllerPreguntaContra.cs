@@ -29,7 +29,6 @@ namespace PTC.Controller.PreguntaContra
             ObjPregunta.Load += new EventHandler(CargoInicial);
             ObjPregunta.btnEnviar.Click += new EventHandler(ConseguirCorreo);
             ObjPregunta.btnEnviar1.Click += new EventHandler(ActualizarContrasena);
-            //ObjContrasena.timevcode.Tick += new EventHandler(Tick);
         }
 
         //Se define un método ConseguirCorreo que envía un correo electrónico con un código de verificación
@@ -142,7 +141,7 @@ namespace PTC.Controller.PreguntaContra
             }
 
         }
-        //Se genera el codgio
+        //Se genera el codigo
     public String GenerarCodigo()
         {
             Random r = new Random();

@@ -17,19 +17,21 @@ namespace PTC.Modelo.DAOPreguntaContra
         {
             try
             {
-
+                //crea comando de sql y abre la coneccion
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = getConnection();
 
-                    //Actualiza la contrasena dodne el correo sea el ingresado
+                    //Actualiza la contrasena donde el correo sea el ingresado
                     String query = "UPDATE Personal SET contraseñaPersonal = @contrasena WHERE Email = @email";
                     cmd.CommandText = query;
 
+                    //asigna valores a los parametros
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
                     cmd.Parameters.AddWithValue("@email", Email);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
+                    //retorna las filas afectadas
                     return rowsAffected;
                 }
             }
@@ -43,28 +45,31 @@ namespace PTC.Modelo.DAOPreguntaContra
 
         public bool ValidarPreguntaRespuestaSeguridad(string email, string preguntaSeguridadIngresada, string respuestaSeguridadIngresada)
         {
+            //retorna true si la pregunta y respuesta ingresadas coinciden con las almacenadas en la base de datos si no retorna falso
             try
             {
+                // Abre una nueva conexión a la base de datos.
                 using (SqlConnection conn = getConnection())
                 {
                     conn.Open();
-                    // se abrie la conexión
+                    // Crea un nuevo comando SQl
 
                     using (SqlCommand cmd = new SqlCommand())
                     {
-                        //Valida al leer la pregunta y respuesta validando que sean del correo ingresado
+                        // Crea el query para seleccionar la pregunta y respuesta de seguridad del usuario asociado a su email
                         cmd.Connection = conn;
                         cmd.CommandText = "SELECT preguntaSeguridad, respuestaSeguridad FROM Personal WHERE Email = @email";
                         cmd.Parameters.AddWithValue("@email", email);
-
+                        // Ejecuta el comando y obtiene un lector de datos para leer los datos
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
+                                // Obtiene la pregunta y respuesta de seguridad almacenadas en la base de datos
                                 string preguntaSeguridad = reader["preguntaSeguridad"].ToString();
                                 string respuestaSeguridad = reader["respuestaSeguridad"].ToString();
 
-                                // Verifica la pregunta y respuesta de seguridad
+                                // retorna si estan asociados
                                 return preguntaSeguridad == preguntaSeguridadIngresada && respuestaSeguridad == respuestaSeguridadIngresada;
                             }
                         }

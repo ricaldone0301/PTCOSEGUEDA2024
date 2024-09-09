@@ -15,13 +15,13 @@ namespace PTC.Controller.CambiarAdminContra
     internal class ControllerCambiarAdminContra
     {
         ViewCambiarContra ObjCambiarContra;
-        public ControllerCambiarAdminContra(ViewCambiarContra View)
+        public ControllerCambiarAdminContra(ViewCambiarContra Vista)
         {
-            ObjCambiarContra = View;
+            ObjCambiarContra = Vista;
             ObjCambiarContra.BtnIngresar.Click += new EventHandler(Realizar);
         }
 
-        private bool ValidatePassword(string password)
+        private bool ValidarContra(string password)
         {
             // Verifica que su longitud sea al menos de 8 caracteres
             if (password.Length < 8)
@@ -50,7 +50,7 @@ namespace PTC.Controller.CambiarAdminContra
             //Se obtiene la contraseña desde un TextBox.
             string password = ObjCambiarContra.TxtContra.Text;
             //Se valida la contraseña para asegurarse de que cumpla conlos  requisitos.
-            if (!ValidatePassword(password))
+            if (!ValidarContra(password))
             {
                 MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
