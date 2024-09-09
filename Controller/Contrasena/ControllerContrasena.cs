@@ -28,7 +28,6 @@ namespace PTC.Controller
             ObjContrasena = Vista;
             ObjContrasena.btnEnviar.Click += new EventHandler(ConseguirCorreo);
             ObjContrasena.btnEnviar1.Click += new EventHandler(ActualizarContrasena);
-            //ObjContrasena.timevcode.Tick += new EventHandler(Tick);
         }
 
         //Se define un método ConseguirCorreo que envía un correo electrónico con un código de verificación
@@ -103,18 +102,6 @@ namespace PTC.Controller
             {
                 MessageBox.Show("El código de verificación es incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        public void Tick(object sender, EventArgs e)
-        {
-            int vCode = 1000;
-
-            vCode += 10;
-            if (vCode == 9999)
-            {
-                vCode = 1000;
-            }
-
         }
 
         public String GenerarCodigo()

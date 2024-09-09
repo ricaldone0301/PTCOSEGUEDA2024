@@ -126,5 +126,9 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.Up
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.exe
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.pdb
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
-C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Dashboard.viewDashboardd.resources
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.exe.licenses
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\Interop.WMPLib.dll
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.ResolveComReference.cache
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\Interop.WMPLib.dll
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\AxInterop.WMPLib.dll

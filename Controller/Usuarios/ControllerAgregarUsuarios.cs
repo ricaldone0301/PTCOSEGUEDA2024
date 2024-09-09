@@ -139,11 +139,14 @@ namespace PTC.Controller.Usuarios
             }
         }
 
+        
+
         //En este metodo se utiliza cuando  hacemos click en registrar un usuario
         public void Nuevo(object sender, EventArgs e)
         {
             try
             {
+                //Si el textbox no esta vacio se sigue el procedimiento pero si esta vacio no se le permite seguir y tiene una excepcion
                 if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text .Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtTelefono.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtUsuario.Text.Trim()) ||
@@ -252,12 +255,12 @@ namespace PTC.Controller.Usuarios
        string.IsNullOrEmpty(ObjAgregarUsuario.txtEmail.Text.Trim())))
 
             {
-                string contrasena = ObjAgregarUsuario.txtContrasena.Text;
-                if (!ValidarContra(contrasena))
-                {
-                    MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //string contrasena = ObjAgregarUsuario.txtContrasena.Text;
+                //if (!ValidarContra(contrasena))
+                //{
+                //    MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
 
 
                 try

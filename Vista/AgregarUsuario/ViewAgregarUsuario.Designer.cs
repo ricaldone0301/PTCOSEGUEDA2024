@@ -56,6 +56,7 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lblError = new System.Windows.Forms.Label();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -92,6 +93,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblError);
             this.panel1.Controls.Add(this.txtRespuesta);
             this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.cbEsp);
@@ -286,7 +288,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(39, 326);
+            this.txtContrasena.Location = new System.Drawing.Point(39, 335);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.MaxLength = 256;
             this.txtContrasena.Name = "txtContrasena";
@@ -419,6 +421,15 @@
             this.bunifuThinButton26.TabIndex = 10;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(36, 317);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(190, 16);
+            this.lblError.TabIndex = 45;
+            this.lblError.Text = "No se ha detectado un cambio";
+            // 
             // ViewAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,5 +479,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         public System.Windows.Forms.ComboBox cbPregunta;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private System.Windows.Forms.Label lblError;
     }
 }

@@ -73,7 +73,7 @@ namespace PTC.Controller.Cita
 
             pacienteID = int.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
             citaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
-            fecha = DateTime.ParseExact(ObjAdminCitas.dgvCitas[2, pos].Value.ToString(), "M/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
             consultorioID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
             hora = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();
             personalID = ObjAdminCitas.dgvCitas[6, pos].Value.ToString();
@@ -97,7 +97,7 @@ namespace PTC.Controller.Cita
         
             pacienteID = int.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
             citaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
-            fecha = DateTime.ParseExact(ObjAdminCitas.dgvCitas[2, pos].Value.ToString(), "M/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
             consultorioID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
             //hora = fecha.ToString("HH:mm:ss.fffffff tt");
             hora = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();

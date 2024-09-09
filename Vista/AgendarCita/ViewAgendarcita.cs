@@ -34,6 +34,7 @@ namespace PTC.Vista.AgendarCita
 
         private void ViewAgendarcita_load(object sender, EventArgs e)
         {
+            //tiene el propósito de asignar el valor de la fecha actual datetime.today a la propiedad minDate de un objeto Fecha, esto se hace para que al momento de asignar fecha a la cita solo pueda elegir fechas de hoy en adelante
             Fecha.MinDate = DateTime.Today;
         }
         private void ContextMenuEliminar(TextBox textBox)

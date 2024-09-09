@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using PTC.Modelo.DTORegistro;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAORegistro
 {
@@ -32,7 +33,7 @@ namespace PTC.Modelo.DAORegistro
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -60,7 +61,7 @@ namespace PTC.Modelo.DAORegistro
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -87,7 +88,7 @@ namespace PTC.Modelo.DAORegistro
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -115,7 +116,7 @@ namespace PTC.Modelo.DAORegistro
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -154,7 +155,7 @@ namespace PTC.Modelo.DAORegistro
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
             finally

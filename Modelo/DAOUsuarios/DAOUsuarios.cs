@@ -138,7 +138,7 @@ namespace PTC.Modelo.DAOUsuarios
                 {
                     cmd.Connection = getConnection();
 
-                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email)";
+                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email, preguntaID, respuesta) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email, @preguntaID, @respuesta)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@usuario", Usuario);
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
@@ -148,6 +148,8 @@ namespace PTC.Modelo.DAOUsuarios
                     cmd.Parameters.AddWithValue("@telefono", Telefono);
                     cmd.Parameters.AddWithValue("@consultorioId", ConsultorioId);
                     cmd.Parameters.AddWithValue("@email", Email);
+                    cmd.Parameters.AddWithValue("@preguntaID", PreguntaID);
+                    cmd.Parameters.AddWithValue("@respuesta", Respuesta);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -170,14 +172,14 @@ namespace PTC.Modelo.DAOUsuarios
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT * FROM Personal";
+                string query = "SELECT * FROM VistaPersonal";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 DataSet ds = new DataSet();
 
-                ds.Load(reader, LoadOption.OverwriteChanges, "Personal");
+                ds.Load(reader, LoadOption.OverwriteChanges, "VistaPersonal");
                 reader.Close();
 
                 return ds;
@@ -267,7 +269,7 @@ namespace PTC.Modelo.DAOUsuarios
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "viewPersonal");
+                adp.Fill(ds, "VistaPersonal");
                 return ds;
             }
             catch (Exception)
@@ -314,40 +316,48 @@ namespace PTC.Modelo.DAOUsuarios
             return usuario;
         }
 
-        public bool EsAdministrador()
-        {
-            try
-            {
-                using (SqlConnection connection = getConnection())
-                {
-                    string query = "SELECT COUNT(*) FROM ViewLogin WHERE usuarioPersonal = @username AND rolPersonal = 'Administrador'";
-                    SqlCommand cmd = new SqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@username", Usuario);
+        //public bool EsAdministrador()
+        //{
+        //    try
+        //    {
+        //        // Se establece la conexión a la base de datos
+        //        using (SqlConnection connection = getConnection())
+        //        {
+        //            //se crea una consulta  para verificar si existe un usuario con el rol de Administrador que coincida con el nombre de usuario y la contraseña escritos
+        //            string query = "SELECT COUNT(*) FROM ViewLogin WHERE usuarioPersonal = @username AND rolPersonal = 'Administrador'";
+        //            // Se crea un comando  y se le asigna la consulta junto con la conexión.
+        //            SqlCommand cmd = new SqlCommand(query, connection);
 
-                    int count = (int)cmd.ExecuteScalar();
-                    return count > 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al verificar el rol del usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
+        //            cmd.Parameters.AddWithValue("@username", Usuario);
+        //            // Se ejecuta la consulta y se obtiene el resultado, que será el número de filas que coinciden con los criterios
+        //            int count = (int)cmd.ExecuteScalar();
+        //            return count > 0;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error al verificar el rol del usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return false;
+        //    }
+        //}
 
 
         public bool VerificarCredenciales()
         {
             try
             {
+                // Se establece la conexión a la base de datos
                 Command.Connection = getConnection();
+                //se crea una consulta  para verificar si existe un usuario con el rol de Administrador que coincida con el nombre de usuario y la contraseña escritos
                 string query = "SELECT COUNT(*) FROM ViewLogin WHERE usuarioPersonal = @username AND contraseñaPersonal = @password AND nombreRol = 'Administrador'";
+                // Se crea un comando  y se le asigna la consulta junto con la conexión.
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", Usuario);
                 cmd.Parameters.AddWithValue("@password", Contrasena);
 
+                // Se ejecuta la consulta y se obtiene el resultado, que será el número de filas que coinciden con los criterios
 
-                    int count = (int)cmd.ExecuteScalar();
+                int count = (int)cmd.ExecuteScalar();
 
                     return count > 0;
 
@@ -368,11 +378,14 @@ namespace PTC.Modelo.DAOUsuarios
             {
                 //DAo daologin = new DAOLogin();
                 Command.Connection = getConnection();
+                //Se crea el query de update donde
                 string query = "UPDATE Personal SET contraseñaPersonal = @contra WHERE usuarioPersonal = @usuario";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                //Se le asignan las variables a parametros 
                 cmd.Parameters.AddWithValue("@usuario", Usuario);
                 cmd.Parameters.AddWithValue("@contra", Contrasena);
                 int respuesta = cmd.ExecuteNonQuery();
+                //se devuelve la respuesta
                 return respuesta;
             }
             catch (Exception ex)

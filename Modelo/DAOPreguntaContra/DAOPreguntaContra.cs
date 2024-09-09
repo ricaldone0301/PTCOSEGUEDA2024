@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAOPreguntaContra
 {
@@ -21,7 +22,7 @@ namespace PTC.Modelo.DAOPreguntaContra
                 {
                     cmd.Connection = getConnection();
 
-
+                    //Actualiza la contrasena dodne el correo sea el ingresado
                     String query = "UPDATE Personal SET contraseñaPersonal = @contrasena WHERE Email = @email";
                     cmd.CommandText = query;
 
@@ -34,7 +35,7 @@ namespace PTC.Modelo.DAOPreguntaContra
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error OS#018: Error al actualizar registro." + ex.Message);
                 return -1;
             }
         }
@@ -46,10 +47,12 @@ namespace PTC.Modelo.DAOPreguntaContra
             {
                 using (SqlConnection conn = getConnection())
                 {
-                    conn.Open(); // Asegúrate de abrir la conexión
+                    conn.Open();
+                    // se abrie la conexión
 
                     using (SqlCommand cmd = new SqlCommand())
                     {
+                        //Valida al leer la pregunta y respuesta validando que sean del correo ingresado
                         cmd.Connection = conn;
                         cmd.CommandText = "SELECT preguntaSeguridad, respuestaSeguridad FROM Personal WHERE Email = @email";
                         cmd.Parameters.AddWithValue("@email", email);
@@ -61,7 +64,7 @@ namespace PTC.Modelo.DAOPreguntaContra
                                 string preguntaSeguridad = reader["preguntaSeguridad"].ToString();
                                 string respuestaSeguridad = reader["respuestaSeguridad"].ToString();
 
-                                // Verificar la pregunta y respuesta de seguridad
+                                // Verifica la pregunta y respuesta de seguridad
                                 return preguntaSeguridad == preguntaSeguridadIngresada && respuestaSeguridad == respuestaSeguridadIngresada;
                             }
                         }
@@ -70,7 +73,7 @@ namespace PTC.Modelo.DAOPreguntaContra
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al validar pregunta y respuesta de seguridad: {ex.Message}");
+                MessageBox.Show("Error OS#022: Error al validar pregunta y respuesta asociada al correo." + ex.Message);
             }
             finally
             {
@@ -81,7 +84,7 @@ namespace PTC.Modelo.DAOPreguntaContra
         }
 
             public DataSet ComboBoxPreguntas()
-        {
+            {
             DataSet ds = new DataSet();
             try
             {
@@ -98,7 +101,7 @@ namespace PTC.Modelo.DAOPreguntaContra
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -106,6 +109,6 @@ namespace PTC.Modelo.DAOPreguntaContra
                 getConnection().Close();
             }
             return ds;
-        }
+            }
     }
 }

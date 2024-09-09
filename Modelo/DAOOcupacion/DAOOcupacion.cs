@@ -78,7 +78,7 @@ namespace PTC.Modelo.DAOOcupacion
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al registrar ocupacion: {ex.Message}");
+                MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
             finally
@@ -114,8 +114,9 @@ namespace PTC.Modelo.DAOOcupacion
 
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#017: Error al visualizar registro." + ex.Message);
                 return null;
             }
             finally
@@ -149,8 +150,9 @@ namespace PTC.Modelo.DAOOcupacion
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#018: Error al actualizar registro." + ex.Message);
                 return -1;
             }
             finally
@@ -179,8 +181,9 @@ namespace PTC.Modelo.DAOOcupacion
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#019: Error al eliminar registro." + ex.Message);
                 return -1;
             }
             finally
@@ -209,8 +212,9 @@ namespace PTC.Modelo.DAOOcupacion
                 adp.Fill(ds, "ViewOcupaciones");
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#020: Error al intentar buscar registro." + ex.Message);
                 return null;
             }
             finally

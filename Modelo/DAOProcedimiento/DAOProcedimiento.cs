@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using PTC.Modelo.DTOProcedimiento;
+using System.Windows.Forms;
 
 namespace PTC.Modelo.DAOProcedimiento
 {
@@ -36,7 +37,7 @@ namespace PTC.Modelo.DAOProcedimiento
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
             finally
@@ -50,7 +51,7 @@ namespace PTC.Modelo.DAOProcedimiento
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT * FROM Procedimientos";
+                string query = "SELECT * FROM ViewProcedimientos";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -58,13 +59,14 @@ namespace PTC.Modelo.DAOProcedimiento
                 //en un dataset utilizando el metodo load
                 DataSet ds = new DataSet();
 
-                ds.Load(reader, LoadOption.OverwriteChanges, "Procedimientos");
+                ds.Load(reader, LoadOption.OverwriteChanges, "ViewProcedimientos");
                 reader.Close();
 
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#017: Error al visualizar registro." + ex.Message);
                 return null;
             }
             finally
@@ -96,8 +98,9 @@ namespace PTC.Modelo.DAOProcedimiento
                 return respuesta;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#018: Error al actualizar registro." + ex.Message);
                 return -1;
             }
             finally
@@ -120,8 +123,9 @@ namespace PTC.Modelo.DAOProcedimiento
                 return respuesta;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#019: Error al eliminar registro." + ex.Message);
                 return -1;
             }
             finally
@@ -145,8 +149,9 @@ namespace PTC.Modelo.DAOProcedimiento
                 adp.Fill(ds, "viewProcedimientos");
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#020: Error al intentar buscar registro." + ex.Message);
                 return null;
             }
             finally

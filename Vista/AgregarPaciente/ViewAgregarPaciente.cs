@@ -26,6 +26,7 @@ namespace PTC.Vista.AgregarPaciente
 
         private void ViewAgregarPaciente_Load(object sender, EventArgs e)
         {
+            //Esta al igual que la otra validacion limita el calendario, este le asigna calendario solo permitir fechas anteriores a la de hoy ya que es para la fecha de nacimiento.
             dtpFechaNac.MaxDate = DateTime.Today;
         }
         public ViewAgregarPaciente(int accion, int pacienteID, string nombrepaciente, int edadpaciente, string telefonopaciente, DateTime fechanac, string correopaciente, string ocupacion, string direccionpaciente, string dui, string referencia, string nombreemergencia, string numemergencia, string motivoconsulta, string padecimientos, string controlmedico, string medicocabeceranombre, string nummedicocabecera, string alergiamedicamentos, string medicamento, string operacion, string tipooperacion, string recuperacionoperacion)

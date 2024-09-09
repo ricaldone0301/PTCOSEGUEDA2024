@@ -163,6 +163,11 @@
     <Compile Include="Modelo\DTOUsuarios\DTOUsuarios.cs" />
     <Compile Include="Modelo\ModelInit.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vista\AgendarCita\ViewAgendarcita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,12 +215,6 @@
     </Compile>
     <Compile Include="Vista\Dashboard\ViewDashboard.Designer.cs">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Dashboard\viewDashboardd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Dashboard\viewDashboardd.Designer.cs">
-      <DependentUpon>viewDashboardd.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Ocupaciones\ViewOcupaciones.cs">
       <SubType>Form</SubType>
@@ -298,14 +297,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Vista\AgendarCita\ViewAgendarcita.resx">
       <DependentUpon>ViewAgendarcita.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,9 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dashboard\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Dashboard\viewDashboardd.resx">
-      <DependentUpon>viewDashboardd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
@@ -392,6 +383,7 @@
     <Content Include="Resources\icons8-dashboard-24.png" />
     <Content Include="Resources\icons8-job-24.png" />
     <Content Include="Resources\icons8-sneeze-30.png" />
+    <Content Include="Resources\OS.jpg" />
     <Content Include="Resources\reload.ico" />
     <Content Include="Resources\trashcan.ico" />
   </ItemGroup>
@@ -410,6 +402,24 @@
   <ItemGroup>
     <None Include="Resources\osegueda1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

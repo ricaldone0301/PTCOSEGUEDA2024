@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,7 @@ namespace PTC.Vista.AgregarDoctores
             textBox.ContextMenuStrip = menuContexto;
         }
 
+        
         public void TextBoxMenuEliminar()
         {
             ContextMenuEliminar(txtContrasena);
@@ -129,13 +131,15 @@ namespace PTC.Vista.AgregarDoctores
 
         private void txtContrasena_TextChanged(object sender, EventArgs e)
         {
-            if (txtContrasena.Text.Length > 256)
+            if(txtContrasena.Text.Length > 256)
             {
                 txtContrasena.Text = txtContrasena.Text.Substring(0, 256);
 
                 txtContrasena.SelectionStart = txtContrasena.Text.Length;
             }
         }
+
+       
 
         private void txtRespuesta_TextChanged(object sender, EventArgs e)
         {

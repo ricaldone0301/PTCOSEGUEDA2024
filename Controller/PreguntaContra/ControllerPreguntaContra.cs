@@ -73,15 +73,19 @@ namespace PTC.Controller.PreguntaContra
             string pregunta = ObjPregunta.cbPregunta.Text.Trim();
             string respuesta = ObjPregunta.txtRespuesta.Text.Trim();
 
+            //Si el codidog ingresado es igual al de verificacion se sigue
             if (codigoIngresado == codigoVerificacion)
             {
                 try
                 {
+                    //verifica que no esten nulos
                     if (!(string.IsNullOrEmpty(ObjPregunta.txtRespuesta.Text.Trim()) ||
            string.IsNullOrEmpty(ObjPregunta.txtEmail.Text.Trim()) ||
            string.IsNullOrEmpty(ObjPregunta.txtContrasena.Text.Trim()) ||
             string.IsNullOrEmpty(ObjPregunta.txtConfirm.Text.Trim())))
                     {
+                        // Se valida si la pregunta y respuesta de seguridad proporcionadas coinciden con los datos almacenados para el correo electrónico dado.
+                        // El método ValidarPreguntaRespuestaSeguridad devuelve true si la validación es exitosa.
                         DAOPreguntaContra dAOContrasena = new DAOPreguntaContra();
                         if (dAOContrasena.ValidarPreguntaRespuestaSeguridad(ObjPregunta.txtEmail.Text.Trim(), pregunta, respuesta))
                         {
@@ -90,6 +94,8 @@ namespace PTC.Controller.PreguntaContra
                             dAOContrasena.Contrasena = cadenaencriptada;
                             dAOContrasena.Email = ObjPregunta.txtEmail.Text.Trim();
 
+                            // Se llama al método ActualizarContra para actualizar la contraseña en la base de datos.
+                            // El método retorna un valor entero que indica el resultado de la operación.
                             int valorRetornado = dAOContrasena.ActualizarContra();
 
                             if (valorRetornado == 1)
@@ -136,6 +142,7 @@ namespace PTC.Controller.PreguntaContra
             }
 
         }
+        //Se genera el codgio
     public String GenerarCodigo()
         {
             Random r = new Random();

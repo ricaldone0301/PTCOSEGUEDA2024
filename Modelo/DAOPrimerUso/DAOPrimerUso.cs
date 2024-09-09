@@ -32,7 +32,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -60,7 +60,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -88,7 +88,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -116,7 +116,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
@@ -153,7 +153,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
             finally
@@ -186,7 +186,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
             finally
@@ -206,14 +206,9 @@ namespace PTC.Modelo.DAOPrimerUso
                 int totalPersonal = (int)cmd.ExecuteScalar();
                 return totalPersonal;
             }
-            catch (SqlException sqlex)
-            {
-                MessageBox.Show(sqlex.Message);
-                return -1;
-            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error OS#023: Error al realizar el conteo de datos." + ex.Message);
                 return -1;
             }
             finally
@@ -231,14 +226,9 @@ namespace PTC.Modelo.DAOPrimerUso
                 int totalPersonal = (int)cmd.ExecuteScalar();
                 return totalPersonal;
             }
-            catch (SqlException sqlex)
-            {
-                MessageBox.Show(sqlex.Message);
-                return -1;
-            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error OS#023: Error al realizar el conteo de datos." + ex.Message);
                 return -1;
             }
             finally

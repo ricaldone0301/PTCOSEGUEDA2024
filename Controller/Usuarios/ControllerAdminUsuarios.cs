@@ -39,7 +39,7 @@ namespace PTC.Controller.Usuarios
                 //se ejecuta el metodo del dao y se envian al txtbuscar para que lo tome como valor requerido.
                 DataSet ds = ObjAdmin.BuscarPersonas(ObjAdminUsuario.txtBuscar.Text.Trim());
                 //se muestran las opciones que devuelve el metodo dao
-                ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["viewPersonal"];
+                ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["VistaPersonal"];
             }
             private void EliminarUsuario(object sender, EventArgs e)
             {
@@ -137,7 +137,7 @@ namespace PTC.Controller.Usuarios
                 //LLama al metodo obtener personas de nuestro dao para que le de la informacion que se registro y poder obtener el data set con los datos agregado de usuario y los establece como fuente de datos en dgv.
                 DAOUsuarios objAdmin = new DAOUsuarios();
                 DataSet ds = objAdmin.ObtenerPersonas();
-                ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["Personal"];
+                ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["VistaPersonal"];
             }
 
 

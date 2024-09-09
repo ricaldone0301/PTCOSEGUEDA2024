@@ -49,12 +49,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.PanelContenedor.SuspendLayout();
             this.PanelPadre.SuspendLayout();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +87,7 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.PanelContenedor.Controls.Add(this.pictureBox4);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(0, 0);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -481,6 +485,15 @@
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(429, 277);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(946, 390);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -525,11 +538,13 @@
             this.Text = "ViewDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewDashboard_Load);
+            this.PanelContenedor.ResumeLayout(false);
             this.PanelPadre.ResumeLayout(false);
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -559,5 +574,6 @@
         public Bunifu.UI.WinForms.BunifuImageButton btnMinimizar;
         public Bunifu.UI.WinForms.BunifuImageButton btnCerrar;
         public Bunifu.UI.WinForms.BunifuImageButton btnMaximizar;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

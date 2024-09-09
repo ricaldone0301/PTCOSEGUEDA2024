@@ -1,4 +1,6 @@
-﻿using PTC.Controller.Dasboard;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using PTC.Controller.Dasboard;
+using PTC.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PTC.Vista.Dashboard
 {
@@ -41,6 +44,10 @@ namespace PTC.Vista.Dashboard
         }
 
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
