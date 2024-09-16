@@ -1,4 +1,6 @@
-﻿using PTC.Controller.Login;
+﻿using PTC.Controller.CambiarAdminContra;
+using PTC.Controller.Login;
+using PTC.Controller.LoginContra;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +18,7 @@ namespace PTC.Vista.ContraLogin
         public ViewContraLogin()
         {
             InitializeComponent();
-            ControllerLogin control = new ControllerLogin(this);
+            ControllerLoginContra control = new ControllerLoginContra(this);
         }
     }
 }

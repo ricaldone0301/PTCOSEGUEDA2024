@@ -97,6 +97,41 @@ namespace PTC.Modelo.DAOLogin
             }
         }
 
+        public int Identificar()
+        {
+            try
+            {
+               
+                // Se crea la conexión
+                Command.Connection = getConnection();
+
+                // Se crea el query de update donde además de actualizar la contraseña, 
+                // también se actualiza el campo status (tipo bit).
+                string query = "SELECT Status FROM Personal WHERE contraseñaPersonal = @contra AND usuarioPersonal = @usuario";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Se le asignan las variables a los parámetros 
+                cmd.Parameters.AddWithValue("@usuario", Usuario);
+                cmd.Parameters.AddWithValue("@contra", Contrasena);
+
+                // Se ejecuta el comando
+                int respuesta = cmd.ExecuteNonQuery();
+
+                // Se devuelve la respuesta
+                return respuesta;
+            }
+            catch (Exception ex)
+            {
+                // Se muestra el mensaje de error
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                // Se cierra la conexión
+                Command.Connection.Close();
+            }
+        }
         public int ValidarPrimerUsoSistema()
         {
             try

@@ -39,13 +39,6 @@ namespace PTC.Controller.Login
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
         }
 
-        public ControllerLogin(ViewContraLogin Vista1)
-        {
-                ObjContraLogin = Vista1;
-
-            ObjContraLogin = Vista1;
-            ObjContraLogin.BtnIngresar.Click += new EventHandler(CambiarContra);
-        }
 
         private void ContraPregunta(object sender, EventArgs e)
         {
@@ -66,38 +59,6 @@ namespace PTC.Controller.Login
             viewOlvidoContrasena.ShowDialog();
 
         }
-
-        private void CambiarContra(object sender, EventArgs e)
-        {
-            try
-            {
-                DAOLogin DAOData = new DAOLogin();
-                CommonClass common = new CommonClass();
-
-                // Asigna el usuario y la nueva contraseña en el DAO
-                DAOData.Usuario = ObjContraLogin.TxtUsuario.Text;
-                string cadenaEncriptada = common.ComputeSha256Hash(ObjContraLogin.TxtContra.Text);
-                DAOData.Contrasena = cadenaEncriptada;
-
-                // Llama al método CambiarContra pasando la nueva contraseña y el usuario
-                int cambiarContra = DAOData.CambiarContra();
-
-                // Verifica el resultado y proporciona retroalimentación al usuario
-                if (cambiarContra == 1)
-                {
-                    MessageBox.Show("La contraseña se ha cambiado exitosamente.");
-                }
-                else
-                {
-                    MessageBox.Show("Error al cambiar la contraseña. Por favor, inténtelo de nuevo.");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Manejo de excepciones para cualquier error inesperado
-                MessageBox.Show($"Se produjo un error: {ex.Message}");
-            }
-        }
     
 
 private void DataAccess(object sender, EventArgs e)
@@ -112,27 +73,33 @@ private void DataAccess(object sender, EventArgs e)
 
 
             bool answer = DAOData.Login();
+            int respuesta = DAOData.Identificar();
 
-
-            if (answer == true)
+            if (respuesta == 0)
             {
-                intentosFallidos = 0;
-                ViewDashboard viewDashboard = new ViewDashboard();
-                viewDashboard.Show();
-                ObjLogin.Hide();
-            }
-            else
-            {
-                intentosFallidos++;
-                MessageBox.Show("Credenciales incorectas", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (intentosFallidos >= 3)
+                ViewContraLogin contraLogin = new ViewContraLogin();
+                contraLogin.ShowDialog();
+                if (answer == true)
                 {
-                    ObjLogin.TxtUsuario.Enabled = false;
-                    ObjLogin.TxtContra.Enabled = false;
-                    ObjLogin.BtnIngresar.Enabled = false;
-                    MessageBox.Show("Ha superado el número máximo de intentos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    intentosFallidos = 0;
+                    ViewDashboard viewDashboard = new ViewDashboard();
+                    viewDashboard.Show();
+                    ObjLogin.Hide();
                 }
             }
+
+            //else
+            //{
+            //    intentosFallidos++;
+            //    MessageBox.Show("Credenciales incorectas", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    if (intentosFallidos >= 3)
+            //    {
+            //        ObjLogin.TxtUsuario.Enabled = false;
+            //        ObjLogin.TxtContra.Enabled = false;
+            //        ObjLogin.BtnIngresar.Enabled = false;
+            //        MessageBox.Show("Ha superado el número máximo de intentos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
         private void IntroducirUsuario(object sender, EventArgs e)
@@ -145,6 +112,7 @@ private void DataAccess(object sender, EventArgs e)
 
         private void LeaveUsuario(object sender, EventArgs e)
         {
+
             if (ObjLogin.TxtUsuario.Text.Trim().Equals(""))
             {
                 ObjLogin.TxtUsuario.Text = "Usuario";

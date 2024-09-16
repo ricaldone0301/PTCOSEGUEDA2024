@@ -126,6 +126,7 @@
     <Compile Include="Controller\Contrasena\ControllerContrasena.cs" />
     <Compile Include="Controller\ControllerInit.cs" />
     <Compile Include="Controller\Dasboard\ControllerDashboard.cs" />
+    <Compile Include="Controller\LoginContra\ControllerLoginContra.cs" />
     <Compile Include="Controller\Login\ControllerLogin.cs" />
     <Compile Include="Controller\Ocupacion\ControllerAdminOcupacion.cs" />
     <Compile Include="Controller\Ocupacion\ControllerAgregarOcupacion.cs" />
