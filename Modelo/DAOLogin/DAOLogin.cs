@@ -57,6 +57,46 @@ namespace PTC.Modelo.DAOLogin
             }
         }
 
+        public int CambiarContra()
+        {
+            try
+            {
+                // Se crea la conexión
+                Command.Connection = getConnection();
+
+                // Se crea el query de update donde además de actualizar la contraseña, 
+                // también se actualiza el campo status (tipo bit).
+                string query = "UPDATE Personal SET contraseñaPersonal = @contra, status = @status WHERE usuarioPersonal = @usuario";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Se le asignan las variables a los parámetros 
+                cmd.Parameters.AddWithValue("@usuario", Usuario);
+                cmd.Parameters.AddWithValue("@contra", Contrasena);
+
+                // Se asume que quieres establecer un valor específico para status.
+                // Aquí se establece el valor de status como true (1) para indicar que el usuario está activo.
+                // Cambia el valor según tus necesidades (true o false).
+                cmd.Parameters.AddWithValue("@status", true);
+
+                // Se ejecuta el comando
+                int respuesta = cmd.ExecuteNonQuery();
+
+                // Se devuelve la respuesta
+                return respuesta;
+            }
+            catch (Exception ex)
+            {
+                // Se muestra el mensaje de error
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                // Se cierra la conexión
+                Command.Connection.Close();
+            }
+        }
+
         public int ValidarPrimerUsoSistema()
         {
             try

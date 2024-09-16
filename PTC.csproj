@@ -210,6 +210,12 @@
     <Compile Include="Vista\Cita\ViewCitas.Designer.cs">
       <DependentUpon>ViewCitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ContraLogin\ViewContraLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ContraLogin\ViewContraLogin.Designer.cs">
+      <DependentUpon>ViewContraLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Dashboard\ViewDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cita\ViewCitas.resx">
       <DependentUpon>ViewCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ContraLogin\ViewContraLogin.resx">
+      <DependentUpon>ViewContraLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dashboard\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>

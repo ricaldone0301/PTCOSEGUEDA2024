@@ -1,5 +1,6 @@
 ﻿using PTC.Controller.Common;
 using PTC.Modelo.DAOLogin;
+using PTC.Vista.ContraLogin;
 using PTC.Vista.Dashboard;
 using PTC.Vista.Login;
 using PTC.Vista.OlvidoContrasena;
@@ -21,6 +22,7 @@ namespace PTC.Controller.Login
     public class ControllerLogin
     {
         private ViewLogin ObjLogin;
+        private ViewContraLogin ObjContraLogin;
         private int intentosFallidos = 0;
 
         public ControllerLogin(ViewLogin Vista)
@@ -35,9 +37,14 @@ namespace PTC.Controller.Login
             ObjLogin.btnOlvido.Click += new EventHandler(ContrasenaOlvidada);
             ObjLogin.linkLabel1.Click += new EventHandler(ContraPregunta);
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
+        }
 
-            //ObjLogin.TxtUsuario.Text = "test2";
-            //ObjLogin.TxtContra.Text = "test2";
+        public ControllerLogin(ViewContraLogin Vista1)
+        {
+                ObjContraLogin = Vista1;
+
+            ObjContraLogin = Vista1;
+            ObjContraLogin.BtnIngresar.Click += new EventHandler(CambiarContra);
         }
 
         private void ContraPregunta(object sender, EventArgs e)
@@ -59,7 +66,41 @@ namespace PTC.Controller.Login
             viewOlvidoContrasena.ShowDialog();
 
         }
-        private void DataAccess(object sender, EventArgs e)
+
+        private void CambiarContra(object sender, EventArgs e)
+        {
+            try
+            {
+                DAOLogin DAOData = new DAOLogin();
+                CommonClass common = new CommonClass();
+
+                // Asigna el usuario y la nueva contraseña en el DAO
+                DAOData.Usuario = ObjContraLogin.TxtUsuario.Text;
+                string cadenaEncriptada = common.ComputeSha256Hash(ObjContraLogin.TxtContra.Text);
+                DAOData.Contrasena = cadenaEncriptada;
+
+                // Llama al método CambiarContra pasando la nueva contraseña y el usuario
+                int cambiarContra = DAOData.CambiarContra();
+
+                // Verifica el resultado y proporciona retroalimentación al usuario
+                if (cambiarContra == 1)
+                {
+                    MessageBox.Show("La contraseña se ha cambiado exitosamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al cambiar la contraseña. Por favor, inténtelo de nuevo.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones para cualquier error inesperado
+                MessageBox.Show($"Se produjo un error: {ex.Message}");
+            }
+        }
+    
+
+private void DataAccess(object sender, EventArgs e)
         {
 
             DAOLogin DAOData = new DAOLogin();
