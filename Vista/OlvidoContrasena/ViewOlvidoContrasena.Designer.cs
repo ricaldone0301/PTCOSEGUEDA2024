@@ -68,7 +68,7 @@
             this.btnEnviar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar1.Name = "btnEnviar1";
             this.btnEnviar1.Size = new System.Drawing.Size(131, 46);
-            this.btnEnviar1.TabIndex = 37;
+            this.btnEnviar1.TabIndex = 5;
             this.btnEnviar1.Text = "ENVIAR";
             this.btnEnviar1.UseVisualStyleBackColor = false;
             // 
@@ -79,7 +79,7 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.ShortcutsEnabled = false;
             this.txtConfirm.Size = new System.Drawing.Size(209, 22);
-            this.txtConfirm.TabIndex = 38;
+            this.txtConfirm.TabIndex = 4;
             // 
             // bunifuCustomLabel2
             // 
@@ -132,7 +132,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
-            this.txtContrasena.TabIndex = 35;
+            this.txtContrasena.TabIndex = 2;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
             // bunifuCustomLabel3
@@ -159,7 +159,7 @@
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(131, 46);
-            this.btnEnviar.TabIndex = 32;
+            this.btnEnviar.TabIndex = 3;
             this.btnEnviar.Text = "ENVIAR";
             this.btnEnviar.UseVisualStyleBackColor = false;
             // 
@@ -171,7 +171,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // bunifuCustomLabel6

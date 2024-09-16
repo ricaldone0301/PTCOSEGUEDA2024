@@ -54,7 +54,7 @@
             this.dgvPersonas.ReadOnly = true;
             this.dgvPersonas.RowHeadersWidth = 51;
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonas.Size = new System.Drawing.Size(1074, 589);
+            this.dgvPersonas.Size = new System.Drawing.Size(1134, 589);
             this.dgvPersonas.TabIndex = 1;
             this.dgvPersonas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellContentClick);
             // 
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Location = new System.Drawing.Point(468, 178);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1074, 51);
+            this.panel1.Size = new System.Drawing.Size(1134, 51);
             this.panel1.TabIndex = 2;
             // 
             // cmsVerPaciente
@@ -78,7 +78,7 @@
             this.cmsVerPaciente.Location = new System.Drawing.Point(692, 9);
             this.cmsVerPaciente.Name = "cmsVerPaciente";
             this.cmsVerPaciente.Size = new System.Drawing.Size(75, 35);
-            this.cmsVerPaciente.TabIndex = 4;
+            this.cmsVerPaciente.TabIndex = 3;
             this.cmsVerPaciente.Text = "Ver";
             this.cmsVerPaciente.UseVisualStyleBackColor = true;
             this.cmsVerPaciente.Click += new System.EventHandler(this.cmsVerPaciente_Click);
@@ -91,7 +91,7 @@
             this.cmsEliminar.Location = new System.Drawing.Point(883, 9);
             this.cmsEliminar.Name = "cmsEliminar";
             this.cmsEliminar.Size = new System.Drawing.Size(94, 35);
-            this.cmsEliminar.TabIndex = 2;
+            this.cmsEliminar.TabIndex = 5;
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.UseVisualStyleBackColor = true;
             // 
@@ -103,7 +103,7 @@
             this.cmsActualizar.Location = new System.Drawing.Point(773, 9);
             this.cmsActualizar.Name = "cmsActualizar";
             this.cmsActualizar.Size = new System.Drawing.Size(104, 35);
-            this.cmsActualizar.TabIndex = 1;
+            this.cmsActualizar.TabIndex = 4;
             this.cmsActualizar.Text = "Actualizar";
             this.cmsActualizar.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +115,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(983, 9);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(88, 35);
-            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -125,8 +125,8 @@
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(468, 143);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(248, 28);
-            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.Size = new System.Drawing.Size(308, 28);
+            this.txtBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -136,10 +136,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 10;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnBuscar.Location = new System.Drawing.Point(718, 137);
+            this.btnBuscar.Location = new System.Drawing.Point(799, 137);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(111, 35);
-            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Size = new System.Drawing.Size(171, 35);
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 

@@ -10,6 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -72,25 +73,30 @@ namespace PTC.Controller.Usuarios
                 //nuevamente con row y pos se obtienen los datos de la fila que hemos seleccionado en el dgv
                 int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
                 int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;
-                int rol, EspecialidadID, consultorioID, preguntaID;
-                string PersonalID, Nombre, Telefono, UsuarioPersonal, contraseñaPersonal, email, respuesta;
+                int rolID, EspecialidadID, consultorioID, preguntaID;
+                string PersonalID, Nombre, Telefono, UsuarioPersonal, contraseñaPersonal, email, respuesta, Especialidad, consultorio, pregunta, rol;
 
-                //En esta parte se abre nuestro formulario de edicion con los datos del usuario precargados listo para modificarlos.
-                Nombre = ObjAdminUsuario.dgvPersonas[0, pos].Value.ToString();
-                PersonalID = ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString();
-                EspecialidadID = int.Parse(ObjAdminUsuario.dgvPersonas[2, pos].Value.ToString());
-                Telefono = ObjAdminUsuario.dgvPersonas[3, pos].Value.ToString();
-                consultorioID = int.Parse(ObjAdminUsuario.dgvPersonas[4, pos].Value.ToString());
-                UsuarioPersonal = ObjAdminUsuario.dgvPersonas[5, pos].Value.ToString();
-                contraseñaPersonal = ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString();
-                rol = int.Parse(ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString());
-                email = ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString();
-                preguntaID = int.Parse(ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString());
-                respuesta = ObjAdminUsuario.dgvPersonas[10, pos].Value.ToString();
+            //En esta parte se abre nuestro formulario de edicion con los datos del usuario precargados listo para modificarlos.
+            Nombre = ObjAdminUsuario.dgvPersonas[0, pos].Value.ToString();
+            PersonalID = ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString();
+            Telefono = ObjAdminUsuario.dgvPersonas[2, pos].Value.ToString();
+            UsuarioPersonal = ObjAdminUsuario.dgvPersonas[3, pos].Value.ToString();
+            email = ObjAdminUsuario.dgvPersonas[4, pos].Value.ToString();
+            respuesta = ObjAdminUsuario.dgvPersonas[5, pos].Value.ToString();
+            pregunta = ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString();
+            consultorio = ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString();
+            Especialidad = ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString();
+            rol = ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString();
+            EspecialidadID = int.Parse(ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString());
+            consultorioID = int.Parse(ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString());
+            rolID = int.Parse(ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString());
+            preguntaID = int.Parse(ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString());
+            contraseñaPersonal = ObjAdminUsuario.dgvPersonas[10, pos].Value.ToString();
 
-                //En esta parte se actualizan los datos que hemos modificado en el dgv.
 
-                ViewAgregarUsuario openForm = new ViewAgregarUsuario(3, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta);
+            //En esta parte se actualizan los datos que hemos modificado en el dgv.
+
+            ViewAgregarUsuario openForm = new ViewAgregarUsuario(3, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta, pregunta, consultorio, Especialidad, rolID);
                 openForm.ShowDialog();
                 RefrescarData();
             }
@@ -108,24 +114,30 @@ namespace PTC.Controller.Usuarios
                 //nuevamente con row y pos se obtienen los datos de la fila que hemos seleccionado en el dgv
                 int rowIndex = ObjAdminUsuario.dgvPersonas.CurrentCell.RowIndex;
                 int pos = ObjAdminUsuario.dgvPersonas.CurrentRow.Index;
-                int rol, EspecialidadID, consultorioID, preguntaID;
-                string PersonalID, Nombre, Telefono, UsuarioPersonal, contraseñaPersonal, email, respuesta;
+                int rolID, EspecialidadID, consultorioID, preguntaID;
+                string PersonalID, Nombre, Telefono, UsuarioPersonal, contraseñaPersonal, email, respuesta, pregunta, consultorio, Especialidad, rol;
 
                 //En esta parte se abre nuestro formulario de edicion con los datos del usuario precargados listo para modificarlos.
                 Nombre = ObjAdminUsuario.dgvPersonas[0, pos].Value.ToString();
                 PersonalID = ObjAdminUsuario.dgvPersonas[1, pos].Value.ToString();
-                EspecialidadID = int.Parse(ObjAdminUsuario.dgvPersonas[2, pos].Value.ToString());
-                Telefono = ObjAdminUsuario.dgvPersonas[3, pos].Value.ToString();
-                consultorioID = int.Parse(ObjAdminUsuario.dgvPersonas[4, pos].Value.ToString());
-                UsuarioPersonal = ObjAdminUsuario.dgvPersonas[5, pos].Value.ToString();
-                contraseñaPersonal = ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString();
-                rol = int.Parse(ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString());
-                email = ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString();
-                preguntaID = int.Parse(ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString());
-                respuesta = ObjAdminUsuario.dgvPersonas[10, pos].Value.ToString();
-                //En esta parte se actualizan los datos que hemos modificado en el dgv.
+            Telefono = ObjAdminUsuario.dgvPersonas[2, pos].Value.ToString();
+            UsuarioPersonal = ObjAdminUsuario.dgvPersonas[3, pos].Value.ToString();
+            email = ObjAdminUsuario.dgvPersonas[4, pos].Value.ToString();
+            respuesta = ObjAdminUsuario.dgvPersonas[5, pos].Value.ToString();
+            pregunta = ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString();
+            consultorio = ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString();
+            Especialidad = ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString();
+            rol = ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString();
+            EspecialidadID = int.Parse(ObjAdminUsuario.dgvPersonas[10, pos].Value.ToString());
+            consultorioID = int.Parse(ObjAdminUsuario.dgvPersonas[11, pos].Value.ToString());
+            rolID = int.Parse(ObjAdminUsuario.dgvPersonas[12, pos].Value.ToString());
+            preguntaID = int.Parse(ObjAdminUsuario.dgvPersonas[13, pos].Value.ToString());
+            contraseñaPersonal = ObjAdminUsuario.dgvPersonas[14, pos].Value.ToString();
 
-                ViewAgregarUsuario openForm = new ViewAgregarUsuario(2, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta);
+
+            //En esta parte se actualizan los datos que hemos modificado en el dgv.
+
+            ViewAgregarUsuario openForm = new ViewAgregarUsuario(2, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta, pregunta, consultorio, Especialidad,rolID);
                 openForm.ShowDialog();
                 RefrescarData();
 

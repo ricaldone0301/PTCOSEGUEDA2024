@@ -70,11 +70,11 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 89);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(61, 80);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(472, 25);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(397, 25);
             this.bunifuCustomLabel1.TabIndex = 28;
-            this.bunifuCustomLabel1.Text = "INGRESE LAS CREDENCIALES DE ADMINISTRADOR";
+            this.bunifuCustomLabel1.Text = "INGRESE SUS CREDENCIALES ANTERIORES";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomLabel6
@@ -114,7 +114,7 @@
             this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(40, 36);
-            this.BtnExit.TabIndex = 29;
+            this.BtnExit.TabIndex = 4;
             this.BtnExit.UseVisualStyleBackColor = true;
             // 
             // ViewCambiarContra

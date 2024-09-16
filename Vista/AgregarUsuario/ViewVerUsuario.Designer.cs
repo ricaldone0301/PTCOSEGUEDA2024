@@ -106,7 +106,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 512);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 8;
             // 
             // cbEsp
             // 
@@ -115,7 +115,7 @@
             this.cbEsp.Location = new System.Drawing.Point(315, 241);
             this.cbEsp.Name = "cbEsp";
             this.cbEsp.Size = new System.Drawing.Size(209, 24);
-            this.cbEsp.TabIndex = 36;
+            this.cbEsp.TabIndex = 5;
             // 
             // cbConsul
             // 
@@ -145,7 +145,7 @@
             this.cbRol.Location = new System.Drawing.Point(315, 339);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(209, 24);
-            this.cbRol.TabIndex = 33;
+            this.cbRol.TabIndex = 7;
             // 
             // bunifuCustomLabel5
             // 
@@ -177,7 +177,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
-            this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.TabIndex = 2;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // bunifuCustomLabel11
@@ -198,7 +198,7 @@
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
-            this.txtContrasena.TabIndex = 25;
+            this.txtContrasena.TabIndex = 6;
             // 
             // bunifuCustomLabel9
             // 
@@ -218,7 +218,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(209, 22);
-            this.txtUsuario.TabIndex = 23;
+            this.txtUsuario.TabIndex = 4;
             // 
             // bunifuCustomLabel7
             // 
@@ -238,7 +238,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 3;
             // 
             // bunifuCustomLabel6
             // 
@@ -258,7 +258,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
-            this.txtNombre.TabIndex = 17;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // bunifuCustomLabel4

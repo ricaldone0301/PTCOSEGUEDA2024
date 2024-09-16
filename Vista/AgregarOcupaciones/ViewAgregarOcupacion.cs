@@ -58,6 +58,11 @@ namespace PTC.Vista.AgendarOcupaciones
                 txtNombre.SelectionStart = txtNombre.Text.Length;
             }
         }
+
+        private void ViewAgregarOcupacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

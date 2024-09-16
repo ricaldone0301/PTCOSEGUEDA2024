@@ -7,6 +7,7 @@ using PTC.Vista.AgregarDoctores;
 using PTC.Vista.AgregarPaciente;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -303,6 +304,7 @@ string.IsNullOrEmpty(objAgregarPaciente.txtNumEmergencia.Text.Trim())))
                 if (valor == 1)
                 {
                     MessageBox.Show("Los datos fueron actualizados exitosamente.", "Actualización exitosa", MessageBoxButtons.OK);
+                    
                 }
                 else if (valor == 2)
                 {

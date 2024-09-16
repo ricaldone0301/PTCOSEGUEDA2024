@@ -18,10 +18,11 @@ namespace PTC.Controller.Ocupacion
     {
         ViewAgregarOcupacion ObjAgregarOcupacion;
 
+        //Se declaran las variables
         private int accion;
-        private string rol;
         private int ocupacionID;
 
+        //Contructor para agregar registro
         public ControllerAgregarOcupacion(ViewAgregarOcupacion Vista, int accion)
         {
             ObjAgregarOcupacion = Vista;
@@ -29,6 +30,8 @@ namespace PTC.Controller.Ocupacion
             verificarAccion();
             ObjAgregarOcupacion.btnGuardar.Click += new EventHandler(NuevoRegistro);
         }
+
+        //Constructor para actualizar registro
         public ControllerAgregarOcupacion(ViewAgregarOcupacion Vista, int accion, string nombreOcupacion, int ocupacionID)
         {
             ObjAgregarOcupacion = Vista;
@@ -39,6 +42,7 @@ namespace PTC.Controller.Ocupacion
             ObjAgregarOcupacion.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
 
+        //Se verifica la acción y dependiendo del valor se desactivan distintos controles
         public void verificarAccion()
         {
             if (accion == 1)
@@ -63,6 +67,7 @@ namespace PTC.Controller.Ocupacion
         {
             try
             {
+                //Se verifica que el campo esté lleno
                 if (!(string.IsNullOrEmpty(ObjAgregarOcupacion.txtNombre.Text.Trim())))
 
                 {
@@ -70,8 +75,8 @@ namespace PTC.Controller.Ocupacion
                     CommonClass commonClass = new CommonClass();
 
                     daoAdmin.NombreOcupacion = ObjAgregarOcupacion.txtNombre.Text.Trim();
-                    //daoAdmin.OcupacionID = (int)ObjAgregarOcupacion.cbOcupacion.SelectedValue;
 
+                    //Se ejecuta el método del DAO
                     int valorRetornado = daoAdmin.RegistrarOcupacion();
 
                     if (valorRetornado == 1)
@@ -99,26 +104,31 @@ namespace PTC.Controller.Ocupacion
 
         public void ActualizarRegistro(object sender, EventArgs e)
         {
-            DAOOcupacion daoUpdate = new DAOOcupacion();
-            daoUpdate.NombreOcupacion = ObjAgregarOcupacion.txtNombre.Text.Trim();
-            daoUpdate.OcupacionID = ocupacionID;
-            //daoUpdate.OcupacionID = (int)ObjAgregarOcupacion.cbOcupacion.SelectedValue;
+            //Se verifica que el campo esté lleno
+            if (!(string.IsNullOrEmpty(ObjAgregarOcupacion.txtNombre.Text.Trim())))
 
+            {
+                //Se crea un objeto del DAO
+                DAOOcupacion daoUpdate = new DAOOcupacion();
+                daoUpdate.NombreOcupacion = ObjAgregarOcupacion.txtNombre.Text.Trim();
+                daoUpdate.OcupacionID = ocupacionID;
 
-            int valorRetornado = daoUpdate.ActualizarOcupacion();
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido actualizado exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                //Se ejecuta el método del DAO
+                int valorRetornado = daoUpdate.ActualizarOcupacion();
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido actualizado exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
 

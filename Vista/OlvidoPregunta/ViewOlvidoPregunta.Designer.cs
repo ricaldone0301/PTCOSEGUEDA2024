@@ -72,7 +72,7 @@
             this.btnEnviar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar1.Name = "btnEnviar1";
             this.btnEnviar1.Size = new System.Drawing.Size(131, 46);
-            this.btnEnviar1.TabIndex = 37;
+            this.btnEnviar1.TabIndex = 7;
             this.btnEnviar1.Text = "ENVIAR";
             this.btnEnviar1.UseVisualStyleBackColor = false;
             // 
@@ -83,7 +83,7 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.ShortcutsEnabled = false;
             this.txtConfirm.Size = new System.Drawing.Size(209, 22);
-            this.txtConfirm.TabIndex = 38;
+            this.txtConfirm.TabIndex = 6;
             // 
             // bunifuCustomLabel2
             // 
@@ -139,7 +139,7 @@
             this.cbPregunta.Location = new System.Drawing.Point(210, 133);
             this.cbPregunta.Name = "cbPregunta";
             this.cbPregunta.Size = new System.Drawing.Size(254, 24);
-            this.cbPregunta.TabIndex = 40;
+            this.cbPregunta.TabIndex = 1;
             // 
             // txtEmail
             // 
@@ -149,7 +149,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 39;
+            this.txtEmail.TabIndex = 3;
             // 
             // bunifuCustomLabel4
             // 
@@ -171,7 +171,7 @@
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.ShortcutsEnabled = false;
             this.txtRespuesta.Size = new System.Drawing.Size(209, 22);
-            this.txtRespuesta.TabIndex = 37;
+            this.txtRespuesta.TabIndex = 2;
             // 
             // bunifuCustomLabel1
             // 
@@ -193,7 +193,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
-            this.txtContrasena.TabIndex = 35;
+            this.txtContrasena.TabIndex = 4;
             // 
             // bunifuCustomLabel3
             // 
@@ -219,7 +219,7 @@
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(131, 46);
-            this.btnEnviar.TabIndex = 32;
+            this.btnEnviar.TabIndex = 5;
             this.btnEnviar.Text = "ENVIAR";
             this.btnEnviar.UseVisualStyleBackColor = false;
             // 

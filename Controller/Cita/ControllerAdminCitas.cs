@@ -65,22 +65,26 @@ namespace PTC.Controller.Cita
         {
             int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;
             int pos = ObjAdminCitas.dgvCitas.CurrentRow.Index;
-            int pacienteID, consultorioID, citaID, procedimientoID;
+            int citaID, consultorioID, procedimientoID, pacienteID;
+            string consultorio, procedimiento, paciente, personal;
             string personalID, hora;
             DateTime fecha;
 
 
+            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
+            hora = ObjAdminCitas.dgvCitas[1, pos].Value.ToString();
+            citaID = int.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
+            consultorio = ObjAdminCitas.dgvCitas[3, pos].Value.ToString();
+            procedimiento = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();
+            paciente = ObjAdminCitas.dgvCitas[5, pos].Value.ToString();
+            personal = ObjAdminCitas.dgvCitas[6, pos].Value.ToString();
+            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[10, pos].Value.ToString());
+            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[9, pos].Value.ToString());
+            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[7, pos].Value.ToString());
+            personalID = ObjAdminCitas.dgvCitas[8, pos].Value.ToString();
 
-            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
-            citaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
-            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
-            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
-            hora = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();
-            personalID = ObjAdminCitas.dgvCitas[6, pos].Value.ToString();
-            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[5, pos].Value.ToString());
 
-
-            ViewAgendarcita openForm = new ViewAgendarcita(3, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
+            ViewAgendarcita openForm = new ViewAgendarcita(3, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID, paciente, personal, consultorio, procedimiento);
             openForm.ShowDialog();
             RefrescarData();
         }
@@ -89,23 +93,31 @@ namespace PTC.Controller.Cita
         {
             int rowIndex = ObjAdminCitas.dgvCitas.CurrentCell.RowIndex;
             int pos = ObjAdminCitas.dgvCitas.CurrentRow.Index;
-            int pacienteID, consultorioID, citaID, procedimientoID;
+            int citaID, consultorioID, procedimientoID, pacienteID;
+            string consultorio, procedimiento, paciente, personal;
             string personalID, hora;
             DateTime fecha;
 
-            
-        
-            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
-            citaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
-            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
-            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[1, pos].Value.ToString());
+
+            fecha = DateTime.Parse(ObjAdminCitas.dgvCitas[0, pos].Value.ToString());
+            hora = ObjAdminCitas.dgvCitas[1, pos].Value.ToString();
+            citaID = int.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
+            consultorio = ObjAdminCitas.dgvCitas[3, pos].Value.ToString();
+            procedimiento = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();
+            paciente = ObjAdminCitas.dgvCitas[5, pos].Value.ToString();
+            personal = ObjAdminCitas.dgvCitas[6, pos].Value.ToString();
+            consultorioID = int.Parse(ObjAdminCitas.dgvCitas[10, pos].Value.ToString());
+            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[9, pos].Value.ToString());
+            pacienteID = int.Parse(ObjAdminCitas.dgvCitas[7, pos].Value.ToString());
+            personalID = ObjAdminCitas.dgvCitas[8, pos].Value.ToString();
+
             //hora = fecha.ToString("HH:mm:ss.fffffff tt");
-            hora = ObjAdminCitas.dgvCitas[4, pos].Value.ToString();
-            personalID = ObjAdminCitas.dgvCitas[6, pos].Value.ToString();
-            procedimientoID = int.Parse(ObjAdminCitas.dgvCitas[5, pos].Value.ToString());
 
 
-            ViewAgendarcita openForm = new ViewAgendarcita(2, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
+
+
+
+            ViewAgendarcita openForm = new ViewAgendarcita(2, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID, paciente, personal, consultorio, procedimiento);
             openForm.ShowDialog();
             RefrescarData();
         }

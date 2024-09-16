@@ -140,9 +140,9 @@ namespace PTC.Modelo.DAOOcupacion
             try
             {
                 Command.Connection = getConnection();
-                string query = "UPDATE Ocupaciones SET " +
-                                "nombreOcupacion = @param1" +
-                                " WHERE ocupacionID = @param2";
+                string query = "UPDATE ViewOcupaciones SET " +
+                                "Nombre = @param1" +
+                                " WHERE ID = @param2";
 
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("param1", NombreOcupacion);
@@ -204,7 +204,7 @@ namespace PTC.Modelo.DAOOcupacion
             try
             {
                 Command.Connection = getConnection();
-                string query = $"SELECT * FROM ViewOcupaciones WHERE [nombreOcupacion] LIKE '%{valor}%' OR [ocupacionID] LIKE '%{valor}%'";
+                string query = $"SELECT * FROM ViewOcupaciones WHERE [Nombre] LIKE '%{valor}%' OR [ID] LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);

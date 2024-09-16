@@ -25,7 +25,7 @@ namespace PTC.Controller.PrimerUso
 
         private string rol;
 
-        //private ViewRegistro viewRegistro;
+        //Vista para registrar Usuario
         public ControllerPrimerUso(ViewPrimerUso Vista)
         {
             ObjRegistro = Vista;
@@ -34,13 +34,14 @@ namespace PTC.Controller.PrimerUso
 
         }
 
+        //Vista para registrar empresa
         public ControllerPrimerUso(ViewPrimerUsoInfo Vista1)
         {
             ObjRegistroEmpresa = Vista1;
             ObjRegistroEmpresa.btnEnviar1.Click += new EventHandler(RegistrarEmpresa);
         }
 
-
+        //Cargo inical cargan todooooslosc ombo box
         public void CargoInicial(object sender, EventArgs e)
         {
             try
@@ -99,10 +100,10 @@ namespace PTC.Controller.PrimerUso
             }
         }
         
-
+        //Este metodo registra al usuario
         public void RegistrarUsuario(object sender, EventArgs e)
         {
-
+            //Primero verifica que todos los campos no esten nulos
             try
             {
                 if (!(string.IsNullOrEmpty(ObjRegistro.txtNombre.Text.Trim()) ||
@@ -112,7 +113,8 @@ namespace PTC.Controller.PrimerUso
     string.IsNullOrEmpty(ObjRegistro.txtEmail.Text.Trim())))
                 {
                     ViewLogin viewLogin = new ViewLogin();
-
+                    //Crea objetos del Dao y de la clase commun
+                    //Y luego se los asigna a los campos y varaibles
                     DAORegistro daoRegistro = new DAORegistro();
                     CommonClass common = new CommonClass();
                     daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
@@ -120,12 +122,13 @@ namespace PTC.Controller.PrimerUso
                     daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
                     daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
                     daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
-                    daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OS1");
+                    daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OSEGUEDA1");
                     daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
                     daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
                     daoRegistro.PreguntaID = int.Parse(ObjRegistro.cbPregunta.SelectedValue.ToString());
                     daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
 
+                    //el metodo
                     int valorRetornado = daoRegistro.RegistrarUsuario();
 
                     if (valorRetornado == 1)
@@ -152,6 +155,7 @@ namespace PTC.Controller.PrimerUso
 
         public void RegistrarEmpresa(object sender, EventArgs e)
         {
+            //Primero verifica que todos los campos no esten nulos
 
             try
             {
@@ -160,6 +164,8 @@ string.IsNullOrEmpty(ObjRegistroEmpresa.txtNombre.Text.Trim()) ||
 string.IsNullOrEmpty(ObjRegistroEmpresa.txtDireccion.Text.Trim()) ||
 string.IsNullOrEmpty(ObjRegistroEmpresa.txtTelefono.Text.Trim())))
                 {
+                    //Crea objetos del Dao y de la clase commun
+                    //Y luego se los asigna a los campos y varaibles
                     ViewPrimerUso viewPrimerUso = new ViewPrimerUso();
                     ViewPrimerUsoInfo viewEmpresa = new ViewPrimerUsoInfo();
                     DAOPrimerUso daoRegistro = new DAOPrimerUso();
@@ -168,6 +174,7 @@ string.IsNullOrEmpty(ObjRegistroEmpresa.txtTelefono.Text.Trim())))
                     daoRegistro.NombreEmpresa = ObjRegistroEmpresa.txtNombre.Text.Trim();
                     daoRegistro.Direccion = ObjRegistroEmpresa.txtDireccion.Text.Trim();
                     daoRegistro.TelefonoEmpresa = ObjRegistroEmpresa.txtTelefono.Text.Trim();
+                    //Se ejecuta el metodo
 
                     int valorRetornado = daoRegistro.RegistrarEmpresa();
 

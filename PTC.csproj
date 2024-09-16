@@ -216,6 +216,12 @@
     <Compile Include="Vista\Dashboard\ViewDashboard.Designer.cs">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Login\ViewCambiar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\ViewCambiar.Designer.cs">
+      <DependentUpon>ViewCambiar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Ocupaciones\ViewOcupaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dashboard\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\ViewCambiar.resx">
+      <DependentUpon>ViewCambiar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>

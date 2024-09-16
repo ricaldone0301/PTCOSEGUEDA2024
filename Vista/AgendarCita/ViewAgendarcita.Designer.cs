@@ -110,7 +110,7 @@
             this.txtHora.Name = "txtHora";
             this.txtHora.ShortcutsEnabled = false;
             this.txtHora.Size = new System.Drawing.Size(102, 22);
-            this.txtHora.TabIndex = 38;
+            this.txtHora.TabIndex = 6;
             this.txtHora.TextChanged += new System.EventHandler(this.txtHora_TextChanged);
             // 
             // btnGuardar
@@ -125,7 +125,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(171, 50);
-            this.btnGuardar.TabIndex = 37;
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
@@ -136,7 +136,7 @@
             this.cbPaciente.Location = new System.Drawing.Point(43, 66);
             this.cbPaciente.Name = "cbPaciente";
             this.cbPaciente.Size = new System.Drawing.Size(503, 24);
-            this.cbPaciente.TabIndex = 36;
+            this.cbPaciente.TabIndex = 1;
             // 
             // cbConsultorio
             // 
@@ -145,7 +145,7 @@
             this.cbConsultorio.Location = new System.Drawing.Point(42, 375);
             this.cbConsultorio.Name = "cbConsultorio";
             this.cbConsultorio.Size = new System.Drawing.Size(209, 24);
-            this.cbConsultorio.TabIndex = 35;
+            this.cbConsultorio.TabIndex = 4;
             this.cbConsultorio.SelectedIndexChanged += new System.EventHandler(this.cbConsultorio_SelectedIndexChanged);
             // 
             // cbProcedimiento
@@ -155,7 +155,7 @@
             this.cbProcedimiento.Location = new System.Drawing.Point(42, 161);
             this.cbProcedimiento.Name = "cbProcedimiento";
             this.cbProcedimiento.Size = new System.Drawing.Size(209, 24);
-            this.cbProcedimiento.TabIndex = 34;
+            this.cbProcedimiento.TabIndex = 2;
             this.cbProcedimiento.SelectedIndexChanged += new System.EventHandler(this.cbProcedimiento_SelectedIndexChanged);
             // 
             // cbDoctor
@@ -165,7 +165,7 @@
             this.cbDoctor.Location = new System.Drawing.Point(42, 267);
             this.cbDoctor.Name = "cbDoctor";
             this.cbDoctor.Size = new System.Drawing.Size(209, 24);
-            this.cbDoctor.TabIndex = 33;
+            this.cbDoctor.TabIndex = 3;
             // 
             // Fecha
             // 
@@ -173,7 +173,7 @@
             this.Fecha.MinDate = new System.DateTime(2024, 8, 12, 0, 0, 0, 0);
             this.Fecha.Name = "Fecha";
             this.Fecha.Size = new System.Drawing.Size(260, 22);
-            this.Fecha.TabIndex = 32;
+            this.Fecha.TabIndex = 5;
             this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
             // 
             // btnActualizar
@@ -188,7 +188,7 @@
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(171, 50);
-            this.btnActualizar.TabIndex = 30;
+            this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 

@@ -32,6 +32,7 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.btnCerrar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnMaximizar = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -49,15 +50,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.PanelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PanelPadre.SuspendLayout();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,15 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1923, 1019);
             this.PanelContenedor.TabIndex = 32;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(429, 277);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(946, 390);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // PanelPadre
             // 
@@ -137,7 +146,7 @@
             this.btnCerrar.ShowImageBorders = true;
             this.btnCerrar.ShowSizeMarkers = false;
             this.btnCerrar.Size = new System.Drawing.Size(64, 55);
-            this.btnCerrar.TabIndex = 36;
+            this.btnCerrar.TabIndex = 11;
             this.btnCerrar.ToolTipText = "";
             this.btnCerrar.WaitOnLoad = false;
             this.btnCerrar.Zoom = 20;
@@ -171,7 +180,7 @@
             this.btnMaximizar.ShowImageBorders = true;
             this.btnMaximizar.ShowSizeMarkers = false;
             this.btnMaximizar.Size = new System.Drawing.Size(64, 55);
-            this.btnMaximizar.TabIndex = 35;
+            this.btnMaximizar.TabIndex = 10;
             this.btnMaximizar.ToolTipText = "";
             this.btnMaximizar.WaitOnLoad = false;
             this.btnMaximizar.Zoom = 20;
@@ -205,7 +214,7 @@
             this.btnMinimizar.ShowImageBorders = true;
             this.btnMinimizar.ShowSizeMarkers = false;
             this.btnMinimizar.Size = new System.Drawing.Size(64, 55);
-            this.btnMinimizar.TabIndex = 34;
+            this.btnMinimizar.TabIndex = 9;
             this.btnMinimizar.ToolTipText = "";
             this.btnMinimizar.WaitOnLoad = false;
             this.btnMinimizar.Zoom = 20;
@@ -239,7 +248,7 @@
             this.ok.Quality = 10;
             this.ok.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ok.Size = new System.Drawing.Size(270, 1019);
-            this.ok.TabIndex = 20;
+            this.ok.TabIndex = 2;
             this.ok.Paint += new System.Windows.Forms.PaintEventHandler(this.ok_Paint);
             // 
             // btnInicio
@@ -265,7 +274,7 @@
             this.btnInicio.Margin = new System.Windows.Forms.Padding(5);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(181, 34);
-            this.btnInicio.TabIndex = 14;
+            this.btnInicio.TabIndex = 1;
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnProcedimientos
@@ -291,7 +300,7 @@
             this.btnProcedimientos.Margin = new System.Windows.Forms.Padding(5);
             this.btnProcedimientos.Name = "btnProcedimientos";
             this.btnProcedimientos.Size = new System.Drawing.Size(181, 34);
-            this.btnProcedimientos.TabIndex = 11;
+            this.btnProcedimientos.TabIndex = 2;
             this.btnProcedimientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUsuarios
@@ -317,7 +326,7 @@
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(181, 46);
-            this.btnUsuarios.TabIndex = 10;
+            this.btnUsuarios.TabIndex = 6;
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -354,7 +363,7 @@
             this.btnPacientes.Margin = new System.Windows.Forms.Padding(5);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(181, 34);
-            this.btnPacientes.TabIndex = 5;
+            this.btnPacientes.TabIndex = 3;
             this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOcupaciones
@@ -380,7 +389,7 @@
             this.btnOcupaciones.Margin = new System.Windows.Forms.Padding(5);
             this.btnOcupaciones.Name = "btnOcupaciones";
             this.btnOcupaciones.Size = new System.Drawing.Size(181, 34);
-            this.btnOcupaciones.TabIndex = 6;
+            this.btnOcupaciones.TabIndex = 4;
             this.btnOcupaciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCerrarSesion
@@ -406,7 +415,7 @@
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(5);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(181, 46);
-            this.btnCerrarSesion.TabIndex = 8;
+            this.btnCerrarSesion.TabIndex = 7;
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNombre
@@ -430,7 +439,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(92, 40);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(99, 25);
-            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.TabIndex = 8;
             this.lblUsuario.Text = "USUARIO";
             // 
             // pictureBox1
@@ -481,18 +490,9 @@
             this.btnCitas.Margin = new System.Windows.Forms.Padding(5);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(129, 34);
-            this.btnCitas.TabIndex = 7;
+            this.btnCitas.TabIndex = 5;
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(429, 277);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(946, 390);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -539,12 +539,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewDashboard_Load);
             this.PanelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.PanelPadre.ResumeLayout(false);
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -74,8 +74,8 @@ namespace PTC.Controller.Ocupacion
             string nombreOcupacion;
 
 
-            ocupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString());
-            nombreOcupacion = ObjAdminOcupacion.dgvOcupaciones[0, pos].Value.ToString();
+            ocupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[0, pos].Value.ToString());
+            nombreOcupacion = ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString();
 
 
             ViewAgregarOcupacion openForm = new ViewAgregarOcupacion(2, nombreOcupacion, ocupacionID);

@@ -264,7 +264,7 @@ namespace PTC.Modelo.DAOUsuarios
             try
             {
                 Command.Connection = getConnection();
-                string query = $"SELECT * FROM viewPersonal WHERE nombrePersonal LIKE '%{valor}%' OR usuarioPersonal LIKE '%{valor}%' OR personalID LIKE '%{valor}%' OR especialidadID LIKE '%{valor}%' OR telefono LIKE '%{valor}%' OR contraseñaPersonal LIKE '%{valor}% 'OR roleID LIKE '%{valor}%' OR Email LIKE '%{valor}%'  OR consultorioID LIKE '%{valor}%'";
+                string query = $"SELECT * FROM VistaPersonal WHERE Nombre LIKE '%{valor}%' OR ID LIKE '%{valor}%' OR Usuario LIKE '%{valor}%' OR Teléfono LIKE '%{valor}%' OR Usuario LIKE '%{valor}%' OR Correo LIKE '%{valor}% 'OR Pregunta LIKE '%{valor}%' OR Respuesta LIKE '%{valor}%' OR Consultorio LIKE '%{valor}%' OR Especialidad LIKE '%{valor}%' OR Rol LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -272,8 +272,9 @@ namespace PTC.Modelo.DAOUsuarios
                 adp.Fill(ds, "VistaPersonal");
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error OS#020: Error al intentar buscar registro." + ex.Message);
                 return null;
             }
             finally
@@ -289,7 +290,7 @@ namespace PTC.Modelo.DAOUsuarios
             {
                 using (SqlConnection conn = getConnection())
                 {
-                    string query = "SELECT * FROM Personal WHERE personalID = @id";
+                    string query = "SELECT * FROM VistaPersonal WHERE ID = @id";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -298,13 +299,15 @@ namespace PTC.Modelo.DAOUsuarios
                     {
                         usuario = new DtoUsuarios
                         {
-                            Nombre = reader["nombrePersonal"].ToString(),
-                            Email = reader["email"].ToString(),
-                            Telefono = reader["telefono"].ToString(),
-                            Usuario = reader["usuarioPersonal"].ToString(),
-                            EspecialidadId = Convert.ToInt32(reader["especialidadID"]),
-                            ConsultorioId = Convert.ToInt32(reader["consultorioID"]),
-                            Rol = Convert.ToInt32(reader["roleID"])
+                            Nombre = reader["Nombre"].ToString(),
+                            Telefono = reader["Teléfono"].ToString(),
+                            Usuario = reader["Usuario"].ToString(),
+                            Email = reader["Email"].ToString(),
+                            Respuesta = reader["Respuesta"].ToString(),
+                            PreguntaID = Convert.ToInt32(reader["Pregunta"]),
+                            ConsultorioId = Convert.ToInt32(reader["Consultorio"]),
+                            EspecialidadId = Convert.ToInt32(reader["Especialidad"]),
+                            Rol = Convert.ToInt32(reader["Rol"])
                         };
                     }
                 }

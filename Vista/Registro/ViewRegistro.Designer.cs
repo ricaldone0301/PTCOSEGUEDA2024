@@ -183,7 +183,7 @@
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.ShortcutsEnabled = false;
             this.txtRespuesta.Size = new System.Drawing.Size(254, 99);
-            this.txtRespuesta.TabIndex = 40;
+            this.txtRespuesta.TabIndex = 9;
             this.txtRespuesta.TextChanged += new System.EventHandler(this.txtRespuesta_TextChanged);
             // 
             // bunifuCustomLabel8
@@ -205,7 +205,7 @@
             this.cbPregunta.Location = new System.Drawing.Point(322, 248);
             this.cbPregunta.Name = "cbPregunta";
             this.cbPregunta.Size = new System.Drawing.Size(254, 24);
-            this.cbPregunta.TabIndex = 38;
+            this.cbPregunta.TabIndex = 7;
             // 
             // bunifuCustomLabel3
             // 
@@ -226,7 +226,7 @@
             this.cbEsp.Location = new System.Drawing.Point(596, 69);
             this.cbEsp.Name = "cbEsp";
             this.cbEsp.Size = new System.Drawing.Size(209, 24);
-            this.cbEsp.TabIndex = 36;
+            this.cbEsp.TabIndex = 2;
             // 
             // cbConsul
             // 
@@ -235,7 +235,7 @@
             this.cbConsul.Location = new System.Drawing.Point(71, 355);
             this.cbConsul.Name = "cbConsul";
             this.cbConsul.Size = new System.Drawing.Size(209, 24);
-            this.cbConsul.TabIndex = 35;
+            this.cbConsul.TabIndex = 8;
             // 
             // bunifuCustomLabel1
             // 
@@ -261,7 +261,7 @@
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(131, 46);
-            this.btnEnviar.TabIndex = 32;
+            this.btnEnviar.TabIndex = 11;
             this.btnEnviar.Text = "ENVIAR";
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
@@ -273,7 +273,7 @@
             this.cbRol.Location = new System.Drawing.Point(596, 167);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(209, 24);
-            this.cbRol.TabIndex = 33;
+            this.cbRol.TabIndex = 5;
             // 
             // bunifuCustomLabel5
             // 
@@ -307,7 +307,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
-            this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.TabIndex = 3;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // bunifuCustomLabel11
@@ -330,7 +330,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(235, 22);
-            this.txtContrasena.TabIndex = 25;
+            this.txtContrasena.TabIndex = 10;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             // 
             // bunifuCustomLabel9
@@ -353,7 +353,8 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(209, 22);
-            this.txtUsuario.TabIndex = 23;
+            this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // bunifuCustomLabel7
             // 
@@ -375,7 +376,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // bunifuCustomLabel6
@@ -398,7 +399,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
-            this.txtNombre.TabIndex = 17;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // bunifuCustomLabel4
@@ -420,7 +421,7 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.ShortcutsEnabled = false;
             this.txtConfirm.Size = new System.Drawing.Size(209, 22);
-            this.txtConfirm.TabIndex = 38;
+            this.txtConfirm.TabIndex = 12;
             this.txtConfirm.TextChanged += new System.EventHandler(this.txtConfirm_TextChanged);
             // 
             // bunifuCustomLabel2
@@ -458,7 +459,7 @@
             this.btnEnviar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar1.Name = "btnEnviar1";
             this.btnEnviar1.Size = new System.Drawing.Size(131, 46);
-            this.btnEnviar1.TabIndex = 37;
+            this.btnEnviar1.TabIndex = 13;
             this.btnEnviar1.Text = "ENVIAR";
             this.btnEnviar1.UseVisualStyleBackColor = false;
             // 

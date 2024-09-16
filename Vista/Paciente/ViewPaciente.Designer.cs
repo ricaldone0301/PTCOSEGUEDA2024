@@ -67,7 +67,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(718, 137);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(107, 35);
-            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
@@ -77,7 +77,7 @@
             this.textBox1.Location = new System.Drawing.Point(468, 143);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(244, 28);
-            this.textBox1.TabIndex = 16;
+            this.textBox1.TabIndex = 1;
             // 
             // btnNuevoPaciente
             // 
@@ -88,7 +88,7 @@
             this.btnNuevoPaciente.Controls.Add(this.btnNuevo);
             this.btnNuevoPaciente.Location = new System.Drawing.Point(468, 178);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
-            this.btnNuevoPaciente.Size = new System.Drawing.Size(1070, 51);
+            this.btnNuevoPaciente.Size = new System.Drawing.Size(1227, 51);
             this.btnNuevoPaciente.TabIndex = 15;
             // 
             // cmsVerPaciente
@@ -96,10 +96,10 @@
             this.cmsVerPaciente.AccessibleName = "cmsVerPaciente";
             this.cmsVerPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsVerPaciente.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cmsVerPaciente.Location = new System.Drawing.Point(692, 9);
+            this.cmsVerPaciente.Location = new System.Drawing.Point(875, 13);
             this.cmsVerPaciente.Name = "cmsVerPaciente";
             this.cmsVerPaciente.Size = new System.Drawing.Size(75, 35);
-            this.cmsVerPaciente.TabIndex = 4;
+            this.cmsVerPaciente.TabIndex = 3;
             this.cmsVerPaciente.Text = "Ver";
             this.cmsVerPaciente.UseVisualStyleBackColor = true;
             // 
@@ -108,10 +108,10 @@
             this.cmsEliminar.AccessibleName = "cmsEliminar";
             this.cmsEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cmsEliminar.Location = new System.Drawing.Point(883, 9);
+            this.cmsEliminar.Location = new System.Drawing.Point(1066, 13);
             this.cmsEliminar.Name = "cmsEliminar";
             this.cmsEliminar.Size = new System.Drawing.Size(94, 35);
-            this.cmsEliminar.TabIndex = 2;
+            this.cmsEliminar.TabIndex = 5;
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.UseVisualStyleBackColor = true;
             // 
@@ -120,10 +120,10 @@
             this.cmsActualizar.AccessibleName = "cmsActualizar";
             this.cmsActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsActualizar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cmsActualizar.Location = new System.Drawing.Point(773, 9);
+            this.cmsActualizar.Location = new System.Drawing.Point(956, 13);
             this.cmsActualizar.Name = "cmsActualizar";
             this.cmsActualizar.Size = new System.Drawing.Size(104, 35);
-            this.cmsActualizar.TabIndex = 1;
+            this.cmsActualizar.TabIndex = 4;
             this.cmsActualizar.Text = "Actualizar";
             this.cmsActualizar.UseVisualStyleBackColor = true;
             // 
@@ -132,10 +132,10 @@
             this.btnNuevo.AccessibleName = "btnNuevo";
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnNuevo.Location = new System.Drawing.Point(983, 9);
+            this.btnNuevo.Location = new System.Drawing.Point(1166, 13);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 35);
-            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 

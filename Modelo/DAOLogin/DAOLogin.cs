@@ -81,6 +81,95 @@ namespace PTC.Modelo.DAOLogin
                 getConnection().Close();
             }
         }
+
+        public bool PrimerLogin(string usuario)
+        {
+            try
+            {
+                // Create and open a new connection
+                using (var connection = getConnection())
+                {
+                    // Define the query to get the status
+                    string query = "SELECT status FROM Personal WHERE usuarioPersonal = @Usuario";
+
+                    // Create a SqlCommand object and associate it with the connection
+                    using (var cmd = new SqlCommand(query, connection))
+                    {
+                        // Add the parameter to the command
+                        cmd.Parameters.AddWithValue("@Usuario", usuario);
+
+                        // Execute the query and get the status value
+                        var result = cmd.ExecuteScalar();
+
+                        // Check if the result is null
+                        if (result == null || result == DBNull.Value)
+                        {
+                            MessageBox.Show("No se encontró el usuario en la base de datos.");
+                            return false; // Indicate that the user was not found or status is null
+                        }
+
+                        // Convert the result to a boolean
+                        bool status = Convert.ToBoolean(result);
+                        return status; // Return the status (true or false)
+                    }
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                MessageBox.Show("Error OS#015: No se pudo validar el primer uso del sistema: " + sqlex.Message);
+                return false; // Indicate SQL error
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return false; // Indicate general error
+            }
+        }
+
+        public int CambiarContra()
+        {
+            try
+            {
+                // Se crea la conexión
+                Command.Connection = getConnection();
+
+                // Se crea el query de update donde además de actualizar la contraseña, 
+                // también se actualiza el campo status (tipo bit).
+                string query = "UPDATE Personal SET contraseñaPersonal = @contra, status = @status WHERE usuarioPersonal = @usuario";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Se le asignan las variables a los parámetros 
+                cmd.Parameters.AddWithValue("@usuario", Usuario);
+                cmd.Parameters.AddWithValue("@contra", Contrasena);
+
+                // Se asume que quieres establecer un valor específico para status.
+                // Aquí se establece el valor de status como true (1) para indicar que el usuario está activo.
+                // Cambia el valor según tus necesidades (true o false).
+                cmd.Parameters.AddWithValue("@status", true);
+
+                // Se ejecuta el comando
+                int respuesta = cmd.ExecuteNonQuery();
+
+                // Se devuelve la respuesta
+                return respuesta;
+            }
+            catch (Exception ex)
+            {
+                // Se muestra el mensaje de error
+                MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                // Se cierra la conexión
+                Command.Connection.Close();
+            }
+        }
+
+
     }
- }
+
+
+}
+
 

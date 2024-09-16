@@ -78,36 +78,41 @@ namespace PTC.Controller.Procedimiento
         {
             try
             {
-
-               //Se crea para interatuar con la base de datos.
-               DAOProcedimiento daoAdmin = new DAOProcedimiento();
-
-                //Se les asigna valores de la vista y luego se le asigna al objeto en el dao.
-                daoAdmin.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
-                String test = ObjAgregarProcedimiento.txtPrecio.Text.ToString(
-                    ).Trim();
-                decimal result;
-                decimal.TryParse(test, out result);
-                daoAdmin.PrecioProcedimiento = result;
-                daoAdmin.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.Text.ToString();
-
-                // Una vez llamadas las variables para llenar el procedimiento
-                // Se invoca el metodo RegistrarProcedimiento del DAO para registrar el nuevo procedimiento
-                int valorRetornado = daoAdmin.RegistrarProcedimiento();
-
-                if (valorRetornado == 1)
+                if (!(string.IsNullOrEmpty(ObjAgregarProcedimiento.txtDescripcion.Text.Trim()) ||
+    string.IsNullOrEmpty(ObjAgregarProcedimiento.txtNombreProcedimiento.Text.Trim()) ||
+    string.IsNullOrEmpty(ObjAgregarProcedimiento.txtPrecio.Text.Trim())))
                 {
-                    MessageBox.Show("Los cita ha sido registrados exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Los cita no pudo ser registrada.",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+
+                    //Se crea para interatuar con la base de datos.
+                    DAOProcedimiento daoAdmin = new DAOProcedimiento();
+
+                    //Se les asigna valores de la vista y luego se le asigna al objeto en el dao.
+                    daoAdmin.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
+                    String test = ObjAgregarProcedimiento.txtPrecio.Text.ToString(
+                        ).Trim();
+                    decimal result;
+                    decimal.TryParse(test, out result);
+                    daoAdmin.PrecioProcedimiento = result;
+                    daoAdmin.DescProcedimiento = ObjAgregarProcedimiento.txtDescripcion.Text.ToString();
+
+                    // Una vez llamadas las variables para llenar el procedimiento
+                    // Se invoca el metodo RegistrarProcedimiento del DAO para registrar el nuevo procedimiento
+                    int valorRetornado = daoAdmin.RegistrarProcedimiento();
+
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los cita ha sido registrados exitosamente",
+                                        "Proceso completado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los cita no pudo ser registrada.",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -120,8 +125,12 @@ namespace PTC.Controller.Procedimiento
 
         public void Actualizar(object sender, EventArgs e)
         {
-            //crea una instancia de DAOProcedimiento y asigna el procedimientoID del registro a modificar
-            DAOProcedimiento daoUpdate = new DAOProcedimiento();
+            if (!(string.IsNullOrEmpty(ObjAgregarProcedimiento.txtDescripcion.Text.Trim()) ||
+string.IsNullOrEmpty(ObjAgregarProcedimiento.txtNombreProcedimiento.Text.Trim()) ||
+string.IsNullOrEmpty(ObjAgregarProcedimiento.txtPrecio.Text.Trim())))
+            {
+                //crea una instancia de DAOProcedimiento y asigna el procedimientoID del registro a modificar
+                DAOProcedimiento daoUpdate = new DAOProcedimiento();
             daoUpdate.ProcedimientoID = procedimientoID;
             //Luego obtiene y asigna el nombre del procedimiento desde el campo de texto de la vista
             daoUpdate.NombreProcedimiento = ObjAgregarProcedimiento.txtNombreProcedimiento.Text.ToString();
@@ -137,19 +146,20 @@ namespace PTC.Controller.Procedimiento
 
 
             int valorRetornado = daoUpdate.ActualizarProcedimiento();
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos del procedimiento han sido actualizado exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
-            else if (valorRetornado == 2)
-            {
-                MessageBox.Show("Los datos de la cita no pudieron ser actualizados completamente",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos del procedimiento han sido actualizado exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+                else if (valorRetornado == 2)
+                {
+                    MessageBox.Show("Los datos de la cita no pudieron ser actualizados completamente",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
             }
         }
 

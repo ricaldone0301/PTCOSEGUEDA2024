@@ -31,7 +31,7 @@ namespace PTC.Controller.Registro
             ObjRegistro.Load += new EventHandler(CargoInicial);
             ObjRegistro.btnEnviar.Click += new EventHandler(ConseguirCorreo);
             ObjRegistro.btnEnviar1.Click += new EventHandler(VerificarCodigoYRegistrar);
-            ObjRegistro.timevcode.Tick  += new EventHandler(Tick);
+            //ObjRegistro.timevcode.Tick  += new EventHandler(Tick);
         }
 
    
@@ -134,19 +134,20 @@ namespace PTC.Controller.Registro
 
         public void VerificarCodigoYRegistrar(object sender, EventArgs e)
         {
-
+            //Asigna la variavle inputCode al campo donde se mete el codigo
             string inputCode = ObjRegistro.txtConfirm.Text.Trim();
 
+            //Si el codigo no es igual al de verfificacion retorna un mensaje de error
             if (inputCode != verificationCode)
             {
                 MessageBox.Show("El código de verificación es incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }
 
-
+            //Si e igual entonces intent registrarlo
             try
             {
-
+                //Se crea un objeto del DAO y la clase CommonClasss
                 DAORegistro daoRegistro = new DAORegistro();
                 CommonClass common = new CommonClass();
 
@@ -154,24 +155,25 @@ namespace PTC.Controller.Registro
 
                 string cadenaencriptada = common.ComputeSha256Hash(password);
 
-
+                //Se le asigna  los campos variables del Dao
                 daoRegistro.Nombre = ObjRegistro.txtNombre.Text.Trim();
                 daoRegistro.EspecialidadId = (int)ObjRegistro.cbEsp.SelectedValue;
                 daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
                 daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
                 daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
-                daoRegistro.Contrasena = cadenaencriptada;
+                daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OSEGUEDA1@");
                 daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
                 daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
                 daoRegistro.PreguntaID = (int)ObjRegistro.cbPregunta.SelectedValue;
                 daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
 
-                // Attempt to register the user
+                // Intenta registrar el usaurio
                 int valorRetornado = daoRegistro.RegistrarUsuario();
 
                 if (valorRetornado == 1)
                 {
                     MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else
                 {
@@ -184,6 +186,7 @@ namespace PTC.Controller.Registro
             }
         }
 
+        //Este metodo valida la contrasena verificando que tenga todos los requerimientos necesarios
         private bool ValidatePassword(string password)
         {
 
@@ -205,18 +208,20 @@ namespace PTC.Controller.Registro
 
             return true;
         }
-        public void Tick(object sender, EventArgs e)
-        {
-            int vCode = 1000;
+        //public void Tick(object sender, EventArgs e)
+        //{
+        //    int vCode = 1000;
 
-            vCode += 10;
-            if (vCode == 9999)
-            {
-                vCode = 1000;
-            }
+        //    vCode += 10;
+        //    if (vCode == 9999)
+        //    {
+        //        vCode = 1000;
+        //    }
 
-        }
+        //}
 
+        //Este metodo genera el codigo por medio de un random
+        //el cual es de 6 digitos
         public String generateCode()
         {
             Random r = new Random();

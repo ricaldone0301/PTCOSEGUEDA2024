@@ -119,5 +119,20 @@ namespace PTC.Vista
                 txtRespuesta.SelectionStart = txtRespuesta.Text.Length;
             }
         }
+
+        private void txtNombre_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPregunta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

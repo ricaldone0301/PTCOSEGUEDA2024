@@ -73,7 +73,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(718, 134);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(107, 35);
-            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
@@ -83,7 +83,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(468, 140);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(244, 28);
-            this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -95,7 +95,7 @@
             this.panel1.Location = new System.Drawing.Point(468, 175);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1070, 51);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 3;
             // 
             // cmsVerPaciente
             // 
@@ -117,7 +117,7 @@
             this.cmsEliminar.Location = new System.Drawing.Point(883, 9);
             this.cmsEliminar.Name = "cmsEliminar";
             this.cmsEliminar.Size = new System.Drawing.Size(94, 35);
-            this.cmsEliminar.TabIndex = 2;
+            this.cmsEliminar.TabIndex = 5;
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +129,7 @@
             this.cmsActualizar.Location = new System.Drawing.Point(773, 9);
             this.cmsActualizar.Name = "cmsActualizar";
             this.cmsActualizar.Size = new System.Drawing.Size(104, 35);
-            this.cmsActualizar.TabIndex = 1;
+            this.cmsActualizar.TabIndex = 4;
             this.cmsActualizar.Text = "Actualizar";
             this.cmsActualizar.UseVisualStyleBackColor = true;
             // 
@@ -141,7 +141,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(983, 9);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 35);
-            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 

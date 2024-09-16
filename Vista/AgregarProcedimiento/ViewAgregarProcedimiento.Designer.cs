@@ -73,7 +73,7 @@
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(676, 661);
-            this.bunifuCards1.TabIndex = 26;
+            this.bunifuCards1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -90,7 +90,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 578);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnGuardar
@@ -105,7 +105,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(171, 50);
-            this.btnGuardar.TabIndex = 39;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
@@ -121,7 +121,7 @@
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(171, 50);
-            this.btnActualizar.TabIndex = 38;
+            this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
@@ -145,7 +145,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ShortcutsEnabled = false;
             this.txtDescripcion.Size = new System.Drawing.Size(517, 299);
-            this.txtDescripcion.TabIndex = 14;
+            this.txtDescripcion.TabIndex = 3;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // txtPrecio
@@ -155,7 +155,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.ShortcutsEnabled = false;
             this.txtPrecio.Size = new System.Drawing.Size(151, 22);
-            this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.TabIndex = 2;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // bunifuCustomLabel1
@@ -177,7 +177,7 @@
             this.txtNombreProcedimiento.Name = "txtNombreProcedimiento";
             this.txtNombreProcedimiento.ShortcutsEnabled = false;
             this.txtNombreProcedimiento.Size = new System.Drawing.Size(517, 22);
-            this.txtNombreProcedimiento.TabIndex = 11;
+            this.txtNombreProcedimiento.TabIndex = 1;
             this.txtNombreProcedimiento.TextChanged += new System.EventHandler(this.txtNombreProcedimiento_TextChanged);
             // 
             // bunifuCustomLabel4

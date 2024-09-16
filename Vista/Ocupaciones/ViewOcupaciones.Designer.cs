@@ -67,7 +67,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(718, 135);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(107, 35);
-            this.btnBuscar.TabIndex = 100;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
@@ -77,7 +77,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(468, 141);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(244, 28);
-            this.txtBuscar.TabIndex = 99;
+            this.txtBuscar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -99,7 +99,7 @@
             this.cmsVerPaciente.Location = new System.Drawing.Point(692, 9);
             this.cmsVerPaciente.Name = "cmsVerPaciente";
             this.cmsVerPaciente.Size = new System.Drawing.Size(75, 35);
-            this.cmsVerPaciente.TabIndex = 4;
+            this.cmsVerPaciente.TabIndex = 3;
             this.cmsVerPaciente.Text = "Ver";
             this.cmsVerPaciente.UseVisualStyleBackColor = true;
             // 
@@ -111,7 +111,7 @@
             this.cmsEliminar.Location = new System.Drawing.Point(883, 9);
             this.cmsEliminar.Name = "cmsEliminar";
             this.cmsEliminar.Size = new System.Drawing.Size(94, 35);
-            this.cmsEliminar.TabIndex = 2;
+            this.cmsEliminar.TabIndex = 5;
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.UseVisualStyleBackColor = true;
             // 
@@ -123,7 +123,7 @@
             this.cmsActualizar.Location = new System.Drawing.Point(773, 9);
             this.cmsActualizar.Name = "cmsActualizar";
             this.cmsActualizar.Size = new System.Drawing.Size(104, 35);
-            this.cmsActualizar.TabIndex = 1;
+            this.cmsActualizar.TabIndex = 4;
             this.cmsActualizar.Text = "Actualizar";
             this.cmsActualizar.UseVisualStyleBackColor = true;
             // 
@@ -135,7 +135,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(983, 9);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 35);
-            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 

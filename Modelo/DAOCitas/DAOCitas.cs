@@ -14,14 +14,18 @@ namespace PTC.Modelo.DAOCitas
     {
         readonly SqlCommand Command = new SqlCommand();
 
+        //Se crea un datataset
+        //Este sirve para buscar las citas
         public DataSet BuscarCitas(string valor)
         {
             try
             {
                 Command.Connection = getConnection();
-                string query = $"SELECT * FROM ViewCitas WHERE citaID LIKE '%{valor}%' OR fecha LIKE '%{valor}%' OR hora LIKE '%{valor}%' OR consultorioID LIKE '%{valor}%' OR doctorID LIKE '%{valor}%' OR pacienteID LIKE '%{valor}%'";
+                //Se crea el query de seleccion
+                string query = $"SELECT * FROM ViewCitas WHERE ID LIKE '%{valor}%' OR Fecha LIKE '%{valor}%' OR Hora LIKE '%{valor}%' OR ID LIKE '%{valor}%' OR Doctor LIKE '%{valor}%' OR Paciente LIKE '%{valor}%' OR Procedimiento LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.ExecuteNonQuery();
+                //Este crea un adaptador el cual llena el dataset
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adp.Fill(ds, "ViewCitas");
@@ -149,6 +153,8 @@ namespace PTC.Modelo.DAOCitas
             return ds;
         }
 
+
+        //Este metodo sirve 
         public int AgendarCita()
         {
             try

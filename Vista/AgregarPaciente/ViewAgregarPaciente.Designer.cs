@@ -106,7 +106,7 @@
             this.txtNombreAlergiaMedicamento.Name = "txtNombreAlergiaMedicamento";
             this.txtNombreAlergiaMedicamento.ShortcutsEnabled = false;
             this.txtNombreAlergiaMedicamento.Size = new System.Drawing.Size(412, 81);
-            this.txtNombreAlergiaMedicamento.TabIndex = 170;
+            this.txtNombreAlergiaMedicamento.TabIndex = 18;
             this.txtNombreAlergiaMedicamento.TextChanged += new System.EventHandler(this.txtNombreAlergiaMedicamento_TextChanged);
             // 
             // btnAgregarOcupacion
@@ -121,7 +121,7 @@
             this.btnAgregarOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarOcupacion.Name = "btnAgregarOcupacion";
             this.btnAgregarOcupacion.Size = new System.Drawing.Size(40, 67);
-            this.btnAgregarOcupacion.TabIndex = 169;
+            this.btnAgregarOcupacion.TabIndex = 24;
             this.btnAgregarOcupacion.Text = "+";
             this.btnAgregarOcupacion.UseVisualStyleBackColor = false;
             this.btnAgregarOcupacion.Click += new System.EventHandler(this.btnAgregarOcupacion_Click);
@@ -136,7 +136,7 @@
             this.txtMotivoConsulta.Name = "txtMotivoConsulta";
             this.txtMotivoConsulta.ShortcutsEnabled = false;
             this.txtMotivoConsulta.Size = new System.Drawing.Size(397, 81);
-            this.txtMotivoConsulta.TabIndex = 167;
+            this.txtMotivoConsulta.TabIndex = 12;
             this.txtMotivoConsulta.TextChanged += new System.EventHandler(this.txtMotivoConsulta_TextChanged);
             // 
             // txtNombreMedicamento
@@ -149,7 +149,7 @@
             this.txtNombreMedicamento.Name = "txtNombreMedicamento";
             this.txtNombreMedicamento.ShortcutsEnabled = false;
             this.txtNombreMedicamento.Size = new System.Drawing.Size(572, 81);
-            this.txtNombreMedicamento.TabIndex = 166;
+            this.txtNombreMedicamento.TabIndex = 19;
             this.txtNombreMedicamento.TextChanged += new System.EventHandler(this.txtNombreMedicamento_TextChanged);
             // 
             // btnGuardarPaciente
@@ -189,7 +189,7 @@
             this.txtRecuperacionOperacion.Name = "txtRecuperacionOperacion";
             this.txtRecuperacionOperacion.ShortcutsEnabled = false;
             this.txtRecuperacionOperacion.Size = new System.Drawing.Size(959, 89);
-            this.txtRecuperacionOperacion.TabIndex = 163;
+            this.txtRecuperacionOperacion.TabIndex = 23;
             this.txtRecuperacionOperacion.TextChanged += new System.EventHandler(this.txtRecuperacionOperacion_TextChanged);
             // 
             // bunifuCustomLabel21
@@ -215,7 +215,7 @@
             this.txtTipoOperacion.Name = "txtTipoOperacion";
             this.txtTipoOperacion.ShortcutsEnabled = false;
             this.txtTipoOperacion.Size = new System.Drawing.Size(309, 81);
-            this.txtTipoOperacion.TabIndex = 161;
+            this.txtTipoOperacion.TabIndex = 22;
             this.txtTipoOperacion.TextChanged += new System.EventHandler(this.txtTipoOperacion_TextChanged);
             // 
             // bunifuCustomLabel20
@@ -239,7 +239,7 @@
             this.cbOperacionNo.Margin = new System.Windows.Forms.Padding(4);
             this.cbOperacionNo.Name = "cbOperacionNo";
             this.cbOperacionNo.Size = new System.Drawing.Size(51, 24);
-            this.cbOperacionNo.TabIndex = 159;
+            this.cbOperacionNo.TabIndex = 21;
             this.cbOperacionNo.Text = "No";
             this.cbOperacionNo.UseVisualStyleBackColor = true;
             this.cbOperacionNo.CheckedChanged += new System.EventHandler(this.cbOperacionNo_CheckedChanged);
@@ -252,7 +252,7 @@
             this.cbOperacionSi.Margin = new System.Windows.Forms.Padding(4);
             this.cbOperacionSi.Name = "cbOperacionSi";
             this.cbOperacionSi.Size = new System.Drawing.Size(43, 24);
-            this.cbOperacionSi.TabIndex = 158;
+            this.cbOperacionSi.TabIndex = 20;
             this.cbOperacionSi.Text = "Sí";
             this.cbOperacionSi.UseVisualStyleBackColor = true;
             this.cbOperacionSi.CheckedChanged += new System.EventHandler(this.cbOperacionSi_CheckedChanged);
@@ -301,11 +301,11 @@
             this.txtNumMedicoCabecera.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumMedicoCabecera.Location = new System.Drawing.Point(516, 522);
             this.txtNumMedicoCabecera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNumMedicoCabecera.MaxLength = 20;
+            this.txtNumMedicoCabecera.MaxLength = 9;
             this.txtNumMedicoCabecera.Name = "txtNumMedicoCabecera";
             this.txtNumMedicoCabecera.ShortcutsEnabled = false;
             this.txtNumMedicoCabecera.Size = new System.Drawing.Size(272, 26);
-            this.txtNumMedicoCabecera.TabIndex = 154;
+            this.txtNumMedicoCabecera.TabIndex = 17;
             this.txtNumMedicoCabecera.TextChanged += new System.EventHandler(this.txtNumMedicoCabecera_TextChanged);
             // 
             // bunifuCustomLabel16
@@ -330,7 +330,7 @@
             this.txtMedicoCabeceraNombre.Name = "txtMedicoCabeceraNombre";
             this.txtMedicoCabeceraNombre.ShortcutsEnabled = false;
             this.txtMedicoCabeceraNombre.Size = new System.Drawing.Size(453, 26);
-            this.txtMedicoCabeceraNombre.TabIndex = 152;
+            this.txtMedicoCabeceraNombre.TabIndex = 16;
             this.txtMedicoCabeceraNombre.TextChanged += new System.EventHandler(this.txtMedicoCabeceraNombre_TextChanged);
             // 
             // bunifuCustomLabel15
@@ -367,7 +367,7 @@
             this.cbControlMedicoNo.Margin = new System.Windows.Forms.Padding(4);
             this.cbControlMedicoNo.Name = "cbControlMedicoNo";
             this.cbControlMedicoNo.Size = new System.Drawing.Size(51, 24);
-            this.cbControlMedicoNo.TabIndex = 149;
+            this.cbControlMedicoNo.TabIndex = 15;
             this.cbControlMedicoNo.Text = "No";
             this.cbControlMedicoNo.UseVisualStyleBackColor = true;
             this.cbControlMedicoNo.CheckedChanged += new System.EventHandler(this.cbControlMedicoNo_CheckedChanged);
@@ -380,7 +380,7 @@
             this.cbControlMedicoSi.Margin = new System.Windows.Forms.Padding(4);
             this.cbControlMedicoSi.Name = "cbControlMedicoSi";
             this.cbControlMedicoSi.Size = new System.Drawing.Size(43, 24);
-            this.cbControlMedicoSi.TabIndex = 148;
+            this.cbControlMedicoSi.TabIndex = 14;
             this.cbControlMedicoSi.Text = "Sí";
             this.cbControlMedicoSi.UseVisualStyleBackColor = true;
             this.cbControlMedicoSi.CheckedChanged += new System.EventHandler(this.cbControlMedicoSi_CheckedChanged);
@@ -420,7 +420,7 @@
             this.txtNumEmergencia.Name = "txtNumEmergencia";
             this.txtNumEmergencia.ShortcutsEnabled = false;
             this.txtNumEmergencia.Size = new System.Drawing.Size(269, 26);
-            this.txtNumEmergencia.TabIndex = 145;
+            this.txtNumEmergencia.TabIndex = 11;
             this.txtNumEmergencia.TextChanged += new System.EventHandler(this.txtNumEmergencia_TextChanged);
             // 
             // txtNombreEmergencia
@@ -432,7 +432,7 @@
             this.txtNombreEmergencia.Name = "txtNombreEmergencia";
             this.txtNombreEmergencia.ShortcutsEnabled = false;
             this.txtNombreEmergencia.Size = new System.Drawing.Size(395, 26);
-            this.txtNombreEmergencia.TabIndex = 144;
+            this.txtNombreEmergencia.TabIndex = 10;
             this.txtNombreEmergencia.TextChanged += new System.EventHandler(this.txtNombreEmergencia_TextChanged);
             // 
             // bunifuCustomLabel10
@@ -457,7 +457,7 @@
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.ShortcutsEnabled = false;
             this.txtReferencia.Size = new System.Drawing.Size(469, 26);
-            this.txtReferencia.TabIndex = 142;
+            this.txtReferencia.TabIndex = 9;
             this.txtReferencia.TextChanged += new System.EventHandler(this.txtReferencia_TextChanged);
             // 
             // bunifuCustomLabel9
@@ -482,7 +482,7 @@
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.ShortcutsEnabled = false;
             this.txtDUI.Size = new System.Drawing.Size(263, 26);
-            this.txtDUI.TabIndex = 140;
+            this.txtDUI.TabIndex = 8;
             this.txtDUI.TextChanged += new System.EventHandler(this.txtDUI_TextChanged);
             // 
             // bunifuCustomLabel8
@@ -508,7 +508,7 @@
             this.txtDireccionPaciente.Name = "txtDireccionPaciente";
             this.txtDireccionPaciente.ShortcutsEnabled = false;
             this.txtDireccionPaciente.Size = new System.Drawing.Size(460, 81);
-            this.txtDireccionPaciente.TabIndex = 138;
+            this.txtDireccionPaciente.TabIndex = 7;
             this.txtDireccionPaciente.TextChanged += new System.EventHandler(this.txtDireccionPaciente_TextChanged);
             // 
             // bunifuCustomLabel7
@@ -533,7 +533,7 @@
             this.cmbOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.cmbOcupacion.Name = "cmbOcupacion";
             this.cmbOcupacion.Size = new System.Drawing.Size(164, 28);
-            this.cmbOcupacion.TabIndex = 136;
+            this.cmbOcupacion.TabIndex = 6;
             this.cmbOcupacion.SelectedIndexChanged += new System.EventHandler(this.cmbOcupacion_SelectedIndexChanged);
             // 
             // bunifuCustomLabel6
@@ -558,7 +558,7 @@
             this.txtCorreoPaciente.Name = "txtCorreoPaciente";
             this.txtCorreoPaciente.ShortcutsEnabled = false;
             this.txtCorreoPaciente.Size = new System.Drawing.Size(453, 26);
-            this.txtCorreoPaciente.TabIndex = 134;
+            this.txtCorreoPaciente.TabIndex = 5;
             this.txtCorreoPaciente.TextChanged += new System.EventHandler(this.txtCorreoPaciente_TextChanged);
             // 
             // bunifuCustomLabel5
@@ -581,7 +581,7 @@
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(281, 26);
-            this.dtpFechaNac.TabIndex = 132;
+            this.dtpFechaNac.TabIndex = 4;
             this.dtpFechaNac.ValueChanged += new System.EventHandler(this.dtpFechaNac_ValueChanged);
             // 
             // bunifuCustomLabel3
@@ -606,7 +606,7 @@
             this.txtTelefonoPaciente.Name = "txtTelefonoPaciente";
             this.txtTelefonoPaciente.ShortcutsEnabled = false;
             this.txtTelefonoPaciente.Size = new System.Drawing.Size(272, 26);
-            this.txtTelefonoPaciente.TabIndex = 130;
+            this.txtTelefonoPaciente.TabIndex = 3;
             this.txtTelefonoPaciente.TextChanged += new System.EventHandler(this.txtTelefonoPaciente_TextChanged);
             // 
             // bunifuCustomLabel2
@@ -642,7 +642,7 @@
             this.txtEdadPaciente.Name = "txtEdadPaciente";
             this.txtEdadPaciente.ShortcutsEnabled = false;
             this.txtEdadPaciente.Size = new System.Drawing.Size(32, 26);
-            this.txtEdadPaciente.TabIndex = 127;
+            this.txtEdadPaciente.TabIndex = 2;
             this.txtEdadPaciente.TextChanged += new System.EventHandler(this.txtEdadPaciente_TextChanged);
             // 
             // bunifuCustomLabel1
@@ -667,7 +667,7 @@
             this.txtNombrePaciente.Name = "txtNombrePaciente";
             this.txtNombrePaciente.ShortcutsEnabled = false;
             this.txtNombrePaciente.Size = new System.Drawing.Size(469, 26);
-            this.txtNombrePaciente.TabIndex = 125;
+            this.txtNombrePaciente.TabIndex = 1;
             this.txtNombrePaciente.TextChanged += new System.EventHandler(this.txtNombrePaciente_TextChanged);
             // 
             // bunifuCustomLabel4
@@ -720,7 +720,7 @@
             this.btnGuardarOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarOcupacion.Name = "btnGuardarOcupacion";
             this.btnGuardarOcupacion.Size = new System.Drawing.Size(144, 62);
-            this.btnGuardarOcupacion.TabIndex = 112;
+            this.btnGuardarOcupacion.TabIndex = 26;
             this.btnGuardarOcupacion.Text = "GUARDAR";
             this.btnGuardarOcupacion.UseVisualStyleBackColor = false;
             // 
@@ -733,7 +733,7 @@
             this.txtNombreOcupacion.Name = "txtNombreOcupacion";
             this.txtNombreOcupacion.ShortcutsEnabled = false;
             this.txtNombreOcupacion.Size = new System.Drawing.Size(303, 26);
-            this.txtNombreOcupacion.TabIndex = 80;
+            this.txtNombreOcupacion.TabIndex = 25;
             this.txtNombreOcupacion.TextChanged += new System.EventHandler(this.txtNombreOcupacion_TextChanged_1);
             // 
             // txtPadecimientos
@@ -746,7 +746,7 @@
             this.txtPadecimientos.Name = "txtPadecimientos";
             this.txtPadecimientos.ShortcutsEnabled = false;
             this.txtPadecimientos.Size = new System.Drawing.Size(245, 48);
-            this.txtPadecimientos.TabIndex = 176;
+            this.txtPadecimientos.TabIndex = 13;
             this.txtPadecimientos.TextChanged += new System.EventHandler(this.txtPadecimientos_TextChanged);
             // 
             // ViewAgregarPaciente

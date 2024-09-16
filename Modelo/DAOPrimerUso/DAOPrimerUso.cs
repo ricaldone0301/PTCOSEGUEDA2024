@@ -16,14 +16,18 @@ namespace PTC.Modelo.DAOPrimerUso
         readonly SqlCommand Command = new SqlCommand();
         public DataSet ComboBoxRoles()
         {
+            //Se crea un DataSet
             DataSet ds = new DataSet();
             try
             {
+                //Se abre la conexión
                 using (SqlConnection connection = getConnection())
                 {
+                    //Se envía una consulta
                     string query = "SELECT * FROM ViewPrimer";
                     SqlCommand cmd = new SqlCommand(query, connection);
 
+                    //Se crea un adaptador y se llena con los datos de la vista ViewPrimer
                     using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
                     {
                         adp.Fill(ds, "ViewPrimer");
@@ -32,13 +36,16 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             catch (Exception ex)
             {
+                //Si encuentra un error, se muestra el mensaje y el dataset es null
                 MessageBox.Show("Error OS#012: No se pudo cargar de forma correcta el contenido de los ComboBox" + ex.Message);
                 ds = null;
             }
             finally
             {
+                //Finalmente se cierra la conexión
                 getConnection().Close();
             }
+            //Se retorna el dataset
             return ds;
         }
 
@@ -127,7 +134,7 @@ namespace PTC.Modelo.DAOPrimerUso
         }
 
 
-        public int RegistrarUsuario()
+        /*public int RegistrarUsuario()
         {
             try
             {
@@ -162,16 +169,19 @@ namespace PTC.Modelo.DAOPrimerUso
             }
 
 
-        }
+        }*/
+
+        //se crea el METODO registro de Empresa
 
         public int RegistrarEmpresa()
         {
             try
-            {
+            {       //Se cre aun comando de tipo SQL
                 using (SqlCommand cmd = new SqlCommand())
-                {
+                {   
+                    //Se abre la conexion
                     cmd.Connection = getConnection();
-
+                    //Se crea el query 
                     String query = "INSERT INTO Empresa (nombreEmpresa, telefonoEmpresa, direccion, emailEmpresa) VALUES (@nombre, @telefono, @direccion, @email)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@direccion", Direccion);
@@ -180,12 +190,13 @@ namespace PTC.Modelo.DAOPrimerUso
                     cmd.Parameters.AddWithValue("@email", EmailEmpresa);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
-
+                    //Se devuelven las filas afectadas
                     return rowsAffected;
                 }
             }
             catch (Exception ex)
             {
+                //Si encuentra un error devuelve -1 y muestra el mensaje
                 MessageBox.Show("Error OS#021: Error al crear registro" + ex.Message);
                 return -1;
             }
@@ -200,9 +211,12 @@ namespace PTC.Modelo.DAOPrimerUso
         {
             try
             {
+                //Se abre el getConnection
                 Command.Connection = getConnection();
+                //Se crea el query
                 string query = "SELECT COUNT(*) FROM Empresa";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                //Se ejecuta el query y lo guarda en la variable totalPersonal
                 int totalPersonal = (int)cmd.ExecuteScalar();
                 return totalPersonal;
             }
@@ -213,6 +227,7 @@ namespace PTC.Modelo.DAOPrimerUso
             }
             finally
             {
+                //Finalmente se cierra la conexión
                 Command.Connection.Close();
             }
         }

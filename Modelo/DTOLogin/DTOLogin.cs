@@ -10,6 +10,7 @@ namespace PTC.Modelo.DTOLogin
         {
         private  string usuarioPersonal;
         private  string contraseñaPersonal;
+        private string contranueva;
         private  int rolID;
         private  string nombrePersonal;
         public  string access;
@@ -24,7 +25,8 @@ namespace PTC.Modelo.DTOLogin
         public string UsuarioNormal { get => usuarioNormal; set => usuarioNormal = value; }
 
         public  int Rol { get => rolID; set => rolID = value; }
-        }
+        public string Contranueva { get => contranueva; set => contranueva = value; }
+    }
 
     }
 

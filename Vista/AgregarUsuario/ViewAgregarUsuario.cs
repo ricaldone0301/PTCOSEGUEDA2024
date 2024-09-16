@@ -26,11 +26,11 @@ namespace PTC.Vista.AgregarDoctores
             ControllerAgregarusuario objAgregarUsuario = new ControllerAgregarusuario(this, accion);
         }
 
-        public ViewAgregarUsuario(int accion, string Nombre, string PersonalID, int rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta)
+        public ViewAgregarUsuario(int accion, string Nombre, string PersonalID, string rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta, string pregunta, string consultorio,string Especialidad, int rolID)
         {
             InitializeComponent();
             TextBoxMenuEliminar();
-            ControllerAgregarusuario objActualiarUsuario = new ControllerAgregarusuario(this, accion, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta);
+            ControllerAgregarusuario objActualiarUsuario = new ControllerAgregarusuario(this, accion, Nombre, PersonalID, rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta, pregunta, consultorio, Especialidad, rolID);
         }
 
 
@@ -50,8 +50,6 @@ namespace PTC.Vista.AgregarDoctores
         // Se llama al método ContextMenuEliminar para cada uno de los TextBox especificados.
         public void TextBoxMenuEliminar()
         {
-            
-            ContextMenuEliminar(txtContrasena); 
             ContextMenuEliminar(txtEmail);      
             ContextMenuEliminar(txtNombre);    
             ContextMenuEliminar(txtTelefono);   
@@ -137,16 +135,6 @@ namespace PTC.Vista.AgregarDoctores
                 txtUsuario.Text = txtUsuario.Text.Substring(0, 30);
 
                 txtUsuario.SelectionStart = txtUsuario.Text.Length;
-            }
-        }
-
-        private void txtContrasena_TextChanged(object sender, EventArgs e)
-        {
-            if(txtContrasena.Text.Length > 256)
-            {
-                txtContrasena.Text = txtContrasena.Text.Substring(0, 256);
-
-                txtContrasena.SelectionStart = txtContrasena.Text.Length;
             }
         }
 

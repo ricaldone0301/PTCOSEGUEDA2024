@@ -1,6 +1,7 @@
 ﻿using PTC.Controller.Common;
 using PTC.Modelo.DAORegistro;
 using PTC.Modelo.DAOUsuarios;
+using PTC.Modelo.DTORegistro;
 using PTC.Vista.AgregarDoctores;
 using PTC.Vista.Registro;
 using System;
@@ -34,14 +35,14 @@ namespace PTC.Controller.Usuarios
             //Al dar click en el boton agregar se llama al evento nuevo.
             ObjAgregarUsuario.btnAgregar.Click += new EventHandler(Nuevo);
         }
-        public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta)
+        public ControllerAgregarusuario(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID,string Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta, string pregunta, string consultorio,  string Especialidad, int rolID)
         {
             ObjAgregarUsuario = Vista;
             this.accion = accion;
             //llena la vista con los valores del usuario que se va a actualizar.
             ObjAgregarUsuario.Load += new EventHandler(CargoInicial);
             verificarAccion();
-            CargaValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta);
+            CargaValues(Vista, accion, Nombre, PersonalID, Rol, EspecialidadID, Telefono, consultorioID, UsuarioPersonal, contraseñaPersonal, email, preguntaID, respuesta, pregunta, consultorio, Especialidad, rolID);
             this.personalId = int.Parse(PersonalID.ToString());
             //Al dar click al botn de actualizar se llama al metodo actualizarregistro.
             ObjAgregarUsuario.btnActualizar.Click += new EventHandler(ActualizarRegistro);
@@ -129,7 +130,7 @@ namespace PTC.Controller.Usuarios
                 ObjAgregarUsuario.btnAgregar.Enabled = false;
                 ObjAgregarUsuario.btnActualizar.Enabled = false;
                 ObjAgregarUsuario.txtUsuario.Enabled = false;
-                ObjAgregarUsuario.txtContrasena.Enabled = false;
+                //ObjAgregarUsuario.txtContrasena.Enabled = false;
                 ObjAgregarUsuario.txtNombre.Enabled = false;
                 ObjAgregarUsuario.txtTelefono.Enabled = false;
                 ObjAgregarUsuario.txtEmail.Enabled = false;
@@ -150,7 +151,7 @@ namespace PTC.Controller.Usuarios
                 if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text .Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtTelefono.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtUsuario.Text.Trim()) ||
-       string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
+      // string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
         string.IsNullOrEmpty(ObjAgregarUsuario.txtRespuesta.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtEmail.Text.Trim())))
 
@@ -161,12 +162,12 @@ namespace PTC.Controller.Usuarios
                     //Extrae los datos del formulario.
                     CommonClass commonClass = new CommonClass();
 
-                    string contrasena = ObjAgregarUsuario.txtContrasena.Text;
-                    if (!ValidarContra(contrasena))
+                    //string contrasena = ObjAgregarUsuario.txtContrasena.Text;
+                   /* if (!ValidarContra(contrasena))
                     {
                         MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }
+                    }*/
 
                     try
                     {
@@ -174,7 +175,7 @@ namespace PTC.Controller.Usuarios
                         DAORegistro daoRegistro = new DAORegistro();
                         CommonClass common = new CommonClass();
 
-                        string cadenaencriptada = common.ComputeSha256Hash(contrasena);
+                        //string cadenaencriptada = common.ComputeSha256Hash(contrasena);
 
 
                         daoAdmin.Nombre = ObjAgregarUsuario.txtNombre.Text.Trim();
@@ -182,7 +183,7 @@ namespace PTC.Controller.Usuarios
                         daoAdmin.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
                         daoAdmin.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
                         daoAdmin.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-                        daoAdmin.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
+                        daoAdmin.Contrasena = common.ComputeSha256Hash(ObjAgregarUsuario.txtUsuario.Text.Trim() + "OSEGUEDA1@");
                         daoAdmin.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
                         daoAdmin.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
                         daoAdmin.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;
@@ -198,6 +199,10 @@ namespace PTC.Controller.Usuarios
                                             "Proceso completado",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Information);
+                            MessageBox.Show($"Usuario administrador: {ObjAgregarUsuario.txtUsuario.Text.Trim()}Contraseña de usuario: {ObjAgregarUsuario.txtUsuario.Text.Trim()}OS1",
+                    "Credenciales de acceso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -250,17 +255,11 @@ namespace PTC.Controller.Usuarios
             if (!(string.IsNullOrEmpty(ObjAgregarUsuario.txtNombre.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtTelefono.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtUsuario.Text.Trim()) ||
-       string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
+       //string.IsNullOrEmpty(ObjAgregarUsuario.txtContrasena.Text.Trim()) ||
         string.IsNullOrEmpty(ObjAgregarUsuario.txtRespuesta.Text.Trim()) ||
        string.IsNullOrEmpty(ObjAgregarUsuario.txtEmail.Text.Trim())))
 
             {
-                //string contrasena = ObjAgregarUsuario.txtContrasena.Text;
-                //if (!ValidarContra(contrasena))
-                //{
-                //    MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-                //}
 
 
                 try
@@ -275,7 +274,7 @@ namespace PTC.Controller.Usuarios
                     daoUpdate.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
                     daoUpdate.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
                     daoUpdate.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-                    daoUpdate.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
+                    //.Contrasena = commonClass.ComputeSha256Hash(ObjAgregarUsuario.txtContrasena.Text.Trim());
                     daoUpdate.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
                     daoUpdate.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
                     daoUpdate.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;
@@ -306,13 +305,13 @@ namespace PTC.Controller.Usuarios
 
 
         //Este metodo carga los valores ya actualizados en la vista.
-        public void CargaValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, int Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta)
+        public void CargaValues(ViewAgregarUsuario Vista, int accion, string Nombre, string PersonalID, string Rol, int EspecialidadID, string Telefono, int consultorioID, string UsuarioPersonal, string contraseñaPersonal, string email, int preguntaID, string respuesta, string pregunta, string consultorio, string Especialidad, int rolID)
         {
             ObjAgregarUsuario.txtNombre.Text = Nombre;
             ObjAgregarUsuario.txtEmail.Text = PersonalID.ToString();
             ObjAgregarUsuario.txtTelefono.Text = Telefono;
             ObjAgregarUsuario.txtUsuario.Text = UsuarioPersonal;
-            ObjAgregarUsuario.txtContrasena.Text = contraseñaPersonal;
+            //ObjAgregarUsuario.txtContrasena.Text = contraseñaPersonal;
             ObjAgregarUsuario.txtEmail.Text = email;
             ObjAgregarUsuario.txtRespuesta.Text = respuesta;
 

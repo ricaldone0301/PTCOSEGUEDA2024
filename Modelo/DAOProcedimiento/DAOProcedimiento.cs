@@ -140,13 +140,13 @@ namespace PTC.Modelo.DAOProcedimiento
                 Command.Connection = getConnection();
                 //Establece una conexión a la base de datos
                 //construye una consulta SELECT que busca coincidencias en varios campos
-                string query = $"SELECT * FROM viewProcedimientos WHERE procedimientoID LIKE '%{valor}%' OR nombreProcedimiento LIKE '%{valor}%' OR precioProcedimiento LIKE '%{valor}%' OR descProcedimiento LIKE '%{valor}%'";
+                string query = $"SELECT * FROM ViewProcedimientos WHERE ID LIKE '%{valor}%' OR Nombre LIKE '%{valor}%' OR Precio LIKE '%{valor}%' OR Descripcion LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 //utiliza un SqlDataAdapter para llenar un DataSet con los resultados de la consulta. 
-                cmd.ExecuteReader();
+                cmd.ExecuteScalar();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "viewProcedimientos");
+                adp.Fill(ds, "ViewProcedimientos");
                 return ds;
             }
             catch (Exception ex)

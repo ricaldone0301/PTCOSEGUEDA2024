@@ -32,13 +32,13 @@ namespace PTC.Controller.Cita
             ObjAgendarCita.Load += new EventHandler(CargoInicial);
             ObjAgendarCita.btnGuardar.Click += new EventHandler(NuevaCita);
         }
-        public ControllerAgendarCita(ViewAgendarcita Vista, int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
+        public ControllerAgendarCita(ViewAgendarcita Vista, int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID, string paciente, string personal, string consultorio, string procedimiento)
         {
             ObjAgendarCita = Vista;
             this.accion = accion;
             ObjAgendarCita.Load += new EventHandler(CargoInicial);
             verificarAccion();
-            ChargeValues(Vista, accion, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
+            ChargeValues(Vista, accion, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID, paciente, personal, consultorio, procedimiento);
             this.citaID = citaID;
             ObjAgendarCita.btnActualizar.Click += new EventHandler(ActualizarRegistro);
         }
@@ -208,34 +208,39 @@ namespace PTC.Controller.Cita
 
         public void ActualizarRegistro(object sender, EventArgs e)
         {
-            DAOCitas daoUpdate = new DAOCitas();
-            daoUpdate.PacienteID = int.Parse(ObjAgendarCita.cbPaciente.SelectedValue.ToString());
-            daoUpdate.PersonalID = ObjAgendarCita.cbDoctor.SelectedValue.ToString();
-            daoUpdate.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
-            daoUpdate.CitaID = citaID;
-            daoUpdate.Hora = ObjAgendarCita.txtHora.Text.ToString();
-            daoUpdate.Fecha = ObjAgendarCita.Fecha.Value;
-            daoUpdate.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
-            //daoUpdate.Hora = DateTime.Parse(ObjAgendarCita.Tiempo.ToString()).ToString();
+            if (ObjAgendarCita.Fecha != null &&
+    !string.IsNullOrWhiteSpace(ObjAgendarCita.txtHora.Text))
+            {
+                DAOCitas daoUpdate = new DAOCitas();
+                daoUpdate.PacienteID = int.Parse(ObjAgendarCita.cbPaciente.SelectedValue.ToString());
+                daoUpdate.PersonalID = ObjAgendarCita.cbDoctor.SelectedValue.ToString();
+                daoUpdate.ConsultorioID = int.Parse(ObjAgendarCita.cbConsultorio.SelectedValue.ToString());
+                daoUpdate.CitaID = citaID;
+                daoUpdate.Hora = ObjAgendarCita.txtHora.Text.ToString();
+                daoUpdate.Fecha = ObjAgendarCita.Fecha.Value;
+                daoUpdate.ProcedimientoID = int.Parse(ObjAgendarCita.cbProcedimiento.SelectedValue.ToString());
+                //daoUpdate.Hora = DateTime.Parse(ObjAgendarCita.Tiempo.ToString()).ToString();
 
 
-            int valorRetornado = daoUpdate.ActualizarUsuario();
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido actualizado exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                int valorRetornado = daoUpdate.ActualizarUsuario();
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido actualizado exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
-        public void ChargeValues(ViewAgendarcita Vista, int accion, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
+
+        public void ChargeValues(ViewAgendarcita Vista, int accion, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID, string paciente, string personal, string consultorio, string procedimiento)
         {
             ObjAgendarCita.cbPaciente.SelectedValue = pacienteID;
             ObjAgendarCita.cbDoctor.SelectedValue = personalID;

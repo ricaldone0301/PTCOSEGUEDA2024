@@ -17,16 +17,20 @@ namespace PTC.Modelo.DAORegistro
         readonly SqlCommand Command = new SqlCommand();
         public DataSet ComboBoxRoles()
         {
+            //Se crea un dataset
             DataSet ds = new DataSet();
             try
             {
+                //Abre la conexion
                 using (SqlConnection connection = getConnection())
                 {
+                    //Se hace e query de sleccion yass
                     string query = "SELECT * FROM Roles";
                     SqlCommand cmd = new SqlCommand(query, connection);
 
                     using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
                     {
+                        //crea un adaptador y llena el dataset con la tabla 
                         adp.Fill(ds, "Roles");
                     }
                 }
@@ -131,10 +135,13 @@ namespace PTC.Modelo.DAORegistro
         {
             try
             {
+                //Utiliza el SqlCommand
                 using (SqlCommand cmd = new SqlCommand())
                 {
+                    //Abre la conexion
                     cmd.Connection = getConnection();
 
+                    //Se crea el query de isnercion asignando los campos a los parametros si asi es!!!
                     String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email, preguntaID, Respuesta) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email, @pregunta, @respuesta)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@usuario", Usuario);
@@ -148,8 +155,9 @@ namespace PTC.Modelo.DAORegistro
                     cmd.Parameters.AddWithValue("@pregunta", PreguntaID);
                     cmd.Parameters.AddWithValue("@respuesta", Respuesta);
 
+                    //Ejecuta el comando y lo guarda en la variable rowsAffected
                     int rowsAffected = cmd.ExecuteNonQuery();
-
+                    //Retorna lel query
                     return rowsAffected;
                 }
             }

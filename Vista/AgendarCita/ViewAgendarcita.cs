@@ -22,12 +22,12 @@ namespace PTC.Vista.AgendarCita
             ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion);
             Fecha.MinDate = DateTime.Today;
         }
-        public ViewAgendarcita(int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID)
+        public ViewAgendarcita(int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID, string paciente, string personal, string consultorio, string procedimiento)
         {
             InitializeComponent();
             TextBoxMenuEliminar();
             this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
-            ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this,  accion, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID);
+            ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this,  accion, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID, paciente, personal, consultorio, procedimiento);
             Fecha.MinDate = DateTime.Today;
 
         }

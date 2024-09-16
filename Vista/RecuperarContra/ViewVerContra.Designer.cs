@@ -117,7 +117,7 @@
             this.cbEsp.Location = new System.Drawing.Point(315, 241);
             this.cbEsp.Name = "cbEsp";
             this.cbEsp.Size = new System.Drawing.Size(209, 24);
-            this.cbEsp.TabIndex = 36;
+            this.cbEsp.TabIndex = 0;
             // 
             // cbConsul
             // 
@@ -126,7 +126,7 @@
             this.cbConsul.Location = new System.Drawing.Point(42, 445);
             this.cbConsul.Name = "cbConsul";
             this.cbConsul.Size = new System.Drawing.Size(209, 24);
-            this.cbConsul.TabIndex = 35;
+            this.cbConsul.TabIndex = 0;
             // 
             // bunifuCustomLabel1
             // 
@@ -152,7 +152,7 @@
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(131, 46);
-            this.btnActualizar.TabIndex = 32;
+            this.btnActualizar.TabIndex = 2;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
@@ -163,7 +163,7 @@
             this.cbRol.Location = new System.Drawing.Point(315, 339);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(209, 24);
-            this.cbRol.TabIndex = 33;
+            this.cbRol.TabIndex = 0;
             // 
             // bunifuCustomLabel5
             // 
@@ -196,7 +196,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.ShortcutsEnabled = false;
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
-            this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.TabIndex = 0;
             // 
             // bunifuCustomLabel11
             // 
@@ -218,7 +218,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.ShortcutsEnabled = false;
             this.txtContrasena.Size = new System.Drawing.Size(209, 22);
-            this.txtContrasena.TabIndex = 25;
+            this.txtContrasena.TabIndex = 1;
             // 
             // bunifuCustomLabel9
             // 
@@ -239,7 +239,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(209, 22);
-            this.txtUsuario.TabIndex = 23;
+            this.txtUsuario.TabIndex = 0;
             // 
             // bunifuCustomLabel7
             // 
@@ -260,7 +260,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(209, 22);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 0;
             // 
             // bunifuCustomLabel6
             // 
@@ -281,7 +281,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(499, 22);
-            this.txtNombre.TabIndex = 17;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // bunifuCustomLabel4

@@ -50,6 +50,7 @@ namespace PTC.Controller.VerPerfil
             try
             {
                 //Se crea la instancia  del daousuarios para manejar la interaccion con la base de datos.
+                //Se cargan todos los DataSet.
                 DAOUsuarios objAdmin = new DAOUsuarios();
 
                 DataSet dsRoles = objAdmin.ComboBoxRoles();
@@ -94,6 +95,8 @@ namespace PTC.Controller.VerPerfil
             }
         }
 
+        //Se hace la validacion de contra si no cumple con los tres requisitos
+        //Retorna falso
         private bool ValidarContra(string password)
         {
 
@@ -114,6 +117,8 @@ namespace PTC.Controller.VerPerfil
             }
             return true;
         }
+
+        //Este metodo sirve para cambiar la contrasena
         public void CambiarContra(object sender, EventArgs e)
         {
 

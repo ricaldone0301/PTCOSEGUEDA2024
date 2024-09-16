@@ -120,9 +120,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAXSURBVChTY/if7P6fGDyqEC+mtkL3/wDIngmwTMD4kgAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAn0AAAAeCAYAAABZjKgQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAClSURBVHhe7dZBAQAgDAAh2y2I/TPMHh4POnD2zgIA8Dfp
+        AwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4A
+        gADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAIkD4AgADpAwAI
+        kD4AgADpAwD43uwDgx5Ui2L4Yp0AAAAASUVORK5CYII=
 </value>
   </data>
 </root>
