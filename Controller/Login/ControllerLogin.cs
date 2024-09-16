@@ -23,11 +23,11 @@ namespace PTC.Controller.Login
 {
     public class ControllerLogin
     {
-        private ViewLogin ObjLogin;
+        private ViewInicio ObjLogin;
         ViewCambiar ObjCambiar;
         private int intentosFallidos = 0;
 
-        public ControllerLogin(ViewLogin Vista)
+        public ControllerLogin(ViewInicio Vista)
         {
             ObjLogin = Vista;
             ObjLogin.TxtUsuario.Enter += new EventHandler(IntroducirUsuario);

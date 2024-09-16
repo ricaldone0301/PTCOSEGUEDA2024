@@ -19,7 +19,7 @@ namespace PTC.Vista.Login
         {
             InitializeComponent();
             TextBoxMenuEliminar();
-            ControllerLogin control = new ControllerLogin(this);
+            //ControllerLogin control = new ControllerLogin(this);
         }
 
         private void ContextMenuEliminar(TextBox textBox)

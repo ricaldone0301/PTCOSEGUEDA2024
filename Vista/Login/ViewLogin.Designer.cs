@@ -28,15 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnIngresar = new System.Windows.Forms.Button();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.btnOlvido = new System.Windows.Forms.LinkLabel();
-            this.TxtContra = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.BtnRegistro = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
+            this.BtnRegistro = new System.Windows.Forms.LinkLabel();
+            this.TxtContra = new System.Windows.Forms.TextBox();
+            this.BtnIngresar = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnOlvido = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::PTC.Properties.Resources.blanco;
+            this.panel1.Controls.Add(this.TxtUsuario);
+            this.panel1.Controls.Add(this.BtnRegistro);
+            this.panel1.Controls.Add(this.TxtContra);
+            this.panel1.Controls.Add(this.BtnIngresar);
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.btnOlvido);
+            this.panel1.Location = new System.Drawing.Point(393, 160);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(837, 329);
+            this.panel1.TabIndex = 7;
+            // 
+            // TxtUsuario
+            // 
+            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
+            this.TxtUsuario.Location = new System.Drawing.Point(224, 55);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUsuario.MaxLength = 30;
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.ShortcutsEnabled = false;
+            this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
+            this.TxtUsuario.TabIndex = 1;
+            this.TxtUsuario.Text = "Usuario";
+            // 
+            // BtnRegistro
+            // 
+            this.BtnRegistro.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.BtnRegistro.AutoSize = true;
+            this.BtnRegistro.BackColor = System.Drawing.Color.White;
+            this.BtnRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.BtnRegistro.Location = new System.Drawing.Point(532, 218);
+            this.BtnRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.BtnRegistro.Name = "BtnRegistro";
+            this.BtnRegistro.Size = new System.Drawing.Size(58, 16);
+            this.BtnRegistro.TabIndex = 6;
+            this.BtnRegistro.TabStop = true;
+            this.BtnRegistro.Text = "Registro";
+            // 
+            // TxtContra
+            // 
+            this.TxtContra.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContra.ForeColor = System.Drawing.Color.Gray;
+            this.TxtContra.Location = new System.Drawing.Point(224, 135);
+            this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtContra.MaxLength = 256;
+            this.TxtContra.Name = "TxtContra";
+            this.TxtContra.ShortcutsEnabled = false;
+            this.TxtContra.Size = new System.Drawing.Size(380, 39);
+            this.TxtContra.TabIndex = 2;
+            this.TxtContra.Text = "Contraseña";
+            this.TxtContra.TextChanged += new System.EventHandler(this.TxtContra_TextChanged);
             // 
             // BtnIngresar
             // 
@@ -55,47 +111,6 @@
             this.BtnIngresar.UseVisualStyleBackColor = false;
             this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
-            // TxtUsuario
-            // 
-            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.TxtUsuario.Location = new System.Drawing.Point(224, 55);
-            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtUsuario.MaxLength = 30;
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.ShortcutsEnabled = false;
-            this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
-            this.TxtUsuario.TabIndex = 1;
-            this.TxtUsuario.Text = "Usuario";
-            // 
-            // btnOlvido
-            // 
-            this.btnOlvido.ActiveLinkColor = System.Drawing.SystemColors.Window;
-            this.btnOlvido.AutoSize = true;
-            this.btnOlvido.BackColor = System.Drawing.Color.White;
-            this.btnOlvido.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnOlvido.Location = new System.Drawing.Point(130, 203);
-            this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btnOlvido.Name = "btnOlvido";
-            this.btnOlvido.Size = new System.Drawing.Size(157, 16);
-            this.btnOlvido.TabIndex = 4;
-            this.btnOlvido.TabStop = true;
-            this.btnOlvido.Text = "Recuperacion por correo";
-            // 
-            // TxtContra
-            // 
-            this.TxtContra.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContra.ForeColor = System.Drawing.Color.Gray;
-            this.TxtContra.Location = new System.Drawing.Point(224, 135);
-            this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtContra.MaxLength = 256;
-            this.TxtContra.Name = "TxtContra";
-            this.TxtContra.ShortcutsEnabled = false;
-            this.TxtContra.Size = new System.Drawing.Size(380, 39);
-            this.TxtContra.TabIndex = 2;
-            this.TxtContra.Text = "Contraseña";
-            this.TxtContra.TextChanged += new System.EventHandler(this.TxtContra_TextChanged);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.Window;
@@ -111,34 +126,19 @@
             this.linkLabel1.Text = "Recuperacion por pregunta";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // BtnRegistro
+            // btnOlvido
             // 
-            this.BtnRegistro.ActiveLinkColor = System.Drawing.SystemColors.Window;
-            this.BtnRegistro.AutoSize = true;
-            this.BtnRegistro.BackColor = System.Drawing.Color.White;
-            this.BtnRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.BtnRegistro.Location = new System.Drawing.Point(532, 218);
-            this.BtnRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.BtnRegistro.Name = "BtnRegistro";
-            this.BtnRegistro.Size = new System.Drawing.Size(58, 16);
-            this.BtnRegistro.TabIndex = 6;
-            this.BtnRegistro.TabStop = true;
-            this.BtnRegistro.Text = "Registro";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = global::PTC.Properties.Resources.osegueda1;
-            this.panel1.Controls.Add(this.TxtUsuario);
-            this.panel1.Controls.Add(this.BtnRegistro);
-            this.panel1.Controls.Add(this.TxtContra);
-            this.panel1.Controls.Add(this.BtnIngresar);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.btnOlvido);
-            this.panel1.Location = new System.Drawing.Point(393, 160);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 329);
-            this.panel1.TabIndex = 7;
+            this.btnOlvido.ActiveLinkColor = System.Drawing.SystemColors.Window;
+            this.btnOlvido.AutoSize = true;
+            this.btnOlvido.BackColor = System.Drawing.Color.White;
+            this.btnOlvido.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnOlvido.Location = new System.Drawing.Point(130, 203);
+            this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnOlvido.Name = "btnOlvido";
+            this.btnOlvido.Size = new System.Drawing.Size(157, 16);
+            this.btnOlvido.TabIndex = 4;
+            this.btnOlvido.TabStop = true;
+            this.btnOlvido.Text = "Recuperacion por correo";
             // 
             // ViewLogin
             // 
