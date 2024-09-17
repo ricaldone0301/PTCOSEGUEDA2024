@@ -82,7 +82,7 @@ namespace PTC.Modelo.DAOLogin
             }
         }
 
-        public bool PrimerLogin(string usuario)
+        public bool Identificar(string usuario)
         {
             try
             {
@@ -166,58 +166,6 @@ namespace PTC.Modelo.DAOLogin
             }
         }
 
-                // Se crea el query de update donde además de actualizar la contraseña, 
-                // también se actualiza el campo status (tipo bit).
-                string query = "SELECT Status FROM Personal WHERE contraseñaPersonal = @contra AND usuarioPersonal = @usuario";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-
-                // Se le asignan las variables a los parámetros 
-                cmd.Parameters.AddWithValue("@usuario", Usuario);
-                cmd.Parameters.AddWithValue("@contra", Contrasena);
-
-                // Se ejecuta el comando
-                int respuesta = cmd.ExecuteNonQuery();
-
-                // Se devuelve la respuesta
-                return respuesta;
-            }
-            catch (Exception ex)
-            {
-                // Se muestra el mensaje de error
-                MessageBox.Show(ex.Message);
-                return -1;
-            }
-            finally
-            {
-                // Se cierra la conexión
-                Command.Connection.Close();
-            }
-        }
-        public int ValidarPrimerUsoSistema()
-        {
-            try
-            {
-                Command.Connection = getConnection();
-                string query = "SELECT COUNT(*) FROM ViewLogin";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                int totalUsuarios = (int)cmd.ExecuteScalar();
-                return totalUsuarios;
-            }
-            catch (SqlException sqlex)
-            {
-                MessageBox.Show("Error OS#015: No se pudo validar el primer uso del sistema" + sqlex.Message);
-                return -1;
-            }
-            catch (Exception)
-            {
-                return -1;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
-
         public bool PrimerLogin(string usuario)
         {
             try
@@ -260,46 +208,7 @@ namespace PTC.Modelo.DAOLogin
                 MessageBox.Show("Error: " + ex.Message);
                 return false; // Indicate general error
             }
-        }
 
-        public int CambiarContra()
-        {
-            try
-            {
-                // Se crea la conexión
-                Command.Connection = getConnection();
-
-                // Se crea el query de update donde además de actualizar la contraseña, 
-                // también se actualiza el campo status (tipo bit).
-                string query = "UPDATE Personal SET contraseñaPersonal = @contra, status = @status WHERE usuarioPersonal = @usuario";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-
-                // Se le asignan las variables a los parámetros 
-                cmd.Parameters.AddWithValue("@usuario", Usuario);
-                cmd.Parameters.AddWithValue("@contra", Contrasena);
-
-                // Se asume que quieres establecer un valor específico para status.
-                // Aquí se establece el valor de status como true (1) para indicar que el usuario está activo.
-                // Cambia el valor según tus necesidades (true o false).
-                cmd.Parameters.AddWithValue("@status", true);
-
-                // Se ejecuta el comando
-                int respuesta = cmd.ExecuteNonQuery();
-
-                // Se devuelve la respuesta
-                return respuesta;
-            }
-            catch (Exception ex)
-            {
-                // Se muestra el mensaje de error
-                MessageBox.Show(ex.Message);
-                return -1;
-            }
-            finally
-            {
-                // Se cierra la conexión
-                Command.Connection.Close();
-            }
         }
     }
 

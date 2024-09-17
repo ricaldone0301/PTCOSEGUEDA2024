@@ -16,7 +16,7 @@ namespace PTC.Vista.Login
         public ViewCambiar()
         {
             InitializeComponent();
-            ControllerLogin control = new ControllerLogin(this);
+            ControllerLogin cambiarController = new ControllerLogin(this);
         }
     }
 }

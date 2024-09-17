@@ -133,4 +133,3 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.csproj.Re
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\Interop.WMPLib.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Login.ViewCambiar.resources
-C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Login.ViewInicio.resources

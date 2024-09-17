@@ -31,7 +31,7 @@ namespace PTC.Controller
             else
 
             {
-                Application.Run(new ViewInicio());
+                Application.Run(new ViewLogin());
             }
         }
     }

@@ -23,11 +23,11 @@ namespace PTC.Controller.Login
 {
     public class ControllerLogin
     {
-        private ViewInicio ObjLogin;
+        private ViewLogin ObjLogin;
         ViewCambiar ObjCambiar;
         private int intentosFallidos = 0;
 
-        public ControllerLogin(ViewInicio Vista)
+        public ControllerLogin(ViewLogin Vista)
         {
             ObjLogin = Vista;
             ObjLogin.TxtUsuario.Enter += new EventHandler(IntroducirUsuario);
@@ -39,26 +39,20 @@ namespace PTC.Controller.Login
             ObjLogin.btnOlvido.Click += new EventHandler(ContrasenaOlvidada);
             ObjLogin.linkLabel1.Click += new EventHandler(ContraPregunta);
             ObjLogin.BtnIngresar.Click += (sender, e) => DataAccess(sender, e);
-            ObjCambiar = new ViewCambiar();
-            ObjCambiar.BtnIngresar.Click += new EventHandler(CambiarContra);
 
             //ObjLogin.TxtUsuario.Text = "test2";
             //ObjLogin.TxtContra.Text = "test2";
         }
-
+            
         public ControllerLogin(ViewCambiar Vista1)
         {
             ObjCambiar = Vista1;
-            
-            ObjCambiar = new ViewCambiar();
             ObjCambiar.BtnIngresar.Click += new EventHandler(CambiarContra);
 
             //ObjLogin.TxtUsuario.Text = "test2";
             //ObjLogin.TxtContra.Text = "test2";
         }
-            //ObjLogin.TxtUsuario.Text = "test2";
-            //ObjLogin.TxtContra.Text = "test2";
-        }
+
         private void ContraPregunta(object sender, EventArgs e)
         {
             ViewOlvidoPregunta viewPregunta = new ViewOlvidoPregunta();
@@ -79,6 +73,7 @@ namespace PTC.Controller.Login
 
         }
 
+       
         private void CambiarContra(object sender, EventArgs e)
         {
             try
@@ -87,7 +82,7 @@ namespace PTC.Controller.Login
                 CommonClass common = new CommonClass();
 
                 // Asigna el usuario y la nueva contraseña en el DAO
-                DAOData.Usuario = ObjLogin.TxtUsuario.Text;
+                DAOData.Usuario = ObjCambiar.TxtUsuario.Text;
                 string cadenaEncriptada = common.ComputeSha256Hash(ObjCambiar.TxtContra.Text);
                 DAOData.Contrasena = cadenaEncriptada;
 
@@ -122,7 +117,7 @@ namespace PTC.Controller.Login
 
 
             bool answer = DAOData.Login();
-            int respuesta = DAOData.Identificar();
+            bool respuesta = DAOData.Identificar(ObjLogin.TxtUsuario.Text);
             bool primerLoginStatus = DAOData.PrimerLogin(ObjLogin.TxtUsuario.Text);
             if (primerLoginStatus == false)
             {
