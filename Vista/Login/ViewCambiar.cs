@@ -17,7 +17,6 @@ namespace PTC.Vista.Login
         {
             InitializeComponent();
             ControllerLogin control = new ControllerLogin(this);
-            
         }
     }
 }

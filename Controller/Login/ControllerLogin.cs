@@ -56,6 +56,9 @@ namespace PTC.Controller.Login
             //ObjLogin.TxtUsuario.Text = "test2";
             //ObjLogin.TxtContra.Text = "test2";
         }
+            //ObjLogin.TxtUsuario.Text = "test2";
+            //ObjLogin.TxtContra.Text = "test2";
+        }
         private void ContraPregunta(object sender, EventArgs e)
         {
             ViewOlvidoPregunta viewPregunta = new ViewOlvidoPregunta();
@@ -119,9 +122,8 @@ namespace PTC.Controller.Login
 
 
             bool answer = DAOData.Login();
-
+            int respuesta = DAOData.Identificar();
             bool primerLoginStatus = DAOData.PrimerLogin(ObjLogin.TxtUsuario.Text);
-
             if (primerLoginStatus == false)
             {
                 // Show the change password form
