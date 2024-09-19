@@ -3064,6 +3064,13 @@
         UQKjBEYJjCU0SmiU0CihUUKjBEYJjBIYNTTe3t7++Rdyfod9LKCmmgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnServidor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALUAAAAuCAYAAABu8lgpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVHhe7cExAQAAAMKg9U9tCF8gAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAABuNYJGAAFKZEayAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnInicio.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALUAAAAiCAYAAAAZMJhSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

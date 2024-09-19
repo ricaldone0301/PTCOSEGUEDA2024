@@ -142,7 +142,7 @@ namespace PTC.Modelo.DAORegistro
                     cmd.Connection = getConnection();
 
                     //Se crea el query de isnercion asignando los campos a los parametros si asi es!!!
-                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email, preguntaID, Respuesta) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email, @pregunta, @respuesta)";
+                    String query = "INSERT INTO Personal (usuarioPersonal, contraseñaPersonal, roleID, nombrePersonal, especialidadID, telefono, consultorioID, email, preguntaID, Respuesta, Status) VALUES (@usuario, @contrasena, @roleID, @nombre, @especialidadId, @telefono, @consultorioId, @email, @pregunta, @respuesta, @status)";
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@usuario", Usuario);
                     cmd.Parameters.AddWithValue("@contrasena", Contrasena);
@@ -154,6 +154,7 @@ namespace PTC.Modelo.DAORegistro
                     cmd.Parameters.AddWithValue("@email", Email);
                     cmd.Parameters.AddWithValue("@pregunta", PreguntaID);
                     cmd.Parameters.AddWithValue("@respuesta", Respuesta);
+                    cmd.Parameters.AddWithValue("@status", false);
 
                     //Ejecuta el comando y lo guarda en la variable rowsAffected
                     int rowsAffected = cmd.ExecuteNonQuery();

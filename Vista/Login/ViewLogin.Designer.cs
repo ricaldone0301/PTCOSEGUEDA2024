@@ -35,29 +35,31 @@
             this.BtnIngresar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnOlvido = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = global::PTC.Properties.Resources.blanco;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.TxtUsuario);
             this.panel1.Controls.Add(this.BtnRegistro);
             this.panel1.Controls.Add(this.TxtContra);
             this.panel1.Controls.Add(this.BtnIngresar);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.btnOlvido);
-            this.panel1.Location = new System.Drawing.Point(393, 160);
+            this.panel1.Location = new System.Drawing.Point(393, 107);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 329);
+            this.panel1.Size = new System.Drawing.Size(837, 521);
             this.panel1.TabIndex = 7;
             // 
             // TxtUsuario
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.TxtUsuario.Location = new System.Drawing.Point(224, 55);
+            this.TxtUsuario.Location = new System.Drawing.Point(235, 231);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsuario.MaxLength = 30;
             this.TxtUsuario.Name = "TxtUsuario";
@@ -72,7 +74,7 @@
             this.BtnRegistro.AutoSize = true;
             this.BtnRegistro.BackColor = System.Drawing.Color.White;
             this.BtnRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.BtnRegistro.Location = new System.Drawing.Point(532, 218);
+            this.BtnRegistro.Location = new System.Drawing.Point(595, 391);
             this.BtnRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BtnRegistro.Name = "BtnRegistro";
             this.BtnRegistro.Size = new System.Drawing.Size(58, 16);
@@ -84,7 +86,7 @@
             // 
             this.TxtContra.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContra.ForeColor = System.Drawing.Color.Gray;
-            this.TxtContra.Location = new System.Drawing.Point(224, 135);
+            this.TxtContra.Location = new System.Drawing.Point(235, 302);
             this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
             this.TxtContra.MaxLength = 256;
             this.TxtContra.Name = "TxtContra";
@@ -102,7 +104,7 @@
             this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnIngresar.Location = new System.Drawing.Point(359, 254);
+            this.BtnIngresar.Location = new System.Drawing.Point(340, 391);
             this.BtnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(144, 50);
@@ -117,7 +119,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.White;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.linkLabel1.Location = new System.Drawing.Point(130, 234);
+            this.linkLabel1.Location = new System.Drawing.Point(105, 403);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(171, 16);
@@ -132,13 +134,23 @@
             this.btnOlvido.AutoSize = true;
             this.btnOlvido.BackColor = System.Drawing.Color.White;
             this.btnOlvido.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnOlvido.Location = new System.Drawing.Point(130, 203);
+            this.btnOlvido.Location = new System.Drawing.Point(105, 373);
             this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnOlvido.Name = "btnOlvido";
             this.btnOlvido.Size = new System.Drawing.Size(157, 16);
             this.btnOlvido.TabIndex = 4;
             this.btnOlvido.TabStop = true;
             this.btnOlvido.Text = "Recuperacion por correo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PTC.Properties.Resources.osegueda;
+            this.pictureBox1.Location = new System.Drawing.Point(269, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // ViewLogin
             // 
@@ -156,6 +168,7 @@
             this.Text = "ViewLogin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,5 +181,6 @@
         public System.Windows.Forms.LinkLabel btnOlvido;
         public System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

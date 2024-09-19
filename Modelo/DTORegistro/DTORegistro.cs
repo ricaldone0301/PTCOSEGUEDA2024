@@ -19,6 +19,7 @@ namespace PTC.Modelo.DTORegistro
             private string email;
             private int preguntaID;
             private string respuesta;
+            private bool status;
 
             public string Nombre { get => nombrePersonal; set => nombrePersonal = value; }
             public string PersonalId { get => personalID; set => personalID = value; }
@@ -31,5 +32,6 @@ namespace PTC.Modelo.DTORegistro
             public string Email { get => email; set => email = value; }
         public int PreguntaID { get => preguntaID; set => preguntaID = value; }
         public string Respuesta { get => respuesta; set => respuesta = value; }
+        public bool Status { get => status; set => status = value; }
     }
     }

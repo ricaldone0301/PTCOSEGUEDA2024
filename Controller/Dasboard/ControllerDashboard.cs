@@ -19,6 +19,7 @@ using PTC.Controller.Common;
 using PTC.Vista.Paciente;
 using PTC.Vista.Ocupaciones;
 using PTC.Vista.RecuperarContra;
+using PTC.Vista.Conexion;
 
 namespace PTC.Controller.Dasboard
 {
@@ -45,6 +46,7 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.btnMaximizar.Click += new EventHandler(Maximizar);
             ObjDashboard.btnCerrar.Click += new EventHandler(Cerrar);
             ObjDashboard.btnMinimizar.Click += new EventHandler(Minimizar);
+            ObjDashboard.btnServidor.Click += new EventHandler(Servidor);
         }
 
         private void Maximizar(object sender, EventArgs e)
@@ -88,6 +90,11 @@ namespace PTC.Controller.Dasboard
             AbrirFormulario<ViewPaciente>();
         }
 
+        private void Servidor(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewContraConexion>();
+
+        }
         private void Procedimientos(object sender, EventArgs e)
         {
             AbrirFormulario<ViewProcedimiento>();
@@ -150,11 +157,16 @@ namespace PTC.Controller.Dasboard
             switch (SessionVar.Rol)
             {
                 case "Asistente":
+                    ObjDashboard.btnServidor.Visible = false;
+                    break;
+                case "Administrador":
                     break;
                 case "Secretario":
+                    ObjDashboard.btnServidor.Visible = false;
                     break;
                 case "Doctor":
                     ObjDashboard.btnUsuarios.Visible = false;
+                    ObjDashboard.btnServidor.Visible = false;
                     break;
                 default:
                     break;

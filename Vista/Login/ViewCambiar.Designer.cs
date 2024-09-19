@@ -41,7 +41,7 @@
             // 
             this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
             this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.Location = new System.Drawing.Point(593, 49);
+            this.BtnExit.Location = new System.Drawing.Point(576, 43);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(40, 36);
@@ -56,7 +56,7 @@
             this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnIngresar.Location = new System.Drawing.Point(450, 351);
+            this.BtnIngresar.Location = new System.Drawing.Point(433, 345);
             this.BtnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(144, 50);
@@ -70,7 +70,7 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(167, 125);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(150, 119);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(397, 25);
             this.bunifuCustomLabel1.TabIndex = 34;
@@ -81,7 +81,7 @@
             // 
             this.TxtContra.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContra.ForeColor = System.Drawing.Color.Gray;
-            this.TxtContra.Location = new System.Drawing.Point(172, 266);
+            this.TxtContra.Location = new System.Drawing.Point(155, 260);
             this.TxtContra.Margin = new System.Windows.Forms.Padding(4);
             this.TxtContra.MaxLength = 256;
             this.TxtContra.Name = "TxtContra";
@@ -96,7 +96,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(197, 100);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(180, 94);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(325, 25);
             this.bunifuCustomLabel6.TabIndex = 33;
@@ -107,7 +107,7 @@
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.TxtUsuario.Location = new System.Drawing.Point(172, 208);
+            this.TxtUsuario.Location = new System.Drawing.Point(155, 202);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsuario.MaxLength = 30;
             this.TxtUsuario.Name = "TxtUsuario";
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(720, 450);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -128,6 +128,7 @@
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.TxtUsuario);
             this.Name = "ViewCambiar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewCambiar";
             this.ResumeLayout(false);
             this.PerformLayout();

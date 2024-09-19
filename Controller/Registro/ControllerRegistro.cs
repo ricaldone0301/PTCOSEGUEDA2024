@@ -161,11 +161,12 @@ namespace PTC.Controller.Registro
                 daoRegistro.Telefono = ObjRegistro.txtTelefono.Text.Trim();
                 daoRegistro.ConsultorioId = (int)ObjRegistro.cbConsul.SelectedValue;
                 daoRegistro.Usuario = ObjRegistro.txtUsuario.Text.Trim();
-                daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OSEGUEDA1@");
+                daoRegistro.Contrasena = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OS1@");
                 daoRegistro.Rol = int.Parse(ObjRegistro.cbRol.SelectedValue.ToString());
                 daoRegistro.Email = ObjRegistro.txtEmail.Text.Trim();
                 daoRegistro.PreguntaID = (int)ObjRegistro.cbPregunta.SelectedValue;
                 daoRegistro.Respuesta = ObjRegistro.txtRespuesta.Text.Trim();
+                daoRegistro.Status = false;
 
                 // Intenta registrar el usaurio
                 int valorRetornado = daoRegistro.RegistrarUsuario();

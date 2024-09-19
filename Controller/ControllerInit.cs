@@ -1,10 +1,12 @@
-﻿using PTC.Modelo.DAOLogin;
+﻿using PTC.Controller.Common;
+using PTC.Modelo.DAOLogin;
 using PTC.Modelo.DAOPrimerUso;
 using PTC.Vista;
 using PTC.Vista.Login;
 using PTC.Vista.PrimerUso;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,8 @@ namespace PTC.Controller
     {
         public static void DeterminarVistaInicial()
         {
+            CommonClass ObjCommonClass = new CommonClass();
+            ObjCommonClass.LeerXML();
             DAOPrimerUso ObjPrimerUso = new DAOPrimerUso();
             
             int primerEmpresa =  ObjPrimerUso.VerificarEmpresa();
@@ -34,5 +38,7 @@ namespace PTC.Controller
                 Application.Run(new ViewLogin());
             }
         }
+
+       
     }
 }

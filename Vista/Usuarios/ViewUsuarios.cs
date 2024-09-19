@@ -21,6 +21,8 @@ namespace PTC.Vista.Doctores
             ControllerAdminUsuarios ObjAdminUsuario = new ControllerAdminUsuarios(this);
         }
 
+
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
 

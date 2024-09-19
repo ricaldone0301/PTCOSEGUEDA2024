@@ -36,7 +36,6 @@
     <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
@@ -136,6 +135,8 @@
     <Compile Include="Controller\Procedimiento\ControllerAdminProcedimientos.cs" />
     <Compile Include="Controller\Procedimiento\ControllerAgregarProcedimientos.cs" />
     <Compile Include="Controller\Registro\ControllerRegistro.cs" />
+    <Compile Include="Controller\Servidor\ControllerContraServidor.cs" />
+    <Compile Include="Controller\Servidor\ControllerServidor.cs" />
     <Compile Include="Controller\Usuarios\ControllerAdminUsuarios.cs" />
     <Compile Include="Controller\Usuarios\ControllerAgregarUsuarios.cs" />
     <Compile Include="Controller\VerPerfil\ControllerVerPerfil.cs" />
@@ -153,6 +154,7 @@
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTOCitas\DTOCitas.cs" />
     <Compile Include="Modelo\DTOContrasena\DTOContrasena.cs" />
+    <Compile Include="Modelo\DTOdbContext\DTOdbContext.cs" />
     <Compile Include="Modelo\DTOLogin\DTOLogin.cs" />
     <Compile Include="Modelo\DTOOcupacion\DTOOcupacion.cs" />
     <Compile Include="Modelo\DTOPaciente\DTOPaciente.cs" />
@@ -209,6 +211,18 @@
     </Compile>
     <Compile Include="Vista\Cita\ViewCitas.Designer.cs">
       <DependentUpon>ViewCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Conexion\ViewConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Conexion\ViewConexion.Designer.cs">
+      <DependentUpon>ViewConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Conexion\ViewContraConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Conexion\ViewContraConexion.Designer.cs">
+      <DependentUpon>ViewContraConexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Dashboard\ViewDashboard.cs">
       <SubType>Form</SubType>
@@ -326,6 +340,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cita\ViewCitas.resx">
       <DependentUpon>ViewCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Conexion\ViewConexion.resx">
+      <DependentUpon>ViewConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Conexion\ViewContraConexion.resx">
+      <DependentUpon>ViewContraConexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Dashboard\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
