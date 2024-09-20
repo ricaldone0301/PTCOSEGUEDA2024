@@ -15,8 +15,9 @@ namespace PTC.Vista.Conexion
     {
         public ViewConexion(int origen)
         {
+
             InitializeComponent();
-            ControllerServidor control = new ControllerServidor(this, origen);
+            ControllerServidor Control = new ControllerServidor(this, origen);
         }
     }
 }

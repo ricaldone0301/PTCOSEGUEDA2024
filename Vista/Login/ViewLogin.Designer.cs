@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.BtnRegistro = new System.Windows.Forms.LinkLabel();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.BtnIngresar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnOlvido = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,21 +50,10 @@
             this.panel1.Controls.Add(this.BtnIngresar);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.btnOlvido);
-            this.panel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(393, 107);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(837, 521);
             this.panel1.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PTC.Properties.Resources.osegueda;
-            this.pictureBox1.Location = new System.Drawing.Point(269, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // TxtUsuario
             // 
@@ -84,12 +73,11 @@
             this.BtnRegistro.ActiveLinkColor = System.Drawing.SystemColors.Window;
             this.BtnRegistro.AutoSize = true;
             this.BtnRegistro.BackColor = System.Drawing.Color.White;
-            this.BtnRegistro.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
             this.BtnRegistro.Location = new System.Drawing.Point(595, 391);
             this.BtnRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BtnRegistro.Name = "BtnRegistro";
-            this.BtnRegistro.Size = new System.Drawing.Size(71, 20);
+            this.BtnRegistro.Size = new System.Drawing.Size(58, 16);
             this.BtnRegistro.TabIndex = 6;
             this.BtnRegistro.TabStop = true;
             this.BtnRegistro.Text = "Registro";
@@ -130,12 +118,11 @@
             this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.Window;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.White;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
             this.linkLabel1.Location = new System.Drawing.Point(105, 403);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(210, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(171, 16);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperacion por pregunta";
@@ -146,15 +133,24 @@
             this.btnOlvido.ActiveLinkColor = System.Drawing.SystemColors.Window;
             this.btnOlvido.AutoSize = true;
             this.btnOlvido.BackColor = System.Drawing.Color.White;
-            this.btnOlvido.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOlvido.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
             this.btnOlvido.Location = new System.Drawing.Point(105, 373);
             this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnOlvido.Name = "btnOlvido";
-            this.btnOlvido.Size = new System.Drawing.Size(192, 20);
+            this.btnOlvido.Size = new System.Drawing.Size(157, 16);
             this.btnOlvido.TabIndex = 4;
             this.btnOlvido.TabStop = true;
             this.btnOlvido.Text = "Recuperacion por correo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PTC.Properties.Resources.osegueda;
+            this.pictureBox1.Location = new System.Drawing.Point(269, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // ViewLogin
             // 
