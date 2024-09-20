@@ -43,26 +43,36 @@ namespace PTC.Controller.Common
                 XmlNode sqlAuthNode = root.SelectSingleNode("SqlAuth/text()");
                 XmlNode sqlPassNode = root.SelectSingleNode("SqlPass/text()");
 
-                string serverCode = servernode.Value;
-                string databaseCode = databaseNode.Value;
-                string userCode = sqlAuthNode.Value;
-                string passwordCode = sqlPassNode.Value;
+                string serverCode = servernode?.Value;
+                string databaseCode = databaseNode?.Value;
+                string userCode = sqlAuthNode?.Value;
+                string passwordCode = sqlPassNode?.Value;
 
                 DtodbContext.Server = DescifrarCadena(serverCode);
                 DtodbContext.Database = DescifrarCadena(databaseCode);
-                DtodbContext.User = DescifrarCadena(userCode);
-                DtodbContext.Password = DescifrarCadena(passwordCode);
-                //MessageBox.Show($"{DTOdbContext.Server}, {DTOdbContext.Database}, {DTOdbContext.User}, {DTOdbContext.Password}");
+
+                if (string.IsNullOrEmpty(userCode) && string.IsNullOrEmpty(passwordCode))
+                {
+                    // Conectar usando autenticación de Windows
+                    DtodbContext.User = null; // o no es necesario asignar
+                    DtodbContext.Password = null; // o no es necesario asignar
+                }
+                else
+                {
+                    DtodbContext.User = DescifrarCadena(userCode);
+                    DtodbContext.Password = DescifrarCadena(passwordCode);
+                }
             }
             else
             {
-                //Crear archivo
+                // Crear archivo
                 ViewConexion Form = new ViewConexion(1);
                 Form.ShowDialog();
                 ViewLogin FormLog = new ViewLogin();
                 FormLog.Show();
             }
         }
+
 
         public string DescifrarCadena(string cadenaCode)
         {

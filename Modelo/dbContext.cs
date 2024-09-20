@@ -42,19 +42,31 @@ namespace PTC.Modelo
 
             }
 
-        public static SqlConnection testConnection(string server, string database, string user, string password)
+        public SqlConnection testConnection(string server, string database, string user, string password)
         {
+            string connectionString;
+
+            if (string.IsNullOrEmpty(user) && string.IsNullOrEmpty(password))
+            {
+                connectionString = $"Server={server};Database={database};Integrated Security=True;";
+            }
+            else
+            {
+                connectionString = $"Server={server};Database={database};User Id={user};Password={password};";
+            }
+
+            SqlConnection connection = new SqlConnection(connectionString);
             try
             {
-                SqlConnection conexion = new SqlConnection($"Server = {server}; DataBase = {database}; User Id = {user}; Password = {password}");
-                conexion.Open();
-                return conexion;
+                connection.Open();
+                return connection;
             }
-            catch (SqlException)
+            catch
             {
-
+                // Manejar errores de conexión
                 return null;
             }
         }
+
     }
 }

@@ -23,8 +23,8 @@ namespace PTC.Controller.Servidor
             ObjViewConexion = View;
             verificarOrigen(origen);
             ///tabcontrol 2
-             View.rdDeshabilitarWindows.CheckedChanged += new EventHandler(rdFalseMarked);
-            View.rdHabilitarWindows.CheckedChanged += new EventHandler(rdTrueMarked);
+             View.rdDeshabilitar.CheckedChanged += new EventHandler(rdFalseMarked);
+            View.rdHabilitar.CheckedChanged += new EventHandler(rdTrueMarked);
             View.btnGuardar.Click += new EventHandler(GuardarRegistro);
 
         }
@@ -44,7 +44,7 @@ namespace PTC.Controller.Servidor
         
         void rdFalseMarked(object sender, EventArgs e)
         {
-            if (ObjViewConexion.rdDeshabilitarWindows.Checked == true)
+            if (ObjViewConexion.rdDeshabilitar.Checked == true)
             {
                 ObjViewConexion.panelAuth.Enabled = true;
             }
@@ -52,7 +52,7 @@ namespace PTC.Controller.Servidor
 
         void rdTrueMarked(object sender, EventArgs e)
         {
-            if (ObjViewConexion.rdHabilitarWindows.Checked == true)
+            if (ObjViewConexion.rdHabilitar.Checked == true)
             {
                 ObjViewConexion.panelAuth.Enabled = false;
                 ObjViewConexion.txtSqlAuth.Clear();
@@ -70,18 +70,17 @@ namespace PTC.Controller.Servidor
             {
                 XmlDocument doc = new XmlDocument();
 
-                //Crear declaración XML
+                // Crear declaración XML
                 XmlDeclaration decl = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(decl);
 
-                //Crear elemento raíz
+                // Crear elemento raíz
                 XmlElement root = doc.CreateElement("Conn");
                 doc.AppendChild(root);
 
-                //Crear los elementos hijos y agregarlos al elemento raíz
+                // Crear los elementos hijos y agregarlos al elemento raíz
                 XmlElement servidor = doc.CreateElement("Server");
                 string servidorCode = CodificarBase64String(ObjViewConexion.txtServer.Text.Trim());
-
                 servidor.InnerText = servidorCode;
                 root.AppendChild(servidor);
 
@@ -90,48 +89,64 @@ namespace PTC.Controller.Servidor
                 Database.InnerText = DatabaseCode;
                 root.AppendChild(Database);
 
-                if (ObjViewConexion.rdHabilitarWindows.Checked == true)
-                {
-                    XmlElement SqlAuth = doc.CreateElement("SqlAuth");
-                    SqlAuth.InnerText = string.Empty;
-                    root.AppendChild(SqlAuth);
+                XmlElement SqlAuth = doc.CreateElement("SqlAuth");
+                XmlElement SqlPass = doc.CreateElement("SqlPass");
 
-                    XmlElement SqlPass = doc.CreateElement("SqlPass");
-                    SqlPass.InnerText = string.Empty;
-                    root.AppendChild(SqlPass);
+                if (ObjViewConexion.rdHabilitar.Checked)
+                {
+                    // Autenticación de Windows
+                    SqlAuth.InnerText = string.Empty; // O simplemente no lo añadas
+                    SqlPass.InnerText = string.Empty; // O simplemente no lo añadas
                 }
                 else
                 {
-                    XmlElement SqlAuth = doc.CreateElement("SqlAuth");
+                    // Autenticación SQL
                     string sqlAuthCode = CodificarBase64String(ObjViewConexion.txtSqlAuth.Text.Trim());
                     SqlAuth.InnerText = sqlAuthCode;
-                    root.AppendChild(SqlAuth);
 
-                    XmlElement SqlPass = doc.CreateElement("SqlPass");
                     string SqlPassCode = CodificarBase64String(ObjViewConexion.txtSqlPass.Text.Trim());
                     SqlPass.InnerText = SqlPassCode;
-                    root.AppendChild(SqlPass);
                 }
-                SqlConnection con = dbContext.testConnection(ObjViewConexion.txtServer.Text.Trim(), ObjViewConexion.txtDatabase.Text.Trim(), ObjViewConexion.txtSqlAuth.Text.Trim(), ObjViewConexion.txtSqlPass.Text.Trim());
+
+                root.AppendChild(SqlAuth);
+                root.AppendChild(SqlPass);
+
+                // Crear una instancia de dbContext
+                var connectionContext = new dbContext();
+
+                // Conectar
+                SqlConnection con = connectionContext.testConnection(
+                    ObjViewConexion.txtServer.Text.Trim(),
+                    ObjViewConexion.txtDatabase.Text.Trim(),
+                    ObjViewConexion.rdHabilitar.Checked ? null : ObjViewConexion.txtSqlAuth.Text.Trim(),
+                    ObjViewConexion.rdHabilitar.Checked ? null : ObjViewConexion.txtSqlPass.Text.Trim()
+                );
+
                 if (con != null)
                 {
+                    // Guardar configuración en XML
                     doc.Save("config_server.xml");
                     DtodbContext.Server = ObjViewConexion.txtServer.Text.Trim();
                     DtodbContext.Database = ObjViewConexion.txtDatabase.Text.Trim();
-                    DtodbContext.User = ObjViewConexion.txtSqlAuth.Text.Trim();
-                    DtodbContext.Password = ObjViewConexion.txtSqlPass.Text.Trim();
-                    MessageBox.Show($"El archivo fue creado exitosamente.", "Archivo de configuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DtodbContext.User = ObjViewConexion.rdHabilitar.Checked ? null : ObjViewConexion.txtSqlAuth.Text.Trim();
+                    DtodbContext.Password = ObjViewConexion.rdHabilitar.Checked ? null : ObjViewConexion.txtSqlPass.Text.Trim();
+
+                    MessageBox.Show("El archivo fue creado exitosamente.", "Archivo de configuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ObjViewConexion.Dispose();
                 }
-
+                else
+                {
+                    MessageBox.Show("No se pudo establecer la conexión.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (XmlException ex)
             {
                 MessageBox.Show($"{ex.Message}, no se pudo crear el archivo de configuración.", "Consulte el manual técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-        
+
+
+
 
         public string CodificarBase64String(string textoacifrar)
         {

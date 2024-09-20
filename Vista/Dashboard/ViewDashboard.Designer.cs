@@ -38,6 +38,7 @@
             this.btnMaximizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnServidor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -48,11 +49,10 @@
             this.lblNombre = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblUsuario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.btnServidor = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PanelPadre.SuspendLayout();
@@ -102,7 +102,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(429, 277);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(946, 390);
+            this.pictureBox4.Size = new System.Drawing.Size(826, 321);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
@@ -226,6 +226,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ok.Controls.Add(this.bunifuSeparator1);
             this.ok.Controls.Add(this.btnServidor);
             this.ok.Controls.Add(this.btnInicio);
             this.ok.Controls.Add(this.btnProcedimientos);
@@ -237,7 +238,6 @@
             this.ok.Controls.Add(this.lblNombre);
             this.ok.Controls.Add(this.lblUsuario);
             this.ok.Controls.Add(this.pictureBox1);
-            this.ok.Controls.Add(this.bunifuSeparator1);
             this.ok.Controls.Add(this.btnCitas);
             this.ok.Dock = System.Windows.Forms.DockStyle.Left;
             this.ok.GradientBottomLeft = System.Drawing.Color.White;
@@ -252,6 +252,32 @@
             this.ok.Size = new System.Drawing.Size(270, 1019);
             this.ok.TabIndex = 2;
             this.ok.Paint += new System.Windows.Forms.PaintEventHandler(this.ok_Paint);
+            // 
+            // btnServidor
+            // 
+            this.btnServidor.ActiveBorderThickness = 1;
+            this.btnServidor.ActiveCornerRadius = 20;
+            this.btnServidor.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnServidor.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnServidor.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnServidor.BackColor = System.Drawing.Color.Transparent;
+            this.btnServidor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnServidor.BackgroundImage")));
+            this.btnServidor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnServidor.ButtonText = "SERVIDOR";
+            this.btnServidor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnServidor.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServidor.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnServidor.IdleBorderThickness = 1;
+            this.btnServidor.IdleCornerRadius = 20;
+            this.btnServidor.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnServidor.IdleForecolor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnServidor.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnServidor.Location = new System.Drawing.Point(48, 774);
+            this.btnServidor.Margin = new System.Windows.Forms.Padding(5);
+            this.btnServidor.Name = "btnServidor";
+            this.btnServidor.Size = new System.Drawing.Size(181, 46);
+            this.btnServidor.TabIndex = 10;
+            this.btnServidor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnInicio
             // 
@@ -456,19 +482,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(95)))), ((int)(((byte)(49)))));
-            this.bunifuSeparator1.LineThickness = 4;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-19, 85);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(289, 43);
-            this.bunifuSeparator1.TabIndex = 1;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
             // btnCitas
             // 
             this.btnCitas.ActiveBorderThickness = 1;
@@ -522,31 +535,21 @@
             this.bunifuSeparator2.Size = new System.Drawing.Size(849, 17);
             this.bunifuSeparator2.TabIndex = 33;
             // 
-            // btnServidor
+            // bunifuSeparator1
             // 
-            this.btnServidor.ActiveBorderThickness = 1;
-            this.btnServidor.ActiveCornerRadius = 20;
-            this.btnServidor.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.btnServidor.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btnServidor.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.btnServidor.BackColor = System.Drawing.Color.Transparent;
-            this.btnServidor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnServidor.BackgroundImage")));
-            this.btnServidor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnServidor.ButtonText = "SERVIDOR";
-            this.btnServidor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnServidor.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServidor.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnServidor.IdleBorderThickness = 1;
-            this.btnServidor.IdleCornerRadius = 20;
-            this.btnServidor.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btnServidor.IdleForecolor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnServidor.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnServidor.Location = new System.Drawing.Point(48, 774);
-            this.btnServidor.Margin = new System.Windows.Forms.Padding(5);
-            this.btnServidor.Name = "btnServidor";
-            this.btnServidor.Size = new System.Drawing.Size(181, 46);
-            this.btnServidor.TabIndex = 10;
-            this.btnServidor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Tomato;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 15;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 88);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(270, 17);
+            this.bunifuSeparator1.TabIndex = 11;
             // 
             // ViewDashboard
             // 
@@ -564,7 +567,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewDashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewDashboard_Load);
             this.PanelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -585,7 +587,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel ok;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public Bunifu.Framework.UI.BunifuThinButton2 btnCerrarSesion;
         public Bunifu.Framework.UI.BunifuThinButton2 btnPacientes;
         public Bunifu.Framework.UI.BunifuThinButton2 btnOcupaciones;
@@ -604,5 +605,6 @@
         public Bunifu.UI.WinForms.BunifuImageButton btnMaximizar;
         private System.Windows.Forms.PictureBox pictureBox4;
         public Bunifu.Framework.UI.BunifuThinButton2 btnServidor;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
     }
 }
