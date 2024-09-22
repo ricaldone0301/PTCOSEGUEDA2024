@@ -36,6 +36,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmsGenerarReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tomato;
+            this.panel1.Controls.Add(this.cmsGenerarReporte);
             this.panel1.Controls.Add(this.cmsVerPaciente);
             this.panel1.Controls.Add(this.cmsEliminar);
             this.panel1.Controls.Add(this.cmsActualizar);
@@ -143,6 +145,18 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
+            // cmsGenerarReporte
+            // 
+            this.cmsGenerarReporte.AccessibleName = "cmsGenerarReporte";
+            this.cmsGenerarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsGenerarReporte.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cmsGenerarReporte.Location = new System.Drawing.Point(581, 9);
+            this.cmsGenerarReporte.Name = "cmsGenerarReporte";
+            this.cmsGenerarReporte.Size = new System.Drawing.Size(105, 35);
+            this.cmsGenerarReporte.TabIndex = 7;
+            this.cmsGenerarReporte.Text = "Reporte";
+            this.cmsGenerarReporte.UseVisualStyleBackColor = true;
+            // 
             // ViewUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,5 +186,6 @@
         public System.Windows.Forms.TextBox txtBuscar;
         public System.Windows.Forms.Button cmsVerPaciente;
         public System.Windows.Forms.Button cmsActualizar;
+        public System.Windows.Forms.Button cmsGenerarReporte;
     }
 }

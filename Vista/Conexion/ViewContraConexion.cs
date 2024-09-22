@@ -16,7 +16,19 @@ namespace PTC.Vista.Conexion
         public ViewContraConexion()
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerContraServidor objConnection = new ControllerContraServidor(this);
+        }
+
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtPassword);
         }
     }
 }

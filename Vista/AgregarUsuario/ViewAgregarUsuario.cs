@@ -158,6 +158,11 @@ namespace PTC.Vista.AgregarDoctores
                 txtRespuesta.SelectionStart = txtRespuesta.Text.Length;
             }
         }
+
+        private void bunifuCustomLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }

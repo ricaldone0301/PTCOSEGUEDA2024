@@ -183,7 +183,7 @@ namespace PTC.Controller.Usuarios
                         daoAdmin.Telefono = ObjAgregarUsuario.txtTelefono.Text.Trim();
                         daoAdmin.ConsultorioId = (int)ObjAgregarUsuario.cbConsul.SelectedValue;
                         daoAdmin.Usuario = ObjAgregarUsuario.txtUsuario.Text.Trim();
-                        daoAdmin.Contrasena = common.ComputeSha256Hash(ObjAgregarUsuario.txtUsuario.Text.Trim() + "OSEGUEDA1@");
+                        daoAdmin.Contrasena = common.ComputeSha256Hash(ObjAgregarUsuario.txtUsuario.Text.Trim() + "OS1@");
                         daoAdmin.Rol = int.Parse(ObjAgregarUsuario.cbRol.SelectedValue.ToString());
                         daoAdmin.Email = ObjAgregarUsuario.txtEmail.Text.Trim();
                         daoAdmin.PreguntaID = (int)ObjAgregarUsuario.cbPregunta.SelectedValue;

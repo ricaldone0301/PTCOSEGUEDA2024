@@ -26,7 +26,6 @@ namespace PTC.Controller.VerPerfil
             ObjVerContra.Load += new EventHandler(CargoInicial);
             ObjVerContra.txtNombre.Text = SessionVar.Nombre;
             ObjVerContra.txtUsuario.Text = SessionVar.Usuario;
-            ObjVerContra.txtContrasena.Text = SessionVar.Contrasena;
             ObjVerContra.txtEmail.Text = SessionVar.Email;
             ObjVerContra.cbConsul.Text = SessionVar.NombreConsul;
             ObjVerContra.cbEsp.Text = SessionVar.NombreEsp;
@@ -122,10 +121,10 @@ namespace PTC.Controller.VerPerfil
         public void CambiarContra(object sender, EventArgs e)
         {
 
-            if (!(string.IsNullOrEmpty(ObjVerContra.txtContrasena.Text.Trim())))
+            if (!(string.IsNullOrEmpty(ObjVerContra.txtContrasenaNueva.Text.Trim())))
 
             {
-                string contrasena = ObjVerContra.txtContrasena.Text;
+                string contrasena = ObjVerContra.txtContrasenaNueva.Text;
                 if (!ValidarContra(contrasena))
                 {
                     MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -142,9 +141,9 @@ namespace PTC.Controller.VerPerfil
 
 
                     DAOData.Usuario = ObjVerContra.txtUsuario.Text;
-                    DAOData.Contrasena = ObjVerContra.txtContrasena.Text;
+                    DAOData.Contrasena = ObjVerContra.txtContrasenaNueva.Text;
 
-                    string cadenaencriptada = common.ComputeSha256Hash(ObjVerContra.txtContrasena.Text);
+                    string cadenaencriptada = common.ComputeSha256Hash(ObjVerContra.txtContrasenaNueva.Text);
                     DAOData.Contrasena = cadenaencriptada;
 
                     SessionVar.NuevaContra = cadenaencriptada;

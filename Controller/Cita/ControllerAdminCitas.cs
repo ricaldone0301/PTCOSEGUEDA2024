@@ -127,6 +127,11 @@ namespace PTC.Controller.Cita
             DAOCitas objAdmin = new DAOCitas();
             DataSet ds = objAdmin.ObtenerCita();
             ObjAdminCitas.dgvCitas.DataSource = ds.Tables["ViewCitas"];
+
+            ObjAdminCitas.dgvCitas.Columns[8].Visible = false;
+            ObjAdminCitas.dgvCitas.Columns[7].Visible = false;
+            ObjAdminCitas.dgvCitas.Columns[9].Visible = false;
+            ObjAdminCitas.dgvCitas.Columns[10].Visible = false;
         }
 
         private void NuevaCita(object sender, EventArgs e)

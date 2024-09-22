@@ -14,14 +14,17 @@ namespace PTC.Vista.Doctores
 {
     public partial class ViewUsuarios : Form
     {
-
+        ViewUsuarios ObjAdminUsuario;
         public ViewUsuarios()
         {
             InitializeComponent();
             ControllerAdminUsuarios ObjAdminUsuario = new ControllerAdminUsuarios(this);
         }
 
+        public void ViewUsuarios_Load(object sender, EventArgs e)
+        {
 
+        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {

@@ -17,7 +17,31 @@ namespace PTC.Vista.Conexion
         {
 
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerServidor Control = new ControllerServidor(this, origen);
+        }
+
+        private void ContextMenuEliminar(TextBox textBox)
+        {
+            var menuContexto = new ContextMenuStrip();
+            textBox.ContextMenuStrip = menuContexto;
+        }
+
+        public void TextBoxMenuEliminar()
+        {
+            ContextMenuEliminar(txtDatabase);
+            ContextMenuEliminar(txtServer);
+            ContextMenuEliminar(txtSqlAuth);
+            ContextMenuEliminar(txtSqlPass);
+        }
+        private void ViewConexion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDatabase_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

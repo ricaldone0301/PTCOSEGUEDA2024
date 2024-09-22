@@ -49,7 +49,7 @@ namespace PTC.Vista.Registro
             ContextMenuEliminar(txtTelefono);
             ContextMenuEliminar(txtNombre);
             ContextMenuEliminar(txtEmail);
-            ContextMenuEliminar(txtContrasena);
+            //ContextMenuEliminar(txtContrasena);
             ContextMenuEliminar(txtRespuesta);
             ContextMenuEliminar(txtConfirm);
         }

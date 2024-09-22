@@ -97,7 +97,7 @@ namespace PTC.Controller.Registro
 
         public void ConseguirCorreo(object sender, EventArgs e)
         {
-            string password = ObjRegistro.txtContrasena.Text;
+            string password = ObjRegistro.txtUsuario.Text.Trim() + "OS1@";
             if (!ValidatePassword(password))
             {
                 MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -151,7 +151,7 @@ namespace PTC.Controller.Registro
                 DAORegistro daoRegistro = new DAORegistro();
                 CommonClass common = new CommonClass();
 
-                string password = ObjRegistro.txtContrasena.Text;
+                string password = common.ComputeSha256Hash(ObjRegistro.txtUsuario.Text.Trim() + "OS1@");
 
                 string cadenaencriptada = common.ComputeSha256Hash(password);
 
@@ -174,6 +174,12 @@ namespace PTC.Controller.Registro
                 if (valorRetornado == 1)
                 {
                     MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                        MessageBox.Show("Los datos han sido registrados exitosamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Contraseña de usuario: {ObjRegistro.txtUsuario.Text.Trim()}OS1",
+"Credenciales de acceso",
+MessageBoxButtons.OK,
+MessageBoxIcon.Information);
 
                 }
                 else

@@ -57,7 +57,9 @@ namespace PTC.Controller.Procedimiento
             DataSet ds = objAdmin.ObtenerProcedimiento();
             //El DataSet contiene la tabla Procedimientos que se asigna como fuente de datos
             ObjAdminProcedimiento.dgvProcedimientos.DataSource = ds.Tables["ViewProcedimientos"];
+
         }
+    
 
         private void Nuevo(object sender, EventArgs e)
         {

@@ -22,6 +22,7 @@ namespace PTC.Controller
             ObjCommonClass.LeerXML();
             DAOPrimerUso ObjPrimerUso = new DAOPrimerUso();
             
+            
             int primerEmpresa =  ObjPrimerUso.VerificarEmpresa();
             int primerUsuario = ObjPrimerUso.VerificarRegistro();
             if (primerEmpresa == 0)

@@ -38,6 +38,7 @@
             this.btnMaximizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnServidor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -52,7 +53,6 @@
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.btnServidor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PanelPadre.SuspendLayout();
@@ -100,9 +100,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(429, 277);
+            this.pictureBox4.Location = new System.Drawing.Point(583, 309);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(946, 390);
+            this.pictureBox4.Size = new System.Drawing.Size(815, 312);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
@@ -252,6 +252,32 @@
             this.ok.Size = new System.Drawing.Size(270, 1019);
             this.ok.TabIndex = 2;
             this.ok.Paint += new System.Windows.Forms.PaintEventHandler(this.ok_Paint);
+            // 
+            // btnServidor
+            // 
+            this.btnServidor.ActiveBorderThickness = 1;
+            this.btnServidor.ActiveCornerRadius = 20;
+            this.btnServidor.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnServidor.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnServidor.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnServidor.BackColor = System.Drawing.Color.Transparent;
+            this.btnServidor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnServidor.BackgroundImage")));
+            this.btnServidor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnServidor.ButtonText = "SERVIDOR";
+            this.btnServidor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnServidor.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServidor.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnServidor.IdleBorderThickness = 1;
+            this.btnServidor.IdleCornerRadius = 20;
+            this.btnServidor.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnServidor.IdleForecolor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnServidor.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnServidor.Location = new System.Drawing.Point(48, 774);
+            this.btnServidor.Margin = new System.Windows.Forms.Padding(5);
+            this.btnServidor.Name = "btnServidor";
+            this.btnServidor.Size = new System.Drawing.Size(181, 46);
+            this.btnServidor.TabIndex = 10;
+            this.btnServidor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnInicio
             // 
@@ -521,32 +547,6 @@
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator2.Size = new System.Drawing.Size(849, 17);
             this.bunifuSeparator2.TabIndex = 33;
-            // 
-            // btnServidor
-            // 
-            this.btnServidor.ActiveBorderThickness = 1;
-            this.btnServidor.ActiveCornerRadius = 20;
-            this.btnServidor.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.btnServidor.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btnServidor.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.btnServidor.BackColor = System.Drawing.Color.Transparent;
-            this.btnServidor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnServidor.BackgroundImage")));
-            this.btnServidor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnServidor.ButtonText = "SERVIDOR";
-            this.btnServidor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnServidor.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServidor.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnServidor.IdleBorderThickness = 1;
-            this.btnServidor.IdleCornerRadius = 20;
-            this.btnServidor.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btnServidor.IdleForecolor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnServidor.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnServidor.Location = new System.Drawing.Point(48, 774);
-            this.btnServidor.Margin = new System.Windows.Forms.Padding(5);
-            this.btnServidor.Name = "btnServidor";
-            this.btnServidor.Size = new System.Drawing.Size(181, 46);
-            this.btnServidor.TabIndex = 10;
-            this.btnServidor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewDashboard
             // 

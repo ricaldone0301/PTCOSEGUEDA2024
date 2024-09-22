@@ -46,7 +46,7 @@ namespace PTC.Controller.Servidor
         {
             if (ObjViewConexion.rdDeshabilitarWindows.Checked == true)
             {
-                ObjViewConexion.panelAuth.Enabled = true;
+                ObjViewConexion.panel5.Enabled = true;
             }
         }
 
@@ -54,7 +54,7 @@ namespace PTC.Controller.Servidor
         {
             if (ObjViewConexion.rdHabilitarWindows.Checked == true)
             {
-                ObjViewConexion.panelAuth.Enabled = false;
+                ObjViewConexion.panel5.Enabled = false;
                 ObjViewConexion.txtSqlAuth.Clear();
                 ObjViewConexion.txtSqlPass.Clear();
             }
@@ -90,7 +90,7 @@ namespace PTC.Controller.Servidor
                 Database.InnerText = DatabaseCode;
                 root.AppendChild(Database);
 
-                if (ObjViewConexion.rdHabilitarWindows.Checked == true)
+                if (ObjViewConexion.rdDeshabilitarWindows.Checked == true)
                 {
                     XmlElement SqlAuth = doc.CreateElement("SqlAuth");
                     SqlAuth.InnerText = string.Empty;
@@ -125,9 +125,9 @@ namespace PTC.Controller.Servidor
                 }
 
             }
-            catch (XmlException ex)
+            catch (XmlException )
             {
-                MessageBox.Show($"{ex.Message}, no se pudo crear el archivo de configuración.", "Consulte el manual técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error #024: Error al crear archivo de configuración.");
             }
 
         }

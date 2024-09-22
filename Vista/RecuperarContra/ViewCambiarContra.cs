@@ -17,6 +17,7 @@ namespace PTC.Vista.RecuperarContra
         public ViewCambiarContra()
         {
             InitializeComponent();
+            TextBoxMenuEliminar();
             ControllerCambiarAdminContra objPerfil = new ControllerCambiarAdminContra(this);
         }
 

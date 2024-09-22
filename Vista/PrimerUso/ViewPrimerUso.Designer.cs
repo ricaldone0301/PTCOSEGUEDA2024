@@ -51,6 +51,7 @@
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -324,11 +325,24 @@
             this.bunifuCustomLabel4.TabIndex = 10;
             this.bunifuCustomLabel4.Text = "NOMBRE";
             // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(361, 58);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(673, 37);
+            this.bunifuCustomLabel2.TabIndex = 42;
+            this.bunifuCustomLabel2.Text = "AHORA CONFIGUREMOS EL PRIMER USUARIO";
+            // 
             // ViewPrimerUso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 828);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "ViewPrimerUso";
@@ -338,6 +352,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -365,5 +380,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         public System.Windows.Forms.ComboBox cbPregunta;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
     }
 }

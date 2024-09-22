@@ -41,7 +41,7 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtContrasenaNueva = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.bunifuCustomLabel10);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.bunifuCustomLabel11);
-            this.panel1.Controls.Add(this.txtContrasena);
+            this.panel1.Controls.Add(this.txtContrasenaNueva);
             this.panel1.Controls.Add(this.bunifuCustomLabel9);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.bunifuCustomLabel7);
@@ -148,7 +148,7 @@
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnActualizar.Location = new System.Drawing.Point(435, 423);
+            this.btnActualizar.Location = new System.Drawing.Point(363, 423);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(131, 46);
@@ -210,15 +210,15 @@
             this.bunifuCustomLabel11.TabIndex = 26;
             this.bunifuCustomLabel11.Text = "TELÉFONO";
             // 
-            // txtContrasena
+            // txtContrasenaNueva
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(42, 341);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContrasena.MaxLength = 256;
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.ShortcutsEnabled = false;
-            this.txtContrasena.Size = new System.Drawing.Size(209, 22);
-            this.txtContrasena.TabIndex = 1;
+            this.txtContrasenaNueva.Location = new System.Drawing.Point(42, 341);
+            this.txtContrasenaNueva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasenaNueva.MaxLength = 256;
+            this.txtContrasenaNueva.Name = "txtContrasenaNueva";
+            this.txtContrasenaNueva.ShortcutsEnabled = false;
+            this.txtContrasenaNueva.Size = new System.Drawing.Size(209, 22);
+            this.txtContrasenaNueva.TabIndex = 1;
             // 
             // bunifuCustomLabel9
             // 
@@ -371,7 +371,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         public System.Windows.Forms.TextBox txtTelefono;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        public System.Windows.Forms.TextBox txtContrasena;
+        public System.Windows.Forms.TextBox txtContrasenaNueva;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         public System.Windows.Forms.TextBox txtUsuario;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;

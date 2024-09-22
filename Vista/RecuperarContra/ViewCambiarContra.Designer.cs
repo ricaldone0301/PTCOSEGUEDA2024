@@ -48,7 +48,7 @@
             this.TxtContra.ShortcutsEnabled = false;
             this.TxtContra.Size = new System.Drawing.Size(380, 39);
             this.TxtContra.TabIndex = 2;
-            this.TxtContra.Text = "Contraseña nueva";
+            this.TxtContra.Text = "Contraseña anterior";
             // 
             // TxtUsuario
             // 
@@ -61,7 +61,7 @@
             this.TxtUsuario.ShortcutsEnabled = false;
             this.TxtUsuario.Size = new System.Drawing.Size(380, 39);
             this.TxtUsuario.TabIndex = 1;
-            this.TxtUsuario.Text = "Contrasena anterior";
+            this.TxtUsuario.Text = "Usuario";
             this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
             // bunifuCustomLabel1

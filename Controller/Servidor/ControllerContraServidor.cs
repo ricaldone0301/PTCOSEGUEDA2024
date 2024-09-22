@@ -26,7 +26,7 @@ namespace PTC.Controller.Servidor
             CommonClass common = new CommonClass();
             string usuario = SessionVar.Usuario;
             string cadenaencriptada = common.ComputeSha256Hash(ObjViewContra.txtPassword.Text);
-            if (cadenaencriptada == SessionVar.Contrasena )
+            if (cadenaencriptada == SessionVar.Contrasena)
             {
                 ViewConexion ObjViewConexion = new ViewConexion(2);
                 ObjViewConexion.ShowDialog();

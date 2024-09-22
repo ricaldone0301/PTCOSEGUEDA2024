@@ -67,13 +67,6 @@ namespace PTC.Controller.CambiarAdminContra
                 string cadenaencriptada = common.ComputeSha256Hash(ObjCambiarContra.TxtContra.Text);
                 objUsuario.Contrasena = cadenaencriptada;
 
-
-                bool answer = objUsuario.VerificarCredenciales();
-
-
-
-                if (answer == true)
-                {
                     //Si las credenciales son correctas, se cambia la contraseña.
                     if (!(string.IsNullOrEmpty(objUsuario.Contrasena = SessionVar.NuevaContra)))
                     {
@@ -85,18 +78,13 @@ namespace PTC.Controller.CambiarAdminContra
                         ObjCambiarContra.Hide();
                     }
                     //Si la contraseña no pudo ser cambiada, se muestra una advertencia.
-                    else if (answer == false)
-                    {
-                        MessageBox.Show("Las credenciales son correctas, pero la contrasea no pudo ser cambiada.", "Cambio de contrasea interrumpido.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    }
                     else
                     {
                         //Si las credenciales son incorrectas, se muestra un mensaje de error.
                         MessageBox.Show("Credenciales incorectas, verifique que las credenciales pertenezcan a un administrador.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                }
+                
 
 
             }

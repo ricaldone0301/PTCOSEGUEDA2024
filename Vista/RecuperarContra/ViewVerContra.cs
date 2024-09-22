@@ -26,7 +26,7 @@ namespace PTC.Vista.RecuperarContra
         }
         public void TextBoxMenuEliminar()
         {
-            ContextMenuEliminar(txtContrasena);
+            ContextMenuEliminar(txtContrasenaNueva);
         }
         private void ContextMenuEliminar(TextBox textBox)
         {

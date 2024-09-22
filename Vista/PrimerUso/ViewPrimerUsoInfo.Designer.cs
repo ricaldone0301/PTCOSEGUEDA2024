@@ -41,6 +41,7 @@
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -198,11 +199,24 @@
             this.bunifuCustomLabel4.TabIndex = 10;
             this.bunifuCustomLabel4.Text = "NOMBRE DE EMPRESA";
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(275, 63);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(1124, 37);
+            this.bunifuCustomLabel1.TabIndex = 27;
+            this.bunifuCustomLabel1.Text = "BIENVENIDO A OSEGUEDA SYSTEM, COMENCEMOS CON LA CONFIGURACIÓN";
+            // 
             // ViewPrimerUsoInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 828);
+            this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "ViewPrimerUsoInfo";
@@ -213,6 +227,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -230,5 +245,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         public System.Windows.Forms.TextBox txtNombre;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

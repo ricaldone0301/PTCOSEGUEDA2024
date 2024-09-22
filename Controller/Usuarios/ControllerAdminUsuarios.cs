@@ -31,9 +31,18 @@ namespace PTC.Controller.Usuarios
                 ObjAdminUsuario.cmsActualizar.Click += new EventHandler(ActualizarUsuario);
                 ObjAdminUsuario.cmsEliminar.Click += new EventHandler(EliminarUsuario);
                 ObjAdminUsuario.cmsVerPaciente.Click += new EventHandler(VerUsuario);
+                ObjAdminUsuario.cmsGenerarReporte.Click += new EventHandler(GenerarReporte);
                 ObjAdminUsuario.btnBuscar.Click += new EventHandler(BuscarPersonas);
             }
-            private void BuscarPersonas(object sender, EventArgs e)
+
+
+
+        private void GenerarReporte(object sender, EventArgs e)
+        {
+            /*ViewReporteUsuarios openForm = new ViewReporteUsuarios();
+            openForm.ShowDialog();*/
+        }
+        private void BuscarPersonas(object sender, EventArgs e)
             {
                 //se crea el objeto de dao.
                 DAOUsuarios ObjAdmin = new DAOUsuarios();
@@ -150,6 +159,14 @@ namespace PTC.Controller.Usuarios
                 DAOUsuarios objAdmin = new DAOUsuarios();
                 DataSet ds = objAdmin.ObtenerPersonas();
                 ObjAdminUsuario.dgvPersonas.DataSource = ds.Tables["VistaPersonal"];
+            // Ocular columnas innecesarias
+
+    ObjAdminUsuario.dgvPersonas.Columns[14].Visible = false; 
+    ObjAdminUsuario.dgvPersonas.Columns[13].Visible = false; 
+    ObjAdminUsuario.dgvPersonas.Columns[12].Visible = false; 
+    ObjAdminUsuario.dgvPersonas.Columns[11].Visible = false; 
+    ObjAdminUsuario.dgvPersonas.Columns[10].Visible = false; 
+
             }
 
 
