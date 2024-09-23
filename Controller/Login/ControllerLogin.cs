@@ -76,6 +76,13 @@ namespace PTC.Controller.Login
        
         private void CambiarContra(object sender, EventArgs e)
         {
+            string password = ObjCambiar.TxtContra.Text;
+
+            if (!ValidatePassword(password))
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, incluir al menos un número y un carácter especial.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             try
             {
                 DAOLogin DAOData = new DAOLogin();
@@ -106,6 +113,27 @@ namespace PTC.Controller.Login
             }
         }
 
+        private bool ValidatePassword(string password)
+        {
+
+            if (password.Length < 8)
+            {
+                return false;
+            }
+
+            bool hasNumber = password.Any(char.IsDigit);
+            if (!hasNumber)
+            {
+                return false;
+            }
+            bool hasSpecialChar = password.Any(ch => "!@#$%^&*()_+[]{}|;:',.<>?/~`".Contains(ch));
+            if (!hasSpecialChar)
+            {
+                return false;
+            }
+
+            return true;
+        }
         private void DataAccess(object sender, EventArgs e)
         {
             DAOLogin DAOData = new DAOLogin();

@@ -117,22 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAr0AAAAeCAYAAAAhM6axAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACsSURBVHhe7dYxEQAwCACxukNI/WsAH38Z4iFv/ywAAJRJ
-        LwAAedILAECe9AIAkCe9AADkSS8AAHnSCwBAnvQCAJAnvQAA5EkvAAB50gsAQJ70AgCQJ70AAORJLwAA
-        edILAECe9AIAkCe9AADkSS8AAHnSCwBAnvQCAJAnvQAA5EkvAAB50gsAQJ70AgCQJ70AAORJLwAAedIL
-        AECe9AIAkCe9AADkSS8AAHGzBzPEQbco6O+IAAAAAElFTkSuQmCC
-</value>
+  <data name="txturl.Text" xml:space="preserve">
+    <value>https://download1529.mediafire.com/n6tracestlxgYGLrBGqvFB1-YY7uheLnp1d1ywUKhTscVV-WJ6moSSJ4d8uGR8g_5MJC_5rf-sJiYiIAl3JD8WFANNGrAITzeoZoU0YIeCamXH2wGx2kMJDjj643L4c6R_VKA_N5pZh_4SJo-Oz8Gpt0czrOZUnZUEOnZ08V4iYos60/hsh8spu9ngg5fh6/Manuales.zip</value>
   </data>
-  <data name="bunifuThinButton26.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnInicio.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAANwAAAAgCAYAAAB5ChbjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABySURBVHhe7dMxAQAwDMCguauQ+dfQusjFgQTe/lmgIRyE
-        hIOQcBASDkLCQUg4CAkHIeEgJByEhIOQcBASDkLCQUg4CAkHIeEgJByEhIOQcBASDkLCQUg4CAkHIeEg
-        JByEhIOQcBASDkLCQUg4CAkHmdkDaS4QSCO5H74AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAxcAAAAiCAYAAAAtfyS/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVHhe7dcxAQAADMOg+TfdmcgJLrgBAAAE5AIAAEjI
+        BQAAkJALAAAgIRcAAEBCLgAAgIRcAAAACbkAAAAScgEAACTkAgAASMgFAACQkAsAACAhFwAAQEIuAACA
+        hFwAAAAJuQAAABJyAQAAJOQCAABIyAUAAJCQCwAAICEXAABAQi4AAICEXAAAAAm5AAAAEnIBAAAk5AIA
+        AEjIBQAAkJALAAAgIRcAAEBCLgAAgIRcAAAACbkAAAAScgEAACTkAgAACGwPor+sR6T8x9IAAAAASUVO
+        RK5CYII=
 </value>
   </data>
 </root>

@@ -212,3 +212,4 @@ C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\CrystalDecisi
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\natal\OneDrive\Documents\GitHub\PTCOSEGUEDA2024\obj\Debug\PTC.Vista.Descargas.ViewDescargas.resources

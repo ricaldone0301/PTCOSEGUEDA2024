@@ -131,6 +131,8 @@
             this.Controls.Add(this.TxtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewCambiarContra";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewRecuperarContra";
             this.ResumeLayout(false);
             this.PerformLayout();

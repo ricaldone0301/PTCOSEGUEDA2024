@@ -32,12 +32,12 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.btnCerrar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnMaximizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnMinimizar = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ok = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnDescargas = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnServidor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInicio = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnProcedimientos = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -51,14 +51,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnCitas = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PanelPadre.SuspendLayout();
             this.ok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,15 +97,6 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1923, 1019);
             this.PanelContenedor.TabIndex = 32;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(583, 309);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(815, 312);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // PanelPadre
             // 
@@ -226,6 +218,7 @@
             this.ok.BackColor = System.Drawing.Color.Transparent;
             this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
             this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ok.Controls.Add(this.btnDescargas);
             this.ok.Controls.Add(this.btnServidor);
             this.ok.Controls.Add(this.btnInicio);
             this.ok.Controls.Add(this.btnProcedimientos);
@@ -252,6 +245,32 @@
             this.ok.Size = new System.Drawing.Size(270, 1019);
             this.ok.TabIndex = 2;
             this.ok.Paint += new System.Windows.Forms.PaintEventHandler(this.ok_Paint);
+            // 
+            // btnDescargas
+            // 
+            this.btnDescargas.ActiveBorderThickness = 1;
+            this.btnDescargas.ActiveCornerRadius = 20;
+            this.btnDescargas.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnDescargas.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnDescargas.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnDescargas.BackColor = System.Drawing.Color.Transparent;
+            this.btnDescargas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDescargas.BackgroundImage")));
+            this.btnDescargas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDescargas.ButtonText = "MANUALES";
+            this.btnDescargas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDescargas.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargas.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnDescargas.IdleBorderThickness = 1;
+            this.btnDescargas.IdleCornerRadius = 20;
+            this.btnDescargas.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnDescargas.IdleForecolor = System.Drawing.Color.MidnightBlue;
+            this.btnDescargas.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnDescargas.Location = new System.Drawing.Point(73, 512);
+            this.btnDescargas.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDescargas.Name = "btnDescargas";
+            this.btnDescargas.Size = new System.Drawing.Size(129, 34);
+            this.btnDescargas.TabIndex = 11;
+            this.btnDescargas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnServidor
             // 
@@ -522,6 +541,15 @@
             this.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(583, 309);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(815, 312);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -567,12 +595,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewDashboard_Load);
             this.PanelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.PanelPadre.ResumeLayout(false);
             this.ok.ResumeLayout(false);
             this.ok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -604,5 +632,6 @@
         public Bunifu.UI.WinForms.BunifuImageButton btnMaximizar;
         private System.Windows.Forms.PictureBox pictureBox4;
         public Bunifu.Framework.UI.BunifuThinButton2 btnServidor;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnDescargas;
     }
 }

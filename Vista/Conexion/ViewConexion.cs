@@ -1,4 +1,5 @@
 ﻿using PTC.Controller.Servidor;
+using PTC.Vista.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace PTC.Vista.Conexion
             InitializeComponent();
             TextBoxMenuEliminar();
             ControllerServidor Control = new ControllerServidor(this, origen);
+
         }
 
         private void ContextMenuEliminar(TextBox textBox)
@@ -40,6 +42,11 @@ namespace PTC.Vista.Conexion
         }
 
         private void txtDatabase_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbConf_Click(object sender, EventArgs e)
         {
 
         }

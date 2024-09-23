@@ -1,5 +1,6 @@
-﻿using BunifuAnimatorNS;
-using PTC.Controller.Cita;
+﻿using PTC.Controller.Cita;
+using PTC.Controller.Ocupacion;
+using PTC.Controller.Paciente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,72 +18,38 @@ namespace PTC.Vista.AgendarCita
         public ViewAgendarcita(int accion)
         {
             InitializeComponent();
-            TextBoxMenuEliminar();
-            this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
-            ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this, accion);
+            ControllerAgendarCita ObjAgendarCita = new ControllerAgendarCita(this, accion);
             Fecha.MinDate = DateTime.Today;
         }
+
         public ViewAgendarcita(int accion, int citaID, int pacienteID, string personalID, int consultorioID, string hora, DateTime fecha, int procedimientoID, string paciente, string personal, string consultorio, string procedimiento)
         {
             InitializeComponent();
             TextBoxMenuEliminar();
-            this.Fecha.ValueChanged += new System.EventHandler(this.Fecha_ValueChanged);
-            ControllerAgendarCita objAgendarCita = new ControllerAgendarCita(this,  accion, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID, paciente, personal, consultorio, procedimiento);
-            Fecha.MinDate = DateTime.Today;
-
+            ControllerAgendarCita ObjAgregarPaciente = new ControllerAgendarCita(this, accion, citaID, pacienteID, personalID, consultorioID, hora, fecha, procedimientoID, paciente, personal, consultorio, procedimiento);
         }
 
-        private void ViewAgendarcita_load(object sender, EventArgs e)
+        private void ContextMenuEliminar(System.Windows.Forms.TextBox textBox)
         {
-            //tiene el propósito de asignar el valor de la fecha actual datetime.today a la propiedad minDate de un objeto Fecha, esto se hace para que al momento de asignar fecha a la cita solo pueda elegir fechas de hoy en adelante
-            Fecha.MinDate = DateTime.Today;
-        }
-        private void ContextMenuEliminar(TextBox textBox)
-        {
+            // Crear una nueva instancia de ContextMenuStrip (menú contextual).
             var menuContexto = new ContextMenuStrip();
+
+            // Se le asigna el menú contextual creado al TextBox especificado.
             textBox.ContextMenuStrip = menuContexto;
         }
-
         public void TextBoxMenuEliminar()
         {
             ContextMenuEliminar(txtHora);
         }
-        private void bunifuCustomLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbConsultorio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbPaciente_Keypress(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbPaciente_Keypress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void cbProcedimiento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Fecha_ValueChanged(object sender, EventArgs e)
-        {
-        }
 
         private void txtHora_TextChanged(object sender, EventArgs e)
         {
+            if (txtHora.Text.Length > 5)
+            {
+                txtHora.Text = txtHora.Text.Substring(0, 5);
+                txtHora.SelectionStart = txtHora.Text.Length;
+            }
+
             string text = txtHora.Text;
             string validChars = "0123456789:";
 
@@ -92,8 +59,8 @@ namespace PTC.Vista.AgendarCita
             {
                 txtHora.Text = filteredText;
                 txtHora.SelectionStart = txtHora.Text.Length;
-            }
 
+            }
         }
     }
 }

@@ -136,6 +136,8 @@ namespace PTC.Controller.Usuarios
                 ObjAgregarUsuario.txtEmail.Enabled = false;
                 ObjAgregarUsuario.cbConsul.Enabled = false;
                 ObjAgregarUsuario.cbEsp.Enabled = false;
+                ObjAgregarUsuario.cbPregunta.Enabled = false;
+                ObjAgregarUsuario.txtRespuesta.Enabled = false;
                 ObjAgregarUsuario.cbRol.Enabled = false;
             }
         }

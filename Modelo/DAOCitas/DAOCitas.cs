@@ -22,7 +22,7 @@ namespace PTC.Modelo.DAOCitas
             {
                 Command.Connection = getConnection();
                 //Se crea el query de seleccion
-                string query = $"SELECT * FROM ViewCitas WHERE ID LIKE '%{valor}%' OR Fecha LIKE '%{valor}%' OR Hora LIKE '%{valor}%' OR ID LIKE '%{valor}%' OR Doctor LIKE '%{valor}%' OR Paciente LIKE '%{valor}%' OR Procedimiento LIKE '%{valor}%'";
+                string query = $"SELECT * FROM ViewCitas WHERE ID LIKE '%{valor}%' OR fecha LIKE '%{valor}%' OR hora LIKE '%{valor}%' OR ID LIKE '%{valor}%' OR Doctor LIKE '%{valor}%' OR Paciente LIKE '%{valor}%' OR Procedimiento LIKE '%{valor}%' OR Consultorio LIKE '%{valor}%'";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.ExecuteNonQuery();
                 //Este crea un adaptador el cual llena el dataset

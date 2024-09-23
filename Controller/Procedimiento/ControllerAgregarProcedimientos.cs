@@ -101,14 +101,14 @@ namespace PTC.Controller.Procedimiento
 
                     if (valorRetornado == 1)
                     {
-                        MessageBox.Show("Los cita ha sido registrados exitosamente",
+                        MessageBox.Show("El procedimiento ha sido registrado exitosamente",
                                         "Proceso completado",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Los cita no pudo ser registrada.",
+                        MessageBox.Show("El registro no pudo ser registrado.",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);

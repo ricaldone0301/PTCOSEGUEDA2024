@@ -442,9 +442,8 @@
             this.ClientSize = new System.Drawing.Size(828, 783);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCards1);
-            this.MaximumSize = new System.Drawing.Size(1701, 875);
-            this.MinimumSize = new System.Drawing.Size(846, 830);
             this.Name = "ViewAgregarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarDoctores";
             this.bunifuCards1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

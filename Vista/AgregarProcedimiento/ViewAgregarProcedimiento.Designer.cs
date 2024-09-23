@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAgregarProcedimiento));
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNombreProcedimiento = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCards1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel3
@@ -80,6 +80,50 @@
             this.bunifuCards1.Size = new System.Drawing.Size(676, 661);
             this.bunifuCards1.TabIndex = 0;
             // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Tomato;
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.bunifuThinButton26);
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Tomato;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Tomato;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Tomato;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Tomato;
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(3, 2);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(673, 30);
+            this.bunifuGradientPanel2.TabIndex = 47;
+            // 
+            // bunifuThinButton26
+            // 
+            this.bunifuThinButton26.ActiveBorderThickness = 1;
+            this.bunifuThinButton26.ActiveCornerRadius = 20;
+            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton26.BackColor = System.Drawing.Color.Tomato;
+            this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
+            this.bunifuThinButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bunifuThinButton26.ButtonText = "USUARIO";
+            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton26.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton26.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton26.IdleBorderThickness = 1;
+            this.bunifuThinButton26.IdleCornerRadius = 20;
+            this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton26.Location = new System.Drawing.Point(0, -2);
+            this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton26.Name = "bunifuThinButton26";
+            this.bunifuThinButton26.Size = new System.Drawing.Size(220, 32);
+            this.bunifuThinButton26.TabIndex = 10;
+            this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -99,6 +143,15 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.btnActualizar);
+            this.panel2.Location = new System.Drawing.Point(325, 509);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(170, 66);
+            this.panel2.TabIndex = 47;
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,6 +168,32 @@
             this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.btnGuardar);
+            this.panel3.Location = new System.Drawing.Point(121, 500);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(170, 66);
+            this.panel3.TabIndex = 46;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
+            this.btnGuardar.Location = new System.Drawing.Point(4, 10);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(162, 52);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "AGREGAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // bunifuCustomLabel2
             // 
@@ -186,85 +265,6 @@
             this.bunifuCustomLabel4.TabIndex = 10;
             this.bunifuCustomLabel4.Text = "NOMBRE PROCEDIMIENTO";
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.btnGuardar);
-            this.panel3.Location = new System.Drawing.Point(121, 500);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 66);
-            this.panel3.TabIndex = 46;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(203)))), ((int)(((byte)(234)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(159)))), ((int)(((byte)(110)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(35)))), ((int)(((byte)(82)))));
-            this.btnGuardar.Location = new System.Drawing.Point(4, 10);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(162, 52);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "AGREGAR";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // bunifuGradientPanel2
-            // 
-            this.bunifuGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
-            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.bunifuThinButton26);
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Tomato;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(3, 2);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(673, 30);
-            this.bunifuGradientPanel2.TabIndex = 47;
-            // 
-            // bunifuThinButton26
-            // 
-            this.bunifuThinButton26.ActiveBorderThickness = 1;
-            this.bunifuThinButton26.ActiveCornerRadius = 20;
-            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.BackColor = System.Drawing.Color.Tomato;
-            this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
-            this.bunifuThinButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuThinButton26.ButtonText = "USUARIO";
-            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton26.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton26.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleBorderThickness = 1;
-            this.bunifuThinButton26.IdleCornerRadius = 20;
-            this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.Location = new System.Drawing.Point(0, -2);
-            this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton26.Name = "bunifuThinButton26";
-            this.bunifuThinButton26.Size = new System.Drawing.Size(220, 32);
-            this.bunifuThinButton26.TabIndex = 10;
-            this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.btnActualizar);
-            this.panel2.Location = new System.Drawing.Point(325, 509);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(170, 66);
-            this.panel2.TabIndex = 47;
-            // 
             // ViewAgregarProcedimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,13 +276,14 @@
             this.MaximumSize = new System.Drawing.Size(1701, 875);
             this.MinimumSize = new System.Drawing.Size(846, 830);
             this.Name = "ViewAgregarProcedimiento";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "ViewAgregarProcedimiento";
             this.bunifuCards1.ResumeLayout(false);
+            this.bunifuGradientPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.bunifuGradientPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

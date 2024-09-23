@@ -346,6 +346,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "ViewPrimerUso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPrimerUso";
             this.panel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);

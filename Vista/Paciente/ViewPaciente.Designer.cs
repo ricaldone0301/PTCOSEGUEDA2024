@@ -150,6 +150,7 @@
             this.Controls.Add(this.btnNuevoPaciente);
             this.Controls.Add(this.dgvPacientes);
             this.Name = "ViewPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPaciente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
             this.btnNuevoPaciente.ResumeLayout(false);

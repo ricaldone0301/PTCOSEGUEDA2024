@@ -20,6 +20,7 @@ namespace PTC.Vista.AgendarOcupaciones
             InitializeComponent();
             TextBoxMenuEliminar();
             ControllerAgregarOcupacion ObjAgregarOcupacion = new ControllerAgregarOcupacion(this, accion);
+
         }
 
         public ViewAgregarOcupacion(int accion, string nombreOcupacion, int ocupacionID)

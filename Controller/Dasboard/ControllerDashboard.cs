@@ -20,6 +20,7 @@ using PTC.Vista.Paciente;
 using PTC.Vista.Ocupaciones;
 using PTC.Vista.RecuperarContra;
 using PTC.Vista.Conexion;
+using PTC.Vista.Descargas;
 
 namespace PTC.Controller.Dasboard
 {
@@ -47,6 +48,7 @@ namespace PTC.Controller.Dasboard
             ObjDashboard.btnCerrar.Click += new EventHandler(Cerrar);
             ObjDashboard.btnMinimizar.Click += new EventHandler(Minimizar);
             ObjDashboard.btnServidor.Click += new EventHandler(Servidor);
+            ObjDashboard.btnDescargas.Click += new EventHandler(Descargas);
         }
 
         private void Maximizar(object sender, EventArgs e)
@@ -93,6 +95,12 @@ namespace PTC.Controller.Dasboard
         private void Servidor(object sender, EventArgs e)
         {
             AbrirFormulario<ViewContraConexion>();
+
+        }
+
+        private void Descargas(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewDescargas>();
 
         }
         private void Procedimientos(object sender, EventArgs e)

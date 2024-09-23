@@ -33,10 +33,11 @@ namespace PTC.Controller
             {
                 Application.Run(new ViewPrimerUso());
             }
-            else
+            else 
 
             {
                 Application.Run(new ViewLogin());
+
             }
         }
 

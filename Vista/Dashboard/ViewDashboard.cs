@@ -20,7 +20,7 @@ namespace PTC.Vista.Dashboard
         {
             InitializeComponent();
             ControllerDashboard objDash = new ControllerDashboard(this);
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void btnCitas_Click(object sender, EventArgs e)

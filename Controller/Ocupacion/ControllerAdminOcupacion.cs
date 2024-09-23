@@ -51,7 +51,7 @@ namespace PTC.Controller.Ocupacion
             {
 
                 DAOOcupacion daoDel = new DAOOcupacion();
-                daoDel.OcupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString());
+                daoDel.OcupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[0, pos].Value.ToString());
                 int valorRetornado = daoDel.EliminarOcupacion();
                 if (valorRetornado == 1)
                 {
@@ -91,8 +91,8 @@ namespace PTC.Controller.Ocupacion
             string nombreOcupacion;
 
 
-            ocupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString());
-            nombreOcupacion = ObjAdminOcupacion.dgvOcupaciones[0, pos].Value.ToString();
+            ocupacionID = int.Parse(ObjAdminOcupacion.dgvOcupaciones[0, pos].Value.ToString());
+            nombreOcupacion = ObjAdminOcupacion.dgvOcupaciones[1, pos].Value.ToString();
 
 
             ViewAgregarOcupacion openForm = new ViewAgregarOcupacion(3, nombreOcupacion, ocupacionID);

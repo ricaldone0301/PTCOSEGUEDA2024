@@ -41,7 +41,7 @@ namespace PTC.Controller.Cita
             if (MessageBox.Show($"¿Esta seguro que quiere eliminar esta cita?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOCitas daoDel = new DAOCitas();
-                daoDel.CitaID = int.Parse(ObjAdminCitas.dgvCitas[3, pos].Value.ToString());
+                daoDel.CitaID = int.Parse(ObjAdminCitas.dgvCitas[2, pos].Value.ToString());
                 int valorRetornado = daoDel.EliminarCita();
                 if (valorRetornado == 1)
                 {

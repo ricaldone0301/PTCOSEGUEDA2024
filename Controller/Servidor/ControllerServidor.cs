@@ -26,9 +26,32 @@ namespace PTC.Controller.Servidor
              View.rdDeshabilitarWindows.CheckedChanged += new EventHandler(rdFalseMarked);
             View.rdHabilitarWindows.CheckedChanged += new EventHandler(rdTrueMarked);
             View.btnGuardar.Click += new EventHandler(GuardarRegistro);
+            
 
         }
 
+        private void Maximizar(object sender, EventArgs e)
+        {
+            if (ObjViewConexion.WindowState == FormWindowState.Normal)
+            {
+                ObjViewConexion.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                ObjViewConexion.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void Cerrar(object sender, EventArgs e)
+        {
+           Application.Exit();
+            
+        }
+
+        private void Minimizar(object sender, EventArgs e)
+        {
+            ObjViewConexion.WindowState = FormWindowState.Minimized;
+        }
         public void verificarOrigen(int origen)
         {
             if (origen == 2)
@@ -46,7 +69,7 @@ namespace PTC.Controller.Servidor
         {
             if (ObjViewConexion.rdDeshabilitarWindows.Checked == true)
             {
-                ObjViewConexion.panel5.Enabled = true;
+                ObjViewConexion.panelAuth.Enabled = true;
             }
         }
 
@@ -54,7 +77,7 @@ namespace PTC.Controller.Servidor
         {
             if (ObjViewConexion.rdHabilitarWindows.Checked == true)
             {
-                ObjViewConexion.panel5.Enabled = false;
+                ObjViewConexion.panelAuth.Enabled = false;
                 ObjViewConexion.txtSqlAuth.Clear();
                 ObjViewConexion.txtSqlPass.Clear();
             }
@@ -93,16 +116,6 @@ namespace PTC.Controller.Servidor
                 if (ObjViewConexion.rdDeshabilitarWindows.Checked == true)
                 {
                     XmlElement SqlAuth = doc.CreateElement("SqlAuth");
-                    SqlAuth.InnerText = string.Empty;
-                    root.AppendChild(SqlAuth);
-
-                    XmlElement SqlPass = doc.CreateElement("SqlPass");
-                    SqlPass.InnerText = string.Empty;
-                    root.AppendChild(SqlPass);
-                }
-                else
-                {
-                    XmlElement SqlAuth = doc.CreateElement("SqlAuth");
                     string sqlAuthCode = CodificarBase64String(ObjViewConexion.txtSqlAuth.Text.Trim());
                     SqlAuth.InnerText = sqlAuthCode;
                     root.AppendChild(SqlAuth);
@@ -110,6 +123,17 @@ namespace PTC.Controller.Servidor
                     XmlElement SqlPass = doc.CreateElement("SqlPass");
                     string SqlPassCode = CodificarBase64String(ObjViewConexion.txtSqlPass.Text.Trim());
                     SqlPass.InnerText = SqlPassCode;
+                    root.AppendChild(SqlPass);
+
+                }
+                else
+                {
+                    XmlElement SqlAuth = doc.CreateElement("SqlAuth");
+                    SqlAuth.InnerText = string.Empty;
+                    root.AppendChild(SqlAuth);
+
+                    XmlElement SqlPass = doc.CreateElement("SqlPass");
+                    SqlPass.InnerText = string.Empty;
                     root.AppendChild(SqlPass);
                 }
                 SqlConnection con = dbContext.testConnection(ObjViewConexion.txtServer.Text.Trim(), ObjViewConexion.txtDatabase.Text.Trim(), ObjViewConexion.txtSqlAuth.Text.Trim(), ObjViewConexion.txtSqlPass.Text.Trim());

@@ -96,11 +96,11 @@ namespace PTC.Controller.Usuarios
             consultorio = ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString();
             Especialidad = ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString();
             rol = ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString();
-            EspecialidadID = int.Parse(ObjAdminUsuario.dgvPersonas[8, pos].Value.ToString());
-            consultorioID = int.Parse(ObjAdminUsuario.dgvPersonas[7, pos].Value.ToString());
-            rolID = int.Parse(ObjAdminUsuario.dgvPersonas[9, pos].Value.ToString());
-            preguntaID = int.Parse(ObjAdminUsuario.dgvPersonas[6, pos].Value.ToString());
-            contraseñaPersonal = ObjAdminUsuario.dgvPersonas[10, pos].Value.ToString();
+            EspecialidadID = int.Parse(ObjAdminUsuario.dgvPersonas[10, pos].Value.ToString());
+            consultorioID = int.Parse(ObjAdminUsuario.dgvPersonas[11, pos].Value.ToString());
+            rolID = int.Parse(ObjAdminUsuario.dgvPersonas[12, pos].Value.ToString());
+            preguntaID = int.Parse(ObjAdminUsuario.dgvPersonas[13, pos].Value.ToString());
+            contraseñaPersonal = ObjAdminUsuario.dgvPersonas[14, pos].Value.ToString();
 
 
             //En esta parte se actualizan los datos que hemos modificado en el dgv.
