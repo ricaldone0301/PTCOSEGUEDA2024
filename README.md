@@ -14,13 +14,13 @@ Informacion del proyecto:
 - Gestión de procedimientos
 - Gestión de ocupaciones
 
--Inicio de sesión
--Formato MVC (Modelo, Vista, Controlador)
--Implementación de encriptacion de contraseña
--Configuración inicial de usuario y sistema
--Configuración de servidor de forma local y con archivo XML
--Cambio de contraseña necesario para nuevos usuarios
--Metodos de recuperación de contraseña: intervención de administrador, correo electrónico y preguntas de seguridad
+- Inicio de sesión
+- Formato MVC (Modelo, Vista, Controlador)
+- Implementación de encriptacion de contraseña
+- Configuración inicial de usuario y sistema
+- Configuración de servidor de forma local y con archivo XML
+- Cambio de contraseña necesario para nuevos usuarios
+- Metodos de recuperación de contraseña: intervención de administrador, correo electrónico y preguntas de seguridad
 
 Autores:
 - Natalie Abigail Navarro Góchez 2023030
